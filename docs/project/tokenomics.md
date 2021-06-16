@@ -14,20 +14,13 @@ title: Tokenomics
 ## Distribution
 
 - 25% Sale
-    - 5% Seed
-    - 15% Private
-    - 5% Incentivized testnet
 - 25% Team
 - 25% Company
 - 25% Success
-    - 10% Liquidity
-    - 5% Community nodes
-    - 5% Marketing
-    - 5% Advisors
 
 ## Sales
 
 - Initial circulating supply: 25,000,000 NOS
-- Initial market cap: $ 1,300,000 USD
-- Private sale price: $ 0.06 USD
-- Public sale price: $ 0.10 USD
+- Initial market cap: *tbd*
+- Private sale price: *tbd*
+- Public sale price: *tbd*
