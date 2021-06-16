@@ -91,12 +91,5 @@ module.exports = {
     {
       normalSuffix: "/"
     }
-  ],
-  configureWebpack: {
-    resolve: {
-      alias: {
-        "@assets": path.resolve(__dirname, "../assets")
-      }
-    }
-  }
+  ]
 }
