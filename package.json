@@ -1,0 +1,19 @@
+{
+  "name": "nosana.io",
+  "version": "0.0.1",
+  "description": "Decentralized CI/CD",
+  "main": "index.js",
+  "authors": {
+    "name": "Sjoerd",
+    "email": "team@nosana.io"
+  },
+  "repository": "https://gitlab.com/nosana-ci/apps/docs/vuepress.git/nosana.io",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
