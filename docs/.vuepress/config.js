@@ -33,7 +33,7 @@ module.exports = {
     editLinks: true,
     docsDir: 'docs',
     editLinkText: 'Edit on GitLab 🦊',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
       {
         text: 'Introduction',
@@ -57,7 +57,7 @@ module.exports = {
           children: [
             ["/", "Home"],
             ["/intro", "Introduction"],
-            ["/tokenomics", "Tokenomics"],
+            ["/faq", "F.A.Q."],
           ]
         },
         {
@@ -68,6 +68,14 @@ module.exports = {
             ["/platform/compute", "🌏 Compute"],
             ["/platform/market", "💰 Market"],
             ["/platform/security", "🔒️Security"],
+          ]
+        },
+        {
+          title: "Project",
+          collapsable: false,
+          children: [
+            ["/project/tokenomics", "🪙 Tokenomics"],
+            ["/project/roadmap", "🛣 Roadmap"],
           ]
         },
         {
@@ -87,9 +95,5 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    "vuepress-plugin-clean-urls",
-    {
-      normalSuffix: "/"
-    }
   ]
 }
