@@ -1,3 +1,7 @@
+---
+title: Intro
+---
+
 # Introduction
 
 Nosana introduces a decentralized CI/CD solution on the Solana

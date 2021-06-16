@@ -29,10 +29,10 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
+    repo: 'https://gitlab.com/nosana-ci/apps/docs/vuepress.git',
+    editLinks: true,
+    docsDir: 'docs',
+    editLinkText: 'Edit on GitLab 🦊',
     lastUpdated: false,
     nav: [
       {
@@ -87,5 +87,16 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-  ]
+    "vuepress-plugin-clean-urls",
+    {
+      normalSuffix: "/"
+    }
+  ],
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@assets": path.resolve(__dirname, "../assets")
+      }
+    }
+  }
 }
