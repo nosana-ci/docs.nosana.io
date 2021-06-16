@@ -1,0 +1,29 @@
+image: node
+
+cache:
+  paths:
+    - node_modules
+  key: project
+
+stages:
+  - install
+  - test
+  - deploy
+
+install:
+  stage: install
+  script: npm install
+  only:
+    - merge_requests
+    - main
+
+pages:
+  stage: deploy
+  script:
+    - npm run build
+    - mv docs/.vuepress/dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
