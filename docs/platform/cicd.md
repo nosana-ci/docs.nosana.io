@@ -1,5 +1,5 @@
 ---
-title: 🤖CI/CD
+title: CI/CD
 ---
 
 # 🤖 CI/CD

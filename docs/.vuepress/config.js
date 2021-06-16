@@ -69,6 +69,13 @@ module.exports = {
             ["/platform/market", "💰 Market"],
             ["/platform/security", "🔒️Security"],
           ]
+        },
+        {
+          title: "Links",
+          collapsable: false,
+          children: [
+            ['https://nosana.io', "Website"],
+          ]
         }
       ]
     }

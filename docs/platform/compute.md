@@ -1,5 +1,5 @@
 ---
-title: 🌏Compute
+title: Compute
 ---
 
 # 🌏 Compute

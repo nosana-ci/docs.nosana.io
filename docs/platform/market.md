@@ -1,5 +1,5 @@
 ---
-title: 💰Market
+title: Market
 ---
 
 # 💰 Market
