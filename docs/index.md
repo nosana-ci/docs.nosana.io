@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://journeyofquality.files.wordpress.com/2020/11/cicd-tools.jpg
-tagline: Decentralized CI/CD
+tagline: Community powered CI and CD
 actionText: Learn more →
 actionLink: /intro
 features:
