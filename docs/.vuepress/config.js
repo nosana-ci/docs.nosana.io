@@ -36,8 +36,8 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Nosana',
-        link: '/nosana/',
+        text: 'Introduction',
+        link: '/intro/',
       },
       {
         text: 'Platform',
@@ -53,25 +53,21 @@ module.exports = {
         {
           title: "",
           collapsable: false,
-          // sidebarDepth: 0,
-          children: [["/", "Home"]]
-        },
-        {
-          title: "Nosana",
-          collapsable: false,
+          sidebarDepth: 0,
           children: [
-            ["/nosana/intro", "Introduction"],
-            ["/nosana/tokenomics", "Tokenomics"],
+            ["/", "Home"],
+            ["/intro", "Introduction"],
+            ["/tokenomics", "Tokenomics"],
           ]
         },
         {
           title: "Platform",
           collapsable: false,
           children: [
-            ["/platform/network", "🔌 Network"],
-            ["/platform/governance", "🏛 Governance"],
-            ["/platform/rewards", "🪙 Rewards"],
-            ["/platform/staking", "⌛️ Staking"],
+            ["/platform/cicd", "🤖 CI/CD"],
+            ["/platform/compute", "🌏 Compute"],
+            ["/platform/market", "💰 Market"],
+            ["/platform/security", "🔒️Security"],
           ]
         }
       ]
