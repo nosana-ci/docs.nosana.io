@@ -36,25 +36,45 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'Nosana',
+        link: '/nosana/',
       },
       {
-        text: 'nosana.io',
+        text: 'Platform',
+        link: '/platform/',
+      },
+      {
+        text: 'Website',
         link: 'https://nosana.io'
       }
     ],
     sidebar: {
-      '/guide/': [
+      "/": [
         {
-          title: 'Guide',
+          title: "",
+          collapsable: false,
+          // sidebarDepth: 0,
+          children: [["/", "Home"]]
+        },
+        {
+          title: "Nosana",
           collapsable: false,
           children: [
-            '',
-            'using-vue',
+            ["/nosana/intro", "Introduction"],
+            ["/nosana/tokenomics", "Tokenomics"],
+          ]
+        },
+        {
+          title: "Platform",
+          collapsable: false,
+          children: [
+            ["/platform/network", "🔌 Network"],
+            ["/platform/governance", "🏛 Governance"],
+            ["/platform/rewards", "🪙 Rewards"],
+            ["/platform/staking", "⌛️ Staking"],
           ]
         }
-      ],
+      ]
     }
   },
 

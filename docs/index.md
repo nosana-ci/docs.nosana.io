@@ -2,8 +2,8 @@
 home: true
 heroImage: https://journeyofquality.files.wordpress.com/2020/11/cicd-tools.jpg
 tagline: Decentralized CI/CD
-actionText: Quick Start →
-actionLink: /guide/
+actionText: Learn more →
+actionLink: /nosana/
 features:
 - title: Decentralized
   details: Nosana runs any  CI/CD pipeline openly and transparently. Computation by the people, for the people.
