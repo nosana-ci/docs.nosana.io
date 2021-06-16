@@ -1,4 +1,4 @@
-# Using Vue in Markdown
+# Tokenomics
 
 ## Browser API Access Restrictions
 

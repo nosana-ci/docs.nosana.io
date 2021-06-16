@@ -1,10 +1,12 @@
 const { description } = require('../../package')
 
 module.exports = {
+  theme: "book",
+
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Nosana',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -38,12 +40,8 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'nosana.io',
+        link: 'https://nosana.io'
       }
     ],
     sidebar: {
