@@ -10,7 +10,7 @@ Nosana will deploy and bring forward her products in the following timeline.
 ## Q3 - 2021
 
 - Deployment testnet Nosana nodes
-- Incentivised testnet
+- Incentivized testnet
 - Public tokensale
 
 ## Q4 - 2021
