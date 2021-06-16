@@ -1,4 +1,4 @@
-image: node
+image: node:16.3.0-alpine
 
 cache:
   paths:
@@ -12,7 +12,7 @@ stages:
 
 install:
   stage: install
-  script: npm install
+  script: npm ci
   only:
     - merge_requests
     - main
