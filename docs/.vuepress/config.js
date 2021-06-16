@@ -1,7 +1,7 @@
 const { description } = require('../../package')
 
 module.exports = {
-  theme: "book",
+  theme: 'book',
 
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -49,40 +49,40 @@ module.exports = {
       }
     ],
     sidebar: {
-      "/": [
+      '/': [
         {
-          title: "",
+          title: '',
           collapsable: false,
           sidebarDepth: 0,
           children: [
-            ["/", "Home"],
-            ["/intro", "Introduction"],
-            ["/faq", "F.A.Q."],
+            ['/', 'Home'],
+            ['/intro', 'Introduction'],
+            ['/faq', 'F.A.Q.'],
           ]
         },
         {
-          title: "Platform",
+          title: 'Platform',
           collapsable: false,
           children: [
-            ["/platform/cicd", "🤖 CI/CD"],
-            ["/platform/compute", "🌏 Compute"],
-            ["/platform/market", "💰 Market"],
-            ["/platform/security", "🔒️Security"],
+            ['/platform/cicd', '🤖 CI/CD'],
+            ['/platform/compute', '🌏 Compute'],
+            ['/platform/market', '💰 Market'],
+            ['/platform/security', '🔒️Security'],
           ]
         },
         {
-          title: "Project",
+          title: 'Project',
           collapsable: false,
           children: [
-            ["/project/tokenomics", "🪙 Tokenomics"],
-            ["/project/roadmap", "🛣 Roadmap"],
+            ['/project/tokenomics', '🪙 Tokenomics'],
+            ['/project/roadmap', '🛣 Roadmap'],
           ]
         },
         {
-          title: "Links",
+          title: 'Links',
           collapsable: false,
           children: [
-            ['https://nosana.io', "Website"],
+            ['https://nosana.io', 'Website'],
           ]
         }
       ]
@@ -95,6 +95,9 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    "vuepress-plugin-clean-urls",
+    'vuepress-plugin-clean-urls',
+    {
+      normalSuffix: '/'
+    }
   ]
 }
