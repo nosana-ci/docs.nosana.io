@@ -64,14 +64,14 @@ module.exports = {
             ['/platform/security', '🔒️Security'],
           ]
         },
-        {
-          title: 'Project',
-          collapsable: false,
-          children: [
-            ['/project/tokenomics', '🪙 Tokenomics'],
-            ['/project/roadmap', '🛣 Roadmap'],
-          ]
-        },
+        // {
+        //   title: 'Project',
+        //   collapsable: false,
+        //   children: [
+        //     ['/project/tokenomics', '🪙 Tokenomics'],
+        //     ['/project/roadmap', '🛣 Roadmap'],
+        //   ]
+        // },
         {
           title: 'Links',
           collapsable: false,
