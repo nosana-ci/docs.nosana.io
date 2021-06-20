@@ -51,7 +51,7 @@ module.exports = {
           children: [
             ['/', 'Home'],
             ['/intro', 'Introduction'],
-            ['/faq', 'F.A.Q.'],
+            // ['/faq', 'F.A.Q.'],
           ]
         },
         {
