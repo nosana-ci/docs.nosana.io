@@ -37,14 +37,6 @@ module.exports = {
     lastUpdated: true,
     nav: [
       {
-        text: 'Introduction',
-        link: '/intro/',
-      },
-      {
-        text: 'Platform',
-        link: '/platform/',
-      },
-      {
         text: 'Website',
         link: 'https://nosana.io'
       }
@@ -65,8 +57,8 @@ module.exports = {
           title: 'Platform',
           collapsable: false,
           children: [
-            ['/platform/cicd', '🤖 CI/CD'],
-            ['/platform/compute', '🌏 Compute'],
+            ['/platform/cicd', '🚀 CI/CD'],
+            ['/platform/os', '👨‍💻 Open Source'],
             ['/platform/market', '💰 Market'],
             ['/platform/security', '🔒️Security'],
           ]

@@ -2,7 +2,7 @@
 title: CI/CD
 ---
 
-# 🤖 CI/CD
+# 🚀 CI/CD
 
 CI/CD introduces ongoing automation and continuous monitoring throughout the 
 lifecycle of apps, from integration and testing phases to delivery and deployment. 
