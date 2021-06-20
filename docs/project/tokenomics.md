@@ -16,15 +16,15 @@ title: Tokenomics
 - 25% Sale
   - 8% Seed <sup><a name="vesting1">1</a></sup>
   - 8% Private <sup><a name="vesting1">1</a></sup>
-  - 4% Public <sup><a name="vesting2">2</a></sup>
-  - 5% Incentivized testnet <sup><a name="vesting2">2</a></sup>
-- 25% Team <sup><a name="vesting1">1</a></sup>
+  - 4% Public <sup><a name="vesting3">3</a></sup>
+  - 5% Incentivized testnet <sup><a name="vesting3">3</a></sup>
+- 25% Team <sup><a name="vesting2">2</a></sup>
 - 25% Company <sup><a name="vesting2">2</a></sup>
-- 25% Success <sup><a name="vesting3">3</a></sup>
-  - 10% Liquidity
-  - 5% Marketing
-  - 5% Advisors
-  - 5% Community nodes  
+- 25% Success
+  - 10% Liquidity <sup><a name="vesting3">3</a></sup>
+  - 5% Marketing <sup><a name="vesting3">3</a></sup>
+  - 5% Advisors <sup><a name="vesting2">2</a></sup>
+  - 5% Community nodes <sup><a name="vesting3">3</a></sup> 
 
 <sup>[1](#vesting1)</sup>25% released at token distribution, then linearly released over 18 months.
 
