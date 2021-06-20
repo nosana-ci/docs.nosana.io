@@ -4,10 +4,6 @@ title: FAQ
 
 # Frequently Asked Questions
 
-## How can I contact the team?
-
-You can reach us at `team@nosana.io`.
-
 ## What is the token address?
 
 The token is yet to be distributed. 
@@ -17,13 +13,17 @@ Be aware of scammers!
 
 ## Will there be a public token sale?
 
-Yes. Details and dates will be announced.
+Yes. Details and dates will be announced. See [roadmap](/project/roadmap).
 
 ## Will there be an airdrop?
 
 Yes. Selected open source projects will be able to join our airdrop.
-More information will follow.
+More information will follow. See [roadmap](/project/roadmap).
 
 ## What is CI/CD?
 
 See our platform and [CI/CD](platform/cicd) page.
+
+## How can I contact the team?
+
+You can reach us at `team@nosana.io`.
