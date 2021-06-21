@@ -1,4 +1,5 @@
 const { description } = require('../../package')
+const path = require("path")
 
 module.exports = {
   theme: 'book',
@@ -31,7 +32,7 @@ module.exports = {
    */
   themeConfig: {
     repo: 'https://gitlab.com/nosana-ci/apps/docs/vuepress',
-    logo: 'https://docs.nosana.io/assets/logo.svg',
+    logo: '/logo.svg',
     editLinks: true,
     docsDir: 'docs',
     editLinkText: 'Edit on GitLab 🦊',
@@ -93,5 +94,13 @@ module.exports = {
     // {
     //   normalSuffix: '/'
     // }
-  ]
+  ],
+
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@assets": path.resolve(__dirname, "../assets")
+      }
+    }
+  }
 }

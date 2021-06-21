@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://docs.nosana.io/assets/logo.svg
+heroImage: /logo.svg
 tagline: Community powered CI and CD
 actionText: Learn more →
 actionLink: /intro
