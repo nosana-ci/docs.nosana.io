@@ -31,7 +31,7 @@ module.exports = {
    */
   themeConfig: {
     repo: 'https://gitlab.com/nosana-ci/apps/docs/vuepress',
-    logo: 'https://i.pinimg.com/originals/55/7d/6a/557d6ae9d6e5a6db26bfef71c98a91ac.png',
+    logo: 'https://docs.nosana.io/assets/logo.svg',
     editLinks: true,
     docsDir: 'docs',
     editLinkText: 'Edit on GitLab 🦊',
