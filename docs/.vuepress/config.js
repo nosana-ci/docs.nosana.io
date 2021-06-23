@@ -31,9 +31,8 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'https://gitlab.com/nosana-ci/apps/docs/vuepress',
     logo: '/logo.svg',
-    editLinks: true,
+    editLinks: false,
     docsDir: 'docs',
     editLinkText: 'Edit on GitLab 🦊',
     lastUpdated: true,
@@ -52,7 +51,7 @@ module.exports = {
           children: [
             ['/', 'Home'],
             ['/intro', 'Introduction'],
-            // ['/faq', 'F.A.Q.'],
+            ['/faq', 'F.A.Q.'],
           ]
         },
         {
@@ -65,14 +64,14 @@ module.exports = {
             ['/platform/security', '🔒️Security'],
           ]
         },
-        // {
-        //   title: 'Project',
-        //   collapsable: false,
-        //   children: [
-        //     ['/project/tokenomics', '🪙 Tokenomics'],
-        //     ['/project/roadmap', '🛣 Roadmap'],
-        //   ]
-        // },
+        {
+          title: 'Project',
+          collapsable: false,
+          children: [
+            ['/project/tokenomics', '🪙 Tokenomics'],
+            ['/project/roadmap', '🛣 Roadmap'],
+          ]
+        },
         {
           title: 'Links',
           collapsable: false,

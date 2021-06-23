@@ -14,23 +14,27 @@ title: Tokenomics
 ## Distribution
 
 - 25% Sale
-  - 8% Seed <sup><a name="vesting1">1</a></sup>
-  - 8% Private <sup><a name="vesting1">1</a></sup>
-  - 4% Public <sup><a name="vesting3">3</a></sup>
-  - 5% Incentivized testnet <sup><a name="vesting3">3</a></sup>
-- 25% Team <sup><a name="vesting2">2</a></sup>
-- 25% Company <sup><a name="vesting2">2</a></sup>
+  - 8% Seed <sup>[1](#vesting1)</sup>
+  - 8% Private <sup>[1](#vesting1)</sup>
+  - 4% Public <sup>[3](#vesting3)</sup>
+  - 5% Incentivized testnet <sup>[3](#vesting3)</sup>
+- 25% Team <sup>[2](#vesting2)</sup>
+- 25% Company <sup>[2](#vesting2)</sup>
 - 25% Success
-  - 10% Liquidity <sup><a name="vesting3">3</a></sup>
-  - 5% Marketing <sup><a name="vesting3">3</a></sup>
-  - 5% Advisors <sup><a name="vesting2">2</a></sup>
-  - 5% Community nodes <sup><a name="vesting3">3</a></sup> 
+  - 10% Liquidity <sup>[3](#vesting3)</sup>
+  - 5% Marketing <sup>[3](#vesting3)</sup>
+  - 5% Advisors <sup>[2](#vesting2)</sup>
+  - 5% Community nodes <sup>[3](#vesting3)</sup>
 
-<sup>[1](#vesting1)</sup>25% released at token distribution, then linearly released over 18 months.
+<a name="vesting1">1</a>.  25% released at token distribution, then linearly released over 18 months.
 
-<sup>[2](#vesting2)</sup>Linearly released over 56 months (4 years), starting at token distribution. 
+<a name="vesting2">2</a>.  Linearly released over 56 months (4 years), starting at token distribution. 
 
-<sup>[3](#vesting3)</sup>Available at token distribution
+<a name="vesting3">3</a>.  Available at token distribution
+
+### Diagram
+
+![distribution](~@assets/distribution.svg)
 
 ## Sales
 
