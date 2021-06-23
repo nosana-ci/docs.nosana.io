@@ -28,7 +28,7 @@ title: Tokenomics
 
 <a name="vesting1">1</a>.  25% released at token distribution, then linearly released over 18 months.
 
-<a name="vesting2">2</a>.  Linearly released over 56 months (4 years), starting at token distribution. 
+<a name="vesting2">2</a>.  Linearly released over 48 months (4 years), starting at token distribution. 
 
 <a name="vesting3">3</a>.  Available at token distribution
 
