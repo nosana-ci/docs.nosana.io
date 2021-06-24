@@ -6,7 +6,7 @@ title: Compute
 
 Nosana believes in the open source model from its core.
 Open source is all around us,
-and the most reliable software out there is open source.
+and the most reliable software is open source.
 
 A main principle of open-source software development is peer production, 
 with products such as source code, blueprints, 
