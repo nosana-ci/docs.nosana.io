@@ -14,14 +14,14 @@ title: Tokenomics
 ## Distribution
 
 - 25% Sale
-  - 8% Seed <sup>[1](#vesting1)</sup>
-  - 8% Private <sup>[1](#vesting1)</sup>
+  - 4% Seed <sup>[1](#vesting1)</sup>
+  - 12% Private <sup>[1](#vesting1)</sup>
   - 4% Public <sup>[3](#vesting3)</sup>
   - 5% Incentivized testnet <sup>[3](#vesting3)</sup>
-- 25% Team <sup>[2](#vesting2)</sup>
+- 20% Team <sup>[2](#vesting2)</sup>
 - 25% Company <sup>[2](#vesting2)</sup>
-- 25% Success
-  - 10% Liquidity <sup>[3](#vesting3)</sup>
+- 30% Success
+  - 15% Liquidity <sup>[3](#vesting3)</sup>
   - 5% Marketing <sup>[3](#vesting3)</sup>
   - 5% Advisors <sup>[2](#vesting2)</sup>
   - 5% Community nodes <sup>[3](#vesting3)</sup>
@@ -40,5 +40,5 @@ title: Tokenomics
 
 - Initial circulating supply: 25,000,000 NOS
 - Initial market cap: $2.500.000
-- Private sale price: $0.075 USD
+- Private sale price: $0.08 USD
 - Public sale price: $0.10 USD
