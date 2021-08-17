@@ -20,6 +20,7 @@ install:
 pages:
   stage: deploy
   script:
+    - npm ci
     - npm run build
     - mv docs/.vuepress/dist public
   artifacts:
