@@ -27,7 +27,7 @@ module.exports = {
 
   markdown: {
     extendMarkdown: md => {
-      md.use(require('markdown-it-task-lists'), {enabled: true});
+      md.use(require('markdown-it-task-lists'));
     }
   },
 
@@ -58,13 +58,13 @@ module.exports = {
           ]
         },
         {
-          title: 'Abstract',
+          title: 'Overview',
           collapsable: false,
           children: [
             ['/abstract/intro', 'Introduction'],
+            ['/abstract/background', 'Background'],
             ['/abstract/roadmap', 'Roadmap'],
             ['/abstract/faq', 'F.A.Q.'],
-            ['/abstract/recap', 'CI/CD recap'],
           ]
         },
         {
