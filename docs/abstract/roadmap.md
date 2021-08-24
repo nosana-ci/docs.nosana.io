@@ -14,12 +14,12 @@ title: Roadmap
 
 ### Q2
 
-- [x] Core platform development
+- [x] Phase 1 and Core Platform development
 - [x] Website
 
 ### Q3
 
-- [x] Core platform development
+- [x] Phase 1 and Core Platform development
 - [x] Demo environment build
 - [x] Onepager made
 - [x] Documentation pages online 
@@ -30,15 +30,16 @@ title: Roadmap
 
 ### Q4
 
-- [ ] Core platform development
-- [ ] Incentivized testnet live
+- [ ] Phase 1 release Solana Testnet
+- [ ] Incentivized Testnet live
 - [ ] Onboarded 25 projects
 
 ## 2022
 
 ### Q1
 
-- [ ] Deployment Solana Mainnet
+- [ ] Phase 1 release Solana Mainnet
+- [ ] Start Phase 2 development
 - [ ] Onboarded 50 projects  
 - [ ] 50 daily pipelines run   
 - [ ] Token distribution
@@ -48,5 +49,15 @@ title: Roadmap
 
 ### Q2
 
+- [ ] Phase 2 development
 - [ ] Integration into other CI/CD systems
 - [ ] Onboarded 100 projects
+
+### Q3
+
+- [ ] Phase 2 release Solana mainnet
+- [ ] Start Phase 3 & 4 development
+
+### Q4
+
+- [ ] Phase 3 & 4 release Solana mainnet
