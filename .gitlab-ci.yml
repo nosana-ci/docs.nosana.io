@@ -1,26 +1,12 @@
-image: node:16.3.0-alpine
-
-cache:
-  paths:
-    - node_modules
-  key: project
+image: node:16.7
 
 stages:
-  - install
-  - test
   - deploy
-
-install:
-  stage: install
-  script: npm ci
-  only:
-    - merge_requests
-    - main
 
 pages:
   stage: deploy
   script:
-    - npm ci
+    - npm install
     - npm run build
     - mv docs/.vuepress/dist public
   artifacts:
