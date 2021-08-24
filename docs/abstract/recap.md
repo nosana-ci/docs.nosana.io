@@ -1,8 +1,8 @@
 ---
-title: Recap
+title: CI/CD Recap
 ---
 
-# CI/CD recap
+# CI/CD Recap
 
 CI/CD introduces ongoing automation and continuous monitoring throughout the
 lifecycle of apps, from integration and testing phases to delivery and deployment.

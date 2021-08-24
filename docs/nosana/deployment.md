@@ -1,7 +1,7 @@
 ---
-title: Deployment
+title: Continuous Deployment
 ---
 
-# Nosana Decentralized Deployment
+# Nosana Decentralized Continuous Deployment
 
 ## What is Continuous Deployment?

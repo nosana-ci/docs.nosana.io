@@ -64,17 +64,16 @@ module.exports = {
             ['/abstract/intro', 'Introduction'],
             ['/abstract/roadmap', 'Roadmap'],
             ['/abstract/faq', 'F.A.Q.'],
+            ['/abstract/recap', 'CI/CD recap'],
           ]
         },
         {
-          title: 'Nosana',
+          title: 'The Nosana Pipeline',
           collapsable: false,
           children: [
-            ['/nosana/recap', 'CI/CD recap'],
-            ['/nosana/unit', 'Phase 1: Unit'],
-            ['/nosana/integration', 'Phase 2: Integration'],
-            ['/nosana/delivery', 'Phase 3: Delivery'],
-            ['/nosana/deployment', 'Phase 4: Deployment'],
+            ['/nosana/integration', 'Phase 1: Integration'],
+            ['/nosana/delivery', 'Phase 2: Delivery'],
+            ['/nosana/deployment', 'Phase 3: Deployment'],
           ]
         },
         {

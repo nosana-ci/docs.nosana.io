@@ -27,8 +27,7 @@ The Nosana platform runs CI/CD for open source projects.
 In addition, the Nosana platform will be open source itself.
 Nosana runs any  CI/CD pipeline openly and transparently.
 
-::: details
-Open source is all around us,
+::: tip Open source is all around us,
 and the most reliable software is open source.
 
 A main principle of open-source software development is peer production,
