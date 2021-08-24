@@ -1,15 +1,23 @@
 ---
-title: Tokenomics
+title: Metrics
 ---
 
-# 🪙 Tokenomics
+# Token Metrics
 
 ## Info
 
-- Type: SPL Token on Solana
-- Ticker: `NOS`
-- Total supply: 100,000,000 NOS
-- Token contract: *tbd*
+|||
+| --- | ---: |
+| Type | SPL Token |
+| Ticker | `NOS` |
+| Total supply | 100,000,000 `NOS` |
+| Token contract | *tbd* |
+|
+| **Sales**
+| Initial circulating supply | 25,000,000 `NOS` |
+| Initial market cap | $ 2,500,000.00 `USD` |
+| Private sale price | $ 0.08 `USD` |
+| Public sale price | $ 0.10 `USD` |
 
 ## Distribution
 
@@ -26,6 +34,8 @@ title: Tokenomics
   - 5% Advisors <sup>[2](#vesting2)</sup>
   - 5% Community nodes <sup>[3](#vesting3)</sup>
 
+### Vesting
+
 <a name="vesting1">1</a>.  25% released at token distribution, then linearly released over 18 months.
 
 <a name="vesting2">2</a>.  Linearly released over 48 months (4 years), starting at token distribution. 
@@ -35,10 +45,3 @@ title: Tokenomics
 ### Diagram
 
 ![distribution](~@assets/distribution.svg)
-
-## Sales
-
-- Initial circulating supply: 25,000,000 NOS
-- Initial market cap: $2.500.000
-- Private sale price: $0.08 USD
-- Public sale price: $0.10 USD

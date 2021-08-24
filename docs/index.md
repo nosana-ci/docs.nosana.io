@@ -3,7 +3,7 @@ home: true
 heroImage: /logo.svg
 tagline: Community powered CI and CD
 actionText: Learn more →
-actionLink: /intro
+actionLink: /abstract/intro
 features:
 - title: Decentralized
   details: Nosana runs any  CI/CD pipeline openly and transparently. Computation by the people, for the people.

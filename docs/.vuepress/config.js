@@ -25,6 +25,12 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
 
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-task-lists'), {enabled: true});
+    }
+  },
+
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
@@ -34,7 +40,6 @@ module.exports = {
     logo: '/logo.svg',
     editLinks: false,
     docsDir: 'docs',
-    editLinkText: 'Edit on GitLab 🦊',
     lastUpdated: true,
     nav: [
       {
@@ -50,26 +55,34 @@ module.exports = {
           sidebarDepth: 0,
           children: [
             ['/', 'Home'],
-            ['/intro', 'Introduction'],
-            ['/faq', 'F.A.Q.'],
           ]
         },
         {
-          title: 'Platform',
+          title: 'Abstract',
           collapsable: false,
           children: [
-            ['/platform/cicd', '🚀 CI/CD'],
-            ['/platform/os', '👨‍💻 Open Source'],
-            ['/platform/market', '💰 Market'],
-            ['/platform/security', '🔒️Security'],
+            ['/abstract/intro', 'Introduction'],
+            ['/abstract/roadmap', 'Roadmap'],
+            ['/abstract/faq', 'F.A.Q.'],
           ]
         },
         {
-          title: 'Project',
+          title: 'Nosana',
           collapsable: false,
           children: [
-            ['/project/tokenomics', '🪙 Tokenomics'],
-            ['/project/roadmap', '🛣 Roadmap'],
+            ['/nosana/recap', 'CI/CD recap'],
+            ['/nosana/unit', 'Phase 1: Unit'],
+            ['/nosana/integration', 'Phase 2: Integration'],
+            ['/nosana/delivery', 'Phase 3: Delivery'],
+            ['/nosana/deployment', 'Phase 4: Deployment'],
+          ]
+        },
+        {
+          title: 'Tokenomics',
+          collapsable: false,
+          children: [
+            ['/tokenomics/metrics', 'Metrics'],
+            ['/tokenomics/utility', 'Utility'],
           ]
         },
         {
@@ -101,5 +114,5 @@ module.exports = {
         "@assets": path.resolve(__dirname, "../assets")
       }
     }
-  }
+  },
 }
