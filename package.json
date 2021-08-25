@@ -22,8 +22,12 @@
   },
   "homepage": "https://gitlab.com/nosana-ci/apps/docs/vuepress#readme",
   "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
     "markdown-it-task-lists": "^2.1.1",
     "vuepress": "^1.8.2",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-reading-progress": "^1.0.10",
     "vuepress-theme-book": "^0.0.6"
   }
 }
