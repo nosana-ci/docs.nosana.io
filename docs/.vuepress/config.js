@@ -20,6 +20,22 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
     'reading-progress',
     'vuepress-plugin-code-copy',
+    ['container', {
+      type: 'col-wrapper',
+      defaultTitle: '',
+    }],
+    ['container', {
+      type: 'col-full',
+      defaultTitle: '',
+    }],
+    ['container', {
+      type: 'col-half',
+      defaultTitle: '',
+    }],
+    ['container', {
+      type: 'col-third',
+      defaultTitle: '',
+    }],
   ],
   configureWebpack: {
     resolve: {
@@ -31,6 +47,10 @@ module.exports = {
   markdown: {
     extendMarkdown: md => {
       md.use(require('markdown-it-task-lists'));
+      md.use(require('markdown-it-imsize'));
+    },
+    plugins: {
+      '@centerforopenscience/markdown-it-video': {}
     }
   },
   themeConfig: {
@@ -64,6 +84,7 @@ module.exports = {
           children: [
             ['/abstract/intro', 'Introduction'],
             ['/abstract/background', 'Background'],
+            // ['/abstract/vision', 'Vision'],
             ['/abstract/roadmap', 'Roadmap'],
             ['/abstract/faq', 'F.A.Q.'],
           ]

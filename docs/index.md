@@ -1,5 +1,6 @@
 ---
 home: true
+heroText: Nosana
 heroImage: /logo.svg
 tagline: Community powered CI and CD
 actionText: Learn more →
