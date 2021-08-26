@@ -4,6 +4,10 @@ title: Background
 
 # Background
 
+> A phased approach to continuous delivery is not only preferable, it’s infinitely more manageable.
+
+Since it's inception CI/CD has enormously helped accelerate software release cycles.
+
 ## What is CI/CD ?
 
 In software engineering, CI/CD is the combined practices of Continuous Integration (CI) and either 
@@ -75,4 +79,3 @@ There are many reasons for this. Some of which include:
 ### Proof of History explainer video
 
 @[youtube](https://youtu.be/rywOYfGu4EA)
-
