@@ -61,3 +61,18 @@ Freed up from manual tasks, projects can focus resources on innovation, client s
 :::
 ::::::
 :::::::::
+
+
+## Why on Solana?
+
+As mentioned, Nosana is build entirely on the Solana Network.
+There are many reasons for this. Some of which include:
+
+- **Sealevel** allows Solana to quickly identify all non-overlapping transactions and process them at the same time.
+- **Gulf Stream** makes it possible to know a small number of upcoming Validators so that they can already begin accumulating transactions before they begin producing blocks.
+- **Proof of history** allows Solana to be able to scale massively in the future, without a tradeoff in speed versus security.
+
+### Proof of History explainer video
+
+@[youtube](https://youtu.be/rywOYfGu4EA)
+
