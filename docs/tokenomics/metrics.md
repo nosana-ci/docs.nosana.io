@@ -12,10 +12,13 @@ title: Metrics
 | Ticker | `NOS` |
 | Total supply | 100,000,000 `NOS` |
 | Token contract | *tbd* |
-|
-| **Sales**
-| Initial circulating supply | 25,000,000 `NOS` |
-| Initial market cap | $ 2,500,000.00 `USD` |
+
+## Sales
+
+|||
+| --- | ---: |
+| Initial circulating supply | 40,000,000 `NOS` |
+| Initial market cap | $ 4,000,000.00 `USD` |
 | Private sale price | $ 0.08 `USD` |
 | Public sale price | $ 0.10 `USD` |
 
@@ -27,7 +30,7 @@ title: Metrics
   - 4% Public <sup>[3](#vesting3)</sup>
   - 5% Incentivized testnet <sup>[3](#vesting3)</sup>
 - 20% Team <sup>[2](#vesting2)</sup>
-- 25% Company <sup>[2](#vesting2)</sup>
+- 25% DAO <sup>[2](#vesting2)</sup>
 - 30% Success
   - 15% Liquidity <sup>[3](#vesting3)</sup>
   - 5% Marketing <sup>[3](#vesting3)</sup>
@@ -45,3 +48,7 @@ title: Metrics
 ### Diagram
 
 ![distribution](~@assets/distribution.svg)
+
+### Timeline
+
+![vesting](~@assets/vesting.svg)
