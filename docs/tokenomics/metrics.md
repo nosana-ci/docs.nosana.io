@@ -13,7 +13,7 @@ title: Metrics
 | Total supply | 100,000,000 `NOS` |
 | Token contract | *tbd* |
 
-## Distribution
+## Details
 
 - 10% CI/CD mining pool <sup>[1](#vesting3)</sup>
 - 20% Team <sup>[2](#vesting2)</sup>
@@ -33,10 +33,10 @@ title: Metrics
 
 <a name="vesting5">5</a>. Fully locked for 6 months, then linearly released over 42 months (3,5 years).
 
-### Diagram
+### Token Distribution
 
-![distribution](~@assets/distribution.svg)
+<TokenDistribution/>
 
-### Timeline
+### Release Timeline
 
-![vesting](~@assets/vesting.svg)
+<ReleaseTimeline/>
