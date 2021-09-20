@@ -25,6 +25,7 @@
     "@centerforopenscience/markdown-it-video": "^1.0.0",
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "apexcharts": "^3.28.3",
     "markdown-it-html5-embed": "^1.0.0",
     "markdown-it-imsize": "^2.0.1",
     "markdown-it-task-lists": "^2.1.1",

@@ -38,9 +38,6 @@ export default {
             text: 'NOS Tokens Released',
           },
         },
-        dataLabels: {
-          enabled: false
-        },
         responsive: [{
           breakpoint: 480,
           options: {
