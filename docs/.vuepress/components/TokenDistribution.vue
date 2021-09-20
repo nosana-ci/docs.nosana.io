@@ -24,22 +24,11 @@ export default {
           }
         },
         legend: {
-          position: 'top',
+          position: 'bottom',
         },
         yaxis: {
           show: false
         },
-        // responsive: [{
-        //   breakpoint: 480,
-        //   options: {
-        //     chart: {
-        //       width: 200
-        //     },
-        //     legend: {
-        //       position: 'bottom'
-        //     }
-        //   }
-        // }],
         labels: ['Mining', 'Team', 'Company', 'DAO', 'Backers'],
       },
       series: [10e6, 20e6, 30e6, 25e6, 15e6],

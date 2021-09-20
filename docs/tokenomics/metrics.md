@@ -4,34 +4,31 @@ title: Metrics
 
 # Token Metrics
 
-:::::: col-wrapper
-::: col-half
 |Info||
 | --- | --- |
 | Type | SPL Token |
 | Ticker | `NOS` |
 | Total supply | 100,000,000 |
 | Token contract | *tbd* |
-:::
-::: col-half
-<TokenDistribution/>
-:::
-::::::
-
-
 
 ## Token Distribution
 
 Tokens are distributed over 5 main pools. 
-These are the CI/CD mining pool, Team tokens, Company token, Sale tokens, DAO tokens.
+These are the 
+[CI/CD mining pool](#ci-cd-mining-pool),
+[Team tokens](#team-tokens), 
+[Company tokens](#company-tokens), 
+[Sale tokens](#sale-tokens), and the
+[DAO tokens](#dao-tokens).
 
+<TokenDistribution/>
 
 ### CI/CD mining pool
 
 In the CI/CD mining pool will lay 10% of the total amount of `NOS` token.
 These tokens are available at token distribution.
 
-### Team token
+### Team tokens
 
 The team tokens take up 20% of the total amount of `NOS` token.
 These are linearly released over 48 months (4 years), starting at token distribution.
@@ -52,5 +49,8 @@ Backer tokens take up 15% of the total amount of `NOS` token.
 These are fully locked for 6 months, then linearly released over 42 months (3,5 years).
 
 ## Release Timeline
+
+All tokens are released over a 4-year period. 
+The below chart shows how the different pools grow over this period.
 
 <ReleaseTimeline/>
