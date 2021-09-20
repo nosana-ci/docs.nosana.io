@@ -20,25 +20,21 @@ export default {
         },
         xaxis: {
           type: 'datetime',
-          title: {
-            text: 'Date',
-          },
         },
         yaxis: {
-          tickAmount: 5,
+          tickAmount: 4,
           min: 0,
           max: 100e6,
           decimalsInFloat: 2,
           title: {
-            text: 'NOS Tokens Released',
+            text: 'NOS Tokens',
           },
         },
         dataLabels: {
           enabled: false
         },
         stroke: {
-          curve: "smooth",
-          width: 3
+          curve: "straight",
         },
       },
       series: [{

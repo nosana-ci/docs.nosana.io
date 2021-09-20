@@ -4,39 +4,53 @@ title: Metrics
 
 # Token Metrics
 
-## Info
-
-|||
-| --- | ---: |
+:::::: col-wrapper
+::: col-half
+|Info||
+| --- | --- |
 | Type | SPL Token |
 | Ticker | `NOS` |
-| Total supply | 100,000,000 `NOS` |
+| Total supply | 100,000,000 |
 | Token contract | *tbd* |
-
-## Details
-
-- 10% CI/CD mining pool <sup>[1](#vesting3)</sup>
-- 20% Team <sup>[2](#vesting2)</sup>
-- 30% Company <sup>[3](#vesting3)</sup>
-- 15% Sale <sup>[4](#vesting4)</sup>
-- 25% DAO <sup>[5](#vesting5)</sup>
-
-### Vesting
-
-<a name="vesting1">1</a>. Available at token distribution.
-
-<a name="vesting2">2</a>. Linearly released over 48 months (4 years), starting at token distribution. 
-
-<a name="vesting4">3</a>. 25% released at token distribution, then linearly released over 48 months (4 years). 
-
-<a name="vesting3">4</a>. 25% released at token distribution, then linearly released over 18 months (1,5 years).
-
-<a name="vesting5">5</a>. Fully locked for 6 months, then linearly released over 42 months (3,5 years).
-
-### Token Distribution
-
+:::
+::: col-half
 <TokenDistribution/>
+:::
+::::::
 
-### Release Timeline
+
+
+## Token Distribution
+
+Tokens are distributed over 5 main pools. 
+These are the CI/CD mining pool, Team tokens, Company token, Sale tokens, DAO tokens.
+
+
+### CI/CD mining pool
+
+In the CI/CD mining pool will lay 10% of the total amount of `NOS` token.
+These tokens are available at token distribution.
+
+### Team token
+
+The team tokens take up 20% of the total amount of `NOS` token.
+These are linearly released over 48 months (4 years), starting at token distribution.
+
+### Company tokens
+
+Company tokens take up 30% of the total amount of `NOS` token.
+25% released at token distribution, then linearly released over 48 months (4 years).
+
+### Sale tokens
+
+Backer tokens take up 15% of the total amount of `NOS` token.
+25% released at token distribution, then linearly released over 18 months (1,5 years).
+
+### DAO tokens
+
+Backer tokens take up 15% of the total amount of `NOS` token.
+These are fully locked for 6 months, then linearly released over 42 months (3,5 years).
+
+## Release Timeline
 
 <ReleaseTimeline/>

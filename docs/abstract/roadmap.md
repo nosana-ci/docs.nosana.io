@@ -14,6 +14,7 @@ The third and final phase consist of the development and release the [Nosana Con
 ::: tip Milestones
 Below you'll find milestones and individual tasks for each quarter in 2021 and 2022.
 :::
+
 ## 2021
 
 ### Q1

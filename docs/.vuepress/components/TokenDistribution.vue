@@ -11,8 +11,11 @@ export default {
     return {
       chartOptions: {
         chart: {
-          type: 'donut',
+          // type: 'donut',
+          // type: 'pie',
+          type: 'polarArea',
           id: 'token-distribution',
+          width: 100,
         },
         plotOptions: {
           pie: {
@@ -23,32 +26,20 @@ export default {
         legend: {
           position: 'top',
         },
-        xaxis: {
-          type: 'datetime',
-          title: {
-            text: 'Date',
-          },
-        },
         yaxis: {
-          tickAmount: 5,
-          min: 0,
-          max: 100e6,
-          decimalsInFloat: 2,
-          title: {
-            text: 'NOS Tokens Released',
-          },
+          show: false
         },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: 'bottom'
-            }
-          }
-        }],
+        // responsive: [{
+        //   breakpoint: 480,
+        //   options: {
+        //     chart: {
+        //       width: 200
+        //     },
+        //     legend: {
+        //       position: 'bottom'
+        //     }
+        //   }
+        // }],
         labels: ['Mining', 'Team', 'Company', 'DAO', 'Backers'],
       },
       series: [10e6, 20e6, 30e6, 25e6, 15e6],
