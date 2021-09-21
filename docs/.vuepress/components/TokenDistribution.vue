@@ -6,6 +6,8 @@
 
 <script>
 
+import {tokenDistribution, totalSupply} from "../variables";
+
 export default {
   data: function () {
     return {
@@ -16,6 +18,9 @@ export default {
           type: 'polarArea',
           id: 'token-distribution',
           width: 100,
+        },
+        stroke: {
+          colors: ['#fff']
         },
         plotOptions: {
           pie: {
@@ -29,9 +34,9 @@ export default {
         yaxis: {
           show: false
         },
-        labels: ['Mining', 'Team', 'Company', 'DAO', 'Backers'],
+        labels: tokenDistribution.map(x => x.name),
       },
-      series: [10e6, 20e6, 30e6, 25e6, 15e6],
+      series: tokenDistribution.map(x => x.total * totalSupply),
     }
   },
 };

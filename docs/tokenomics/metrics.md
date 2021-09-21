@@ -16,6 +16,7 @@ title: Metrics
 Tokens are distributed over 5 main pools. 
 These are the 
 [CI/CD mining pool](#ci-cd-mining-pool),
+[Airdrop tokens](#airdrop-tokens),
 [Team tokens](#team-tokens), 
 [Company tokens](#company-tokens), 
 [Sale tokens](#sale-tokens), and the
@@ -23,10 +24,15 @@ These are the
 
 <TokenDistribution/>
 
+### Airdrop tokens
+
+Incentivized Testnet tokens take up 5% of the total amount of `NOS` token.
+These tokens are available at token distribution.
+
 ### CI/CD mining pool
 
 In the CI/CD mining pool will lay 10% of the total amount of `NOS` token.
-These tokens are available at token distribution.
+These are linearly released over 24 months (2 years), starting at token distribution.
 
 ### Team tokens
 
@@ -35,7 +41,7 @@ These are linearly released over 48 months (4 years), starting at token distribu
 
 ### Company tokens
 
-Company tokens take up 30% of the total amount of `NOS` token.
+Company tokens take up 25% of the total amount of `NOS` token.
 25% released at token distribution, then linearly released over 48 months (4 years).
 
 ### Sale tokens
