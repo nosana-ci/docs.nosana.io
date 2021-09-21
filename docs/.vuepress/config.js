@@ -1,5 +1,5 @@
 const {description} = require('../../package')
-const path = require("path")
+const path = require('path')
 
 module.exports = {
   theme: 'book',
@@ -20,6 +20,9 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
     'reading-progress',
     'vuepress-plugin-code-copy',
+    ['vuepress-plugin-global-variables',
+      {variables: require('./variables.js')}
+    ],
     ['container', {
       type: 'col-wrapper',
       defaultTitle: '',
@@ -40,7 +43,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        "@assets": path.resolve(__dirname, "../assets")
+        '@assets': path.resolve(__dirname, '../assets')
       }
     }
   },

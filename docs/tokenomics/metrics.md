@@ -8,12 +8,12 @@ title: Metrics
 | --- | --- |
 | Type | SPL Token |
 | Ticker | `NOS` |
-| Total supply | 100,000,000 |
+| Total supply | {{ $var.totalSupply }} |
 | Token contract | *tbd* |
 
 ## Token Distribution
 
-Tokens are distributed over 5 main pools. 
+Tokens are distributed over {{ $var.tokenDistribution.length }} main pools. 
 These are the 
 [CI/CD mining pool](#ci-cd-mining-pool),
 [Airdrop tokens](#airdrop-tokens),
@@ -26,33 +26,69 @@ These are the
 
 ### Airdrop tokens
 
-Incentivized Testnet tokens take up 5% of the total amount of `NOS` token.
+Incentivized Testnet tokens take up 
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Airdrop' ).total * 100 }}% 
+of the total amount of `NOS` token.
 These tokens are available at token distribution.
 
 ### CI/CD mining pool
 
-In the CI/CD mining pool will lay 10% of the total amount of `NOS` token.
-These are linearly released over 24 months (2 years), starting at token distribution.
+In the CI/CD mining pool will lay 
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Mining' ).total * 100 }}% 
+of the total amount of `NOS` token.
+These are linearly released over
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Mining' ).vesting }}
+months (
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Mining' ).vesting / 12 }} years
+), starting at token distribution.
 
 ### Team tokens
 
-The team tokens take up 20% of the total amount of `NOS` token.
-These are linearly released over 48 months (4 years), starting at token distribution.
+The team tokens take up 
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Team' ).total * 100 }}% 
+of the total amount of `NOS` token.
+These are linearly released over
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Team' ).vesting }}
+months (
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Team' ).vesting / 12 }} years
+), starting at token distribution.
 
 ### Company tokens
 
-Company tokens take up 25% of the total amount of `NOS` token.
-25% released at token distribution, then linearly released over 48 months (4 years).
+Company tokens take up 
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Company' ).total * 100 }}%
+of the total amount of `NOS` token.
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Company' ).upfront * 100 }}%
+released at token distribution, then linearly released over
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Company' ).vesting }}
+months (
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Company' ).vesting / 12 }} 
+years ).
 
 ### Sale tokens
 
-Backer tokens take up 15% of the total amount of `NOS` token.
-25% released at token distribution, then linearly released over 18 months (1,5 years).
+Backer tokens take up 
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Backers' ).total * 100 }}%
+of the total amount of `NOS` token.
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Backers' ).upfront * 100 }}%
+released at token distribution, then linearly released over
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Backers' ).vesting }}
+months (
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Backers' ).vesting / 12 }}
+years ).
 
 ### DAO tokens
 
-Backer tokens take up 15% of the total amount of `NOS` token.
-These are fully locked for 6 months, then linearly released over 42 months (3,5 years).
+Backer tokens take up 
+{{ $var.tokenDistribution.find( ({ name }) => name === 'DAO' ).total * 100 }}% 
+of the total amount of `NOS` token.
+These are fully locked for 
+{{ $var.tokenDistribution.find( ({ name }) => name === 'DAO' ).lock }}
+months, then linearly released over
+{{ $var.tokenDistribution.find( ({ name }) => name === 'DAO' ).vesting }}
+months (
+{{ $var.tokenDistribution.find( ({ name }) => name === 'DAO' ).vesting / 12 }}
+years ).
 
 ## Release Timeline
 

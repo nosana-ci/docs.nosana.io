@@ -14,7 +14,6 @@ export default async (
     isServer
   }) => {
   // ...apply enhancements for the site.
-
   // https://github.com/vuejs/vuepress/issues/791
   if (!isServer) {
     await import('vue-apexcharts').then(module => {
