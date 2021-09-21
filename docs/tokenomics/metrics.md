@@ -7,7 +7,7 @@ title: Metrics
 |Info||
 | --- | --- |
 | Type | SPL Token |
-| Ticker | `NOS` |
+| Ticker |  {{ $var.ticker }} |
 | Total supply | {{ $var.totalSupply }} |
 | Token contract | *tbd* |
 
@@ -26,69 +26,55 @@ These are the
 
 ### Airdrop tokens
 
-Incentivized Testnet tokens take up 
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Airdrop' ).total * 100 }}% 
-of the total amount of `NOS` token.
-These tokens are available at token distribution.
+<TokenDescription pool='Airdrop'/>
+
+Airdrop tokens can be retrieved through our Incentived Tesnet program.
 
 ### CI/CD mining pool
 
-In the CI/CD mining pool will lay 
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Mining' ).total * 100 }}% 
-of the total amount of `NOS` token.
-These are linearly released over
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Mining' ).vesting }}
-months (
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Mining' ).vesting / 12 }} years
-), starting at token distribution.
+<TokenDescription pool='Mining'/>
+
+CI/CD mining tokens can be acquired by nodes that help run the Nosana pipelines.
+The mining pool is a significant portion of the total supply, and capped to 
+{{ $var.tokenDistribution.find( ({ name }) => name === 'Mining' ).total * $var.totalSupply }}
+tokens. 
+The pool's purpose is to kickstart the network and help onboard open source software projects with appealing rates.  
 
 ### Team tokens
 
-The team tokens take up 
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Team' ).total * 100 }}% 
-of the total amount of `NOS` token.
-These are linearly released over
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Team' ).vesting }}
-months (
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Team' ).vesting / 12 }} years
-), starting at token distribution.
+<TokenDescription pool='Team'/>
+
+Team tokens are reserved for founders of the Nosana project and its foundation.
 
 ### Company tokens
 
-Company tokens take up 
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Company' ).total * 100 }}%
-of the total amount of `NOS` token.
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Company' ).upfront * 100 }}%
-released at token distribution, then linearly released over
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Company' ).vesting }}
-months (
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Company' ).vesting / 12 }} 
-years ).
+<TokenDescription pool='Company'/>
 
-### Sale tokens
+Company tokens are used to bring Nosana to a self-sustaining platform. 
+The tokens will be used to either of the following purposes:
 
-Backer tokens take up 
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Backers' ).total * 100 }}%
-of the total amount of `NOS` token.
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Backers' ).upfront * 100 }}%
-released at token distribution, then linearly released over
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Backers' ).vesting }}
-months (
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Backers' ).vesting / 12 }}
-years ).
+- Marketing
+- Liquidity
+- Advisors
+- Engineering
+- Business Development
+
+### Backers tokens
+
+<TokenDescription pool='Backers'/>
+
+Airdrop tokens can be acquired through the private sale.
 
 ### DAO tokens
 
-Backer tokens take up 
-{{ $var.tokenDistribution.find( ({ name }) => name === 'DAO' ).total * 100 }}% 
-of the total amount of `NOS` token.
-These are fully locked for 
-{{ $var.tokenDistribution.find( ({ name }) => name === 'DAO' ).lock }}
-months, then linearly released over
-{{ $var.tokenDistribution.find( ({ name }) => name === 'DAO' ).vesting }}
-months (
-{{ $var.tokenDistribution.find( ({ name }) => name === 'DAO' ).vesting / 12 }}
-years ).
+<TokenDescription pool='DAO'/>
+
+DAO tokens are used to govern Nosana decentralized.
+The tokens will be used to either of the following purposes:
+
+- Proposal rewards
+- Staking rewards
+- Rewards for platform development efforts
 
 ## Release Timeline
 

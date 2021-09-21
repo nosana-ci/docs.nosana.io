@@ -23,7 +23,7 @@ export default {
         yaxis: {
           tickAmount: 4,
           min: 0,
-          max: 100e6,
+          max: totalSupply,
           decimalsInFloat: 0,
         },
         dataLabels: {

@@ -1,4 +1,5 @@
 module.exports = {
+  ticker: 'NOS',
   totalSupply: 100e6,
   tokenDistribution: [
     {
