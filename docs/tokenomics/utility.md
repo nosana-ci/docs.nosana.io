@@ -16,30 +16,13 @@ in exchange for these results.
 
 ![market](~@assets/nos-black.gif)
 
+## Mining
+
+TODO: write
+
 ## Staking
 
-### Open source projects
-
-Open source repositories are able to stake `NOS` tokens in Nosana SPL contracts.
-This staking will allow them to retrieve compute on demand for their pipelines.
-
-The Nosana platform runs CI/CD for open source projects.
-In addition, the Nosana platform will be open source itself.
-Nosana runs any  CI/CD pipeline openly and transparently.
-
-::: details Open Source
-
-Open source is all around us,
-and the most reliable software is open source.
-
-A main principle of open-source software development is peer production,
-with products such as source code, blueprints,
-and documentation freely available to the public.
-:::
-
-### Nosana Nodes
-
-Nodes in the network are able to stake tokens too to increase their reputation.
+TODO: write
 
 ## Reputation
 

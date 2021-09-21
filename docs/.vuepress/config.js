@@ -85,20 +85,21 @@ module.exports = {
           title: 'Overview',
           collapsable: false,
           children: [
-            ['/abstract/intro', 'Introduction'],
-            ['/abstract/background', 'Background'],
-            // ['/abstract/vision', 'Vision'],
-            ['/abstract/roadmap', 'Roadmap'],
-            ['/abstract/faq', 'F.A.Q.'],
+            ['/overview/intro', 'Introduction'],
+            ['/overview/background', 'Background'],
+            // ['/overview/vision', 'Vision'],
+            ['/overview/roadmap', 'Roadmap'],
+            ['/overview/faq', 'F.A.Q.'],
           ]
         },
         {
-          title: 'The Nosana Pipeline',
+          title: 'Nosana',
           collapsable: false,
           children: [
-            ['/nosana/integration', 'Phase 1: Integration'],
-            ['/nosana/delivery', 'Phase 2: Delivery'],
-            ['/nosana/deployment', 'Phase 3: Deployment'],
+            ['/nosana/testnet', 'Phase 0: Incentivized Testnet'],
+            ['/nosana/ci', 'Phase 1: Test Suite'],
+            ['/nosana/cd', 'Phase 2: Deployment Suite'],
+            ['/nosana/dao', 'Phase 3: DAO'],
           ]
         },
         {

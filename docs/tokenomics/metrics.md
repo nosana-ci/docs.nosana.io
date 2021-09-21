@@ -8,47 +8,43 @@ title: Metrics
 | --- | --- |
 | Type | SPL Token |
 | Ticker |  {{ $var.ticker }} |
-| Total supply | {{ $var.totalSupply }} |
+| Total supply | {{ $var.totalSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }} |
 | Token contract | *tbd* |
 
 ## Token Distribution
 
 Tokens are distributed over {{ $var.tokenDistribution.length }} main pools. 
-These are the 
-[CI/CD mining pool](#ci-cd-mining-pool),
-[Airdrop tokens](#airdrop-tokens),
-[Team tokens](#team-tokens), 
-[Company tokens](#company-tokens), 
-[Sale tokens](#sale-tokens), and the
-[DAO tokens](#dao-tokens).
+These are the
+<span v-for="(pool, index) in $var.tokenDistribution">
+<span v-if="index < $var.tokenDistribution.length - 1"><a :href="'#' + pool.name.toLowerCase() + '-tokens'">{{ pool.name }} tokens</a>, </span>
+<span v-else> and the <a :href="'#' + pool.name.toLowerCase() + '-tokens'">{{ pool.name }} tokens</a>.</span>
+</span>
 
 <TokenDistribution/>
 
 ### Airdrop tokens
 
+Airdrop tokens can be retrieved through our Incentivized Testnet program.
+
 <TokenDescription pool='Airdrop'/>
 
-Airdrop tokens can be retrieved through our Incentived Tesnet program.
+### Mining tokens
 
-### CI/CD mining pool
+Mining tokens can be acquired by nodes that help run the Nosana pipelines.
+The mining pool is a significant portion of the total supply, and capped to 
+{{ ($var.tokenDistribution.find( ({ name }) => name === 'Mining' ).total * $var.totalSupply).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
+tokens. 
+The pools' purpose is to kickstart the network and help onboard open source software projects with appealing rates.  
 
 <TokenDescription pool='Mining'/>
 
-CI/CD mining tokens can be acquired by nodes that help run the Nosana pipelines.
-The mining pool is a significant portion of the total supply, and capped to 
-{{ $var.tokenDistribution.find( ({ name }) => name === 'Mining' ).total * $var.totalSupply }}
-tokens. 
-The pool's purpose is to kickstart the network and help onboard open source software projects with appealing rates.  
-
 ### Team tokens
+
+Team tokens are reserved for the founders of the Nosana project and its Foundation.
 
 <TokenDescription pool='Team'/>
 
-Team tokens are reserved for founders of the Nosana project and its foundation.
-
 ### Company tokens
-
-<TokenDescription pool='Company'/>
 
 Company tokens are used to bring Nosana to a self-sustaining platform. 
 The tokens will be used to either of the following purposes:
@@ -59,15 +55,15 @@ The tokens will be used to either of the following purposes:
 - Engineering
 - Business Development
 
-### Backers tokens
+<TokenDescription pool='Company'/>
 
-<TokenDescription pool='Backers'/>
+### Backers tokens
 
 Airdrop tokens can be acquired through the private sale.
 
-### DAO tokens
+<TokenDescription pool='Backers'/>
 
-<TokenDescription pool='DAO'/>
+### DAO tokens
 
 DAO tokens are used to govern Nosana decentralized.
 The tokens will be used to either of the following purposes:
@@ -75,6 +71,8 @@ The tokens will be used to either of the following purposes:
 - Proposal rewards
 - Staking rewards
 - Rewards for platform development efforts
+
+<TokenDescription pool='DAO'/>
 
 ## Release Timeline
 

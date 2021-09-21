@@ -17,6 +17,7 @@ export default {
           id: 'release-timeline',
           stacked: true,
         },
+        colors: tokenDistribution.map(x => x.color),
         xaxis: {
           type: 'datetime',
         },

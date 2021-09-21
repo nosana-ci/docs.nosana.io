@@ -1,10 +1,10 @@
 ---
-title: Delivery
+title: Nosana CD
 ---
 
-# Nosana Continuous Delivery <Badge text="alpha" type="error"/>
+# Nosana Delivery and Deployment Suite
 
-Nosana's second product will be the Delivery Suite.
+Nosana's  third, and final, product will be the Deployment Suite.
 Using this suite, developers will be able to release their software quicker, safer and easier.
 
 ## What is Continuous Delivery?
@@ -24,3 +24,15 @@ but through automated deployments rather than manual ones.
 ## Principles
 
 ![delivery](~@assets/delivery.png)
+
+# Continuous Deployment <Badge text="alpha" type="error"/>
+
+Nosana's other third, and final, product will be the Deployment Suite.
+Using this suite, developers will be able to deployment in a fully automated way.
+
+## What is Continuous Deployment?
+
+Continuous deployment (CD) is a software engineering approach in which software functionalities are
+delivered frequently through automated deployments.
+CD contrasts with continuous delivery, a similar approach in which software functionalities are also frequently
+delivered and deemed to be potentially capable of being deployed but are actually not deployed.

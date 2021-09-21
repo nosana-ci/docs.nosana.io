@@ -4,7 +4,7 @@ heroText: Nosana
 heroImage: /logo.svg
 tagline: Community powered CI and CD
 actionText: Learn more →
-actionLink: /abstract/intro
+actionLink: /overview/intro
 features:
 - title: CI/CD
   details: CI by the people, for the people. Nosana runs any  CI/CD pipeline openly and transparently.

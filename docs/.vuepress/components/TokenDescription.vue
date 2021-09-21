@@ -1,6 +1,6 @@
 <template>
   <p>
-    {{ getDescription() }}
+    <strong :style="getColor()">Specs:</strong> {{ getDescription() }}
   </p>
 </template>
 
@@ -11,9 +11,15 @@ import {tokenDistribution, ticker} from "../variables";
 export default {
   props: ['pool'],
   methods: {
+    getPool() {
+      return tokenDistribution.find(({name}) => name === this.$props.pool)
+    },
+    getColor() {
+      return `color:${this.getPool().color}`
+    },
     getDescription() {
 
-      const pool = tokenDistribution.find(({name}) => name === this.$props.pool)
+      const pool = this.getPool()
 
       let description = `${pool.name} tokens take up ${pool.total * 100}% of the total amount of ${ticker} tokens.`
 
@@ -22,7 +28,7 @@ export default {
         return description
       }
       if (pool.vesting !== 0) {
-        description += ` These are linearly released over ${pool.vesting} months (${pool.vesting / 12} years), `
+        description += ` The tokens are linearly released over ${pool.vesting} months (${pool.vesting / 12} years), `
         if (pool.lock !== 0) {
           description += ` after they have been locked for ${pool.lock} months.`
         } else {

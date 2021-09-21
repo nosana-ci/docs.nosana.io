@@ -6,7 +6,7 @@
 
 <script>
 
-import {tokenDistribution, totalSupply} from "../variables";
+import {tokenDistribution, totalSupply, colors} from "../variables";
 
 export default {
   data: function () {
@@ -19,6 +19,7 @@ export default {
           id: 'token-distribution',
           width: 100,
         },
+        colors: tokenDistribution.map(x => x.color),
         stroke: {
           colors: ['#fff']
         },

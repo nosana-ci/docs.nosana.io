@@ -1,11 +1,12 @@
 ---
-title: Continuous Integration <Badge text="alpha" type="error"/>
+title: Nosana CI
 ---
 
-# Continuous Integration <Badge text="beta" type="warning"/>
+# Nosana Test Suite
 
-Nosana will enter the market with its first product: The Nosana Test Suite.
-The test Suite consist of a number of open source tools like [ESLint](https://eslint.org/),
+Nosana will enter [Solana Mainnet](https://docs.solana.com/clusters#mainnet-beta) with her first 
+production product: The Nosana Test Suite.
+The Test Suite consist of a number of open source tools like [ESLint](https://eslint.org/),
 [SonarQube](https://www.sonarqube.org/).
 
 ## What is Integration Testing?
