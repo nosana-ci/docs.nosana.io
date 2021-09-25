@@ -107,13 +107,6 @@ module.exports = {
             ['/tokenomics/metrics', 'Metrics'],
             ['/tokenomics/utility', 'Utility'],
           ]
-        },
-        {
-          title: 'Links',
-          collapsable: false,
-          children: [
-            ['https://nosana.io', 'Website'],
-          ]
         }
       ]
     }
