@@ -23,6 +23,7 @@
   "homepage": "https://gitlab.com/nosana-ci/apps/docs/vuepress#readme",
   "dependencies": {
     "@centerforopenscience/markdown-it-video": "^1.0.0",
+    "@maginapp/vuepress-plugin-katex": "^1.0.11",
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "apexcharts": "^3.28.3",

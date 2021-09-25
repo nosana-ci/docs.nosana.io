@@ -20,25 +20,12 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
     'reading-progress',
     'vuepress-plugin-code-copy',
-    ['vuepress-plugin-global-variables',
-      {variables: require('./variables.js')}
-    ],
-    ['container', {
-      type: 'col-wrapper',
-      defaultTitle: '',
-    }],
-    ['container', {
-      type: 'col-full',
-      defaultTitle: '',
-    }],
-    ['container', {
-      type: 'col-half',
-      defaultTitle: '',
-    }],
-    ['container', {
-      type: 'col-third',
-      defaultTitle: '',
-    }],
+    ['vuepress-plugin-global-variables', {variables: require('./variables.js')}],
+    ['@maginapp/vuepress-plugin-katex', {delimiters: 'dollars'}],
+    ['container', {type: 'col-wrapper', defaultTitle: '',}],
+    ['container', {type: 'col-full', defaultTitle: '',}],
+    ['container', {type: 'col-half', defaultTitle: '',}],
+    ['container', {type: 'col-third', defaultTitle: '',}],
   ],
   configureWebpack: {
     resolve: {
