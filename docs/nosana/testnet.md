@@ -1,8 +1,6 @@
 ---
-title: Incentivized Testnet
+title: Nosana Incentivized Testnet
 ---
-
-# Nosana Incentivized Testnet <Badge text="alpha" type="green"/>
 
 Nosana will enter [Solana Testnet](https://docs.solana.com/clusters#testnet) with her Incentivized Testnet program.
 

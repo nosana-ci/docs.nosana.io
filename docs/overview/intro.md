@@ -1,8 +1,6 @@
 ---
-title: Intro
+title: Welcome to Nosana
 ---
-
-# Welcome to Nosana
 
 > For every software developer that values transparency and trust.
 

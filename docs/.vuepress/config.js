@@ -16,8 +16,6 @@ module.exports = {
     // '/zh/': {lang: 'zh-CN'},
   },
   plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
     'reading-progress',
     'vuepress-plugin-code-copy',
     ['vuepress-plugin-global-variables', {variables: require('./variables.js')}],

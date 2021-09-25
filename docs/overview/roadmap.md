@@ -2,8 +2,6 @@
 title: Roadmap
 ---
 
-# Roadmap
-
 Nosana brings forward her products in 3 phases. 
 The first phase is the development and release of the [Nosana Continuous Integration](../nosana/integration) product.
 This "Nosana Test Suite" will first be released on Solana Testnet together with Nosana's Incentivized Testnet program.

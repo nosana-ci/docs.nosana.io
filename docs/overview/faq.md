@@ -1,8 +1,6 @@
 ---
-title: FAQ
+title: Frequently Asked Questions
 ---
-
-# Frequently Asked Questions
 
 ## What is the token address?
 
