@@ -16,7 +16,6 @@ module.exports = {
     // '/zh/': {lang: 'zh-CN'},
   },
   plugins: [
-    '@vuepress/plugin-medium-zoom',
     'reading-progress',
     'vuepress-plugin-code-copy',
     ['vuepress-plugin-global-variables', {variables: require('./variables.js')}],
@@ -44,6 +43,7 @@ module.exports = {
   },
   themeConfig: {
     logo: '/logo.svg',
+    author: 'Nosana Team',
     editLinks: false,
     docsDir: 'docs',
     lastUpdated: true,
@@ -56,11 +56,18 @@ module.exports = {
     nav: [
       {
         text: 'F.A.Q.',
-        link: '/overview/faq'
+        link: '/overview/faq',
+        icon: 'reco-faq'
+      },
+      {
+        text: 'Contact',
+        link: 'mailto:team@nosana.io',
+        icon: 'reco-mail'
       },
       {
         text: 'Website',
-        link: 'https://nosana.io'
+        link: 'https://nosana.io',
+        icon: 'reco-home'
       },
     ],
     sidebar: {
