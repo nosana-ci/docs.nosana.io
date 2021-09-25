@@ -31,7 +31,7 @@ Open source software projects are Incentivized based on their Nosana network usa
 In other words, participants will receive tokens for running pipelines.
 All participant will receive a limited amount of Testnet tokens.
 These tokens can only be used to run Nosana pipelines, and cannot be traded. 
-The address on Testnet will be different than the actual <strong>{{ $var.ticker }}</strong> token on Mainnet,
+The address on Testnet will be different from the actual <strong>{{ $var.ticker }}</strong> token on Mainnet,
 hence the Mainnet tokens will be sent via Airdrop to participants registered Mainnet address.
 
 $\sum_{os} NOS_{airdrop} = NOS_{jobs} \forall n \in \mathbb N_{pipelines}$
