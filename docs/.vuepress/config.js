@@ -2,7 +2,7 @@ const {description} = require('../../package')
 const path = require('path')
 
 module.exports = {
-  theme: 'book',
+  theme: 'reco',
   title: 'Nosana',
   description: description,
   head: [
@@ -48,6 +48,8 @@ module.exports = {
     editLinks: false,
     docsDir: 'docs',
     lastUpdated: true,
+    mode: 'light',
+    subSidebar: 'auto',
     locales: {
       '/': {label: '🇺🇸'},
       // '/zh/': {label: '🇨🇳'},

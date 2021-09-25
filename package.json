@@ -35,6 +35,6 @@
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-global-variables": "^0.2.0",
     "vuepress-plugin-reading-progress": "^1.0.10",
-    "vuepress-theme-book": "^0.0.6"
+    "vuepress-theme-reco": "^1.6.6"
   }
 }
