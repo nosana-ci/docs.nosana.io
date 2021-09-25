@@ -71,7 +71,9 @@ The tokens will be used to either of the following purposes:
 
 Airdrop tokens can be acquired through the private sale.
 
+::: tip
 <TokenDescription pool='Backers'/>
+:::
 
 ### DAO tokens
 
