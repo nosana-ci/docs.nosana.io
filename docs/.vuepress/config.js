@@ -16,6 +16,7 @@ module.exports = {
     // '/zh/': {lang: 'zh-CN'},
   },
   plugins: [
+    '@vuepress/plugin-medium-zoom',
     'reading-progress',
     'vuepress-plugin-code-copy',
     ['vuepress-plugin-global-variables', {variables: require('./variables.js')}],
@@ -54,9 +55,13 @@ module.exports = {
     },
     nav: [
       {
+        text: 'F.A.Q.',
+        link: '/overview/faq'
+      },
+      {
         text: 'Website',
         link: 'https://nosana.io'
-      }
+      },
     ],
     sidebar: {
       '/': [
@@ -74,7 +79,6 @@ module.exports = {
           children: [
             ['/overview/intro', 'Introduction'],
             ['/overview/background', 'Background'],
-            // ['/overview/vision', 'Vision'],
             ['/overview/roadmap', 'Roadmap'],
             ['/overview/faq', 'F.A.Q.'],
           ]

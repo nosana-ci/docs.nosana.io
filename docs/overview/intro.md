@@ -5,7 +5,7 @@ title: Welcome to Nosana
 > For every software developer that values transparency and trust.
 
 This is Nosana CI. The only decentralized CI/CD platform, powered by the Solana Network, 
-and fueled by the <strong>NOS</strong> token.
+and fueled by the <strong>{{ $var.ticker }}</strong> token.
 
 Nosana leverages the Proof-of-History consensus of the Solana Network
 to build out decentralized software pipelines. CI by the people, for the people!
@@ -23,12 +23,12 @@ share compute power to execute their software delivery pipelines.
 Nosana pipelines, and phases of developement, consist of 3 individual steps.
 Which will be developed and released after each other.
 
-- [Continuous Integration](../nosana/integration), 
+- [Nosana Test Suite](../nosana/ci), 
    The "Nosana Test Suite" to test assert the code’s correctness before integration.
-- [Continuous Delivery](../nosana/delivery), 
+- [Nosana Delivery and Deployment Suite](../nosana/cd), 
    The "Nosana Release Suite" to build, test and scan your software   
-- [Continuous Deployment](../nosana/deployment), 
-   The "Nosana Deployer" helps deploying releases to environments in a secure and automated manner.   
+- [Nosana DAO](../nosana/dao), 
+   The "Nosana DAO" helps shape the future of the platform.   
 
 All built completely on the Solana Network.
 
