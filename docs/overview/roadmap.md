@@ -1,5 +1,9 @@
 ---
 title: Roadmap
+date: 2021-06-12
+tags:
+- nosana
+- overview
 ---
 
 Nosana brings forward her products in 3 phases.

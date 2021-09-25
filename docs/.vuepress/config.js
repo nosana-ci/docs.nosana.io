@@ -64,6 +64,10 @@ module.exports = {
         link: 'mailto:team@nosana.io',
         icon: 'reco-mail'
       },
+      { text: 'TimeLine',
+        link: '/timeline/',
+        icon: 'reco-date'
+      },
       {
         text: 'Website',
         link: 'https://nosana.io',

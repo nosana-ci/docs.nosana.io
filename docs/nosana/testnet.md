@@ -1,5 +1,9 @@
 ---
 title: Nosana Incentivized Testnet
+date: 2021-06-12
+tags:
+- nosana
+- testing
 ---
 
 <Badge text="beta"/>

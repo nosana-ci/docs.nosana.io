@@ -1,5 +1,9 @@
 ---
 title: Token Metrics
+date: 2021-08-25
+tags:
+- nosana
+- tokens
 ---
 
 |Info||

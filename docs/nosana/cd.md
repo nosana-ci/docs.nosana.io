@@ -1,5 +1,9 @@
 ---
 title: Nosana Delivery and Deployment Suite
+date: 2021-08-28
+tags:
+- nosana
+- product
 ---
 
 <Badge text="alpha" type="error"/>

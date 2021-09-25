@@ -1,5 +1,8 @@
 ---
 title: Frequently Asked Questions
+date: 2021-06-1
+tags:
+- nosana
 ---
 
 ## What is the token address?

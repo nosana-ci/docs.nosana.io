@@ -1,5 +1,9 @@
 ---
 title: Token Utility
+date: 2021-08-29
+tags:
+- nosana
+- tokens
 ---
 
 ## Transactions
