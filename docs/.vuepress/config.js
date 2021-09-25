@@ -60,13 +60,14 @@ module.exports = {
         icon: 'reco-faq'
       },
       {
+        text: 'TimeLine',
+        link: '/timeline/',
+        icon: 'reco-date'
+      },
+      {
         text: 'Contact',
         link: 'mailto:team@nosana.io',
         icon: 'reco-mail'
-      },
-      { text: 'TimeLine',
-        link: '/timeline/',
-        icon: 'reco-date'
       },
       {
         text: 'Website',
