@@ -20,6 +20,10 @@ Registration for the Incentivized Testnet is available here.
 
 Because the Testnet ledger can be reset. Tokens are distributed via Airdrop on 
 [Solana Mainnet](https://docs.solana.com/clusters#mainnet-beta), on a frequent basis.
+<strong>{{ $var.ticker }}</strong> tokens from the Airdrop will be programmatically locked 
+up until the official token release.
+Participants will not be able trade, sell, or otherwise move <strong>{{ $var.ticker }}</strong> tokens received 
+in connection with the Testnet Program, up until the official token release and exchange listings. 
 
 ### Open source projects
 
