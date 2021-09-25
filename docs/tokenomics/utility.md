@@ -24,8 +24,8 @@ TODO: write
 
 ## Reputation
 
-Nosana will host Community Nodes to run pipelines. In addition, anybody is able to join 
-the network by sharing their compute resources. These can be machines ranging from 
+Nosana will host Community Nodes to run pipelines. In addition, anybody is able to join
+the network by sharing their compute resources. These can be machines ranging from
 Raspberry Pi's, smartphones, laptops, desktops PCs, as well as full-blown server racks.
 
 Reputation is build based on verified pipelines run by any identity on the network.

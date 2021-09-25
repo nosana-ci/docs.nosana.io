@@ -2,14 +2,14 @@
 title: Roadmap
 ---
 
-Nosana brings forward her products in 3 phases. 
+Nosana brings forward her products in 3 phases.
 The first phase is the development and release of the [Nosana Continuous Integration](../nosana/integration) product.
 This "Nosana Test Suite" will first be released on Solana Testnet together with Nosana's Incentivized Testnet program.
 The Nosana Test Suite will therafter be released to Solana Mainnet.
 The second phase consist of the development and release of the [Nosana Continuous Delivery](../nosana/delivery) product.
 The third and final phase consist of the development and release the [Nosana Continuous Deployment](../nosana/deployment) product.
 
-::: tip Milestones
+::: tip
 Below you'll find milestones and individual tasks for each quarter in 2021 and 2022.
 :::
 
@@ -31,7 +31,7 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 - [x] Phase 1 and Core Platform development
 - [x] Demo environment build
 - [x] Onepager made
-- [x] Documentation pages online 
+- [x] Documentation pages online
 - [x] Pitch deck
 - [x] Solana Grant backing
 - [ ] Seed round conducted
@@ -49,8 +49,8 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 
 - [ ] Phase 1 release Solana Mainnet
 - [ ] Start Phase 2 development
-- [ ] Onboarded 50 projects  
-- [ ] 50 daily pipelines run   
+- [ ] Onboarded 50 projects
+- [ ] 50 daily pipelines run
 - [ ] Token distribution
 - [ ] Airdrop
 - [ ] Listing exchanges

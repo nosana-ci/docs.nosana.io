@@ -2,19 +2,21 @@
 title: Background
 ---
 
-> A phased approach to continuous delivery is not only preferable, it’s infinitely more manageable.
+::: tip
+A phased approach to continuous delivery is not only preferable, it’s infinitely more manageable.
+:::
 
 Since it's inception CI/CD has enormously helped accelerate software release cycles.
 
 ## What is CI/CD ?
 
-In software engineering, CI/CD is the combined practices of Continuous Integration (CI) and either 
+In software engineering, CI/CD is the combined practices of Continuous Integration (CI) and either
 Continuous Delivery or Continuous Deployment (CD).
 
-CI/CD bridges the gaps between development and operation activities and teams by enforcing automation in building, 
-testing and deployment of applications. 
-Modern day DevOps practices involve continuous development, continuous testing, continuous integration, continuous 
-deployment and continuous monitoring of software applications throughout its development life cycle. 
+CI/CD bridges the gaps between development and operation activities and teams by enforcing automation in building,
+testing and deployment of applications.
+Modern day DevOps practices involve continuous development, continuous testing, continuous integration, continuous
+deployment and continuous monitoring of software applications throughout its development life cycle.
 
 The CI/CD practice, or CI/CD pipeline, forms the backbone of modern day DevOps operations.
 
@@ -27,43 +29,45 @@ that can eventually lead the deployment of a new release of the software.
 
 ## Why CI/CD ?
 
-CI/CD is used for a multiple or reasons in software development. 
-At Nosana we focus on 3 main aspects. 
-These are (i) speed, (ii) reliability, and (iii) growth.
+CI/CD is used for a multiple or reasons in software development.
+At Nosana we focus on 3 main aspects.
+These are [speed](#speed)$^I$, [reliability](#reliability)$^{II}$, and [growth](#growth)$^{III}$.
 
-::::::::: tip Speed
+::::::::: tip
 :::::: col-wrapper
 ::: col-third
 ![speed](~@assets/speed.jpeg =100x100)
 :::
 ::: col-half
+### Speed
 Ongoing feedback allows developers to commit smaller changes more often, increases development velocity.
 :::
 ::::::
 :::::::::
 
-::::::::: tip Reliability
+::::::::: tip
 :::::: col-wrapper
 ::: col-third
 ![security](~@assets/security.png =100x100)
 :::
 ::: col-half
+### Reliability
 Automated, continuous testing ensures that codebases remain stable and release-ready at any time.
 :::
 ::::::
 :::::::::
 
-::::::::: tip Growth
+::::::::: tip
 :::::: col-wrapper
 ::: col-third
 ![growth](~@assets/growth.jpeg =100x100)
 :::
 ::: col-half
-Freed up from manual tasks, projects can focus resources on innovation, client satisfaction, and paying down technical debt.
+### Growth
+Freed up from manual tasks, projects can focus resources on innovation, satisfaction, and downsizing technical debt.
 :::
 ::::::
 :::::::::
-
 
 ## Why on Solana?
 

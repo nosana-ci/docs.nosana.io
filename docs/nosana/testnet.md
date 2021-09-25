@@ -2,6 +2,8 @@
 title: Nosana Incentivized Testnet
 ---
 
+<Badge text="beta"/>
+
 Nosana will enter [Solana Testnet](https://docs.solana.com/clusters#testnet) with her Incentivized Testnet program.
 
 The Testnet program is intended to test Nosana's CI features and tools, before going to Mainnet.
@@ -14,28 +16,28 @@ Registration for the Incentivized Testnet is available here.
 
 [comment]: <> (add link to google forms)
 
-## Airdrop 
+## Airdrop
 
-Because the Testnet ledger can be reset. Tokens are distributed via Airdrop on 
+Because the Testnet ledger can be reset. Tokens are distributed via Airdrop on
 [Solana Mainnet](https://docs.solana.com/clusters#mainnet-beta), on a frequent basis.
-<strong>{{ $var.ticker }}</strong> tokens from the Airdrop will be programmatically locked 
+<strong>{{ $var.ticker }}</strong> tokens from the Airdrop will be programmatically locked
 up until the official token release.
-Participants will not be able trade, sell, or otherwise move <strong>{{ $var.ticker }}</strong> tokens received 
-in connection with the Testnet Program, up until the official token release and exchange listings. 
+Participants will not be able trade, sell, or otherwise move <strong>{{ $var.ticker }}</strong> tokens received
+in connection with the Testnet Program, up until the official token release and exchange listings.
 
 ### Open source projects
 
 Open source software projects are Incentivized based on their Nosana network usage.
 In other words, participants will receive tokens for running pipelines.
 All participant will receive a limited amount of Testnet tokens.
-These tokens can only be used to run Nosana pipelines, and cannot be traded. 
+These tokens can only be used to run Nosana pipelines, and cannot be traded.
 The address on Testnet will be different from the actual <strong>{{ $var.ticker }}</strong> token on Mainnet,
 hence the Mainnet tokens will be sent via Airdrop to participants registered Mainnet address.
 
 $\sum_{os} NOS_{airdrop} = NOS_{jobs} \forall n \in \mathbb N_{pipelines}$
 
-::: tip Rewards
-Participants will receive tokens for running free pipelines ! 
+::: tip
+Participants will receive tokens for running free pipelines !
 :::
 
 ### Nodes
