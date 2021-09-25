@@ -1,8 +1,6 @@
 ---
-title: Nosana CI
+title: Nosana Test Suite
 ---
-
-# Nosana Test Suite
 
 Nosana will enter [Solana Mainnet](https://docs.solana.com/clusters#mainnet-beta) with her first 
 production product: The Nosana Test Suite.

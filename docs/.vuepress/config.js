@@ -2,7 +2,7 @@ const {description} = require('../../package')
 const path = require('path')
 
 module.exports = {
-  theme: 'book',
+  theme: 'reco',
   title: 'Nosana',
   description: description,
   head: [
@@ -16,29 +16,14 @@ module.exports = {
     // '/zh/': {lang: 'zh-CN'},
   },
   plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
     'reading-progress',
     'vuepress-plugin-code-copy',
-    ['vuepress-plugin-global-variables',
-      {variables: require('./variables.js')}
-    ],
-    ['container', {
-      type: 'col-wrapper',
-      defaultTitle: '',
-    }],
-    ['container', {
-      type: 'col-full',
-      defaultTitle: '',
-    }],
-    ['container', {
-      type: 'col-half',
-      defaultTitle: '',
-    }],
-    ['container', {
-      type: 'col-third',
-      defaultTitle: '',
-    }],
+    ['vuepress-plugin-global-variables', {variables: require('./variables.js')}],
+    ['@maginapp/vuepress-plugin-katex', {delimiters: 'dollars'}],
+    ['container', {type: 'col-wrapper', defaultTitle: '',}],
+    ['container', {type: 'col-full', defaultTitle: '',}],
+    ['container', {type: 'col-half', defaultTitle: '',}],
+    ['container', {type: 'col-third', defaultTitle: '',}],
   ],
   configureWebpack: {
     resolve: {
@@ -58,18 +43,32 @@ module.exports = {
   },
   themeConfig: {
     logo: '/logo.svg',
+    author: 'Nosana Team',
     editLinks: false,
     docsDir: 'docs',
     lastUpdated: true,
+    mode: 'light',
+    subSidebar: 'auto',
     locales: {
       '/': {label: '🇺🇸'},
       // '/zh/': {label: '🇨🇳'},
     },
     nav: [
       {
+        text: 'F.A.Q.',
+        link: '/overview/faq',
+        icon: 'reco-faq'
+      },
+      {
+        text: 'Contact',
+        link: 'mailto:team@nosana.io',
+        icon: 'reco-mail'
+      },
+      {
         text: 'Website',
-        link: 'https://nosana.io'
-      }
+        link: 'https://nosana.io',
+        icon: 'reco-home'
+      },
     ],
     sidebar: {
       '/': [
@@ -87,7 +86,6 @@ module.exports = {
           children: [
             ['/overview/intro', 'Introduction'],
             ['/overview/background', 'Background'],
-            // ['/overview/vision', 'Vision'],
             ['/overview/roadmap', 'Roadmap'],
             ['/overview/faq', 'F.A.Q.'],
           ]

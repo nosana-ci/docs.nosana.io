@@ -1,8 +1,6 @@
 ---
-title: Nosana CD
+title: Nosana Delivery and Deployment Suite
 ---
-
-# Nosana Delivery and Deployment Suite
 
 Nosana's  third, and final, product will be the Deployment Suite.
 Using this suite, developers will be able to release their software quicker, safer and easier.

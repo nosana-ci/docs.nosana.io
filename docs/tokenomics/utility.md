@@ -1,8 +1,6 @@
 ---
-title: Utility
+title: Token Utility
 ---
-
-# Token Utility
 
 ## Transactions
 

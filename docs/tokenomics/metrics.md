@@ -1,8 +1,6 @@
 ---
-title: Metrics
+title: Token Metrics
 ---
-
-# Token Metrics
 
 |Info||
 | --- | --- |

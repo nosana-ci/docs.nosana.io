@@ -23,8 +23,7 @@
   "homepage": "https://gitlab.com/nosana-ci/apps/docs/vuepress#readme",
   "dependencies": {
     "@centerforopenscience/markdown-it-video": "^1.0.0",
-    "@vuepress/plugin-back-to-top": "^1.8.2",
-    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "@maginapp/vuepress-plugin-katex": "^1.0.11",
     "apexcharts": "^3.28.3",
     "markdown-it-html5-embed": "^1.0.0",
     "markdown-it-imsize": "^2.0.1",
@@ -34,6 +33,6 @@
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-global-variables": "^0.2.0",
     "vuepress-plugin-reading-progress": "^1.0.10",
-    "vuepress-theme-book": "^0.0.6"
+    "vuepress-theme-reco": "^1.6.6"
   }
 }
