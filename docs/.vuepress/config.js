@@ -45,6 +45,7 @@ module.exports = {
     logo: '/logo.svg',
     author: 'Nosana Team',
     editLinks: false,
+    noFoundPageByTencent: false,
     docsDir: 'docs',
     lastUpdated: true,
     mode: 'light',

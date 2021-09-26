@@ -7,10 +7,10 @@ actionText: Learn more →
 actionLink: /overview/intro
 features:
 - title: CI/CD
-  details: CI by the people, for the people. Nosana runs any  CI/CD pipeline openly and transparently.
+  details: Tech companies are running millions of CI/CD pipelines daily to operate. The size of this market is estimated to reach over $13 billion in 2021 of which half is centralized at the top 5 providers.
 - title: Staking
-  details:  Stake tokens too to earn boost to earn rewards.
+  details: Anyone that has the Nosana app can run CI/CD pipelines from our marketplace. It’s that simple. Run the app, stake NOS tokens, and start earning!
 - title: Governance
-  details: Nosana is an open marketplace. Holders can help shape the future of the platform!
+  details: Nosana is the decentralized replacement for the CI/CD industry. Network updates and funding initiatives will be governed by a proposal system based on the NOS token.
 footer: Made by Nosana with ❤️
 ---

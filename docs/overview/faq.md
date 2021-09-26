@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-date: 2021-06-1
+date: 2021-06-01
 tags:
 - nosana
 ---
