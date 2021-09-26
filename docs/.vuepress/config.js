@@ -43,7 +43,9 @@ module.exports = {
   },
   themeConfig: {
     logo: '/logo.svg',
-    author: 'Nosana Team',
+    author: 'Nosana',
+    record: 'SPL',
+    startYear: 2021,
     editLinks: false,
     noFoundPageByTencent: false,
     docsDir: 'docs',
