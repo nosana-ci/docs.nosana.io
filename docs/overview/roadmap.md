@@ -7,11 +7,11 @@ tags:
 ---
 
 Nosana brings forward her products in 3 phases.
-The first phase is the development and release of the [Nosana Continuous Integration](../nosana/integration) product.
-This "Nosana Test Suite" will first be released on Solana Testnet together with Nosana's Incentivized Testnet program.
+The first phase is the development and release of the [Nosana Test Suite](../nosana/ci) product.
+Early builds of "Nosana Test Suite" will first be released on Solana Testnet together with Nosana's Incentivized Testnet program.
 The Nosana Test Suite will therafter be released to Solana Mainnet.
-The second phase consist of the development and release of the [Nosana Continuous Delivery](../nosana/delivery) product.
-The third and final phase consist of the development and release the [Nosana Continuous Deployment](../nosana/deployment) product.
+The second phase consist of the development and release of the [Nosana Deployment Suite](../nosana/cd) product.
+The third and final phase consist of the development and release the [Nosana DAO](../nosana/dao) product.
 
 ::: tip
 Below you'll find milestones and individual tasks for each quarter in 2021 and 2022.
