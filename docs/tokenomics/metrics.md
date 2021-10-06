@@ -69,7 +69,7 @@ The tokens will be used to either of the following purposes:
 
 ### Backers tokens
 
-Airdrop tokens can be acquired through the private sale.
+Backers tokens can be acquired through the private sale.
 
 ::: tip
 <TokenDescription pool='Backers'/>
