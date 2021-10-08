@@ -88,6 +88,15 @@ The tokens will be used to either of the following purposes:
 <TokenDescription pool='DAO'/>
 :::
 
+
+### Advisor tokens
+
+Advisor tokens are reserved for people that fulfill advisory roles in the development of the Nosana.
+
+::: tip
+<TokenDescription pool='Advisor'/>
+:::
+
 ## Release Timeline
 
 All tokens are released over a 4-year period.

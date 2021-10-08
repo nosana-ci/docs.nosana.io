@@ -19,12 +19,28 @@ module.exports = {
       color: '#0076C5',
     },
     {
+      name: 'Backers',
+      total: .15,
+      lock: 0,
+      vesting: 18,
+      upfront: .25,
+      color: '#D30018',
+    },
+    {
       name: 'Team',
       total: .20,
       lock: 0,
       vesting: 48,
       upfront: 0,
       color: '#21B372',
+    },
+    {
+      name: 'DAO',
+      total: .20,
+      lock: 6,
+      vesting: 42,
+      upfront: 0,
+      color: '#F76700',
     },
     {
       name: 'Company',
@@ -35,20 +51,12 @@ module.exports = {
       color: '#FDDE02',
     },
     {
-      name: 'DAO',
-      total: .25,
+      name: 'Advisor',
+      total: .05,
       lock: 6,
       vesting: 42,
       upfront: 0,
-      color: '#F76700',
-    },
-    {
-      name: 'Backers',
-      total: .15,
-      lock: 0,
-      vesting: 18,
-      upfront: .25,
-      color: '#D30018',
+      color: '#12130F',
     },
   ]
 }
