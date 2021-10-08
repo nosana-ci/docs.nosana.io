@@ -16,7 +16,7 @@ Be aware of scammers!
 
 No, tokens can be acquired through [mining](../tokenomics/utility#mining),
 and our [Incentivized Testnet program](../nosana/testnet).
-Furthermore, tokens can be bought at exchanges when `NOS` gets officially listed.
+Furthermore, tokens can be bought at exchanges when <strong>{{ $var.ticker }}</strong> gets officially listed.
 Details and dates will be announced.
 See our [roadmap](roadmap) for the current status.
 
@@ -32,4 +32,4 @@ See our platform and [background](background) page.
 
 ## How can I contact the team?
 
-You can reach us at `team@nosana.io`.
+You can reach us at [team@nosana.io](mailto:team@nosana.io).
