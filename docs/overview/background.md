@@ -8,7 +8,10 @@ tags:
 
 ::: tip
 A phased approach to continuous delivery is not only preferable, it’s infinitely more manageable.
+::: right
+[Maurice Kherlakian](https://twitter.com/mkherlakian)
 :::
+
 
 Since it's inception CI/CD has enormously helped accelerate software release cycles.
 

@@ -17,8 +17,9 @@ module.exports = {
   },
   plugins: [
     'reading-progress',
-    'vuepress-plugin-code-copy',
-    ['vuepress-plugin-global-variables', {variables: require('./variables.js')}],
+    'code-copy',
+    'flowchart',
+    ['global-variables', {variables: require('./variables.js')}],
     ['@maginapp/vuepress-plugin-katex', {delimiters: 'dollars'}],
     ['container', {type: 'col-wrapper', defaultTitle: '',}],
     ['container', {type: 'col-full', defaultTitle: '',}],
