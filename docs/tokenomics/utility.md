@@ -29,15 +29,18 @@ Reputation is build based on verified pipelines run by any identity on the netwo
 Staked tokens can be used to increase reputation so that malicious nodes can be
 slashes in case of unwanted behaviour.
 
+# Flowchart
+
 @flowstart
 os=>parallel: Software Project
-git=>operation: Code Commit
-ci=>parallel: Nosana CI nodes
-art=>inputoutput: CI artifacts
-sc=>operation: Smart Contract (SPL)
-tx=>end: Transaction
+ci=>parallel: Nosana CI Nodes
+cm=>operation: Code Commit
+sc=>operation: SPL Contract
+ca=>inputoutput: CI Artifacts
+tx=>inputoutput: NOS Transaction
 
-os(path1, bottom)->git->ci(path1, bottom)->art->tx
-os(path2, right)->sc
-ci(path2, right)->sc->tx(left)->ci
+os(path2, bottom)->sc->tx->ci
+os(path1, right)->cm->ci
+ci(path1, bottom)->ca->os
+ci(path2, left)->sc
 @flowend
