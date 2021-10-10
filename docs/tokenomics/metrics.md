@@ -18,7 +18,7 @@ tags:
 Tokens are distributed over {{ $var.tokenDistribution.length }} main pools.
 These are the
 <span v-for="(pool, index) in $var.tokenDistribution">
-<span v-if="index < $var.tokenDistribution.length - 1"><a :href="'#' + pool.name.toLowerCase() + '-tokens'">{{ pool.name }} tokens</a>, </span>
+<span v-if="index < $var.tokenDistribution.length - 1"><a :href="'#' + pool.name.toLowerCase().replace(' ', '-') + '-tokens'">{{ pool.name }} tokens</a>, </span>
 <span v-else> and the <a :href="'#' + pool.name.toLowerCase() + '-tokens'">{{ pool.name }} tokens</a>.</span>
 </span>
 
