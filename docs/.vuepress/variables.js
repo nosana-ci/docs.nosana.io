@@ -3,6 +3,14 @@ module.exports = {
   totalSupply: 100e6,
   tokenDistribution: [
     {
+      name: 'Public Sale',
+      total: .02,
+      lock: 0,
+      vesting: 0,
+      upfront: 0,
+      color: '#000000',
+    },
+    {
       name: 'Airdrop',
       total: .05,
       lock: 0,
@@ -19,14 +27,6 @@ module.exports = {
       color: '#F76700',
     },
     {
-      name: 'Backers',
-      total: .20,
-      lock: 0,
-      vesting: 18,
-      upfront: .25,
-      color: '#D30018',
-    },
-    {
       name: 'Team',
       total: .20,
       lock: 0,
@@ -34,14 +34,14 @@ module.exports = {
       upfront: 0,
       color: '#21B372',
     },
-    // {
-    //   name: 'DAO',
-    //   total: .20,
-    //   lock: 6,
-    //   vesting: 42,
-    //   upfront: 0,
-    //   color: '#F76700',
-    // },
+    {
+      name: 'Company',
+      total: .25,
+      lock: 0,
+      vesting: 48,
+      upfront: .25,
+      color: '#FDDE02',
+    },
     {
       name: 'Mining',
       total: .20,
@@ -51,12 +51,12 @@ module.exports = {
       color: '#0076C5',
     },
     {
-      name: 'Company',
-      total: .25,
+      name: 'Backers',
+      total: .18,
       lock: 0,
-      vesting: 48,
+      vesting: 18,
       upfront: .25,
-      color: '#FDDE02',
+      color: '#D30018',
     },
   ]
 }

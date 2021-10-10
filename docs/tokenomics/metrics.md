@@ -24,6 +24,14 @@ These are the
 
 <TokenDistribution/>
 
+### Public Sale tokens
+
+Public Sale tokens can be retrieved through our Public Sale event.
+
+::: tip
+<TokenDescription pool='Public Sale'/>
+:::
+
 ### Airdrop tokens
 
 Airdrop tokens can be retrieved through our Incentivized Testnet program.
