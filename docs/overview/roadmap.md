@@ -41,13 +41,11 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 
 ### Q4
 
-- [ ] Seed round conducted
 - [ ] Private round conducted
 - [ ] Phase 1 release Solana Testnet
 - [ ] Incentivized Testnet live
 - [ ] Onboarded 25 projects
 - [ ] Public tokensale
-- [ ] Listing exchanges
 
 ## 2022
 
@@ -55,7 +53,6 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 
 - [ ] Phase 1 release Solana Mainnet
 - [ ] Start Phase 2 development
-- [ ] Onboarded 50 projects
 - [ ] 50 daily pipelines run
 - [ ] Token distribution
 - [ ] Airdrop

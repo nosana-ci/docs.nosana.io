@@ -19,6 +19,9 @@ export default {
           type: 'polarArea',
           id: 'token-distribution',
           width: 100,
+          toolbar: {
+            show: true,
+          },
         },
         colors: tokenDistribution.map(x => x.color),
         stroke: {
