@@ -52,13 +52,20 @@ Team tokens are reserved for the founders of the Nosana project and its Foundati
 <TokenDescription pool='Team'/>
 :::
 
+### Liquidity tokens
+
+Liquidity tokens are used for trading pools.
+
+::: tip
+<TokenDescription pool='Liquidity'/>
+:::
+
 ### Company tokens
 
 Company tokens are used to bring Nosana to a self-sustaining platform.
 The tokens will be used to either of the following purposes:
 
 - Marketing
-- Liquidity
 - Advisors
 - Engineering
 - Business Development
@@ -73,28 +80,6 @@ Backers tokens can be acquired through the private sale.
 
 ::: tip
 <TokenDescription pool='Backers'/>
-:::
-
-### DAO tokens
-
-DAO tokens are used to govern Nosana decentralized.
-The tokens will be used to either of the following purposes:
-
-- Proposal rewards
-- Staking rewards
-- Rewards for platform development efforts
-
-::: tip
-<TokenDescription pool='DAO'/>
-:::
-
-
-### Advisor tokens
-
-Advisor tokens are reserved for people that fulfill advisory roles in the development of the Nosana.
-
-::: tip
-<TokenDescription pool='Advisor'/>
 :::
 
 ## Release Timeline

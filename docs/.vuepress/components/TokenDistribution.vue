@@ -15,6 +15,7 @@ export default {
         chart: {
           // type: 'donut',
           // type: 'pie',
+          // type: 'radialBar',
           type: 'polarArea',
           id: 'token-distribution',
           width: 100,
