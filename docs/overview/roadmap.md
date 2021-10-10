@@ -38,14 +38,16 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 - [x] Documentation pages online
 - [x] Pitch deck
 - [x] Solana Grant backing
-- [ ] Seed round conducted
-- [ ] Private round conducted
 
 ### Q4
 
+- [ ] Seed round conducted
+- [ ] Private round conducted
 - [ ] Phase 1 release Solana Testnet
 - [ ] Incentivized Testnet live
 - [ ] Onboarded 25 projects
+- [ ] Public tokensale
+- [ ] Listing exchanges
 
 ## 2022
 
@@ -57,14 +59,12 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 - [ ] 50 daily pipelines run
 - [ ] Token distribution
 - [ ] Airdrop
-- [ ] Listing exchanges
-- [ ] Public tokensale
+- [ ] Onboarded 100 projects
 
 ### Q2
 
 - [ ] Phase 2 development
 - [ ] Integration into other CI/CD systems
-- [ ] Onboarded 100 projects
 
 ### Q3
 

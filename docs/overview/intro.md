@@ -22,7 +22,7 @@ Or simply use other Nosana nodes to run your pipelines on demand!
 :::
 
 The platform combines edge-computing and blockchain functionality into a CI/CD marketplace.
-The [`NOS`](../tokenomics/metrics) token fuels the system by creating an open
+The [<strong>{{ $var.ticker }}</strong>](../tokenomics/metrics) token fuels the system by creating an open
 [marketplace](../tokenomics/utility). People and machine can use and
 share compute power to execute their software delivery pipelines.
 

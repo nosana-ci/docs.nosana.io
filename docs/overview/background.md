@@ -32,7 +32,20 @@ The CI/CD practice, or CI/CD pipeline, forms the backbone of modern day DevOps o
 Below you'll find an example of a CI/CD pipeline where a code commit triggers a series of automated steps,
 that can eventually lead the deployment of a new release of the software.
 
-![pipeline](~@assets/pipeline.png)
+@flowstart
+gp=>start: 👨‍💻 Code Commit
+tb=>operation: ⚙️ Trigger Build
+rb=>parallel: ∞ Nosana Builds
+rt=>parallel: ∞ Nosana Tests
+nb=>operation: 🔔 Notification of Build outcome
+nt=>operation: 🔔 Notification of Test outcome
+dl=>condition: 📦 Deliver
+dp=>end: 🚀 Deploy Environment
+
+gp->tb->rb(path1, bottom)->rt(path1, bottom)->dl(yes)->dp
+rt(path2, left)->nt
+rb(path2, right)->nb
+@flowend
 
 ## Why CI/CD ?
 
@@ -43,7 +56,7 @@ These are [speed](#speed)$^I$, [reliability](#reliability)$^{II}$, and [growth](
 ::::::::: tip
 :::::: col-wrapper
 ::: col-third
-![speed](~@assets/speed.jpeg =100x100)
+<img src="../assets/speed.jpeg" class="green-img medium-zoom-image" alt="speed" width="100" height="100">
 :::
 ::: col-half
 ### Speed
@@ -55,7 +68,7 @@ Ongoing feedback allows developers to commit smaller changes more often, increas
 ::::::::: tip
 :::::: col-wrapper
 ::: col-third
-![security](~@assets/security.png =100x100)
+<img src="../assets/security.png" class="green-img medium-zoom-image" alt="security" width="100" height="100">
 :::
 ::: col-half
 ### Reliability
@@ -67,7 +80,7 @@ Automated, continuous testing ensures that codebases remain stable and release-r
 ::::::::: tip
 :::::: col-wrapper
 ::: col-third
-![growth](~@assets/growth.jpeg =100x100)
+<img src="../assets/growth.jpeg" class="green-img medium-zoom-image" alt="growth" width="100" height="100">
 :::
 ::: col-half
 ### Growth

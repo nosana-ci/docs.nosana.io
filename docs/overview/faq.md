@@ -14,7 +14,8 @@ Be aware of scammers!
 
 ## Will there be a public token sale?
 
-No, tokens can be acquired through [mining](../tokenomics/utility#mining),
+Yes, details will be announced here and on our official social media channels.
+Tokens can also be acquired through [mining](../tokenomics/utility#mining),
 and our [Incentivized Testnet program](../nosana/testnet).
 Furthermore, tokens can be bought at exchanges when <strong>{{ $var.ticker }}</strong> gets officially listed.
 Details and dates will be announced.
