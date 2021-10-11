@@ -42,11 +42,10 @@ Airdrop tokens can be retrieved through our Incentivized Testnet program.
 
 ### Mining tokens
 
-Mining tokens can be acquired by nodes that help run the Nosana pipelines.
+Mining tokens are earned by nodes that execute Nosana CI pipelines.
 The mining pool is a significant portion of the total supply, and capped to
 {{ ($var.tokenDistribution.find( ({ name }) => name === 'Mining' ).total * $var.totalSupply).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
 tokens.
-The pools' purpose is to kickstart the network and help onboard open source software projects with appealing rates.
 
 ::: tip
 <TokenDescription pool='Mining'/>
@@ -70,7 +69,7 @@ Liquidity tokens are used for trading pools.
 
 ### Company tokens
 
-Company tokens are used to bring Nosana to a self-sustaining platform.
+Company tokens are reserved for the development of the Nosana platform.
 The tokens will be used to either of the following purposes:
 
 - Marketing
