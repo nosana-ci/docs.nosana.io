@@ -53,7 +53,7 @@ tokens.
 
 ### Team tokens
 
-Team tokens are reserved for the founders of the Nosana project and its Foundation.
+Team tokens are reserved for the team.
 
 ::: tip
 <TokenDescription pool='Team'/>
