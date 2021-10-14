@@ -38,8 +38,8 @@ module.exports = {
       name: 'Company',
       total: .25,
       lock: 0,
-      vesting: 48,
-      upfront: .25,
+      vesting: 36,
+      upfront: .10,
       color: '#FDDE02',
     },
     {
@@ -54,8 +54,8 @@ module.exports = {
       name: 'Backers',
       total: .18,
       lock: 0,
-      vesting: 18,
-      upfront: .25,
+      vesting: 12,
+      upfront: .10,
       color: '#D30018',
     },
   ]
