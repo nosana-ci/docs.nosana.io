@@ -4,7 +4,7 @@ module.exports = {
   tokenDistribution: [
     {
       name: 'Public Sale',
-      total: .02,
+      total: .03,
       lock: 0,
       vesting: 0,
       upfront: 0,
@@ -52,7 +52,7 @@ module.exports = {
     },
     {
       name: 'Backers',
-      total: .18,
+      total: .17,
       lock: 0,
       vesting: 12,
       upfront: .10,
