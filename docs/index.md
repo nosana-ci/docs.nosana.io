@@ -6,7 +6,7 @@ tagline: Community powered CI and CD
 actionText: Learn more →
 actionLink: /overview/intro
 features:
-- title: CI/CD
+- title: Marketplace
   details: Tech companies are running millions of CI/CD pipelines daily to operate. The size of this market is estimated to reach over $13 billion in 2023 of which half is centralized at the top 5 providers.
 - title: Staking
   details: Anyone that has the Nosana app can run CI/CD pipelines from our marketplace. It’s that simple. Run the app, stake NOS tokens, and start earning!
