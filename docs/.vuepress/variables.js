@@ -54,7 +54,7 @@ module.exports = {
       name: 'Backers',
       total: .17,
       lock: 0,
-      vesting: 12,
+      vesting: 9,
       upfront: .10,
       color: '#D30018',
     },
