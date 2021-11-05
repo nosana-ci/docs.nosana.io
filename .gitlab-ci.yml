@@ -2,6 +2,7 @@ image: node:16.7
 
 stages:
   - deploy
+  - release
 
 pages:
   stage: deploy
@@ -12,5 +13,12 @@ pages:
   artifacts:
     paths:
       - public
+  only:
+    - main
+
+release:
+  image: registry.gitlab.com/nosana-ci/tools/containers/semver
+  stage: release
+  script: release.sh
   only:
     - main
