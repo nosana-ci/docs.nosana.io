@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     generateMonthWiseTimeSeries(name, total, vesting = 0, lock = 0, upfront = 0) {
-      let x = new Date('2 Jan 2022') // token distribution
+      let x = new Date('17 Jan 2022') // token distribution
       const series = [];
       for (let i = 0; i < 49; i++) {
         const y = i < lock ? upfront * total : i >= lock + vesting ? total : upfront * total + (total - upfront * total) * (i - lock) / vesting
