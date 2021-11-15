@@ -19,6 +19,7 @@ export default {
           type: 'polarArea',
           id: 'token-distribution',
           width: 100,
+          background: 'transparent',
           toolbar: {
             show: true,
           },
@@ -38,6 +39,9 @@ export default {
         },
         yaxis: {
           show: false
+        },
+        theme: {
+          mode: localStorage.getItem('mode') !== 'light' ? 'dark' : 'light'
         },
         labels: tokenDistribution.map(x => x.name),
       },
