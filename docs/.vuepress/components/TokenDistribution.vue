@@ -40,9 +40,9 @@ export default {
         yaxis: {
           show: false
         },
-        theme: {
-          mode: localStorage.getItem('mode') !== 'light' ? 'dark' : 'light'
-        },
+        // theme: {
+        //   mode: localStorage.getItem('mode') !== 'light' ? 'dark' : 'light'
+        // },
         labels: tokenDistribution.map(x => x.name),
       },
       series: tokenDistribution.map(x => x.total * totalSupply),

@@ -34,9 +34,9 @@ export default {
         stroke: {
           curve: 'straight',
         },
-        theme: {
-          mode: localStorage.getItem('mode') !== 'light' ? 'dark' : 'light'
-        }
+        // theme: {
+        //   mode: localStorage.getItem('mode') !== 'light' ? 'dark' : 'light'
+        // }
       },
       series: tokenDistribution.map(x => this.generateMonthWiseTimeSeries(x.name,x.total * totalSupply, x.vesting, x.lock, x.upfront))
     }
