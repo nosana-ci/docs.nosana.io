@@ -32,6 +32,7 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 
 ### Q3
 
+- [x] Seed round conducted
 - [x] Phase 1 and Core Platform development
 - [x] Demo environment build
 - [x] Onepager made
@@ -41,7 +42,6 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 
 ### Q4
 
-- [x] Seed round conducted
 - [ ] Private round conducted
 - [ ] Incentivized Testnet live
 
