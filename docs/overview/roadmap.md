@@ -42,7 +42,7 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 
 ### Q4
 
-- [ ] Private round conducted
+- [x] Private round conducted
 - [ ] Incentivized Testnet live
 
 ## 2022
