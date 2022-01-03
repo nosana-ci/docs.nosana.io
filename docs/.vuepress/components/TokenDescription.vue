@@ -32,7 +32,7 @@ export default {
         if (pool.lock !== 0) {
           description += ` after they have been locked for ${pool.lock} months.`
         } else {
-          description += ` beginning with at token distribution.`
+          description += ` beginning at token distribution.`
         }
       }
       if (pool.upfront !== 0) {
