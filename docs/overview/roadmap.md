@@ -13,58 +13,38 @@ The Nosana Test Suite will therafter be released to Solana Mainnet.
 The second phase consist of the development and release of the [Nosana Deployment Suite](../nosana/cd) product.
 The third and final phase consist of the development and release the [Nosana DAO](../nosana/dao) product.
 
-::: tip
+<!-- ::: tip
 Below you'll find milestones and individual tasks for each quarter in 2021 and 2022.
-:::
+::: -->
+### 1 *done*
 
-## 2021
+- [x] Complete demo for Solana Foundation
+- [x] Finalize release strategy for the incentivized Testnet and Mainnet
 
-### Q1
+### 2 *done*
 
-- [x] Concept formed
-- [x] Team formed
-- [x] Core platform development
+- [x] Further development
+- [x] Private fundraise
 
-### Q2
+### 3 *in progress*
 
-- [x] Phase 1 and Core Platform development
-- [x] Website
+- [ ] Complete the Incentivised Testnet 
+- [ ] Mining & staking module
 
-### Q3
+### 4
 
-- [x] Seed round conducted
-- [x] Phase 1 and Core Platform development
-- [x] Demo environment build
-- [x] Onepager made
-- [x] Documentation pages online
-- [x] Pitch deck
-- [x] Solana Grant backing
+- [ ] Complete Smart Contract security audit
+- [ ] Conduct **Solanium Public Sale**
+- [ ] Distribute $NOS tokens
 
-### Q4
+### 5
+- [ ] Incentivized Testnet goes Live
 
-- [x] Private round conducted
-- [ ] Incentivized Testnet live
+### 6
+- [ ] First Phase Nosana Launch: Test Suite
 
-## 2022
+### 7
+- [ ] Second Phase Nosana Launch: Deployment Suite
 
-### Q1
-
-- [ ] Public tokensale
-- [ ] Phase 1 release Solana Mainnet
-- [ ] Token distribution
-- [ ] Airdrop
-- [ ] Onboarded 100 projects
-
-### Q2
-
-- [ ] Phase 2 development
-- [ ] Integration into other CI/CD systems
-
-### Q3
-
-- [ ] Phase 2 release Solana mainnet
-- [ ] Start Phase 3 development
-
-### Q4
-
-- [ ] Phase 3 release Solana mainnet
+### 8
+- [ ] Third Phase Nosana Launch: DAO
