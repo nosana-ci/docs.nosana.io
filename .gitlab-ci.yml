@@ -2,7 +2,7 @@ image: node:16.7
 
 stages:
   - deploy
-  - release
+  - post
 
 pages:
   stage: deploy
@@ -18,7 +18,19 @@ pages:
 
 release:
   image: registry.gitlab.com/nosana-ci/tools/containers/semver
-  stage: release
+  stage: post
   script: release.sh
+  only:
+    - main
+
+cacheflush:
+  stage: post
+  script:
+    - |
+      curl -X POST \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer $CF_TOKEN_CACHE_PURGE_NOSANA_IO" \
+        --data '{"purge_everything":true}' \
+        "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID_NOSANA_IO/purge_cache"
   only:
     - main
