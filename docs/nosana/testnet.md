@@ -16,7 +16,7 @@ A total of
 {{ ($var.tokenDistribution.find( ({ name }) => name === 'Airdrop' ).total * $var.totalSupply).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
 <strong>{{ $var.ticker }}</strong> tokens are available for giveaway to participants in the Testnet Program.
 
-Registration for the Incentivized Testnet is available here.
+[Registration for the Incentivized Testnet is available here.](https://docs.google.com/forms/d/e/1FAIpQLSfZ8lKQv_2L5ngsFhCfGO39EzQCuUEs7RFwQICf32zr7xAbQQ/viewform)
 
 [comment]: <> (add link to google forms)
 
