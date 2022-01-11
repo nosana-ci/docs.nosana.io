@@ -49,7 +49,7 @@ For more information about the IDO, please visit https://solanium.io/project/nos
 ## Will there be an airdrop?
 
 Yes. See our [Incentivized Testnet program](../nosana/testnet).
-Selected open source projects will be able to [join our airdrop](https://docs.google.com/forms/d/e/1FAIpQLSfZ8lKQv_2L5ngsFhCfGO39EzQCuUEs7RFwQICf32zr7xAbQQ/viewform).
+Selected open source projects will be able to [join our airdrop](https://bit.ly/NosanaBetaForm-hp).
 See our [roadmap](roadmap) for the current status.
 
 ## What is CI/CD?
