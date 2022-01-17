@@ -11,7 +11,7 @@ tags:
 | Type | SPL Token |
 | Ticker |  {{ $var.ticker }} |
 | Total supply | {{ $var.totalSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }} |
-| Token contract | *tbd* |
+| Token contract | CopiednosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7 |
 
 ## Token Distribution
 
