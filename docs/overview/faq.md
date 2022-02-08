@@ -20,13 +20,11 @@ The token is an SPL token on the Solana network. The token address is:
 
 ## Will there be a public token sale?
 
-Yes, the Nosana IDO is done on the [Solanium Launchpad](https://www.solanium.io/project/nosana/).
+The Nosana IDO was conducted on the [Solanium Launchpad](https://www.solanium.io/project/nosana/) on the 17th of January, 2022.
 
 Tokens can be acquired through [mining](../tokenomics/utility#mining),
 and our [Incentivized Testnet program](../nosana/testnet).
-Furthermore, tokens can be bought at exchanges when <strong>{{ $var.ticker }}</strong> gets officially listed.
-Details and dates will be announced.
-See our [roadmap](roadmap) for the current status.
+Furthermore, <strong>{{ $var.ticker }}</strong>  tokens can be bought at the following exchanges: Gate.io, MEXC, and Radydium.io.
 
 ## When is the private sale?
 
@@ -39,11 +37,11 @@ You can run the App on a range of different devices like your home computer, a R
 
 ## When is `$NOS` distribution?
 
-The distribution of our token will start on the 17th of January, 2022.
+The distribution of our token took place on the 17th of January, 2022.
 
 ## How will the IDO work for Nosana?
 
-Nosana will launch on Solanium. Solanium is the go-to launchpad for the Solana blockchain.
+Nosana launched on Solanium. Solanium is the go-to launchpad for the Solana blockchain.
 For more information about the IDO, please visit https://solanium.io/project/nosana
 
 ## Will there be an airdrop?
@@ -55,6 +53,10 @@ See our [roadmap](roadmap) for the current status.
 ## What is CI/CD?
 
 See our platform and [background](background) page.
+
+## Who is the team behind Nosana?
+
+The Nosana team is a distributed group of individuals with a strong technical background in the blockchain and CI/CD industry. We share a drive to disrupt the established cloud computing industry using decentralized technologies. We want to make the Metaverse a safe place of freedom where people don't have to sacrifice their privacy to large corps. If you feel you belong here as well send an email to team@nosana.io - developers, marketeers, content writers, community mods, designers, and in general people of passion are welcome. More information about the team is coming soon!
 
 ## How can I contact the team?
 
