@@ -34,8 +34,8 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 ### 4
 
 - [ ] Complete Smart Contract security audit
-- [x ] Conduct **Solanium Public Sale**
-- [x ] Distribute $NOS tokens
+- [x] Conduct **Solanium Public Sale**
+- [x] Distribute $NOS tokens
 
 ### 5
 - [ ] Incentivized Testnet goes Live
