@@ -14,11 +14,15 @@ The Testnet program is intended to test Nosana's CI features and tools, before g
 Projects that participate the Incentivized Testnet program will be able to acquire <strong>{{ $var.ticker }}</strong> tokens.
 A total of
 {{ ($var.tokenDistribution.find( ({ name }) => name === 'Airdrop' ).total * $var.totalSupply).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
-<strong>{{ $var.ticker }}</strong> tokens are available for giveaway to participants in the Testnet Program.
+<strong>{{ $var.ticker }}</strong> tokens are available for giveaway to participants in the Testnet Program. 
 
-[Registration for the Incentivized Testnet is available here.](https://bit.ly/NosanaBetaForm-hp)
+[A how-to guide for getting started with our Testnet can be found here.] (https://nosana.medium.com/nosanas-incentivized-testnet-for-projects-is-live-ddebf143c572)
 
-[comment]: <> (add link to google forms)
+[comment]: <> (link to blog post)
+
+[Projects are now able to join our Incentivized Testnet here.](https://testnet.nosana.io/)
+
+[comment]: <> (link to testnet)
 
 ## Airdrop
 

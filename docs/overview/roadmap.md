@@ -38,7 +38,7 @@ Below you'll find milestones and individual tasks for each quarter in 2021 and 2
 - [x] Distribute $NOS tokens
 
 ### 5
-- [ ] Incentivized Testnet goes Live
+- [x] Incentivized Testnet goes Live
 
 ### 6
 - [ ] First Phase Nosana Launch: Test Suite
