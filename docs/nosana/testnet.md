@@ -16,7 +16,7 @@ A total of
 {{ ($var.tokenDistribution.find( ({ name }) => name === 'Airdrop' ).total * $var.totalSupply).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
 <strong>{{ $var.ticker }}</strong> tokens are available for giveaway to participants in the Testnet Program. 
 
-[A how-to guide for getting started with our Testnet can be found here.] (https://nosana.medium.com/nosanas-incentivized-testnet-for-projects-is-live-ddebf143c572)
+[A how-to guide for getting started with our Testnet can be found here.](https://nosana.medium.com/nosanas-incentivized-testnet-for-projects-is-live-ddebf143c572)
 
 [comment]: <> (link to blog post)
 
