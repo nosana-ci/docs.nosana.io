@@ -24,7 +24,7 @@ The Nosana IDO was conducted on the [Solanium Launchpad](https://www.solanium.io
 
 Tokens can be acquired through [mining](../tokenomics/utility#mining),
 and our [Incentivized Testnet program](../nosana/testnet).
-Furthermore, <strong>{{ $var.ticker }}</strong>  tokens can be bought at the following exchanges: Gate.io, MEXC, and Radydium.io.
+Furthermore, <strong>{{ $var.ticker }}</strong>  tokens can be bought at the following exchanges: Gate.io, MEXC, and Raydium.io.
 
 ## When is the private sale?
 
