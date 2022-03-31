@@ -1,36 +1,59 @@
-image: node:16.14
-
 stages:
+  - build
+  - test
   - deploy
   - post
 
+.vuepress:
+  image: node:16.14
+  cache:
+    paths:
+      - node_modules
+    key: $CI_COMMIT_SHORT_SHA
+
+build:
+  extends: .vuepress
+  stage: build
+  script: npm ci
+  rules:
+    - if: $CI_MERGE_REQUEST_ID || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+test:
+  extends: .vuepress
+  stage: test
+  script: npm run lint
+  rules:
+    - if: $CI_MERGE_REQUEST_ID || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
 pages:
+  extends: .vuepress
   stage: deploy
   script:
-    - npm install
     - npm run build
     - mv docs/.vuepress/dist public
   artifacts:
     paths:
       - public
-  only:
-    - main
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 release:
   image: registry.gitlab.com/nosana-ci/tools/containers/semver
   stage: post
   script: release.sh
-  only:
-    - main
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 cacheflush:
+  image: alpine
   stage: post
   script:
+    - apk add curl
     - |
       curl -X POST \
         --header "Content-Type: application/json" \
         --header "Authorization: Bearer $CF_TOKEN_CACHE_PURGE_NOSANA_IO" \
         --data '{"purge_everything":true}' \
         "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID_NOSANA_IO/purge_cache"
-  only:
-    - main
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
