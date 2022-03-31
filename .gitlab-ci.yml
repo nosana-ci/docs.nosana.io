@@ -14,7 +14,7 @@ stages:
 build:
   extends: .vuepress
   stage: build
-  script: npm ci
+  script: npm install
   rules:
     - if: $CI_MERGE_REQUEST_ID || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
