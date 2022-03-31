@@ -38,17 +38,21 @@ export default {
         //   mode: localStorage.getItem('mode') !== 'light' ? 'dark' : 'light'
         // }
       },
-      series: tokenDistribution.map(x => this.generateMonthWiseTimeSeries(x.name,x.total * totalSupply, x.vesting, x.lock, x.upfront))
-    }
+      series: tokenDistribution.map(x => this.generateMonthWiseTimeSeries(
+          x.name,x.total * totalSupply, x.vesting, x.lock, x.upfront
+      ))
+    };
   },
   methods: {
     generateMonthWiseTimeSeries(name, total, vesting = 0, lock = 0, upfront = 0) {
-      let x = new Date('17 Jan 2022') // token distribution
+      let x = new Date('17 Jan 2022'); // token distribution
       const series = [];
       for (let i = 0; i < 49; i++) {
-        const y = i < lock ? upfront * total : i >= lock + vesting ? total : upfront * total + (total - upfront * total) * (i - lock) / vesting
+        const y = i < lock ?
+            upfront * total : i >= lock + vesting ?
+              total : upfront * total + (total - upfront * total) * (i - lock) / vesting;
         series.push([x.getTime(), y]);
-        x.setMonth(x.getMonth() + 1)
+        x.setMonth(x.getMonth() + 1);
       }
       return {
         name: name,

@@ -46,7 +46,7 @@ export default {
         labels: tokenDistribution.map(x => x.name),
       },
       series: tokenDistribution.map(x => x.total * totalSupply),
-    }
+    };
   },
 };
 

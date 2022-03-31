@@ -17,8 +17,8 @@ export default async (
   // https://github.com/vuejs/vuepress/issues/791
   if (!isServer) {
     await import('vue-apexcharts').then(module => {
-      Vue.use(module.default)
-      Vue.component('apexchart', module.default)
-    })
+      Vue.use(module.default);
+      Vue.component('apexchart', module.default);
+    });
   }
-}
+};
