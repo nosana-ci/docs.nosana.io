@@ -1,5 +1,5 @@
-const {description} = require('../../package')
-const path = require('path')
+const {description} = require('../../package');
+const path = require('path');
 
 module.exports = {
   theme: 'reco',
@@ -120,4 +120,4 @@ module.exports = {
       ]
     }
   }
-}
+};

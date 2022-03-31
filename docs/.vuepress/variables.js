@@ -59,4 +59,4 @@ module.exports = {
       color: '#D30018',
     },
   ]
-}
+};

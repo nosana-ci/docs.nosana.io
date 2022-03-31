@@ -10,8 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore docs/.vuepress",
-    "lint": "npm run lint:js"
+    "lint": "eslint --ext \".js,.vue\" --ignore-path .gitignore docs/.vuepress --fix",
+    "lint:fix": "eslint --ext \".js,.vue\" --ignore-path .gitignore docs/.vuepress --fix"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "vuepress-theme-reco": "^1.6.6"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
     "eslint": "^8.12.0",
     "eslint-plugin-vue": "^8.5.0"
   }
