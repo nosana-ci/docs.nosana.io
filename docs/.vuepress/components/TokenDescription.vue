@@ -6,7 +6,7 @@
 
 <script>
 
-import {tokenDistribution, ticker} from "../variables";
+import {tokenDistribution, ticker} from '../variables';
 
 export default {
   props: ['pool'],
@@ -24,7 +24,7 @@ export default {
       let description = `${pool.name} tokens account for ${pool.total * 100}% of the total number of ${ticker} tokens.`;
 
       if (pool.vesting === 0 && pool.lock === 0) {
-        description += ` These tokens are available at token distribution.`;
+        description += ' These tokens are available at token distribution.';
         return description;
       }
       if (pool.vesting !== 0) {
@@ -33,7 +33,7 @@ export default {
         if (pool.lock !== 0) {
           description += ` after they have been locked for ${pool.lock} months.`;
         } else {
-          description += ` beginning at token distribution.`;
+          description += ' beginning at token distribution.';
         }
       }
       if (pool.upfront !== 0) {

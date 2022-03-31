@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "lint": "eslint --ext \".js,.vue\" --ignore-path .gitignore docs/.vuepress --fix",
+    "lint": "eslint --ext \".js,.vue\" --ignore-path .gitignore docs/.vuepress",
     "lint:fix": "eslint --ext \".js,.vue\" --ignore-path .gitignore docs/.vuepress --fix"
   },
   "repository": {

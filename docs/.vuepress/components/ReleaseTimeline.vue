@@ -6,7 +6,7 @@
 
 <script>
 
-import {tokenDistribution, totalSupply} from "../variables";
+import {tokenDistribution, totalSupply} from '../variables';
 
 export default {
   data: function () {
