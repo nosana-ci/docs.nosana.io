@@ -5,7 +5,7 @@ stages:
   - post
 
 .vuepress:
-  image: node:16.14
+  image: node:16
   cache:
     paths:
       - node_modules
