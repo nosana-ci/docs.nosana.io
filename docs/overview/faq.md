@@ -61,3 +61,8 @@ The Nosana team is a distributed group of individuals with a strong technical ba
 ## How can I contact the team?
 
 You can reach us at [team@nosana.io](mailto:team@nosana.io).
+
+## Are you on GitHub?
+
+You can find us on GitHub at [nosana-ci](https://github.com/nosana-ci).
+
