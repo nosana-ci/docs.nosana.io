@@ -42,6 +42,6 @@
   "devDependencies": {
     "@babel/eslint-parser": "7.18.2",
     "eslint": "8.16.0",
-    "eslint-plugin-vue": "9.0.1"
+    "eslint-plugin-vue": "9.1.0"
   }
 }
