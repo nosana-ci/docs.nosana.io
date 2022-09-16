@@ -12,12 +12,13 @@ The staked NOS is the amount of tokens that the vault actually holds for the use
 while xNOS is a value indicating a users rank for purposes like giveaways and voting.
 
 | Info            | Description                                                                                                                      |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Instructions    | `8`                                                                                                                              |
 | Domain          | `nosana-staking.sol`                                                                                                             |
 | Program Address | [`nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE`](https://explorer.solana.com/address/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE) |
+| APR             | [✅](https://www.apr.dev/program/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE)                                                     |
 
 ## Instructions
 
