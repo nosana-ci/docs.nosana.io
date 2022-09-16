@@ -15,14 +15,46 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
+| Accounts        | `2`                                                                                                                              |
 | Instructions    | `8`                                                                                                                              |
 | Domain          | `nosana-staking.sol`                                                                                                             |
 | Program Address | [`nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE`](https://explorer.solana.com/address/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE) |
 | APR             | [✅](https://www.apr.dev/program/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE)                                                     |
 
+## Accounts
+
+A number of 2 account types make for the Nosana Staking programs' state.
+
+### Stake Account
+
+The `StakeAccount` struct holds all the information for any given staker.
+
+```rust
+pub struct StakeAccount {
+    pub amount: u64,
+    pub authority: Pubkey,
+    pub duration: u64,
+    pub time_unstake: i64,
+    pub vault: Pubkey,
+    pub vault_bump: u8,
+    pub xnos: u128,
+}
+```
+
+### Settings Account
+
+The `SettingsAccount` struct holds the information about the slashing authority and token account.
+
+```rust
+pub struct SettingsAccount {
+    pub authority: Pubkey,
+    pub token_account: Pubkey,
+}
+```
+
 ## Instructions
 
-A number of 4 instruction are defined in the Nosana Pools program.
+A number of 8 instruction are defined in the Nosana Staking program.
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html) in `TypeScript`:
 
 ```typescript
