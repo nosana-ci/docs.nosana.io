@@ -4,3 +4,4 @@ docs/.vuepress/.temp
 docs/.vuepress/.cache
 docs/.vuepress/dist
 renovate.json
+*.md
