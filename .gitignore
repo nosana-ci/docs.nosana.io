@@ -2,3 +2,8 @@ node_modules
 .temp
 .cache
 dist
+
+node_modules/
+test/.vuepress/.cache/
+test/.vuepress/.temp/
+test/.vuepress/dist/
