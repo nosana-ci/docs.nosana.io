@@ -1,10 +1,10 @@
 ---
 home: true
 icon: home
-heroImage: https://nosana.io/img/Nosana_Logo_vertical_color_black.svg
-heroImageDark: https://nosana.io/img/Nosana_Logo_vertical_color_white.svg
+heroImage: https://nosana.io/img/Nosana_Logomark_black.svg
+heroImageDark: https://nosana.io/img/Nosana_Logomark_white.svg
 heroText: Nosana Documentation
-heroFullScreen: true
+heroFullScreen: false
 tagline: Next Gen CI/CD
 actions:
   - text: Get Started
