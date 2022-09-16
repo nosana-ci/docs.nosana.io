@@ -195,13 +195,24 @@ let tx = await program.methods
 To find unclaimed jobs with anchor:
 
 ```javascript
-const jobs = await this.jobsProgram.account.jobAccount.all([
+const jobs = await program.account.jobAccount.all([
   {
     memcmp: {
-      /** offset into program account data to start comparison */
-      offset: 96,
-      /** data to match, as base-58 encoded string and limited to less than 129 bytes */
-      bytes: this.accounts.systemProgram.toBase58(),
+      offset: 8 + 32 * 3,
+      bytes: systemProgram.toBase58(),
+    },
+  },
+]);
+```
+
+To find jobs that have timed out, we first find all running jobs.
+
+```javascript
+const jobs = await program.account.jobAccount.all([
+  {
+    memcmp: {
+      offset: 8 + 32 * 5,
+      bytes: '2',
     },
   },
 ]);
