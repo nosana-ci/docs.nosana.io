@@ -3,8 +3,8 @@
 ## Info
 
 | Description   | type                                                                                                       |
-| ------------- | ---------------------------------------------------------------------------------------------------------- |
-| Type          | SPL Token                                                                                                  |
+|---------------|------------------------------------------------------------------------------------------------------------|
+| Type          | [SPL Token](https://spl.solana.com/token)                                                                  |
 | Standard      | [Non-Fungible](https://docs.metaplex.com/programs/token-metadata/token-standard#the-non-fungible-standard) |
 | Ticker        | TBD                                                                                                        |
 | Total Supply  | TBD                                                                                                        |

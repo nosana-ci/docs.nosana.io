@@ -3,8 +3,8 @@
 ## Info
 
 | Description   | type                                                                                                           |
-| ------------- | -------------------------------------------------------------------------------------------------------------- |
-| Type          | SPL Token                                                                                                      |
+|---------------|----------------------------------------------------------------------------------------------------------------|
+| Type          | [SPL Token](https://spl.solana.com/token)                                                                      |
 | Standard      | [Fungible Asset](https://docs.metaplex.com/programs/token-metadata/token-standard#the-fungible-asset-standard) |
 | Name          | TBD                                                                                                            |
 | Total Supply  | TBD                                                                                                            |
