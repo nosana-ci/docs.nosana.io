@@ -20,7 +20,7 @@ The jobs program allows projects to post jobs, and nodes earn tokens by running 
 
 ## Accounts
 
-A number of 2 account types make for the Nosana Nodes programs' state.
+A number of 2 account types make for the Nosana Job programs' state.
 
 ### Nodes Account
 
@@ -53,8 +53,6 @@ pub struct JobAccount {
     pub time_end: i64,
 }
 ```
-
-## Instructions
 
 ## Instructions
 
