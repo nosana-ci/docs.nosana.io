@@ -16,18 +16,18 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Accounts        | `2`                                                                                                                              |
-| Instructions    | `8`                                                                                                                              |
+| Instructions    | `9`                                                                                                                              |
 | Domain          | `nosana-staking.sol`                                                                                                             |
 | Program Address | [`nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE`](https://explorer.solana.com/address/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE) |
 | APR             | [✅](https://www.apr.dev/program/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE)                                                     |
 
 ## Accounts
 
-A number of 2 account types make for the Nosana Staking programs' state.
+A number of 2 account types make up for the Nosana Staking programs' state.
 
 ### Stake Account
 
-The `StakeAccount` struct holds all the information for any given staker.
+The `StakeAccount` struct holds all the information for any given stake.
 
 ```rust
 pub struct StakeAccount {
@@ -54,7 +54,7 @@ pub struct SettingsAccount {
 
 ## Instructions
 
-A number of 8 instruction are defined in the Nosana Staking program.
+A number of 9 instruction are defined in the Nosana Staking program.
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html) in `TypeScript`:
 
 ```typescript

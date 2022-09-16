@@ -1,13 +1,14 @@
 # Nosana Jobs <Badge type="tip" text="mainnet" vertical="middle" />
 
-## Program Information
+The jobs program allows projects to post jobs, and nodes earn tokens by running jobs.
 
-The jobs program allows users to post jobs and earn tokens by running jobs.
+## Program Information
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
+| Accounts        | `2`                                                                                                                              |
 | Instructions    | `8`                                                                                                                              |
 | Domain          | `nosana-jobs.sol`                                                                                                                |
 | Program Address | [`nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM`](https://explorer.solana.com/address/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM) |
@@ -17,27 +18,124 @@ The jobs program allows users to post jobs and earn tokens by running jobs.
 
 ![](/images/jobs.svg)
 
+## Accounts
+
+A number of 2 account types make for the Nosana Nodes programs' state.
+
+### Nodes Account
+
+The `NodesAccount` struct holds all the information about jobs and the nodes queue.
+
+```rust
+pub struct NodesAccount {
+    pub job_price: u64,
+    pub job_timeout: i64,
+    pub job_type: u8,
+    pub vault: Pubkey,
+    pub vault_bump: u8,
+    pub queue: Vec<Pubkey>,
+}
+```
+
+### Job Account
+
+The `JobAccount` struct holds all the information about any invidual jobs.
+
+```rust
+pub struct JobAccount {
+    pub authority: Pubkey,
+    pub ipfs_job: [u8; 32],
+    pub ipfs_result: [u8; 32],
+    pub node: Pubkey,
+    pub nodes: Pubkey,
+    pub status: u8,
+    pub time_start: i64,
+    pub time_end: i64,
+}
+```
+
 ## Instructions
 
-There is a total of 8 instructions
+## Instructions
+
+A number of 8 instruction are defined in the Nosana Staking program.
+To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html) in `TypeScript`:
+
+```typescript
+const programId = new PublicKey('nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM');
+const idl = await Program.fetchIdl(programId.toString());
+const program = new Program(idl, programId);
+```
 
 ### Init
 
-`init()` initializes a nodes queue and a associated token vault for token deposits.
+The `init()` instruction initializes a nodes queue and a associated token vault for token deposits.
+
+```typescript
+let tx = await program.methods
+    .init(
+        jobPrice,
+        jobTimeout,
+        jobType,
+    )
+    .accounts({
+        mint,
+        nodes,
+        vault,
+        authority,
+        rent,
+        systemProgram,
+        tokenProgram,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Create
 
-`create()` creates a Job with it's required data.
+The `create()` instruction creates a Job with it's required data.
 When there is a node ready in the queue it will immediately start running.
+
+```typescript
+let tx = await program.methods
+    .init(ipfsJob)
+    .accounts({
+        job,
+        nodes,
+        vault,
+        user,
+        authority,
+        rent,
+        systemProgram,
+        tokenProgram,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Close
 
-`close()` closes an existing job account.
+The `close()` instruction closes an existing job account.
 When the job was still queued the tokens will be returned to the user.
+
+```typescript
+let tx = await program.methods
+    .close()
+    .accounts({
+        job,
+        nodes,
+        vault,
+        user,
+        authority,
+        tokenProgram,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Enter
 
-With `enter()` a node enters the node queue.
+With the `enter()` instruction a node enters the node queue.
 
 A few requirements are enforced:
 
@@ -45,13 +143,55 @@ A few requirements are enforced:
 - A node needs to hold an official Nosana NFT.
 - A node can only enter the queue once
 
+```typescript
+let tx = await program.methods
+    .enter()
+    .accounts({
+        stake,
+        nft,
+        metadata,
+        nodes,
+        vault,
+        authority,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
+
 ### Exit
 
-With `exit()` a node exits the node queue.
+With the `exit()` instruction a node exits the node queue.
+
+```typescript
+let tx = await program.methods
+    .exit()
+    .accounts({
+        nodes,
+        authority,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Claim
 
-With `claim()` a node can claim a job that is in the queued state.
+With the `claim()` instruction a node can claim a job that is in the queued state.
+
+```typescript
+let tx = await program.methods
+    .claim()
+    .accounts({
+        job,
+        stake,
+        nft,
+        metadata,
+        nodes,
+        vault,
+        authority,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 To find unclaimed jobs with anchor:
 
@@ -70,8 +210,34 @@ const jobs = await this.jobsProgram.account.jobAccount.all([
 
 ### Cancel
 
-With `cancel()` a node can stop running a job that it has started.
+With the `cancel()` instruction a node can stop running a job that it has started.
+
+```typescript
+let tx = await program.methods
+    .cancel()
+    .accounts({
+        job,
+        authority,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Finish
 
-With `finish()` a node can can post the result for a job it has finished, and me reimbursed for the work.
+With the `finish()` instruction a node can can post the result for a job it has finished, and me reimbursed for the work.
+
+```typescript
+let tx = await program.methods
+    .finish()
+    .accounts({
+        job,
+        nodes,
+        vault,
+        user,
+        authority,
+        tokenProgram,
+    })
+    .signers([authorityKey])
+    .rpc();
+```

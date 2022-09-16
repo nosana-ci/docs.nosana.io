@@ -1,17 +1,40 @@
 # Nosana Pools <Badge type="warning" text="mainnet" vertical="middle" />
 
-## Program Information
-
 The Nosana Pools program allows users to open token pools with predefined emission rates.
+
+## Program Information
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
+| Accounts        | `1`                                                                                                                              |
 | Instructions    | `4`                                                                                                                              |
 | Domain          | `nosana-pools.sol`                                                                                                               |
 | Program Address | [`nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD`](https://explorer.solana.com/address/nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD) |
 | APR             | [✅](https://www.apr.dev/program/nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD)                                                     |
+
+## Accounts
+
+Only 1 account type makes up for the Nosana Pools programs' state.
+
+### Pool Account
+
+The `PoolAccount` struct holds all the information for any given pool.
+
+```rust
+pub struct PoolAccount {
+    pub authority: Pubkey,
+    pub beneficiary: Pubkey,
+    pub claim_type: u8,
+    pub claimed_tokens: u64,
+    pub closeable: bool,
+    pub emission: u64,
+    pub start_time: i64,
+    pub vault: Pubkey,
+    pub vault_bump: u8,
+}
+```
 
 ## Instructions
 
