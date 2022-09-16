@@ -60,4 +60,3 @@ You can reach us at [team@nosana.io](mailto:team@nosana.io).
 ## Are you on GitHub?
 
 You can find us on GitHub at [nosana-ci](https://github.com/nosana-ci).
-

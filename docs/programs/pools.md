@@ -5,7 +5,7 @@
 The jobs program allows users to post jobs and earn tokens by running jobs.
 
 | Info            | Description                                                                                                                      |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Instructions    | `4`                                                                                                                              |

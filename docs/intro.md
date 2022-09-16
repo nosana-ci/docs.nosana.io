@@ -1,4 +1,4 @@
-# Getting Started
+# Welcome to Nosana
 
 ::: tip
 Run code checks and build container images to earn tokens.

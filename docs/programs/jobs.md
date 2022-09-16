@@ -5,7 +5,7 @@
 The jobs program allows users to post jobs and earn tokens by running jobs.
 
 | Info            | Description                                                                                                                      |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Instructions    | `8`                                                                                                                              |
@@ -24,7 +24,6 @@ There is a total of 8 instructions
 
 `init()` initializes a nodes queue and a associated token vault for token deposits.
 
-
 ### Create
 
 `create()` creates a Job with it's required data.
@@ -35,7 +34,6 @@ When there is a node ready in the queue it will immediately start running.
 `close()` closes an existing job account.
 When the job was still queued the tokens will be returned to the user.
 
-
 ### Enter
 
 With `enter()` a node enters the node queue.
@@ -45,7 +43,6 @@ A few requirements are enforced:
 - A node needs to have a minimum stake in Nosana Staking.
 - A node needs to hold an official Nosana NFT.
 - A node can only enter the queue once
-
 
 ### Exit
 
@@ -58,20 +55,21 @@ With `claim()` a node can claim a job that is in the queued state.
 To find unclaimed jobs with anchor:
 
 ```javascript
-const jobs = await this.jobsProgram.account.jobAccount.all([{
-  memcmp: {
-    /** offset into program account data to start comparison */
-    offset: 96,
-    /** data to match, as base-58 encoded string and limited to less than 129 bytes */
-    bytes: this.accounts.systemProgram.toBase58()
-  }
-}]);
+const jobs = await this.jobsProgram.account.jobAccount.all([
+  {
+    memcmp: {
+      /** offset into program account data to start comparison */
+      offset: 96,
+      /** data to match, as base-58 encoded string and limited to less than 129 bytes */
+      bytes: this.accounts.systemProgram.toBase58(),
+    },
+  },
+]);
 ```
 
 ### Cancel
 
 With `cancel()` a node can stop running a job that it has started.
-
 
 ### Finish
 

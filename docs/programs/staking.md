@@ -12,7 +12,7 @@ The staked NOS is the amount of tokens that the vault actually holds for the use
 while xNOS is a value indicating a users rank for purposes like giveaways and voting.
 
 | Info            | Description                                                                                                                      |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Instructions    | `8`                                                                                                                              |

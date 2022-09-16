@@ -2,12 +2,11 @@
 
 ## Program Information
 
-
 The rewards program allow stakers to earn rewards. Anyone that has a stake can
 enter the rewards program.
 
 | Info            | Description                                                                                                                      |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Type            | Solana Program                                                                                                                   |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Instructions    | `8`                                                                                                                              |

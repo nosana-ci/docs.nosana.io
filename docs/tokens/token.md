@@ -3,15 +3,16 @@
 ## Info
 
 | Description   | type                                                                                                                             |
-|---------------|----------------------------------------------------------------------------------------------------------------------------------|
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Type          | SPL Token                                                                                                                        |
+| Standard      | [Fungible](https://docs.metaplex.com/programs/token-metadata/token-standard#the-fungible-standard)                               |
 | Ticker        | <strong>`NOS`</strong>                                                                                                           |
 | Total Supply  | `100,000,000` tokens                                                                                                             |
 | Token Address | [`nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7`](https://explorer.solana.com/address/nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7) |
 
 ## Token Distribution
 
-Tokens are distributed over 7 main pools. 
+Tokens are distributed over 7 main pools.
 These are the Public Sale tokens, Airdrop tokens, Liquidity tokens, Team tokens, Company tokens, Mining tokens,
 and the Backers tokens.
 

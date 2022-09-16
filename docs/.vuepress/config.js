@@ -1,4 +1,10 @@
-import { defineUserConfig , defaultTheme} from 'vuepress'
+import { defineUserConfig, defaultTheme } from 'vuepress';
+
+const pages = {
+  nodes: ['/nodes/start', '/nodes/stake', '/nodes/nft'],
+  programs: ['/programs/staking', '/programs/rewards', '/programs/pools', '/programs/jobs', '/programs/voting'],
+  tokens: ['/tokens/intro', '/tokens/token', '/tokens/nft', '/tokens/card'],
+};
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -11,10 +17,10 @@ export default defineUserConfig({
     editLinkText: 'Edit this page on GitHub',
     docsDir: 'docs',
     head: [
-      ['meta', {name: 'viewport', content: 'width=device-width, initial-scale=1.0'}],
-      ['meta', {name: 'theme-color', content: '#3eaf7c'}],
-      ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
-      ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}]
+      ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
+      ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+      ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+      ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ],
     navbar: [
       {
@@ -22,47 +28,58 @@ export default defineUserConfig({
         link: '/',
       },
       {
-        text: 'Overview',
-        link: '/overview',
+        text: 'Introduction',
+        link: '/intro',
+      },
+      {
+        text: 'F.A.Q.',
+        link: '/faq',
+      },
+      {
+        text: 'Nodes',
+        link: '/nodes',
+        children: pages.nodes,
       },
       {
         text: 'Programs',
-        link: '/nosana',
-        children: [
-          '/nosana/index.md',
-          '/nosana/staking.md',
-          '/nosana/rewards.md',
-          '/nosana/pools.md',
-          '/nosana/jobs.md',
-          '/nosana/voting.md',
-          '/nosana/token.md',
-        ],
-      }
+        link: '/programs',
+        children: pages.programs,
+      },
+      {
+        text: 'Tokens',
+        link: '/tokens',
+        children: pages.tokens,
+      },
+      {
+        text: 'Website',
+        link: 'https://nosana.io',
+      },
     ],
     sidebar: {
-      '/overview/': [
+      '/faq/': [
         {
-          text: 'Overview',
-          children: [
-            '/overview/index.md',
-            '/overview/faq.md',
-          ],
+          text: 'Frequently Asked Questions',
+          children: ['/faq'],
         },
       ],
-      '/nosana/': [
+      '/nodes/': [
         {
-          text: 'Nosana',
-          children: [
-            '/nosana/index.md',
-            '/nosana/staking.md',
-            '/nosana/rewards.md',
-            '/nosana/pools.md',
-            '/nosana/jobs.md',
-            '/nosana/voting.md',
-            '/nosana/token.md',
-          ],
+          text: 'Nosana Nodes',
+          children: pages.nodes,
         },
-      ]
+      ],
+      '/programs/': [
+        {
+          text: 'Nosana Programs',
+          children: pages.programs,
+        },
+      ],
+      '/tokens/': [
+        {
+          text: 'Nosana Tokens',
+          children: pages.tokens,
+        },
+      ],
     },
   }),
-})
+});
