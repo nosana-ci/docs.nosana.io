@@ -1,6 +1,3 @@
 include:
   - project: nosana-ci/tools/cicd/gitlab-ci
     file: npm-generic.yml
-
-variables:
-  OUTPUT_DIR: docs/.vuepress/dist/

@@ -2,6 +2,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "generate": "vuepress build docs -d dist",
     "lint": "echo todo"
   },
   "devDependencies": {
