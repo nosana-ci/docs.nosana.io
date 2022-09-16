@@ -194,7 +194,7 @@ let tx = await program.methods
 
 To find unclaimed jobs with anchor:
 
-```javascript
+```typescript
 const jobs = await program.account.jobAccount.all([
   {
     memcmp: {
@@ -207,7 +207,7 @@ const jobs = await program.account.jobAccount.all([
 
 To find jobs that have timed out, we first find all running jobs.
 
-```javascript
+```typescript
 const jobs = await program.account.jobAccount.all([
   {
     memcmp: {
