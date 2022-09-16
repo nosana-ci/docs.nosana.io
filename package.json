@@ -1,13 +1,10 @@
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "lint": "echo todo"
   },
   "devDependencies": {
     "vuepress": "^2.0.0-beta.51"
-  },
-  "dependencies": {
-    "apexcharts": "^3.35.5",
-    "vuepress-plugin-global-variables": "^0.2.0"
   }
 }

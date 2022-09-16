@@ -1,5 +1,4 @@
 import { defineUserConfig , defaultTheme} from 'vuepress'
-import variables from './variables'
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -10,9 +9,6 @@ export default defineUserConfig({
     logo: 'https://nosana.io/img/NOS_logo.png',
     repo: 'https://github.com/nosana-ci/docs.nosana.io',
     editLinkText: 'Edit this page on GitHub',
-    plugins: [
-      ['global-variables', {variables}],
-    ],
     docsDir: 'docs',
     head: [
       ['meta', {name: 'viewport', content: 'width=device-width, initial-scale=1.0'}],
