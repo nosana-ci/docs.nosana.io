@@ -26,7 +26,7 @@ const program = new Program(idl, programId);
 
 ### Open
 
-The `open()` instruction lets you open a Nosana Pool. 
+The `open()` instruction lets you open a Nosana Pool.
 
 ```typescript
 let tx = await program.methods
@@ -52,7 +52,7 @@ let tx = await program.methods
 
 ### Claim Fee
 
-The `claimFee()` instruction claims emissions from a Nosana Pool with claim type `1`, 
+The `claimFee()` instruction claims emissions from a Nosana Pool with claim type `1`,
 and adds these as rewards (fees) to the RewardsProgram.
 
 ```typescript
@@ -74,7 +74,7 @@ let tx = await program.methods
 
 ### Claim Transfer
 
-The `claimTransfer()` instruction claims emissions from a Nosana Pool with claim type `0`, 
+The `claimTransfer()` instruction claims emissions from a Nosana Pool with claim type `0`,
 and transfer these to a given `user`.
 
 ```typescript

@@ -1,7 +1,5 @@
 # Nosana Staking <Badge type="tip" text="mainnet" vertical="middle" />
 
-## Program Information
-
 The staking program allows users to stake `NOS` tokens for a variable amount of time.
 There are 2 values associated with a users stake:
 
@@ -10,6 +8,8 @@ There are 2 values associated with a users stake:
 
 The staked NOS is the amount of tokens that the vault actually holds for the user that can be slashed or unstaked,
 while xNOS is a value indicating a users rank for purposes like giveaways and voting.
+
+## Program Information
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
@@ -22,54 +22,185 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 
 ## Instructions
 
+A number of 4 instruction are defined in the Nosana Pools program.
+To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html) in `TypeScript`:
+
+```typescript
+const programId = new PublicKey('nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE');
+const idl = await Program.fetchIdl(programId.toString());
+const program = new Program(idl, programId);
+```
+
 ### Init
 
-Initializes the SettingsAccount of the staking program.
+The `init()` instruction initializes the SettingsAccount of the Nosana Staking program.
+
+```typescript
+let tx = await program.methods
+    .init()
+    .accounts({
+        settings,
+        authority,
+        systemProgram,
+        rent,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Stake
 
-Create a new stake for `authority`.
-Initializes a unique `vault` for the staker.
+The `stake()` instruction creates a new stake for the `authority`.
+It initializes a unique `vault` Token Account for the staker.
 This will transfer `amount` of NOS tokens from `user` to the `vault` locked for at least `amount` seconds of time.
-The new stake account is a PDA based on the `authority`.
+The stake account is a PDA based on the `authority`.
+
+```typescript
+let tx = await program.methods
+    .stake(
+        amount,
+        duration
+    )
+    .accounts({
+        mint,
+        user,
+        vault,
+        stake,
+        authority,
+        systemProgram,
+        tokenProgram,
+        rent,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Topup
 
-Performs a top-up of an existing stake.
+The `topup()` instruction performs a top-up of an existing stake.
 `amount` of NOS is transferred to `ata_vault` and the tokens at `stake` are incremented.
 
-- You can top-up for any `stake`
 - You can only top-up if the `stake` is not unstaked yet
 - A top-up is always for the duration of the original `stake`
 
+```typescript
+let tx = await program.methods
+    .topup(amount)
+    .accounts({
+        user,
+        vault,
+        stake,
+        authority,
+        tokenProgram,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
+
 ### Extend
 
-Extends the duration of a stake.
-The duration can only be increased which will result in a higher xnos.
+The `extend()` instruction extends the duration of a stake.
+The duration can only be increased which will result in a higher `xnos`.
 
-### Slash
-
-Reduce a stakes NOS tokens.
-This can only be done by the slashing authority declared in ~stats.authority~.
-The tokens that are slashed will be sent to the provided ~ata_to~ account.
-
-Slashing is a feature used by the Nosana protocol to punish bad actors.
-
-### UpdateSetting
-
-Set the slashing authority in ~settings.authority~ to a new account.
-Set the token account in ~settings.token_account~ to a new account.
-This can only by called by the current slashing authority.
+```typescript
+let tx = await program.methods
+    .extend(duration)
+    .accounts({
+        stake,
+        authority,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Restake
 
-Undo an unstake. This will make a stake active again and reset the unstake time.
+The `restake()` instruction undoes an unstake.
+This will make a stake active again and reset the unstake time.
+
+```typescript
+let tx = await program.methods
+    .restake()
+    .accounts({
+        stake,
+        authority,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Unstake
 
-This will initiate the unstake delay.
+The `unstake()` instruction will initiate the unstake delay.
+
+```typescript
+let tx = await program.methods
+    .unstake()
+    .accounts({
+        stake,
+        authority,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
 
 ### Claim
 
-Claim will transfer back all your `stake` tokens if the delay has passed after they whey unstaked.
+The `unstake()` instruction will transfer back all your `stake` tokens if the delay has passed after they whey unstaked.
 Claiming will close the `stake` account.
+
+```typescript
+let tx = await program.methods
+    .claim()
+    .accounts({
+        user,
+        vault,
+        stake,
+        authority,
+        tokenProgram,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
+
+### Slash
+
+The `unstake()` instruction reduces a stakes' NOS tokens.
+This can only be done by the slashing authority declared in `SettingsAccount.Authority`.
+The tokens that are slashed will be sent to the `SettingsAccount.TokenAccount` account.
+
+Slashing is a feature used by the Nosana protocol to punish bad actors.
+
+```typescript
+let tx = await program.methods
+    .slash(amount)
+    .accounts({
+        settings,
+        stake,
+        tokenAccount,
+        vault,
+        authority,
+        tokenProgram,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
+
+### Update Setting
+
+The `updateSettings()` instruction sets the slashing authority in `SettingsAccount.Authority` to a new account.
+It also sets the token account in `SettingsAccount.TokenAccount` to a new account.
+This can only by called by the current authority.
+
+```typescript
+let tx = await program.methods
+    .slash()
+    .accounts({
+        newAuthority,
+        tokenAccount,
+        settings,
+        authority,
+    })
+    .signers([authorityKey])
+    .rpc();
+```
