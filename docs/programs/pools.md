@@ -15,6 +15,14 @@ The jobs program allows users to post jobs and earn tokens by running jobs.
 
 ## Instructions
 
+The following instruction are defined in the Nosana Pools program.
+
+```typescript
+const programId = new PublicKey('nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD');
+const idl = await Program.fetchIdl(programId.toString());
+const program = new Program(idl, programId);
+```
+
 ### Open
 
 The `open()` instruction lets you open a Nosana Pool. 
@@ -22,7 +30,7 @@ The `open()` instruction lets you open a Nosana Pool.
 ```typescript
 const throwAwayKeypair = Keypair.generate();
 
-let tx = await poolsProgram.methods
+let tx = await program.methods
     .open(
       emission,
       startTime,
@@ -49,7 +57,7 @@ The `claimFee()` instruction claims emissions from a Nosana Pool with claim type
 and adds these as rewards (fees) to the RewardsProgram.
 
 ```typescript
-let tx = await poolsProgram.methods
+let tx = await program.methods
     .claimFee()
     .accounts({
         vault,
@@ -71,7 +79,7 @@ The `claimTransfer()` instruction claims emissions from a Nosana Pool with claim
 and transfer these to a given `user`.
 
 ```typescript
-let tx = await poolsProgram.methods
+let tx = await program.methods
     .claimTransfer()
     .accounts({
         vault,
@@ -90,7 +98,7 @@ let tx = await poolsProgram.methods
 The `close()` instruction close a Nosana Pool.
 
 ```typescript
-let tx = await poolsProgram.methods
+let tx = await program.methods
     .close()
     .accounts({
         vault,
