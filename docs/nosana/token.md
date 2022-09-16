@@ -2,12 +2,12 @@
 
 ## Info
 
-| Description   | type                                                                                                                          |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Type          | SPL Token                                                                                                                     |
-| Ticker        | <strong>`NOS`</strong>                                                                                                        |
-| Total Supply  | `100,000,000` tokens                                                                                                   |
-| Token Address | [nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7](https://explorer.solana.com/address/nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7) |
+| Description   | type                                                                                                                             |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Type          | SPL Token                                                                                                                        |
+| Ticker        | <strong>`NOS`</strong>                                                                                                           |
+| Total Supply  | `100,000,000` tokens                                                                                                             |
+| Token Address | [`nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7`](https://explorer.solana.com/address/nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7) |
 
 ## Token Distribution
 

@@ -12,27 +12,31 @@ The jobs program allows users to post jobs and earn tokens by running jobs.
 | Domain          | `nosana-jobs.sol`                                                                                                                |
 | Program Address | [`nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM`](https://explorer.solana.com/address/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM) |
 
+## Diagram
+
+![](/images/jobs.svg)
+
 ## Instructions
 
 There is a total of 8 instructions
 
-### init()
+### Init
 
 `init()` initializes a nodes queue and a associated token vault for token deposits.
 
 
-### create()
+### Create
 
 `create()` creates a Job with it's required data.
 When there is a node ready in the queue it will immediately start running.
 
-### close()
+### Close
 
 `close()` closes an existing job account.
 When the job was still queued the tokens will be returned to the user.
 
 
-### enter()
+### Enter
 
 With `enter()` a node enters the node queue.
 
@@ -43,11 +47,11 @@ A few requirements are enforced:
 - A node can only enter the queue once
 
 
-### exit()
+### Exit
 
 With `exit()` a node exits the node queue.
 
-### claim()
+### Claim
 
 With `claim()` a node can claim a job that is in the queued state.
 
@@ -64,11 +68,11 @@ const jobs = await this.jobsProgram.account.jobAccount.all([{
 }]);
 ```
 
-### cancel()
+### Cancel
 
 With `cancel()` a node can stop running a job that it has started.
 
 
-### finish()
+### Finish
 
 With `finish()` a node can can post the result for a job it has finished, and me reimbursed for the work.

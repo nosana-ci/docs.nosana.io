@@ -29,6 +29,7 @@ export default defineUserConfig({
         text: 'Programs',
         link: '/nosana',
         children: [
+          '/nosana/index.md',
           '/nosana/staking.md',
           '/nosana/rewards.md',
           '/nosana/pools.md',
@@ -52,6 +53,7 @@ export default defineUserConfig({
         {
           text: 'Nosana',
           children: [
+            '/nosana/index.md',
             '/nosana/staking.md',
             '/nosana/rewards.md',
             '/nosana/pools.md',
