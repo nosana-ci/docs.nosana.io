@@ -1,6 +1,7 @@
 # Nosana Jobs <Badge type="tip" text="mainnet" vertical="middle" />
 
-The jobs program allows projects to post jobs, and nodes earn tokens by running jobs.
+The Nosana Jobs program allows projects to post pipeline jobs.
+It allows nodes in the Nosana Network to earn tokens by running those jobs.
 
 ## Program Information
 
