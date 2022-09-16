@@ -69,15 +69,15 @@ The `init()` instruction initializes the SettingsAccount of the Nosana Staking p
 
 ```typescript
 let tx = await program.methods
-    .init()
-    .accounts({
-        settings,
-        authority,
-        systemProgram,
-        rent,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .init()
+  .accounts({
+    settings,
+    authority,
+    systemProgram,
+    rent,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Stake
@@ -89,22 +89,22 @@ The stake account is a PDA based on the `authority`.
 
 ```typescript
 let tx = await program.methods
-    .stake(
-        amount,
-        duration
-    )
-    .accounts({
-        mint,
-        user,
-        vault,
-        stake,
-        authority,
-        systemProgram,
-        tokenProgram,
-        rent,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .stake(
+    amount,
+    duration
+  )
+  .accounts({
+    mint,
+    user,
+    vault,
+    stake,
+    authority,
+    systemProgram,
+    tokenProgram,
+    rent,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Topup
@@ -117,16 +117,16 @@ The `topup()` instruction performs a top-up of an existing stake.
 
 ```typescript
 let tx = await program.methods
-    .topup(amount)
-    .accounts({
-        user,
-        vault,
-        stake,
-        authority,
-        tokenProgram,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .topup(amount)
+  .accounts({
+    user,
+    vault,
+    stake,
+    authority,
+    tokenProgram,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Extend
@@ -136,13 +136,13 @@ The duration can only be increased which will result in a higher `xnos`.
 
 ```typescript
 let tx = await program.methods
-    .extend(duration)
-    .accounts({
-        stake,
-        authority,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .extend(duration)
+  .accounts({
+    stake,
+    authority,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Restake
@@ -152,13 +152,13 @@ This will make a stake active again and reset the unstake time.
 
 ```typescript
 let tx = await program.methods
-    .restake()
-    .accounts({
-        stake,
-        authority,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .restake()
+  .accounts({
+    stake,
+    authority,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Unstake
@@ -167,13 +167,13 @@ The `unstake()` instruction will initiate the unstake delay.
 
 ```typescript
 let tx = await program.methods
-    .unstake()
-    .accounts({
-        stake,
-        authority,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .unstake()
+  .accounts({
+    stake,
+    authority,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Claim
@@ -183,16 +183,16 @@ Claiming will close the `stake` account.
 
 ```typescript
 let tx = await program.methods
-    .claim()
-    .accounts({
-        user,
-        vault,
-        stake,
-        authority,
-        tokenProgram,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .claim()
+  .accounts({
+    user,
+    vault,
+    stake,
+    authority,
+    tokenProgram,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Slash
@@ -205,17 +205,17 @@ Slashing is a feature used by the Nosana protocol to punish bad actors.
 
 ```typescript
 let tx = await program.methods
-    .slash(amount)
-    .accounts({
-        settings,
-        stake,
-        tokenAccount,
-        vault,
-        authority,
-        tokenProgram,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .slash(amount)
+  .accounts({
+    settings,
+    stake,
+    tokenAccount,
+    vault,
+    authority,
+    tokenProgram,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Update Setting
@@ -226,13 +226,13 @@ This can only by called by the current authority.
 
 ```typescript
 let tx = await program.methods
-    .slash()
-    .accounts({
-        newAuthority,
-        tokenAccount,
-        settings,
-        authority,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .slash()
+  .accounts({
+    newAuthority,
+    tokenAccount,
+    settings,
+    authority,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```

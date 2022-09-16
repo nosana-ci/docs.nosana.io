@@ -53,24 +53,24 @@ The `open()` instruction lets you open a Nosana Pool.
 
 ```typescript
 let tx = await program.methods
-    .open(
-      emission,
-      startTime,
-      claimType,
-      closeable
-    )
-    .accounts({
-        pool,
-        vault,
-        beneficiary,
-        authority,
-        mint,
-        systemProgram,
-        tokenProgram,
-        rent
-    })
-    .signers([authorityKey, poolKey])
-    .rpc();
+  .open(
+    emission,
+    startTime,
+    claimType,
+    closeable
+  )
+  .accounts({
+    pool,
+    vault,
+    beneficiary,
+    authority,
+    mint,
+    systemProgram,
+    tokenProgram,
+    rent
+  })
+  .signers([authorityKey, poolKey])
+  .rpc();
 ```
 
 ### Claim Fee
@@ -80,19 +80,19 @@ and adds these as rewards (fees) to the RewardsProgram.
 
 ```typescript
 let tx = await program.methods
-    .claimFee()
-    .accounts({
-        vault,
-        rewardsStats,
-        rewardsVault,
-        pool,
-        authority,
-        tokenProgram,
-        rewardsProgram,
-        systemProgram,
-    })
-    .signers([authority])
-    .rpc()
+  .claimFee()
+  .accounts({
+    vault,
+    rewardsStats,
+    rewardsVault,
+    pool,
+    authority,
+    tokenProgram,
+    rewardsProgram,
+    systemProgram,
+  })
+  .signers([authority])
+  .rpc()
 ```
 
 ### Claim Transfer
@@ -102,17 +102,17 @@ and transfer these to a given `user`.
 
 ```typescript
 let tx = await program.methods
-    .claimTransfer()
-    .accounts({
-        vault,
-        beneficiary,
-        pool,
-        authority,
-        tokenProgram,
-        systemProgram,
-    })
-    .signers([authority])
-    .rpc()
+  .claimTransfer()
+  .accounts({
+    vault,
+    beneficiary,
+    pool,
+    authority,
+    tokenProgram,
+    systemProgram,
+  })
+  .signers([authority])
+  .rpc()
 ```
 
 ### Close
@@ -121,14 +121,14 @@ The `close()` instruction closes a Nosana Pool.
 
 ```typescript
 let tx = await program.methods
-    .close()
-    .accounts({
-        vault,
-        user,
-        pool,
-        authority,
-        tokenProgram,
-    })
-    .signers([authority])
-    .rpc()
+  .close()
+  .accounts({
+    vault,
+    user,
+    pool,
+    authority,
+    tokenProgram,
+  })
+  .signers([authority])
+  .rpc()
 ```

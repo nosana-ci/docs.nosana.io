@@ -72,22 +72,22 @@ The `init()` instruction initializes a nodes queue and a associated token vault 
 
 ```typescript
 let tx = await program.methods
-    .init(
-        jobPrice,
-        jobTimeout,
-        jobType,
-    )
-    .accounts({
-        mint,
-        nodes,
-        vault,
-        authority,
-        rent,
-        systemProgram,
-        tokenProgram,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .init(
+    jobPrice,
+    jobTimeout,
+    jobType,
+  )
+  .accounts({
+    mint,
+    nodes,
+    vault,
+    authority,
+    rent,
+    systemProgram,
+    tokenProgram,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Create
@@ -97,19 +97,19 @@ When there is a node ready in the queue it will immediately start running.
 
 ```typescript
 let tx = await program.methods
-    .init(ipfsJob)
-    .accounts({
-        job,
-        nodes,
-        vault,
-        user,
-        authority,
-        rent,
-        systemProgram,
-        tokenProgram,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .init(ipfsJob)
+  .accounts({
+    job,
+    nodes,
+    vault,
+    user,
+    authority,
+    rent,
+    systemProgram,
+    tokenProgram,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Close
@@ -119,17 +119,17 @@ When the job was still queued the tokens will be returned to the user.
 
 ```typescript
 let tx = await program.methods
-    .close()
-    .accounts({
-        job,
-        nodes,
-        vault,
-        user,
-        authority,
-        tokenProgram,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .close()
+  .accounts({
+    job,
+    nodes,
+    vault,
+    user,
+    authority,
+    tokenProgram,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Enter
@@ -144,17 +144,17 @@ A few requirements are enforced:
 
 ```typescript
 let tx = await program.methods
-    .enter()
-    .accounts({
-        stake,
-        nft,
-        metadata,
-        nodes,
-        vault,
-        authority,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .enter()
+  .accounts({
+    stake,
+    nft,
+    metadata,
+    nodes,
+    vault,
+    authority,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Exit
@@ -163,33 +163,36 @@ With the `exit()` instruction a node exits the node queue.
 
 ```typescript
 let tx = await program.methods
-    .exit()
-    .accounts({
-        nodes,
-        authority,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .exit()
+  .accounts({
+    nodes,
+    authority,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Claim
 
-With the `claim()` instruction a node can claim a job that is in the queued state.
+With the `claim()` instruction a node can claim a job that is:
+
+- In the Queued (`0`) state.
+- In the Running (`1`) state, but after is has expired.
 
 ```typescript
 let tx = await program.methods
-    .claim()
-    .accounts({
-        job,
-        stake,
-        nft,
-        metadata,
-        nodes,
-        vault,
-        authority,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .claim()
+  .accounts({
+    job,
+    stake,
+    nft,
+    metadata,
+    nodes,
+    vault,
+    authority,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 To find unclaimed jobs with anchor:
@@ -198,12 +201,26 @@ To find unclaimed jobs with anchor:
 const jobs = await program.account.jobAccount.all([
   {
     memcmp: {
-      offset: 8 + 32 * 3,
+      offset: 8 + 32 * 3, // the assigned node must be NULL
       bytes: systemProgram.toBase58(),
+    },
+  },
+  {
+    memcmp: {
+      offset: 8 + 32 * 4, // the nodes queue
+      bytes: nodes.toBase58(),
+    },
+  },
+  {
+    memcmp: {
+      offset: 8 + 32 * 5, // the job status
+      bytes: '1',
     },
   },
 ]);
 ```
+
+Note: leave the `nodes` out to find jobs across all node queues.
 
 To find jobs that have timed out, we first find all running jobs.
 
@@ -211,11 +228,28 @@ To find jobs that have timed out, we first find all running jobs.
 const jobs = await program.account.jobAccount.all([
   {
     memcmp: {
-      offset: 8 + 32 * 5,
+      offset: 8 + 32 * 4, // the nodes queue
+      bytes: nodes.toBase58(),
+    },
+  }, 
+  {
+    memcmp: {
+      offset: 8 + 32 * 5, // the job status
       bytes: '2',
     },
   },
 ]);
+```
+
+With the retrieved running `jobs` we can find jobs that have expired,
+by checking their start time:
+
+```typescript
+for (const job of jobs) {
+  if (job.account.timeStart > (Date.now() / 1e3 - nodes.jobTimout)) {
+    // claim job!
+  }
+}
 ```
 
 ### Cancel
@@ -224,13 +258,13 @@ With the `cancel()` instruction a node can stop running a job that it has starte
 
 ```typescript
 let tx = await program.methods
-    .cancel()
-    .accounts({
-        job,
-        authority,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .cancel()
+  .accounts({
+    job,
+    authority,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
 
 ### Finish
@@ -239,15 +273,15 @@ With the `finish()` instruction a node can can post the result for a job it has 
 
 ```typescript
 let tx = await program.methods
-    .finish()
-    .accounts({
-        job,
-        nodes,
-        vault,
-        user,
-        authority,
-        tokenProgram,
-    })
-    .signers([authorityKey])
-    .rpc();
+  .finish()
+  .accounts({
+    job,
+    nodes,
+    vault,
+    user,
+    authority,
+    tokenProgram,
+  })
+  .signers([authorityKey])
+  .rpc();
 ```
