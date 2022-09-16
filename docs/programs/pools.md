@@ -2,7 +2,7 @@
 
 ## Program Information
 
-The jobs program allows users to post jobs and earn tokens by running jobs.
+The Nosana Pools program allows users to open token pools with predefined emission rates.
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
@@ -16,7 +16,7 @@ The jobs program allows users to post jobs and earn tokens by running jobs.
 ## Instructions
 
 A number of 4 instruction are defined in the Nosana Pools program.
-To load the program in [Anchor](https://www.anchor-lang.com/):
+To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html) in `TypeScript`:
 
 ```typescript
 const programId = new PublicKey('nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD');
@@ -94,7 +94,7 @@ let tx = await program.methods
 
 ### Close
 
-The `close()` instruction close a Nosana Pool.
+The `close()` instruction closes a Nosana Pool.
 
 ```typescript
 let tx = await program.methods
