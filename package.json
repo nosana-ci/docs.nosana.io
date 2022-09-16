@@ -3,7 +3,8 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "generate": "vuepress build docs -d dist",
-    "lint": "prettier --check ."
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "devDependencies": {
     "prettier": "2.7.1",
