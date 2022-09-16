@@ -6,10 +6,10 @@ heroText: Nosana Documentation
 tagline: Next Gen CI/CD
 actions:
   - text: Get Started
-    link: /nosana/jobs
+    link: /nodes/start
     type: primary
   - text: Introduction
-    link: /overview/
+    link: /intro
     type: secondary
 features:
   - title: Decentralized Marketplace
