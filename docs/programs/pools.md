@@ -15,7 +15,8 @@ The jobs program allows users to post jobs and earn tokens by running jobs.
 
 ## Instructions
 
-The following instruction are defined in the Nosana Pools program.
+A number of 4 instruction are defined in the Nosana Pools program.
+To load the program in [Anchor](https://www.anchor-lang.com/):
 
 ```typescript
 const programId = new PublicKey('nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD');
@@ -28,8 +29,6 @@ const program = new Program(idl, programId);
 The `open()` instruction lets you open a Nosana Pool. 
 
 ```typescript
-const throwAwayKeypair = Keypair.generate();
-
 let tx = await program.methods
     .open(
       emission,
@@ -47,7 +46,7 @@ let tx = await program.methods
         tokenProgram,
         rent
     })
-    .signers([authority, throwAwayKeypair])
+    .signers([authorityKey, poolKey])
     .rpc();
 ```
 
