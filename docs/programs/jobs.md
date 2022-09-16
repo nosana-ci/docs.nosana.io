@@ -6,7 +6,7 @@ The jobs program allows projects to post jobs, and nodes earn tokens by running 
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Type            | Solana Program                                                                                                                   |
+| Type            | [Solana Program](https://docs.solana.com/developing/programming-model/overview)                                                  |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Accounts        | `2`                                                                                                                              |
 | Instructions    | `8`                                                                                                                              |

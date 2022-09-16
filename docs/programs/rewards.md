@@ -7,7 +7,7 @@ enter the rewards program.
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Type            | Solana Program                                                                                                                   |
+| Type            | [Solana Program](https://docs.solana.com/developing/programming-model/overview)                                                  |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Instructions    | `8`                                                                                                                              |
 | Domain          | `nosana-rewards.sol`                                                                                                             |

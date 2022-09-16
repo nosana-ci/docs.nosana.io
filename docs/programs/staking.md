@@ -13,7 +13,7 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Type            | Solana Program                                                                                                                   |
+| Type            | [Solana Program](https://docs.solana.com/developing/programming-model/overview)                                                  |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Accounts        | `2`                                                                                                                              |
 | Instructions    | `9`                                                                                                                              |

@@ -6,7 +6,7 @@ The Nosana Pools program allows users to open token pools with predefined emissi
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Type            | Solana Program                                                                                                                   |
+| Type            | [Solana Program](https://docs.solana.com/developing/programming-model/overview)                                                  |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
 | Accounts        | `1`                                                                                                                              |
 | Instructions    | `4`                                                                                                                              |
