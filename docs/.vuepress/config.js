@@ -1,4 +1,5 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
+import { copyCodePlugin } from 'vuepress-plugin-copy-code2';
 
 const pages = {
   nodes: ['/nodes/start', '/nodes/stake', '/nodes/nft'],
@@ -16,6 +17,7 @@ export default defineUserConfig({
     repo: 'https://github.com/nosana-ci/docs.nosana.io',
     editLinkText: 'Edit this page on GitHub',
     docsDir: 'docs',
+    plugins: [copyCodePlugin()],
     head: [
       ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
       ['meta', { name: 'theme-color', content: '#3eaf7c' }],
