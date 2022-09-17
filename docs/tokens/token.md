@@ -1,5 +1,8 @@
 # Nosana Token <Badge type="tip" text="mainnet" vertical="middle" />
 
+NOS is the native token of the Nosana Network. In exchange for NOS tokens, 
+you can use our network to run CI/CD for all your development projects.
+
 ## Info
 
 | Description   | type                                                                                                                             |
