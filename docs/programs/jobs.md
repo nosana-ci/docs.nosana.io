@@ -17,7 +17,28 @@ It allows nodes in the Nosana Network to earn tokens by running those jobs.
 
 ## Diagram
 
-![](/images/jobs.svg)
+```mermaid
+flowchart TB
+    Project -- create --> di2{Job Account}
+    Project -- close --> di2{Job Account}
+    Project --> di3{Vault Account}
+    di3{Vault Account} --> Node
+    
+    Node -- enter --> di1{Nodes Account}
+    Node -- exit --> di1{Nodes Account}
+    Node -- claim --> di2{Job Account}
+    Node -- cancel --> di2{Job Account}
+    Node -- finish --> di2{Job Account}
+    di1{Nodes Account} -.-> di2{Job Account}
+
+    Payer -- init --> di1{Nodes Account}
+    Payer -- init --> di3{Vault Account}
+ 
+    classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+    class di1 orange
+    class di2 orange
+    class di3 orange
+```
 
 ## Accounts
 

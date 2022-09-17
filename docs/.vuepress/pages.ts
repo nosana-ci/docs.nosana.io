@@ -10,11 +10,6 @@ export default [
     link: '/intro',
   },
   {
-    text: 'F.A.Q.',
-    icon: 'question',
-    link: '/faq',
-  },
-  {
     text: 'Nodes',
     icon: 'server',
     prefix: '/nodes/',
