@@ -26,15 +26,7 @@ and the Backers tokens.
       {
         "label": "Nosana Token Distribution",
         "data": [3, 5, 10, 20, 25, 20, 17],
-        "backgroundColor": [
-          "#000000",
-          "#5C2983",
-          "#F76700",
-          "#21B372",
-          "#FDDE02",
-          "#0076C5",
-          "#D30018"
-        ]
+        "backgroundColor": ["#000000", "#5C2983", "#F76700", "#21B372", "#FDDE02", "#0076C5", "#D30018"]
       }
     ]
   }
