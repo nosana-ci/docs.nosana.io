@@ -19,7 +19,7 @@ export default [
     text: 'Programs',
     icon: 'code',
     prefix: '/programs/',
-    children: ['staking', 'rewards', 'pools', 'jobs', 'voting'],
+    children: ['intro', 'staking', 'rewards', 'pools', 'jobs', 'voting'],
   },
   {
     text: 'Tokens',

@@ -15,15 +15,41 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Type            | [Solana Program](https://docs.solana.com/developing/programming-model/overview)                                                  |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
-| Accounts        | `2`                                                                                                                              |
+| Accounts        | `3`                                                                                                                              |
 | Instructions    | `9`                                                                                                                              |
 | Domain          | `nosana-staking.sol`                                                                                                             |
 | Program Address | [`nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE`](https://explorer.solana.com/address/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE) |
 | APR             | [✅](https://www.apr.dev/program/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE)                                                     |
 
+## Diagram
+
+```mermaid
+flowchart TB
+    Authority -- stake<br>unstake<br>restake<br>extend<br>topup<br>claim --> di1{Stake Account}
+    Authority -.- sq1[NOS] -.- di2{Vault Account}
+
+    DAO -- slash --> di1{Stake Account}
+    DAO -.-> di3{Settings Account}
+    DAO -- updateSettings --> di3{Settings Account}
+
+    Payer -- init --> di3{Settings Account}
+
+    di1{Stake Account} -.- sq3[xNOS] -.-> ci(Other Programs)
+
+    classDef orange fill:#f96,stroke:#333,stroke-width:3px;
+    classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
+
+    class di1,di2,di3 orange
+    class sq1,sq2,sq3 yellow
+```
+
 ## Accounts
 
-A number of 2 account types make up for the Nosana Staking programs' state.
+A number of 3 account types make up for the Nosana Staking programs' state.
+
+### Vault Account
+
+The `VaultAccount` is regular Solana Token Account.
 
 ### Stake Account
 

@@ -14,4 +14,3 @@ Network updates and funding initiatives will be governed by a proposal system ba
 | Domain          | tbd                                                                             |
 | Program Address | tbd                                                                             |
 | APR             | ⛔️                                                                              |
-

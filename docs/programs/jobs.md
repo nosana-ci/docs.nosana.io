@@ -9,7 +9,7 @@ It allows nodes in the Nosana Network to earn tokens by running those jobs.
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Type            | [Solana Program](https://docs.solana.com/developing/programming-model/overview)                                                  |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
-| Accounts        | `2`                                                                                                                              |
+| Accounts        | `3`                                                                                                                              |
 | Instructions    | `8`                                                                                                                              |
 | Domain          | `nosana-jobs.sol`                                                                                                                |
 | Program Address | [`nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM`](https://explorer.solana.com/address/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM) |
@@ -21,9 +21,7 @@ It allows nodes in the Nosana Network to earn tokens by running those jobs.
 flowchart TB
     Project -- create --> di2{Job Account}
     Project -- close --> di2{Job Account}
-    Project --> di3{Vault Account}
-    di3{Vault Account} --> Node
-    
+
     Node -- enter --> di1{Nodes Account}
     Node -- exit --> di1{Nodes Account}
     Node -- claim --> di2{Job Account}
@@ -31,18 +29,25 @@ flowchart TB
     Node -- finish --> di2{Job Account}
     di1{Nodes Account} -.-> di2{Job Account}
 
+    Project -.- sq1[NOS] -.-> di3{Vault Account} -.- sq2[NOS] -.-> Node
+
     Payer -- init --> di1{Nodes Account}
     Payer -- init --> di3{Vault Account}
- 
-    classDef orange fill:#f96,stroke:#333,stroke-width:4px;
-    class di1 orange
-    class di2 orange
-    class di3 orange
+
+    classDef orange fill:#f96,stroke:#333,stroke-width:3px;
+    classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
+
+    class di1,di2,di3 orange
+    class sq1,sq2 yellow
 ```
 
 ## Accounts
 
-A number of 2 account types make for the Nosana Job programs' state.
+A number of 3 account types make for the Nosana Job programs' state.
+
+### Vault Account
+
+The `VaultAccount` is regular Solana Token Account.
 
 ### Nodes Account
 
@@ -252,7 +257,7 @@ const jobs = await program.account.jobAccount.all([
       offset: 8 + 32 * 4, // the nodes queue
       bytes: nodes.toBase58(),
     },
-  }, 
+  },
   {
     memcmp: {
       offset: 8 + 32 * 5, // the job status

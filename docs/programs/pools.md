@@ -8,15 +8,37 @@ The Nosana Pools program allows users to open token pools with predefined emissi
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Type            | [Solana Program](https://docs.solana.com/developing/programming-model/overview)                                                  |
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                           |
-| Accounts        | `1`                                                                                                                              |
+| Accounts        | `2`                                                                                                                              |
 | Instructions    | `4`                                                                                                                              |
 | Domain          | `nosana-pools.sol`                                                                                                               |
 | Program Address | [`nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD`](https://explorer.solana.com/address/nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD) |
 | APR             | [✅](https://www.apr.dev/program/nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD)                                                     |
 
+## Diagram
+
+```mermaid
+flowchart TB
+    Authority -- open --> di1{Pool Account}
+    Authority -- close --> di1{Pool Account}
+
+    Beneficiary -- claim --> di1{Pool Account}
+
+    Authority -.- sq1[NOS] -.->di2{Vault Account} -.- sq2[NOS] -.-> Beneficiary
+
+    classDef orange fill:#f96,stroke:#333,stroke-width:3px;
+    classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
+
+    class di1,di2 orange
+    class sq1,sq2 yellow
+```
+
 ## Accounts
 
-Only 1 account type makes up for the Nosana Pools programs' state.
+Only 2 account types makes up for the Nosana Pools programs' state.
+
+### Vault Account
+
+The `VaultAccount` is regular Solana Token Account.
 
 ### Pool Account
 
