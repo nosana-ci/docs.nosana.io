@@ -4,7 +4,7 @@ export default {
   tokenDistribution: [
     {
       name: 'Public Sale',
-      total: .03,
+      total: 0.03,
       lock: 0,
       vesting: 0,
       upfront: 0,
@@ -12,7 +12,7 @@ export default {
     },
     {
       name: 'Airdrop',
-      total: .05,
+      total: 0.05,
       lock: 0,
       vesting: 0,
       upfront: 0,
@@ -20,7 +20,7 @@ export default {
     },
     {
       name: 'Liquidity',
-      total: .10,
+      total: 0.1,
       lock: 0,
       vesting: 0,
       upfront: 0,
@@ -28,7 +28,7 @@ export default {
     },
     {
       name: 'Team',
-      total: .20,
+      total: 0.2,
       lock: 0,
       vesting: 48,
       upfront: 0,
@@ -36,15 +36,15 @@ export default {
     },
     {
       name: 'Company',
-      total: .25,
+      total: 0.25,
       lock: 0,
       vesting: 36,
-      upfront: .10,
+      upfront: 0.1,
       color: '#FDDE02',
     },
     {
       name: 'Mining',
-      total: .20,
+      total: 0.2,
       lock: 0,
       vesting: 24,
       upfront: 0,
@@ -52,11 +52,11 @@ export default {
     },
     {
       name: 'Backers',
-      total: .17,
+      total: 0.17,
       lock: 0,
       vesting: 9,
-      upfront: .10,
+      upfront: 0.1,
       color: '#D30018',
     },
-  ]
+  ],
 };
