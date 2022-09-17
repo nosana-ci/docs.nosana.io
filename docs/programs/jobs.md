@@ -47,7 +47,7 @@ A number of 3 account types make for the Nosana Job programs' state.
 
 ### Vault Account
 
-The `VaultAccount` is regular Solana Token Account.
+The `VaultAccount` is a regular Solana Token Account.
 
 ### Nodes Account
 

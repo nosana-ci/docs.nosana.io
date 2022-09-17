@@ -38,7 +38,7 @@ Only 2 account types makes up for the Nosana Pools programs' state.
 
 ### Vault Account
 
-The `VaultAccount` is regular Solana Token Account.
+The `VaultAccount` is a regular Solana Token Account.
 
 ### Pool Account
 

@@ -48,7 +48,7 @@ A number of 3 account types make up for the Nosana Staking programs' state.
 
 ### Vault Account
 
-The `VaultAccount` is regular Solana Token Account.
+The `VaultAccount` is a regular Solana Token Account.
 
 ### Stake Account
 
