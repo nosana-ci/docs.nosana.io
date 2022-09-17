@@ -29,7 +29,6 @@ flowchart TB
     Authority -.- sq1[NOS] -.- di2{Vault Account}
 
     DAO -- slash --> di1{Stake Account}
-    DAO -.-> di3{Settings Account}
     DAO -- updateSettings --> di3{Settings Account}
 
     Payer -- init --> di3{Settings Account}
