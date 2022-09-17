@@ -16,6 +16,32 @@ Tokens are distributed over 7 main pools.
 These are the Public Sale tokens, Airdrop tokens, Liquidity tokens, Team tokens, Company tokens, Mining tokens,
 and the Backers tokens.
 
+::: chart Polar Chart
+```json
+{
+  "type": "polarArea",
+  "data": {
+    "labels": ["Public Sale", "Airdrop", "Liquidity", "Team", "Company", "Mining", "Backers"],
+    "datasets": [
+      {
+        "label": "Nosana Token Distribution",
+        "data": [3, 5, 10, 20, 25, 20, 17],
+        "backgroundColor": [
+          "#000000",
+          "#5C2983",
+          "#F76700",
+          "#21B372",
+          "#FDDE02",
+          "#0076C5",
+          "#D30018"
+        ]
+      }
+    ]
+  }
+}
+```
+:::
+
 ### Public Sale tokens
 
 Public Sale tokens can be retrieved through our Public Sale event.
