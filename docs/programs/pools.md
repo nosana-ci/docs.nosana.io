@@ -71,7 +71,7 @@ const program = new Program(idl, programId);
 
 ### Open
 
-The `open()` instruction lets you open a Nosana Pool.
+The `open()` instruction lets you open a Nosana Pool's [`PoolAccount`](#pool-account) and [`VaultAccount`](#vault-account).
 
 ```typescript
 let tx = await program.methods

@@ -90,7 +90,7 @@ const program = new Program(idl, programId);
 
 ### Init
 
-The `init()` instruction initializes the SettingsAccount of the Nosana Staking program.
+The `init()` instruction initializes the [`SettingsAccount`](#settings-account) of the Nosana Staking program.
 
 ```typescript
 let tx = await program.methods
@@ -107,8 +107,8 @@ let tx = await program.methods
 
 ### Stake
 
-The `stake()` instruction creates a new stake for the `authority`.
-It initializes a unique `vault` Token Account for the staker.
+The `stake()` instruction creates a new stake [`StakeAccount`](#stake-account) for the `authority`.
+It initializes a unique [`VaultAccount`](#vault-account) for the staker.
 This will transfer `amount` of NOS tokens from `user` to the `vault` locked for `duration` seconds of time.
 The stake account is a PDA based on the `authority`.
 
@@ -204,7 +204,7 @@ let tx = await program.methods
 ### Claim
 
 The `unstake()` instruction will transfer back all your `stake` tokens if the delay has passed after they whey unstaked.
-Claiming will close the `stake` account.
+Claiming will close the [`StakeAccount`](#stake-account) and [`VaultAccount`](#vault-account) of the staker.
 
 ```typescript
 let tx = await program.methods
@@ -223,8 +223,8 @@ let tx = await program.methods
 ### Slash
 
 The `unstake()` instruction reduces a stake's NOS tokens.
-This can only be done by the Slashing Authority declared in `SettingsAccount.Authority`.
-The tokens that are slashed will be sent to the `SettingsAccount.TokenAccount` account.
+This can only be done by the Slashing Authority declared in [`SettingsAccount`](#settings-account) `authority`.
+The tokens that are slashed will be sent to the [`SettingsAccount`](#settings-account) `tokenAccount` account.
 
 Slashing is a feature used by the Nosana Protocol to punish bad actors.
 
@@ -245,8 +245,8 @@ let tx = await program.methods
 
 ### Update Setting
 
-The `updateSettings()` instruction sets the Slashing Authority in `SettingsAccount.Authority` to a new account.
-It also sets the token account in `SettingsAccount.TokenAccount` to a new account.
+The `updateSettings()` instruction sets the Slashing Authority in [`SettingsAccount`](#settings-account) `authority` to a new account.
+It also sets the token account in [`SettingsAccount`](#settings-account) `tokenAccount` to a new token account.
 This can only by called by the current authority.
 
 ```typescript

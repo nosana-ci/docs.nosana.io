@@ -94,7 +94,7 @@ const program = new Program(idl, programId);
 
 ### Init
 
-The `init()` instruction initializes a nodes queue and a associated token vault for token deposits.
+The `init()` instruction initializes a [`NodesAccount`](#nodes-account) and an associated [`VaultAccount`](#vault-account) for token deposits.
 
 ```typescript
 let tx = await program.methods
@@ -143,7 +143,7 @@ let tx = await program.methods
 
 ### Close
 
-The `close()` instruction closes an existing job account.
+The `close()` instruction closes an existing [`JobAccount`](#job-account).
 When the job was still queued the tokens will be returned to the user.
 
 ```typescript
@@ -163,7 +163,7 @@ let tx = await program.methods
 
 ### Enter
 
-With the `enter()` instruction a node enters the node queue.
+With the `enter()` instruction a node enters the [`NodesAccount`](#nodes-account) `queue`.
 
 A few requirements are enforced:
 
