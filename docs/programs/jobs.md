@@ -30,6 +30,7 @@ flowchart TB
     di1{Nodes Account} -.-> di2{Job Account}
 
     Project -.- sq1[NOS] -.-> di3{Vault Account} -.- sq2[NOS] -.-> Node
+    Project -.- sq3[NOS] -.-> ci(Network Fees)
 
     Payer -- init --> di1{Nodes Account}
     Payer -- init --> di3{Vault Account}
@@ -38,7 +39,7 @@ flowchart TB
     classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
 
     class di1,di2,di3 orange
-    class sq1,sq2 yellow
+    class sq1,sq2,sq3 yellow
 ```
 
 ## Accounts
