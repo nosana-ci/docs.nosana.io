@@ -98,7 +98,7 @@ let tx = await program.methods
 ### Claim Fee
 
 The `claimFee()` instruction claims emissions from a Nosana Pool with claim type `1`,
-and adds these as rewards (fees) to the rewards program.
+and adds these as rewards (fees) to the [Rewards Program](/programs/rewards).
 
 ```typescript
 let tx = await program.methods
