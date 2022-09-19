@@ -109,7 +109,7 @@ let tx = await program.methods
 
 The `stake()` instruction creates a new stake for the `authority`.
 It initializes a unique `vault` Token Account for the staker.
-This will transfer `amount` of NOS tokens from `user` to the `vault` locked for at least `amount` seconds of time.
+This will transfer `amount` of NOS tokens from `user` to the `vault` locked for `duration` seconds of time.
 The stake account is a PDA based on the `authority`.
 
 ```typescript
