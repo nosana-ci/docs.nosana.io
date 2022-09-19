@@ -36,11 +36,6 @@ export default hopeTheme({
   },
 
   plugins: {
-    copyright: {
-      license: 'MIT',
-      global: true,
-    },
-
     mdEnhance: {
       align: true,
       attrs: true,
