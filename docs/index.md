@@ -34,7 +34,6 @@ features:
   title: Nosana Tokens
   details: Fungible and Non Fungible
   link: tokens/intro
-footer: Made by Nosana with ❤️
 ---
 
 :::tip

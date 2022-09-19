@@ -9,12 +9,18 @@
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",
     "generate": "vuepress build docs -d dist",
-    "lint": "prettier --check .",
-    "lint:fix": "prettier --write ."
+    "lint": "npm run prettier && npm run eslint && npm run check-types",
+    "prettier": "prettier --check 'docs/.vuepress/**/*.ts'",
+    "prettier:fix": "prettier --write 'docs/.vuepress/**/*.ts'",
+    "check-types": "tsc -p docs/.vuepress",
+    "eslint": "eslint 'docs/.vuepress/**/*.ts'",
+    "eslint:fix": "eslint 'docs/.vuepress/**/*.ts' --fix"
   },
   "devDependencies": {
-    "prettier": "2.7.1",
+    "@typescript-eslint/eslint-plugin": "5.37.0",
+    "@typescript-eslint/parser": "5.37.0",
     "@vuepress/client": "2.0.0-beta.51",
+    "prettier": "2.7.1",
     "vue": "3.2.39",
     "vuepress": "2.0.0-beta.51",
     "vuepress-theme-hope": "2.0.0-beta.103"
