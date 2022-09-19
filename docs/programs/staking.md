@@ -135,7 +135,7 @@ let tx = await program.methods
 ### Topup
 
 The `topup()` instruction performs a top-up of an existing stake.
-`amount` of NOS is transferred to `ata_vault` and the tokens at `stake` are incremented.
+An `amount` of NOS is transferred to the `vault` and the `stake` is update.
 
 - You can only top-up if the `stake` is not unstaked yet
 - A top-up is always for the duration of the original `stake`
