@@ -21,7 +21,7 @@ flowchart TB
     Authority -- enter --> di1{Reward Account}
     Authority -- claim --> di1{Reward Account}
     Authority -- close --> di1{Reward Account}
-    
+
     Anonymous -- sync --> di1{Reward Account}
     Anonymous -- sync --> di3{Stats Account}
 
@@ -29,7 +29,7 @@ flowchart TB
 
     ci(Network Fees) -- addFee --> di3{Stats Account}
     ci(Network Fees) -.- sq1[NOS] -.->di2{Vault Account} -.- sq2[NOS] -.-> Authority
-    
+
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
     classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
 
@@ -106,7 +106,7 @@ The following are some of the Nosana Rewards program's characteristics:
 
 ### Init
 
-The `init()` instruction initializes the [`StatsAccount`](#stats-account) 
+The `init()` instruction initializes the [`StatsAccount`](#stats-account)
 and [`VaultAccount`](#vault-account).
 
 ```typescript
