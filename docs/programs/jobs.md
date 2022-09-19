@@ -276,7 +276,7 @@ by checking their start time:
 
 ```typescript
 for (const job of jobs) {
-  if (job.account.timeStart > (Date.now() / 1e3 - nodes.jobTimout)) {
+  if (job.account.timeStart > (Date.now() / 1e3 - nodes.jobTimeout)) {
     // claim job!
   }
 }
