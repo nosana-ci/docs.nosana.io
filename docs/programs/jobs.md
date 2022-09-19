@@ -83,7 +83,7 @@ pub struct JobAccount {
 
 ## Instructions
 
-A number of 8 instruction are defined in the Nosana Staking program.
+A number of 8 instruction are defined in the Nosana Jobs program.
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html) in `TypeScript`:
 
 ```typescript
