@@ -10,6 +10,12 @@ export default [
     link: '/intro',
   },
   {
+    text: 'Pipelines',
+    icon: 'rocket',
+    prefix: '/pipelines/',
+    children: ['start'],
+  },
+  {
     text: 'Nodes',
     icon: 'server',
     prefix: '/nodes/',

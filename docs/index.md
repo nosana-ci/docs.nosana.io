@@ -18,6 +18,10 @@ features:
   title: Introduction
   details: Welcome to the Nosana Network
   link: intro
+- icon: rocket
+  title: Nosana Pipelines
+  details: Get started with a Nosana Pipeline
+  link: pipelines/start
 - icon: server
   title: Nosana Nodes
   details: Get started as a Nosana Node
