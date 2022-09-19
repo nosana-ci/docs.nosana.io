@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started
 
 ::: tip
 Run code checks and build container images to earn tokens.
