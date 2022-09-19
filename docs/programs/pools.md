@@ -105,13 +105,12 @@ let tx = await program.methods
   .claimFee()
   .accounts({
     vault,
-    rewardsStats,
-    rewardsVault,
     pool,
     authority,
-    tokenProgram,
+    rewardsStats,
+    rewardsVault,
     rewardsProgram,
-    systemProgram,
+    tokenProgram,
   })
   .signers([authority])
   .rpc()
@@ -131,7 +130,6 @@ let tx = await program.methods
     pool,
     authority,
     tokenProgram,
-    systemProgram,
   })
   .signers([authority])
   .rpc()

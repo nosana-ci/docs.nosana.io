@@ -211,7 +211,6 @@ let tx = await program.methods
     user,
     stats,
     vault,
-    systemProgram,
     authority,
     tokenProgram,
   })
