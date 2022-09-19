@@ -118,7 +118,7 @@ let tx = await program.methods
 
 ### Create
 
-The `create()` instruction creates a `JobAccount`(#job-account) with its required data.
+The `create()` instruction creates a [`JobAccount`](#job-account) with its required data.
 When there is a node ready in the queue it will immediately start running.
 
 ```typescript
