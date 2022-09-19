@@ -2,8 +2,7 @@
 
 ## Program Information
 
-The rewards program allow stakers to earn rewards. Anyone that has a stake can
-enter the rewards program.
+The Nosana Rewards Program allow stakers to earn rewards. Anyone that has staked NOS tokens can enter the rewards program.
 
 | Info            | Description                                                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------|
@@ -22,7 +21,7 @@ flowchart TB
     Authority -- enter --> di1{Reward Account}
     Authority -- claim --> di1{Reward Account}
     Authority -- close --> di1{Reward Account}
-    
+
     Anonymous -- sync --> di1{Reward Account}
     Anonymous -- sync --> di3{Stats Account}
 
@@ -30,7 +29,7 @@ flowchart TB
 
     ci(Network Fees) -- addFee --> di3{Stats Account}
     ci(Network Fees) -.- sq1[NOS] -.->di2{Vault Account} -.- sq2[NOS] -.-> Authority
-    
+
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
     classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
 
@@ -40,7 +39,7 @@ flowchart TB
 
 ## Accounts
 
-A number of 3 account types makes up for the Nosana Rewards programs' state.
+A number of 3 account types makes up for the Nosana Rewards program's state.
 
 ### Vault Account
 
@@ -83,36 +82,31 @@ const idl = await Program.fetchIdl(programId.toString());
 const program = new Program(idl, programId);
 ```
 
-These are some of the properties of the rewards program:
+The following are some of the Nosana Rewards program's characteristics:
 
-- A stakers' xNOS score determines the portion of the fees a user will receive.
+- A staker's xNOS score determines the portion of the fees a user will receive.
 - You have to explicitly `enter` the rewards program to participate. The rewards
-  you receive are the percentage of your xNOS from all the participants.
-- Everytime a fee is added to the program it is distributed to all the current
-  participants.
+  you receive are the percentage of your xNOS compared to that of all the other participants.
+- When new fees are added to the program, they are distributed to all current participants.
 - The program uses a token reflection model to distribute: fees are accounted
   for "live" as they come in and no loops necessary.
 - Anyone can send in new fees to be distributed using `add_fees`.
 - You can `claim` your earned rewards at any time (does not require an
   unstake).
-- If you `unstake` your reward account is voided. It is _very_ important that
+- If you `unstake` your reward account is voided. It is _critical_ that
   you claim rewards before unstaking.
 - If you `upstake` or `extend` a stake your rewards program is not updated. You
   will have to `claim` upate your reward to make use of your new xNOS score.
-- A user can only have 1 active rewards entry at a time
+- A user can only have 1 active rewards entry at a time.
 - The rewards a user earns are automatically added to the percentage of rewards
-  he receives. Earned rewards are basically added to his xNOS score (with
-  multiplier 1) - but can be claimed without any delay. This gives them a small
-  advantage but is also a nice feature. Also it should be easy to `upstake` your
-  rewards directly to get a higher multiplier for them.
-- One can always close their own reward account. If the account has any
-  unclaimed rewards they will be voided (distributed to all other participants).
-- If a user unstaked anyone is allowed to close their reward account. This way
-  there will not be "ghosts" accounts accumulating rewards.
+  they receive. Earned rewards are added to their xNOS score (with a
+  multiplier of 1) - but can be claimed without any delay. They gain a slight advandage from this, and it's a great feature as well. Also it's easy to `upstake` your  rewards directly in order to receive a bigger multiplier.
+- One can close their own reward account at any time. If there are any unclaimed rewards on the account, they will be cancelled (and distributed to all other participants).
+- Anyone is permitted to close a user's reward account if they've unstaked. This feature prevents "ghost" accounts from accumulating rewards.
 
 ### Init
 
-The `init()` instruction initializes the [`StatsAccount`](#stats-account) 
+The `init()` instruction initializes the [`StatsAccount`](#stats-account)
 and [`VaultAccount`](#vault-account).
 
 ```typescript
@@ -151,7 +145,7 @@ let tx = await program.methods
 
 ### Claim
 
-The `claim()` instruction sends a users' rewards to a given wallet.
+The `claim()` instruction sends a user's rewards to a given wallet.
 
 ```typescript
 let tx = await program.methods
