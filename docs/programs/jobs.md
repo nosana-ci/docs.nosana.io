@@ -221,6 +221,8 @@ let tx = await program.methods
   .rpc();
 ```
 
+#### Unclaimed Jobs
+
 To find unclaimed jobs with anchor:
 
 ```typescript
@@ -247,6 +249,8 @@ const jobs = await program.account.jobAccount.all([
 ```
 
 Note: leave the `nodes` out to find jobs across all node queues.
+
+#### Expired Jobs
 
 To find jobs that have timed out, we first find all running jobs.
 
