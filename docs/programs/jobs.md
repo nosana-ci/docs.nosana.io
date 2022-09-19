@@ -1,7 +1,6 @@
 # Nosana Jobs <Badge type="tip" text="mainnet" vertical="middle" />
 
-The Nosana Jobs program allows projects to post pipeline jobs.
-It allows nodes in the Nosana Network to earn tokens by running those jobs.
+Projects can post pipeline jobs through the Nosana Jobs program. It lets nodes in the Nosana Network earn tokens by doing those jobs.
 
 ## Program Information
 
@@ -44,7 +43,7 @@ flowchart TB
 
 ## Accounts
 
-A number of 3 account types make for the Nosana Job programs' state.
+A number of 3 account types make for the Nosana Job program's state.
 
 ### Vault Account
 
@@ -84,7 +83,7 @@ pub struct JobAccount {
 
 ## Instructions
 
-A number of 8 instruction are defined in the Nosana Jobs program.
+A number of 8 instructions are defined in the Nosana Jobs program.
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html) in `TypeScript`:
 
 ```typescript
@@ -119,7 +118,7 @@ let tx = await program.methods
 
 ### Create
 
-The `create()` instruction creates a Job with it's required data.
+The `create()` instruction creates a job with its required data.
 When there is a node ready in the queue it will immediately start running.
 
 ```typescript
@@ -227,7 +226,7 @@ let tx = await program.methods
 
 #### Unclaimed Jobs
 
-To find unclaimed jobs with anchor:
+To find unclaimed jobs with Anchor:
 
 ```typescript
 const jobs = await program.account.jobAccount.all([

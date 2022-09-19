@@ -44,7 +44,7 @@ flowchart TB
 
 ## Accounts
 
-A number of 3 account types make up for the Nosana Staking programs' state.
+A number of 3 account types make up for the Nosana Staking program's state.
 
 ### Vault Account
 
@@ -222,11 +222,11 @@ let tx = await program.methods
 
 ### Slash
 
-The `unstake()` instruction reduces a stakes' NOS tokens.
-This can only be done by the slashing authority declared in `SettingsAccount.Authority`.
+The `unstake()` instruction reduces a stake's NOS tokens.
+This can only be done by the Slashing Authority declared in `SettingsAccount.Authority`.
 The tokens that are slashed will be sent to the `SettingsAccount.TokenAccount` account.
 
-Slashing is a feature used by the Nosana protocol to punish bad actors.
+Slashing is a feature used by the Nosana Protocol to punish bad actors.
 
 ```typescript
 let tx = await program.methods
@@ -245,7 +245,7 @@ let tx = await program.methods
 
 ### Update Setting
 
-The `updateSettings()` instruction sets the slashing authority in `SettingsAccount.Authority` to a new account.
+The `updateSettings()` instruction sets the Slashing Authority in `SettingsAccount.Authority` to a new account.
 It also sets the token account in `SettingsAccount.TokenAccount` to a new account.
 This can only by called by the current authority.
 

@@ -34,7 +34,7 @@ flowchart TB
 
 ## Accounts
 
-Only 2 account types makes up for the Nosana Pools programs' state.
+Only 2 account types makes up for the Nosana Pools program's state.
 
 ### Vault Account
 
@@ -98,7 +98,7 @@ let tx = await program.methods
 ### Claim Fee
 
 The `claimFee()` instruction claims emissions from a Nosana Pool with claim type `1`,
-and adds these as rewards (fees) to the RewardsProgram.
+and adds these as rewards (fees) to the rewards program.
 
 ```typescript
 let tx = await program.methods
