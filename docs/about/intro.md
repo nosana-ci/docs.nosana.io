@@ -31,7 +31,7 @@ the field of application development for all types of apps.
 As we move toward a future that is more decentralized, our **ultimate vision** is that projects will not
 rely on centralized mega-corporations for their daily operations. We believe that communities can perform
 essential computations in a decentralized manner by utilizing the Nosana Network.
-With Nosana, a robust community has the ability to keep any project running forever.)
+With Nosana, a robust community has the ability to keep any project running forever.
 
 ## Disclaimer
 
