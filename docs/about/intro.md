@@ -35,7 +35,6 @@ With Nosana, a robust community has the ability to keep any project running fore
 
 ## Disclaimer
 
-All claims, content, designs, algorithms, estimates, roadmaps, specifications,
-and performance measurements described in this project are done with the author's best effort.
-It is up to the reader to check and validate their accuracy and truthfulness.
-Furthermore, nothing in this project constitutes a solicitation for investment.
+This project's claims, content, designs, algorithms, projections, roadmaps, specifications, and performance metrics 
+were all created using the best efforts of the creator. It is the reader's responsibility to confirm their veracity 
+and accuracy. Furthermore, nothing in this project represents an investment solicitation.
