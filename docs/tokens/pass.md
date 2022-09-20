@@ -16,10 +16,10 @@ With the Nosana Mint Pass it's possible to mint official [Nosana NFTs](/tokens/n
 
 ## Description
 
-The Nosana Mint Pass can used at https://nft.nosana.io/ to Nosana Burnder Phone NFTs.
+The Nosana Mint Pass can be used at the vending machine in https://nft.nosana.io/ to mint Nosana Burner Phone NFTs.
 
 ## Graphics
 
-An example of a Nosana Mint Pass SFT.
+The official Nosana Mint Pass SFT looks like this.
 
 ![](https://arweave.net/PN2NsHBZvl_-hpRwdCLV7GC0PaXuziSwk4Q1K4jlEPQ)
