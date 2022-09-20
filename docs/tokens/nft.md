@@ -52,7 +52,7 @@ No NFT goes without a background. A number of 4 image backgrounds are defined.
 
 ### Phone
 
-The burner phone itself. A number of 5 phone types exist.
+The Burner Phone itself. A number of 5 phone types exist.
 
 | Rarity  | Attribute |
 |---------|-----------|
@@ -78,7 +78,7 @@ A phone needs protection. Our cases all have different looks.
 
 ### Keyboard
 
-The peripherals to your device. Some keyboard` are rarer than others.
+The peripherals to your device. Some keyboards are rarer than others.
 
 | Rarity  | Attribute   |
 |---------|-------------|
