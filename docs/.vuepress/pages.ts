@@ -22,5 +22,5 @@ export default [
     icon: 'coins',
     prefix: '/tokens/',
     children: ['intro', 'token', 'nft', 'card'],
-  }
+  },
 ];
