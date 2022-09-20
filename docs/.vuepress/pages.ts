@@ -1,15 +1,5 @@
 export default [
   {
-    text: 'Home',
-    icon: 'home',
-    link: '/',
-  },
-  {
-    text: 'Introduction',
-    icon: 'lightbulb',
-    link: '/intro',
-  },
-  {
     text: 'Pipelines',
     icon: 'rocket',
     prefix: '/pipelines/',
@@ -32,5 +22,5 @@ export default [
     icon: 'coins',
     prefix: '/tokens/',
     children: ['intro', 'token', 'nft', 'card'],
-  },
+  }
 ];

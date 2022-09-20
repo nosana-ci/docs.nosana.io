@@ -7,18 +7,23 @@ export default hopeTheme({
   repo: 'https://github.com/nosana-ci/docs.nosana.io',
   docsDir: 'docs',
   iconAssets: 'fontawesome',
-  author: {
-    name: 'Nosana',
-    url: 'mailto:team@nosana.io',
-  },
 
   // footer
   footer: 'MIT Licensed | Copyright © 2021-present Nosana',
   copyright: false,
   displayFooter: true,
+  contributors: false,
 
-  // navidation
-  sidebar: pages,
+  // navigation
+  sidebar: [
+    {
+      text: 'About',
+      icon: 'lightbulb',
+      prefix: '/about/',
+      children: ['intro', 'terminology'],
+    },
+    ...pages,
+  ],
   navbar: [
     ...pages,
     {
@@ -118,27 +123,7 @@ export default hopeTheme({
             type: 'image/png',
           },
         ],
-        shortcuts: [
-          {
-            name: 'Demo',
-            short_name: 'Demo',
-            url: '/demo/',
-            icons: [
-              {
-                src: '/assets/icon/guide-maskable.png',
-                sizes: '192x192',
-                purpose: 'maskable',
-                type: 'image/png',
-              },
-              {
-                src: '/assets/icon/guide-monochrome.png',
-                sizes: '192x192',
-                purpose: 'monochrome',
-                type: 'image/png',
-              },
-            ],
-          },
-        ],
+        shortcuts: [],
       },
     },
   },
