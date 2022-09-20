@@ -7,17 +7,15 @@ heroText: Nosana Documentation
 tagline: Next Gen CI/CD
 heroFullScreen: true
 actions:
-- text: Get Started 💻
-  link: /nodes/start
+- text: " Get Started"
+  icon: rocket
+  link: /pipelines/start
   type: primary
-- text: Introduction 💡
-  link: /intro
+- text: " Run a node"
+  icon: server
+  link: /nodes/start
   type: secondary
 features:
-- icon: lightbulb
-  title: Introduction
-  details: Welcome to the Nosana Network
-  link: intro
 - icon: rocket
   title: Nosana Pipelines
   details: Get started with a Nosana Pipeline
@@ -34,6 +32,10 @@ features:
   title: Nosana Tokens
   details: Fungible and Non Fungible
   link: tokens/intro
+- icon: lightbulb
+  title: Introduction
+  details: Welcome to the Nosana Network
+  link: about/intro
 ---
 
 :::tip
