@@ -1,4 +1,4 @@
-# Nosana Jobs <Badge type="tip" text="mainnet" vertical="middle" />
+# Nosana Jobs
 
 Projects can post pipeline jobs through the Nosana Jobs program. It lets nodes in the Nosana Network earn tokens by doing those jobs.
 

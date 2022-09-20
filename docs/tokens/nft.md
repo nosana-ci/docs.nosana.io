@@ -26,6 +26,12 @@ It allows the Nosana Network to verify NFT holders onchain.
 For example, in the [Nosana Jobs Program](programs/jobs) nodes are required to hold an Nosana NFT
 to qualify for running pipelines.
 
+## Graphics
+
+An example of a Nosana Burner Phone NFT.
+
+![](https://nosana.io/_nuxt/img/burner-phone.961bb5b.png)
+
 ## Attributes
 
 Attributes allow us to define custom properties (key/value pairs) that describe the Nosana NFT.
@@ -51,7 +57,7 @@ The burner phone itself. A number of 5 phone types exist.
 | Rarity  | Attribute |
 |---------|-----------|
 | `5.0%`  | Rainbow   |
-| `5.0%`  | grey      |
+| `5.0%`  | Grey      |
 | `20.0%` | Blue      |
 | `20.0%` | Purple    |
 | `50.0%` | NOS       |

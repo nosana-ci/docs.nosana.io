@@ -1,4 +1,4 @@
-# Nosana Rewards <Badge type="tip" text="mainnet" vertical="middle" />
+# Nosana Rewards
 
 ## Program Information
 
