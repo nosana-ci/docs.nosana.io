@@ -1,7 +1,7 @@
 # Nosana NFT
 
-Now, we’ve got our very own collection, consisting of 850 Burner Phone NTFs that exist on the Solana Blockchain. 
-Think of a Burner Phone NFT as your very own Network membership card. 
+Now, we’ve got our very own collection, consisting of 850 Burner Phone NTFs that exist on the Solana Blockchain.
+Think of a Burner Phone NFT as your very own Network membership card.
 It even comes with owner-only perks, which you can access on the Nosana Network, the Metaverse or at home.
 
 ## Info
@@ -18,8 +18,8 @@ It even comes with owner-only perks, which you can access on the Nosana Network,
 
 ## Certified Collection
 
-Certified Collections enables NFTs – and tokens in general — to be grouped together and for that information 
-to be verified on-chain. 
+Certified Collections enables NFTs – and tokens in general — to be grouped together and for that information
+to be verified on-chain.
 Additionally, it makes it easier to manage these collections by allocating data for them on-chain.
 
 It allows the Nosana Network to verify NFT holders onchain.
@@ -30,7 +30,7 @@ to qualify for running pipelines.
 
 Attributes allow us to define custom properties (key/value pairs) that describe the Nosana NFT.
 These attributes are displayed when viewing the NFT in your wallet or marketplace of choice.
-Some attributes unlock certain perks in the Nosana Nework, 
+Some attributes unlock certain perks in the Nosana Nework,
 like skipping the line in the [Nodes Queue](/programs/jobs#nodes-account).
 
 ### Background

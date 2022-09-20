@@ -10,10 +10,10 @@ With the Nosana Mint Pass it's possible to mint official [Nosana NFTs](/tokens/n
 | Type          | [SPL Token](https://spl.solana.com/token)                                                                      |
 | Standard      | [Fungible Asset](https://docs.metaplex.com/programs/token-metadata/token-standard#the-fungible-asset-standard) |
 | Name          | Nosana Mint Pass                                                                                               |
-| Symbol        | `NOS-PASS`                                                                                                     |                                                                                                                                                                                                                
-| Decimals      | `0`                                                                                                            |                                                                                                                                                                                                                
-| Cluster       | <Badge type="tip" text="devnet" vertical="middle" /><Badge type="danger" text="mainnet" vertical="middle" />   | 
-| Token Address | [`passDTyNqfs9u426f5hSKQbLDNA3fZKbEcP1bbNQFHD`]()                                                              |                                                                                                         
+| Symbol        | `NOS-PASS`                                                                                                     |
+| Decimals      | `0`                                                                                                            |
+| Cluster       | <Badge type="tip" text="devnet" vertical="middle" /><Badge type="danger" text="mainnet" vertical="middle" />   |
+| Token Address | [`passDTyNqfs9u426f5hSKQbLDNA3fZKbEcP1bbNQFHD`]()                                                              |
 
 ## Description
 
