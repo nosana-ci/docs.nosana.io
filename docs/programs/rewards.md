@@ -23,11 +23,11 @@ flowchart TB
     Authority -- close --> di1{Reward Account}
 
     Anonymous -- sync --> di1{Reward Account}
-    Anonymous -- sync --> di3{Stats Account}
+    Anonymous -- sync --> di3{Reflection Account}
 
     Payer -- init --> di3{Sats Account}
 
-    ci(Network Fees) -- addFee --> di3{Stats Account}
+    ci(Network Fees) -- addFee --> di3{Reflection Account}
     ci(Network Fees) -.- sq1[NOS] -.->di2{Vault Account} -.- sq2[NOS] -.-> Authority
 
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
@@ -58,12 +58,12 @@ pub struct RewardAccount {
 }
 ```
 
-### Stats Account
+### Reflection Account
 
-The `StatsAccount` struct holds all the information on the reflection pool.
+The `ReflectionAccount` struct holds all the information on the reflection pool.
 
 ```rust
-pub struct StatsAccount {
+pub struct ReflectionAccount {
     pub bump: u8,
     pub rate: u128,
     pub total_reflection: u128,
@@ -114,7 +114,7 @@ let tx = await program.methods
   .init()
   .accounts({
     mint,
-    stats,
+    reflection,
     vault,
     authority,
     systemProgram,
@@ -133,7 +133,7 @@ The `enter()` instruction initializes a users' [`RewardsAccount`](#reward-accoun
 let tx = await program.methods
   .enter()
   .accounts({
-    stats,
+    reflection,
     stake,
     reward,
     authority,
@@ -153,7 +153,7 @@ let tx = await program.methods
   .accounts({
     user,
     vault,
-    stats,
+    reflection,
     reward,
     stake,
     authority,
@@ -173,7 +173,7 @@ let tx = await program.methods
   .accounts({
     reward,
     stake,
-    stats,
+    reflection,
   })
   .rpc();
 ```
@@ -186,7 +186,7 @@ The `close()` instruction closes a users' [`RewardsAccount`](#reward-account).
 let tx = await program.methods
   .close()
   .accounts({
-    stats,
+    reflection,
     reward,
     authority,
   })
@@ -203,7 +203,7 @@ let tx = await program.methods
   .addFee(amount)
   .accounts({
     user,
-    stats,
+    reflection,
     vault,
     authority,
     tokenProgram,

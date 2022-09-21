@@ -107,7 +107,7 @@ let tx = await program.methods
     vault,
     pool,
     authority,
-    rewardsStats,
+    rewardsReflection,
     rewardsVault,
     rewardsProgram,
     tokenProgram,

@@ -131,7 +131,7 @@ let tx = await program.methods
     user,
     authority,
     rent,
-    rewardsStats,
+    rewardsReflection,
     rewardsVault,
     rewardsProgram,
     systemProgram,
