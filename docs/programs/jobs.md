@@ -102,6 +102,7 @@ let tx = await program.methods
     jobPrice,
     jobTimeout,
     jobType,
+    stakeMinimum,
   )
   .accounts({
     mint,
@@ -109,6 +110,7 @@ let tx = await program.methods
     vault,
     authority,
     rent,
+    accessKey,
     systemProgram,
     tokenProgram,
   })
@@ -123,7 +125,7 @@ When there is a node ready in the queue it will immediately start running.
 
 ```typescript
 let tx = await program.methods
-  .init(ipfsJob)
+  .create(ipfsJob)
   .accounts({
     job,
     nodes,
