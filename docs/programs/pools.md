@@ -1,4 +1,4 @@
-# Nosana Pools <Badge type="warning" text="mainnet" vertical="middle" />
+# Nosana Pools
 
 The Nosana Pools program allows users to open token pools with predefined emission rates.
 
