@@ -34,7 +34,7 @@ flowchart TB
 
 ## Accounts
 
-Only 2 account types makes up for the Nosana Pools program's state.
+Only 2 account types make up for the Nosana Pools program's state.
 
 ### Vault Account
 

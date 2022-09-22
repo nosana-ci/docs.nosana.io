@@ -39,7 +39,7 @@ flowchart TB
 
 ## Accounts
 
-A number of 3 account types makes up for the Nosana Rewards program's state.
+A number of 3 account types make up for the Nosana Rewards program's state.
 
 ### Vault Account
 

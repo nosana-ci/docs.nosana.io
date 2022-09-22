@@ -43,7 +43,7 @@ flowchart TB
 
 ## Accounts
 
-A number of 3 account types make for the Nosana Job program's state.
+A number of 3 account types make up for the Nosana Job program's state.
 
 ### Vault Account
 
@@ -58,6 +58,8 @@ pub struct NodesAccount {
     pub job_price: u64,
     pub job_timeout: i64,
     pub job_type: u8,
+    pub access_key: Pubkey,
+    pub stake_minimum: u64,
     pub vault: Pubkey,
     pub vault_bump: u8,
     pub queue: Vec<Pubkey>,
