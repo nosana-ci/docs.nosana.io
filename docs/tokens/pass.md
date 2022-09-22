@@ -5,15 +5,15 @@ With the Nosana Mint Pass it's possible to mint official [Nosana NFTs](/tokens/n
 
 ## Info
 
-| Description    | type                                                                                                           |
-|----------------|----------------------------------------------------------------------------------------------------------------|
-| Type           | [SPL Token](https://spl.solana.com/token)                                                                      |
-| Standard       | [Fungible Asset](https://docs.metaplex.com/programs/token-metadata/token-standard#the-fungible-asset-standard) |
-| Name           | Nosana Mint Pass                                                                                               |
-| Symbol         | `NOS-PASS`                                                                                                     |
-| Decimals       | `0`                                                                                                            |
-| Initial Supply | `100`                                                                                                          |
-| Token Address  | [`passDTyNqfs9u426f5hSKQbLDNA3fZKbEcP1bbNQFHD`]()                                                              |
+| Description    | type                                                                                                                             |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Type           | [SPL Token](https://spl.solana.com/token)                                                                                        |
+| Standard       | [Fungible Asset](https://docs.metaplex.com/programs/token-metadata/token-standard#the-fungible-asset-standard)                   |
+| Name           | Nosana Mint Pass                                                                                                                 |
+| Symbol         | `NOS-PASS`                                                                                                                       |
+| Decimals       | `0`                                                                                                                              |
+| Initial Supply | `100`                                                                                                                            |
+| Token Address  | [`passDTyNqfs9u426f5hSKQbLDNA3fZKbEcP1bbNQFHD`](https://explorer.solana.com/address/passDTyNqfs9u426f5hSKQbLDNA3fZKbEcP1bbNQFHD) |
 
 ## Description
 
