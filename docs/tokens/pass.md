@@ -23,4 +23,4 @@ The Nosana Mint Pass can be used at the vending machine in https://nft.nosana.io
 
 The official Nosana Mint Pass SFT looks like this.
 
-![](https://y35l6hnlvm2vw53qgdzit7ok7vu2zkstpjxsiplj7thd374g2rhq.arweave.net/xvq_HaurNVt3cDDyif3K_WmsqlN6byQ9afzOPf-G1E8)
+![](https://arweave.net/xvq_HaurNVt3cDDyif3K_WmsqlN6byQ9afzOPf-G1E8)
