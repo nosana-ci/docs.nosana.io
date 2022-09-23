@@ -1,8 +1,8 @@
 # Nosana NFT
 
-Now, we’ve got our very own collection, consisting of 850 Burner Phone NTFs that exist on the Solana Blockchain.
-Think of a Burner Phone NFT as your very own Network membership card.
-It even comes with owner-only perks, which you can access on the Nosana Network, the Metaverse or at home.
+Nosana's collection of 850 Burner Phone NTFs reside on the Solana Blockchain.
+Consider a Burner Phone NFT to be your own network membership card.
+It even comes with exclusive owner benefits that you may use on the Nosana Network, in the Metaverse, or at home.
 
 ## Info
 
@@ -28,7 +28,7 @@ to qualify for running pipelines.
 
 ## Graphics
 
-An example of a Nosana Burner Phone NFT.
+An example of a Nosana Burner Phone NFT:
 
 ![](https://nosana.io/_nuxt/img/burner-phone.961bb5b.png)
 
@@ -52,7 +52,7 @@ No NFT goes without a background. A number of 4 image backgrounds are defined.
 
 ### Phone
 
-The Burner Phone itself. A number of 5 phone types exist.
+The Burner Phone itself. There are five different types of phones.
 
 | Rarity | Attribute |
 |--------|-----------|
@@ -64,7 +64,7 @@ The Burner Phone itself. A number of 5 phone types exist.
 
 ### Case
 
-A phone needs protection. Our cases all have different looks.
+A phone must be safeguarded. Our cases are all unique in appearance.
 
 | Rarity | Attribute |
 |--------|-----------|
@@ -78,7 +78,7 @@ A phone needs protection. Our cases all have different looks.
 
 ### Keyboard
 
-The peripherals to your device. Some keyboards are rarer than others.
+Your device's peripherals. Some keyboards are more scarce than others.
 
 | Rarity | Attribute   |
 |--------|-------------|
@@ -99,7 +99,7 @@ The peripherals to your device. Some keyboards are rarer than others.
 
 ### Logo
 
-Different logo's can be found on Burner Phones.
+Different logos can be found on burner phones.
 
 | Rarity | Attribute  |
 |--------|------------|
@@ -137,7 +137,7 @@ Hey, a message!?
 
 ### Status
 
-The Nosana Pipelines are always visible on the Burner Phone interface.
+The Nosana Pipelines are always visible on the burner phone interface.
 
 | Rarity | Attribute   |
 |--------|-------------|
