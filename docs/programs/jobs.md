@@ -21,17 +21,17 @@ flowchart TB
     Project -- create --> di2{Job Account}
     Project -- close --> di2{Job Account}
 
-    Node -- enter --> di1{Nodes Account}
-    Node -- exit --> di1{Nodes Account}
+    Node -- enter --> di1{Market Account}
+    Node -- exit --> di1{Market Account}
     Node -- claim --> di2{Job Account}
     Node -- cancel --> di2{Job Account}
     Node -- finish --> di2{Job Account}
-    di1{Nodes Account} -.-> di2{Job Account}
+    di1{Market Account} -.-> di2{Job Account}
 
     Project -.- sq1[NOS] -.-> di3{Vault Account} -.- sq2[NOS] -.-> Node
     Project -.- sq3[NOS] -.-> ci(Network Fees)
 
-    Payer -- init --> di1{Nodes Account}
+    Payer -- init --> di1{Market Account}
     Payer -- init --> di3{Vault Account}
 
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
@@ -49,20 +49,21 @@ A number of 3 account types make up for the Nosana Job program's state.
 
 The `VaultAccount` is a regular Solana Token Account.
 
-### Nodes Account
+### Market Account
 
-The `NodesAccount` struct holds all the information about jobs and the nodes queue.
+The `MarketAccount` struct holds all the information about jobs and the nodes queue.
 
 ```rust
-pub struct NodesAccount {
+pub struct MarketAccount {
+    pub authority: Pubkey,
     pub job_price: u64,
     pub job_timeout: i64,
     pub job_type: u8,
-    pub access_key: Pubkey,
-    pub stake_minimum: u64,
     pub vault: Pubkey,
     pub vault_bump: u8,
-    pub queue: Vec<Pubkey>,
+    pub node_access_key: Pubkey,
+    pub node_stake_minimum: u64,
+    pub node_queue: Vec<Pubkey>,
 }
 ```
 
@@ -76,7 +77,8 @@ pub struct JobAccount {
     pub ipfs_job: [u8; 32],
     pub ipfs_result: [u8; 32],
     pub node: Pubkey,
-    pub nodes: Pubkey,
+    pub market: Pubkey,
+    pub price: u64,
     pub status: u8,
     pub time_start: i64,
     pub time_end: i64,
@@ -96,7 +98,7 @@ const program = new Program(idl, programId);
 
 ### Init
 
-The `init()` instruction initializes a [`NodesAccount`](#nodes-account) and an associated [`VaultAccount`](#vault-account) for token deposits.
+The `init()` instruction initializes a [`MarketAccount`](#market-account) and an associated [`VaultAccount`](#vault-account) for token deposits.
 
 ```typescript
 let tx = await program.methods
@@ -108,7 +110,7 @@ let tx = await program.methods
   )
   .accounts({
     mint,
-    nodes,
+    market,
     vault,
     authority,
     rent,
@@ -130,7 +132,7 @@ let tx = await program.methods
   .create(ipfsJob)
   .accounts({
     job,
-    nodes,
+    market,
     vault,
     user,
     authority,
@@ -155,7 +157,7 @@ let tx = await program.methods
   .close()
   .accounts({
     job,
-    nodes,
+    market,
     vault,
     user,
     authority,
@@ -167,7 +169,7 @@ let tx = await program.methods
 
 ### Enter
 
-With the `enter()` instruction a node enters the [`NodesAccount`](#nodes-account) `queue`.
+With the `enter()` instruction a node enters the [`MarketAccount`](#market-account) `queue`.
 
 A few requirements are enforced:
 
@@ -182,7 +184,7 @@ let tx = await program.methods
     stake,
     nft,
     metadata,
-    nodes,
+    market,
     vault,
     authority,
   })
@@ -198,7 +200,7 @@ With the `exit()` instruction a node exits the node queue.
 let tx = await program.methods
   .exit()
   .accounts({
-    nodes,
+    market,
     authority,
   })
   .signers([authorityKey])
@@ -220,7 +222,7 @@ let tx = await program.methods
     stake,
     nft,
     metadata,
-    nodes,
+    market,
     vault,
     authority,
   })
@@ -313,7 +315,7 @@ let tx = await program.methods
   .finish()
   .accounts({
     job,
-    nodes,
+    market,
     vault,
     user,
     authority,
