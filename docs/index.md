@@ -7,13 +7,13 @@ heroText: Nosana Documentation
 tagline: Next Gen CI/CD
 heroFullScreen: true
 actions:
-- text: " Get Started"
-  icon: rocket
-  link: /pipelines/start
+- text: " Introduction"
+  icon: lightbulb
+  link: about/intro
   type: primary
-- text: " Run a node"
-  icon: server
-  link: /nodes/start
+- text: " Get Started"
+  icon: code
+  link: programs/intro
   type: secondary
 features:
 - icon: rocket
