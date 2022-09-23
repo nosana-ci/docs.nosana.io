@@ -250,7 +250,7 @@ const jobs = await program.account.jobAccount.all([
   },
   {
     memcmp: {
-      offset: 8 + 32 * 5, // the job status
+      offset: 8 + 32 * 5 + 8, // the job status
       bytes: '1',
     },
   },
@@ -273,7 +273,7 @@ const jobs = await program.account.jobAccount.all([
   },
   {
     memcmp: {
-      offset: 8 + 32 * 5, // the job status
+      offset: 8 + 32 * 5 + 8, // the job status
       bytes: '2',
     },
   },
