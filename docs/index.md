@@ -16,6 +16,10 @@ actions:
   link: programs/intro
   type: secondary
 features:
+- icon: lightbulb
+  title: Introduction
+  details: Welcome to the Nosana Network
+  link: about/intro
 - icon: rocket
   title: Nosana Pipelines
   details: Get started with a Nosana Pipeline
@@ -30,12 +34,16 @@ features:
   link: programs/intro
 - icon: coins
   title: Nosana Tokens
-  details: Fungible and Non Fungible
+  details: Native token of the Nosana Network
   link: tokens/intro
-- icon: lightbulb
-  title: Introduction
-  details: Welcome to the Nosana Network
-  link: about/intro
+- icon: mobile
+  title: Nosana NFT
+  details: Nosana Burner Phones Collection
+  link: tokens/nft
+- icon: ticket
+  title: Nosana Mint Pass
+  details: Start minting Nosana NFTs
+  link: tokens/pass
 ---
 
 :::tip
