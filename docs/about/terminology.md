@@ -8,18 +8,18 @@ The blockchain wallet address you use to interact with the Nosana Network.
 
 The [NFTs](/tokens/nft) of the Nosana Network.
 Burner Phones grant access to operate a node on the network, access to special community channels, network boosts,
-and more. 
+and more.
 
 ### Continuous Delivery
 
 Continuous delivery is a software development practice that uses automation to speed the release of new code.
-It establishes a process through which a developer’s changes to an application can be pushed to a code repository 
+It establishes a process through which a developer’s changes to an application can be pushed to a code repository
 or container registry through automation.
 
 ### Continuous Integration
 
 With continuous integration, new code changes to an app are produced, tested, and merged into a shared repository on a
-regular basis. It is a solution to the problem of having too many app branches in development at the same time 
+regular basis. It is a solution to the problem of having too many app branches in development at the same time
 that may clash with each other.
 
 ### Container Image
@@ -32,8 +32,8 @@ An unchangeable, static file that includes executable code so it can run an isol
 When new fees are added to the staking program, they are distributed to all current stakers.
 Claiming rewards adds these tokens to your account.
 You can upstake or extend and tese rewards will add to the tokens you already have staked.
-If you are looking to unstake, you will need to claim any rewards first before you unstake, 
-or those rewards will be lost to you and transfered back into the program for distribution to other stakers. 
+If you are looking to unstake, you will need to claim any rewards first before you unstake,
+or those rewards will be lost to you and transfered back into the program for distribution to other stakers.
 
 ### Claim Transfer
 
@@ -47,7 +47,7 @@ claim network rewards, and see statistics of the Nosana Network.
 
 ### Docker
 
-Docker is an open source platform that enables developers to build, deploy, run, update and manage 
+Docker is an open source platform that enables developers to build, deploy, run, update and manage
 containers—standardized, executable components that combine application source code with the operating system (OS)
 libraries and dependencies required to run that code in any environment.
 
@@ -63,18 +63,18 @@ It lets nodes in the Nosana Network earn tokens by doing those jobs.
 
 ### Leaderboard
 
-The leaderboard is a feature in the Nosana Dashboard that shows a list of wallets who have staked NOS tokens and 
-displays that wallet address' xNOS score. 
+The leaderboard is a feature in the Nosana Dashboard that shows a list of wallets who have staked NOS tokens and
+displays that wallet address' xNOS score.
 
 ### NFT
 
 Stands for Non-Fungible Token. It’s a unique, one-of-a-kind crypto asset (which can be anything from art to music)
 that’s stored on a blockchain. NFTs can be for pure speculation, or they can provide utility for things such as access,
-discounts, etc. 
+discounts, etc.
 
 ### Node
 
-A machine which is part of the Nosana Network and capable of executing pipelines or jobs. 
+A machine which is part of the Nosana Network and capable of executing pipelines or jobs.
 
 ### Pipeline
 
@@ -85,7 +85,7 @@ software ("builds") through many stages of testing and deployment.
 ### Pools
 
 The [Nosana Pools Program](/programs/pools) allows for users to open token pools with
-predefined emission rates. 
+predefined emission rates.
 
 ### Rewards
 
