@@ -30,7 +30,7 @@ Where $NOS$ denotes the number of [Nosana Tokens](/tokens/token) a staker has st
 $$
 \begin{aligned}
 f(NOS) &= xNOS \\
-       &= 1 \frac{ s }{ 10512000 } \cdot NOS \\
+       &= 1 \frac{ s }{ 10512000 } \times NOS \\
 \\
 s.t. &\phantom{=} \set{  s \in \mathbb{Z} \mid 1209600 \leq s \leq 31536000 }
 \end{aligned}
@@ -47,7 +47,7 @@ we can simplify above function to use days rather seconds, which are denoted $d$
 
 $$
 \begin{aligned}
-xNOS &= 1 \frac{ d }{ 121 \frac{ 2 }{ 3 } } \cdot NOS \\
+xNOS &= 1 \frac{ d }{ 121 \frac{ 2 }{ 3 } } \times NOS \\
 \\
 s.t. &\phantom{=} \set{ d \in \mathbb{N} \mid 14 \leq s \leq 365 }
 \end{aligned}
