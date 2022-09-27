@@ -33,7 +33,6 @@ const program = new Program(idl, programId);
 The `init()` instruction initializes the [ReflectionAccount](#reflection-account)
 and [VaultAccount](#vault-account).
 
-
 ```typescript
 let tx = await program.methods
   .init()
@@ -53,7 +52,6 @@ let tx = await program.methods
 
 The `enter()` instruction initializes a user's [RewardsAccount](#rewards-account).
 
-
 ```typescript
 let tx = await program.methods
   .enter()
@@ -71,7 +69,6 @@ let tx = await program.methods
 
 The `addFee()` instruction sends amount of tokens to the [VaultAccount](#vault-account).
 
-
 ```typescript
 let tx = await program.methods
   .addFee()
@@ -87,7 +84,6 @@ let tx = await program.methods
 
 ### Claim
 The `claim()` instruction sends a user's rewards to a given wallet.
-
 
 ```typescript
 let tx = await program.methods
@@ -108,7 +104,6 @@ let tx = await program.methods
 
 The `sync()` instruction re-calculates a users' reflection score.
 
-
 ```typescript
 let tx = await program.methods
   .sync()
@@ -123,7 +118,6 @@ let tx = await program.methods
 ### Close
 
 The `close()` instruction closes a users' [RewardsAccount](#rewards-account).
-
 
 ```typescript
 let tx = await program.methods

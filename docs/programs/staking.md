@@ -80,7 +80,6 @@ const program = new Program(idl, programId);
 The `init()` instruction initializes the [SettingsAccount](#settings-account)
 of the Nosana Staking program.
 
-
 ```typescript
 let tx = await program.methods
   .init()
@@ -102,7 +101,6 @@ This will transfer amount of NOS tokens from user to the vault locked
 for duration seconds of time.
 The stake account is a PDA based on the authority.
 
-
 ```typescript
 let tx = await program.methods
   .stake()
@@ -123,7 +121,6 @@ let tx = await program.methods
 
 The `unstake()` instruction will initiate the unstake delay.
 
-
 ```typescript
 let tx = await program.methods
   .unstake()
@@ -139,7 +136,6 @@ let tx = await program.methods
 
 The `restake()` instruction undoes an unstake.
 This will make a stake active again and reset the unstake time.
-
 
 ```typescript
 let tx = await program.methods
@@ -159,7 +155,6 @@ An `amount` of NOS is transferred to the vault and the stake is update.
 - You can only top-up if the stake is not unstaked yet
 - A top-up is always for the duration of the original stake
 
-
 ```typescript
 let tx = await program.methods
   .topup()
@@ -178,7 +173,6 @@ let tx = await program.methods
 The `extend()` instruction extends the duration of a stake.
 The duration can only be increased which will result in a higher `xnos`.
 
-
 ```typescript
 let tx = await program.methods
   .extend()
@@ -195,7 +189,6 @@ The `claim()` instruction will transfer back all your stake tokens if the delay 
 passed after they whey unstaked.
 Claiming will close the [StakeAccount](#stake-account) and
 [VaultAccount](#vault-account) of the staker.
-
 
 ```typescript
 let tx = await program.methods
@@ -220,7 +213,6 @@ tokenAccount account.
 
 Slashing is a feature used by the Nosana Protocol to punish bad actors.
 
-
 ```typescript
 let tx = await program.methods
   .slash()
@@ -241,7 +233,6 @@ The `updateSettings()` instruction sets the Slashing Authority in
 [SettingsAccount](#settings-account) authority to a new account.
 It also sets the token account in [SettingsAccount](#settings-account) tokenAccount to a
 new token account. This can only by called by the current authority.
-
 
 ```typescript
 let tx = await program.methods

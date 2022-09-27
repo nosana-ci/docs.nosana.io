@@ -32,7 +32,6 @@ const program = new Program(idl, programId);
 The `open()` instruction lets you open a Nosana Pool's [PoolAccount](#pool-account)
 and [VaultAccount](#vault-account).
 
-
 ```typescript
 let tx = await program.methods
   .open()
@@ -54,7 +53,6 @@ let tx = await program.methods
 The `claimFee()` instruction claims emissions from a Nosana Pool with claim type `1`,
 and adds these as rewards (fees) to the [Rewards Program](/programs-rewards).
 
-
 ```typescript
 let tx = await program.methods
   .claimFee()
@@ -75,7 +73,6 @@ let tx = await program.methods
 The `claimTransfer()` instruction claims emissions from a Nosana Pool with claim type `0`,
 and transfer these to a given user.
 
-
 ```typescript
 let tx = await program.methods
   .claimTransfer()
@@ -93,7 +90,6 @@ let tx = await program.methods
 
 The `close()` instruction closes a Nosana Pool's [PoolAccount](#pool-account)
 and [VaultAccount](#vault-account)..
-
 
 ```typescript
 let tx = await program.methods
