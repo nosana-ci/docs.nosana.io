@@ -60,7 +60,7 @@ such that $d$ is greater than or equal to $14$ days and less than or equal to $3
 In more simple phrasing.
 A staker can stake Nosana Tokens for a minimum of two weeks and a maximum of one year.
 The longer the duration of a stake, the higher the multiplier against the number of tokens in stake.
-The maximum multiplier is this system is $4$, because $1 \frac{31536000}{10512000} = 4$.
+The maximum multiplier is this system is $4$, because $1 \frac{ 365 }{ 121 \frac{ 2 }{ 3 } } = 4$.
 
 ## Diagram
 
