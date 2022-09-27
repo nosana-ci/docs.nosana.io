@@ -1,16 +1,9 @@
 # Getting Started
 
-::: tip
-Earn tokens by running code checks and building container images.
-Or, you can just use other Nosana nodes to run your pipelines whenever you want!
-:::
+## Under construction
 
-## Example
+This page is under contruction. Please come back later!
 
-```yaml
-commands:
-  - npm ci
-  - npm run lint
-# docker image to run above commands
-image: node:16
-```
+[Take me home](/)
+
+![](/assets/construction.gif){ width="100" style="display: block; margin: 0 auto; filter: invert(55%) sepia(52%) saturate(431%) hue-rotate(101deg) brightness(94%) contrast(96%);"  }
