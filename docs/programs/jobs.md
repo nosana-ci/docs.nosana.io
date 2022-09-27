@@ -282,7 +282,7 @@ A number of 2 type variants are defined in the Nosana Jobs Program's state.
 The `JobStatus` describes the status of any job
 
 A number of 3 variants are defined:
-| Name                                  | byte                                  |
+| Name                                  | Number                                |
 |---------------------------------------|---------------------------------------|
 | `Queued`                              | `0`                                   |
 | `Running`                             | `1`                                   |
@@ -293,7 +293,7 @@ A number of 3 variants are defined:
 The `JobType` describes the type of any job.
 
 A number of 6 variants are defined:
-| Name                                  | byte                                  |
+| Name                                  | Number                                |
 |---------------------------------------|---------------------------------------|
 | `Default`                             | `0`                                   |
 | `Small`                               | `1`                                   |
