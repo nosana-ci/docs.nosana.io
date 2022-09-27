@@ -21,6 +21,47 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 | Program Address | [`nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE`](https://explorer.solana.com/address/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE) |
 | APR             | [✅](https://www.apr.dev/program/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE)                                                     |
 
+## xNOS calculation
+
+For people that like to know exactly how Nosana calculate a stakers's $xNOS$ score,
+we've written it down as a function $f(NOS) = xNOS$.
+Where $NOS$ denotes the number of [Nosana Tokens](/tokens/token) a staker has staked in the
+[Nosana Staking Program](/programs/staking).
+
+$$
+\begin{aligned}
+f(NOS) &= xNOS \\
+       &= 1 \frac{ s }{ 10512000 } \cdot NOS \\
+\\
+s.t. &\phantom{=} \set{  s \in \mathbb{Z} \mid 1209600 \leq s \leq 31536000 }
+\end{aligned}
+$$
+
+The $s$ parameter denotes time in seconds,
+which represents the duration a staker has staked his or her tokens.
+The parameter $s$ is subject to a [set](https://en.wikipedia.org/wiki/Set-builder_notation).
+The stake duration $s$ belongs to the set of integers $\mathbb{Z}$,
+such that $s$ is greater than or equal to $1209600$ seconds and less than or equal to $31536000$ seconds.
+
+Because it's somewhat difficult to intuitively understand numbers of this magnitude,
+we can simplify above function to use days rather seconds, which are denoted $d$.
+
+$$
+\begin{aligned}
+xNOS &= 1 \frac{ d }{ 121 \frac{ 2 }{ 3 } } \cdot NOS \\
+\\
+s.t. &\phantom{=} \set{ d \in \mathbb{N} \mid 14 \leq s \leq 365 }
+\end{aligned}
+$$
+
+The stake duration $d$ belongs to the set of natural numbers $\mathbb{N}$,
+such that $d$ is greater than or equal to $14$ days and less than or equal to $365$ days.
+
+In more simple phrasing.
+A staker can stake Nosana Tokens for a minimum of two weeks and a maximum of one year.
+The longer the duration of a stake, the higher the multiplier against the number of tokens in stake.
+The maximum multiplier is this system is $4$, because $1 \frac{31536000}{10512000} = 4$.
+
 ## Diagram
 
 ```mermaid
