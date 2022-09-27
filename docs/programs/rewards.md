@@ -38,10 +38,10 @@ The following are some of the Nosana Rewards program's characteristics:
 | Type            | [⚙️ Solana Program](https://docs.solana.com/developing/intro/programs#on-chain-programs)                                            |
 | Source Code     | [👨‍💻GitHub](https://github.com/nosana-ci/nosana-programs)                                                                         |
 | Build Status    | [✅ Anchor Verified](https://www.apr.dev/program/nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp)                                        |
-| Program Address | [🧭 `nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp`](https://explorer.solana.com/address/nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp) |
 | Accounts        | [`3` account types](#accounts)                                                                                                      |
-| Instructions    | [`7` instructions](#instructions)                                                                                                   |
+| Instructions    | [`6` instructions](#instructions)                                                                                                   |
 | Domain          | 🌐 `nosana-rewards.sol`                                                                                                             |
+| Program Address | [🧭 `nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp`](https://explorer.solana.com/address/nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp) |
 
 ## Instructions
 
