@@ -25,8 +25,7 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 
 For people that like to know exactly how Nosana calculate a stakers's $xNOS$ score,
 we've written it down as a function $f(NOS) = xNOS$.
-Where $NOS$ denotes the number of [Nosana Tokens](/tokens/token) a staker has staked in the
-[Nosana Staking Program](/programs/staking).
+Where $NOS$ denotes the number of [Nosana Tokens](/tokens/token) a staker has staked in the Nosana Staking Program.
 
 $$
 \begin{aligned}
