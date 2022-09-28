@@ -431,7 +431,7 @@ let tx = await program.methods
 ```
 
 :::
-:::: 
+::::
 ## Accounts
 
 A number of 3 accounts make up for the Nosana Jobs Program's state.
