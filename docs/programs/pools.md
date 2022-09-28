@@ -20,7 +20,7 @@ The Nosana Pools program allows users to open token pools with predefined emissi
 ## Instructions
 
 A number of 4 instruction are defined in the Nosana Pools program.
-To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 const programId = new PublicKey('nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD');
@@ -37,16 +37,16 @@ and [VaultAccount](#vault-account).
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `pool`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Pool Account            |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `beneficiary`     | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Beneficiary Account     |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `mint`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Mint Account            |
-| `systemProgram`   | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account  |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
-| `rent`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account            |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `pool`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Pool Account                 |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `beneficiary`          | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Beneficiary Account          |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `mint`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Mint Account                 |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account       |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
+| `rent`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account                 |
 
 #### Arguments
 
@@ -92,15 +92,15 @@ and adds these as rewards (fees) to the [Rewards Program](/programs/rewards).
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `rewardsReflection`| <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Rewards Reflection Account|
-| `rewardsVault`    | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Rewards Vault Account   |
-| `pool`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Pool Account            |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
-| `rewardsProgram`  | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rewards Program Account |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `rewardsReflection`    | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Rewards Reflection Account   |
+| `rewardsVault`         | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Rewards Vault Account        |
+| `pool`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Pool Account                 |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
+| `rewardsProgram`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rewards Program Account      |
 
 ::: details Example
 
@@ -131,13 +131,13 @@ and transfer these to a given user.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `beneficiary`     | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Beneficiary Account     |
-| `pool`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Pool Account            |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `beneficiary`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Beneficiary Account          |
+| `pool`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Pool Account                 |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 ::: details Example
 
@@ -165,13 +165,13 @@ and [VaultAccount](#vault-account)..
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `pool`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Pool Account            |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `pool`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Pool Account                 |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 ::: details Example
 
@@ -198,11 +198,6 @@ let tx = await program.methods
 A number of 2 accounts make up for the Nosana Pools Program's state.
 
 ::: tabs
-@tab Vault Account
-
-### Vault Account
-
-The `VaultAccount` is a regular Solana Token Account.
 
 @tab Pool Account
 ### Pool Account
@@ -220,12 +215,18 @@ The `PoolAccount` struct holds all the information for any given pool.
 | `startTime`                 | `i64`                       | `16`    | `90`    |
 | `vault`                     | `publicKey`                 | `32`    | `106`   |
 | `vaultBump`                 | `u8`                        | `1`     | `138`   |
+
+@tab Vault Account
+### Vault Account
+
+The `VaultAccount` is a regular Solana Token Account.
+
 :::
 ## Types
 
 A number of 1 type variants are defined in the Nosana Pools Program's state.
 
-::: tabs
+:::: tabs
 @tab Claim Type
 ### Claim Type
 
@@ -237,6 +238,7 @@ A number of 3 variants are defined:
 | `Transfer`                            | `0`                                   |
 | `AddFee`                              | `1`                                   |
 | `Unknown`                             | `255`                                 |
+
 :::
 <!-- END_NOS_DOCS -->
 

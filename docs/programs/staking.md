@@ -27,7 +27,7 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 ## Instructions
 
 A number of 9 instruction are defined in the Nosana Staking program.
-To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 const programId = new PublicKey('nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE');
@@ -44,12 +44,12 @@ of the Nosana Staking program.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `settings`        | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Settings Account        |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `systemProgram`   | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account  |
-| `rent`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account            |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `settings`             | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Settings Account             |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account       |
+| `rent`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account                 |
 
 ::: details Example
 
@@ -80,16 +80,16 @@ The stake account is a PDA based on the authority.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `mint`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Mint Account            |
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `stake`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account           |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `systemProgram`   | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account  |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
-| `rent`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account            |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `mint`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Mint Account                 |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `stake`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account                |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account       |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
+| `rent`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account                 |
 
 #### Arguments
 
@@ -129,11 +129,11 @@ The `unstake()` instruction will initiate the unstake delay.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `stake`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account           |
-| `reward`          | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Reward Account          |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `stake`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account                |
+| `reward`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Reward Account               |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
 
 ::: details Example
 
@@ -159,10 +159,10 @@ This will make a stake active again and reset the unstake time.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `stake`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account           |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `stake`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account                |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
 
 ::: details Example
 
@@ -190,13 +190,13 @@ An `amount` of NOS is transferred to the vault and the stake is update.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `stake`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account           |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `stake`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account                |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 #### Arguments
 
@@ -232,10 +232,10 @@ The duration can only be increased which will result in a higher `xnos`.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `stake`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account           |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `stake`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account                |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
 
 #### Arguments
 
@@ -270,13 +270,13 @@ Claiming will close the [StakeAccount](#stake-account) and
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `stake`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account           |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `stake`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account                |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 ::: details Example
 
@@ -309,14 +309,14 @@ Slashing is a feature used by the Nosana Protocol to punish bad actors.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `settings`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Settings Account        |
-| `stake`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account           |
-| `tokenAccount`    | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Token Account Account   |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `settings`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Settings Account             |
+| `stake`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Stake Account                |
+| `tokenAccount`         | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Token Account Account        |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 #### Arguments
 
@@ -355,12 +355,12 @@ new token account. This can only by called by the current authority.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `newAuthority`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The New Authority Account   |
-| `tokenAccount`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Account Account   |
-| `settings`        | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Settings Account        |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `newAuthority`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The New Authority Account        |
+| `tokenAccount`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Account Account        |
+| `settings`             | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Settings Account             |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
 
 ::: details Example
 
@@ -386,11 +386,6 @@ let tx = await program.methods
 A number of 3 accounts make up for the Nosana Staking Program's state.
 
 ::: tabs
-@tab Vault Account
-
-### Vault Account
-
-The `VaultAccount` is a regular Solana Token Account.
 
 @tab Settings Account
 ### Settings Account
@@ -402,6 +397,7 @@ slashing authority and token account.
 |-----------------------------|-----------------------------|---------|---------|
 | `authority`                 | `publicKey`                 | `32`    | `8`     |
 | `tokenAccount`              | `publicKey`                 | `32`    | `40`    |
+
 @tab Stake Account
 ### Stake Account
 
@@ -416,6 +412,12 @@ The `StakeAccount` struct holds all the information for any given stake.
 | `vault`                     | `publicKey`                 | `32`    | `72`    |
 | `vaultBump`                 | `u8`                        | `1`     | `104`   |
 | `xnos`                      | `u128`                      | `16`    | `105`   |
+
+@tab Vault Account
+### Vault Account
+
+The `VaultAccount` is a regular Solana Token Account.
+
 :::
 <!-- END_NOS_DOCS -->
 

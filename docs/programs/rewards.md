@@ -47,7 +47,7 @@ The following are some of the Nosana Rewards program's characteristics:
 ## Instructions
 
 A number of 6 instruction are defined in the Nosana Rewards program.
-To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 const programId = new PublicKey('nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp');
@@ -64,15 +64,15 @@ and [VaultAccount](#vault-account).
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `mint`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Mint Account            |
-| `reflection`      | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account      |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `systemProgram`   | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account  |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
-| `rent`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account            |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `mint`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Mint Account                 |
+| `reflection`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account           |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account       |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
+| `rent`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account                 |
 
 ::: details Example
 
@@ -101,13 +101,13 @@ The `enter()` instruction initializes a user's [RewardsAccount](#rewards-account
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `reflection`      | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account      |
-| `stake`           | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account           |
-| `reward`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reward Account          |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `systemProgram`   | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account  |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `reflection`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account           |
+| `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account                |
+| `reward`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reward Account               |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account       |
 
 ::: details Example
 
@@ -134,13 +134,13 @@ The `addFee()` instruction sends amount of tokens to the [VaultAccount](#vault-a
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `reflection`      | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account      |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `reflection`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account           |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 #### Arguments
 
@@ -174,15 +174,15 @@ The `claim()` instruction sends a user's rewards to a given wallet.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `reflection`      | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account      |
-| `reward`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reward Account          |
-| `stake`           | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account           |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `reflection`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account           |
+| `reward`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reward Account               |
+| `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account                |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 ::: details Example
 
@@ -211,11 +211,11 @@ The `sync()` instruction re-calculates a users' reflection score.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `reward`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reward Account          |
-| `stake`           | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account           |
-| `reflection`      | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account      |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `reward`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reward Account               |
+| `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account                |
+| `reflection`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account           |
 
 ::: details Example
 
@@ -239,11 +239,11 @@ The `close()` instruction closes a users' [RewardsAccount](#rewards-account).
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `reflection`      | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account      |
-| `reward`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reward Account          |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `reflection`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reflection Account           |
+| `reward`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Reward Account               |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
 
 ::: details Example
 
@@ -268,11 +268,6 @@ let tx = await program.methods
 A number of 3 accounts make up for the Nosana Rewards Program's state.
 
 ::: tabs
-@tab Vault Account
-
-### Vault Account
-
-The `VaultAccount` is a regular Solana Token Account.
 
 @tab Reflection Account
 ### Reflection Account
@@ -286,6 +281,7 @@ The `ReflectionAccount` struct holds all the information on the reflection pool.
 | `totalXnos`                 | `u128`                      | `16`    | `40`    |
 | `vault`                     | `publicKey`                 | `32`    | `56`    |
 | `vaultBump`                 | `u8`                        | `1`     | `88`    |
+
 @tab Reward Account
 ### Reward Account
 
@@ -297,6 +293,12 @@ The `RewardAccount` struct holds all the information for any given user account.
 | `bump`                      | `u8`                        | `1`     | `40`    |
 | `reflection`                | `u128`                      | `16`    | `41`    |
 | `xnos`                      | `u128`                      | `16`    | `57`    |
+
+@tab Vault Account
+### Vault Account
+
+The `VaultAccount` is a regular Solana Token Account.
+
 :::
 <!-- END_NOS_DOCS -->
 

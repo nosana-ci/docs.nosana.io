@@ -21,7 +21,7 @@ It lets nodes in the Nosana Network earn tokens by doing those jobs.
 ## Instructions
 
 A number of 10 instruction are defined in the Nosana Jobs program.
-To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 const programId = new PublicKey('nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM');
@@ -38,16 +38,16 @@ associated [VaultAccount](#vault-account) for token deposits.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `mint`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Mint Account            |
-| `market`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Market Account          |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `authority`       | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account       |
-| `accessKey`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Access Key Account      |
-| `rent`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account            |
-| `systemProgram`   | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account  |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `mint`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Mint Account                 |
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Market Account               |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Authority Account            |
+| `accessKey`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Access Key Account           |
+| `rent`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rent Account                 |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account       |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 #### Arguments
 
@@ -93,12 +93,12 @@ The vault has to be empty of tokens.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `market`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account          |
-| `vault`           | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Vault Account           |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account               |
+| `vault`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Vault Account                |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 ::: details Example
 
@@ -124,11 +124,11 @@ The `update()` instruction update a [MarketAccount](#market-account).
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `market`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account          |
-| `accessKey`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Access Key Account      |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account               |
+| `accessKey`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Access Key Account           |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
 
 #### Arguments
 
@@ -168,19 +168,19 @@ When there is a node ready in the queue it will immediately start running.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `job`             | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Job Account             |
-| `market`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account          |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `feePayer`        | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Fee Payer Account       |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
-| `rewardsReflection`| <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Rewards Reflection Account|
-| `rewardsVault`    | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Rewards Vault Account   |
-| `rewardsProgram`  | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rewards Program Account |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
-| `systemProgram`   | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account  |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Job Account                  |
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account               |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `feePayer`             | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The Fee Payer Account            |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
+| `rewardsReflection`    | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Rewards Reflection Account   |
+| `rewardsVault`         | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Rewards Vault Account        |
+| `rewardsProgram`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Rewards Program Account      |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The System Program Account       |
 
 #### Arguments
 
@@ -222,14 +222,14 @@ When the job was still queued the tokens will be returned to the user.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `job`             | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Job Account             |
-| `market`          | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Market Account          |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Job Account                  |
+| `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Market Account               |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 ::: details Example
 
@@ -257,10 +257,10 @@ With the `cancel()` instruction a node can stop running a job that it has starte
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `job`             | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Job Account             |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Job Account                  |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
 
 ::: details Example
 
@@ -287,15 +287,15 @@ With the claim() instruction a node can claim a job that is:
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `job`             | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Job Account             |
-| `market`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account          |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `stake`           | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account           |
-| `nft`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Nft Account             |
-| `metadata`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Metadata Account        |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Job Account                  |
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account               |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account                |
+| `nft`                  | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Nft Account                  |
+| `metadata`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Metadata Account             |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
 
 ::: details Example
 
@@ -330,14 +330,14 @@ A few requirements are enforced:
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
-| `market`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account          |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `stake`           | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account           |
-| `nft`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Nft Account             |
-| `metadata`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Metadata Account        |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account               |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Stake Account                |
+| `nft`                  | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Nft Account                  |
+| `metadata`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Metadata Account             |
 
 ::: details Example
 
@@ -366,10 +366,10 @@ from a [MarketAccount](#market-account).
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `market`          | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account          |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Market Account               |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
 
 ::: details Example
 
@@ -394,14 +394,14 @@ and be reimbursed for the work.
 
 #### Accounts
 
-| Name              | Type                                                                                    | Description                 |
-|-------------------|-----------------------------------------------------------------------------------------|-----------------------------|
-| `job`             | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Job Account             |
-| `market`          | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Market Account          |
-| `vault`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account           |
-| `user`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account            |
-| `authority`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account       |
-| `tokenProgram`    | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account   |
+| Name                   | Type                                                                                    | Description                      |
+|------------------------|-----------------------------------------------------------------------------------------|----------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Job Account                  |
+| `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Market Account               |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Vault Account                |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The User Account                 |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The Authority Account            |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Program Account        |
 
 #### Arguments
 
@@ -437,11 +437,6 @@ let tx = await program.methods
 A number of 3 accounts make up for the Nosana Jobs Program's state.
 
 ::: tabs
-@tab Vault Account
-
-### Vault Account
-
-The `VaultAccount` is a regular Solana Token Account.
 
 @tab Market Account
 ### Market Account
@@ -459,6 +454,7 @@ The `MarketAccount` struct holds all the information about jobs and the nodes qu
 | `nodeAccessKey`             | `publicKey`                 | `32`    | `98`    |
 | `nodeStakeMinimum`          | `u64`                       | `8`     | `130`   |
 | `nodeQueue`                 | `Vec<publicKey>`            | `3200`  | `138`   |
+
 @tab Job Account
 ### Job Account
 
@@ -475,12 +471,18 @@ The `JobAccount` struct holds all the information about any individual jobs.
 | `status`                    | `u8`                        | `1`     | `176`   |
 | `timeEnd`                   | `i64`                       | `16`    | `177`   |
 | `timeStart`                 | `i64`                       | `16`    | `193`   |
+
+@tab Vault Account
+### Vault Account
+
+The `VaultAccount` is a regular Solana Token Account.
+
 :::
 ## Types
 
 A number of 2 type variants are defined in the Nosana Jobs Program's state.
 
-::: tabs
+:::: tabs
 @tab Job Status
 ### Job Status
 
@@ -492,6 +494,7 @@ A number of 3 variants are defined:
 | `Queued`                              | `0`                                   |
 | `Running`                             | `1`                                   |
 | `Done`                                | `2`                                   |
+
 @tab Job Type
 ### Job Type
 
@@ -506,6 +509,7 @@ A number of 6 variants are defined:
 | `Large`                               | `3`                                   |
 | `Gpu`                                 | `4`                                   |
 | `Unknown`                             | `255`                                 |
+
 :::
 <!-- END_NOS_DOCS -->
 
