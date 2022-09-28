@@ -64,6 +64,7 @@ let tx = await program.methods
     systemProgram,     // 𐄂 writable, 𐄂 signer
     rent,              // 𐄂 writable, 𐄂 signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -117,6 +118,7 @@ let tx = await program.methods
     tokenProgram,      // 𐄂 writable, 𐄂 signer
     rent,              // 𐄂 writable, 𐄂 signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -145,6 +147,7 @@ let tx = await program.methods
     reward,            // 𐄂 writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -172,6 +175,7 @@ let tx = await program.methods
     stake,             // ✓ writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -216,6 +220,7 @@ let tx = await program.methods
     authority,         // 𐄂 writable, ✓ signer
     tokenProgram,      // 𐄂 writable, 𐄂 signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -251,6 +256,7 @@ let tx = await program.methods
     stake,             // ✓ writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -286,6 +292,7 @@ let tx = await program.methods
     authority,         // ✓ writable, ✓ signer
     tokenProgram,      // 𐄂 writable, 𐄂 signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -334,6 +341,7 @@ let tx = await program.methods
     authority,         // 𐄂 writable, ✓ signer
     tokenProgram,      // 𐄂 writable, 𐄂 signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -367,6 +375,7 @@ let tx = await program.methods
     settings,          // ✓ writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
   })
+  .signers([authorityKey])
   .rpc();
 ```
 
