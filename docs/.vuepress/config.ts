@@ -1,5 +1,6 @@
 import { defineUserConfig } from 'vuepress';
 import theme from './theme.js';
+import { componentsPlugin } from "vuepress-plugin-components";
 
 export default defineUserConfig({
   lang: 'en-US',
