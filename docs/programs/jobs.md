@@ -51,16 +51,16 @@ associated [VaultAccount](#vault-account) for token deposits.
 
 #### Arguments
 
-| Name                   | Size    | Offset  | Description                                     |
-|------------------------|---------|---------|-------------------------------------------------|
-| `jobPrice`             | `8`     | `0`     | The Job Price argument                          |
-| `jobTimeout`           | `16`    | `8`     | The Job Timeout argument                        |
-| `jobType`              | `1`     | `24`    | The Job Type argument                           |
-| `nodeStakeMinimum`     | `8`     | `25`    | The Node Stake Minimum argument                 |
+| Name                   | Size    | Offset  | Description                                               |
+|------------------------|---------|---------|-----------------------------------------------------------|
+| `jobPrice`             | `8`     | `0`     | The Job Price argument                                    |
+| `jobTimeout`           | `16`    | `8`     | The Job Timeout argument                                  |
+| `jobType`              | `1`     | `24`    | The Job Type argument                                     |
+| `nodeStakeMinimum`     | `8`     | `25`    | The Node Stake Minimum argument                           |
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -101,7 +101,7 @@ The vault has to be empty of tokens.
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -130,16 +130,16 @@ The `update()` instruction update a [MarketAccount](#market-account).
 
 #### Arguments
 
-| Name                   | Size    | Offset  | Description                                     |
-|------------------------|---------|---------|-------------------------------------------------|
-| `jobPrice`             | `8`     | `0`     | The Job Price argument                          |
-| `jobTimeout`           | `16`    | `8`     | The Job Timeout argument                        |
-| `jobType`              | `1`     | `24`    | The Job Type argument                           |
-| `nodeStakeMinimum`     | `8`     | `25`    | The Node Stake Minimum argument                 |
+| Name                   | Size    | Offset  | Description                                               |
+|------------------------|---------|---------|-----------------------------------------------------------|
+| `jobPrice`             | `8`     | `0`     | The Job Price argument                                    |
+| `jobTimeout`           | `16`    | `8`     | The Job Timeout argument                                  |
+| `jobType`              | `1`     | `24`    | The Job Type argument                                     |
+| `nodeStakeMinimum`     | `8`     | `25`    | The Node Stake Minimum argument                           |
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -181,13 +181,13 @@ When there is a node ready in the queue it will immediately start running.
 
 #### Arguments
 
-| Name                   | Size    | Offset  | Description                                     |
-|------------------------|---------|---------|-------------------------------------------------|
-| `ipfsJob`              | `32`    | `0`     | The Ipfs Job argument                           |
+| Name                   | Size    | Offset  | Description                                               |
+|------------------------|---------|---------|-----------------------------------------------------------|
+| `ipfsJob`              | `32`    | `0`     | The Ipfs Job argument                                     |
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -229,7 +229,7 @@ When the job was still queued the tokens will be returned to the user.
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -259,7 +259,7 @@ With the `cancel()` instruction a node can stop running a job that it has starte
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -293,7 +293,7 @@ With the claim() instruction a node can claim a job that is:
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -334,7 +334,7 @@ A few requirements are enforced:
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -365,7 +365,7 @@ from a [MarketAccount](#market-account).
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -396,13 +396,13 @@ and be reimbursed for the work.
 
 #### Arguments
 
-| Name                   | Size    | Offset  | Description                                     |
-|------------------------|---------|---------|-------------------------------------------------|
-| `ipfsResult`           | `32`    | `0`     | The Ipfs Result argument                        |
+| Name                   | Size    | Offset  | Description                                               |
+|------------------------|---------|---------|-----------------------------------------------------------|
+| `ipfsResult`           | `32`    | `0`     | The Ipfs Result argument                                  |
 
 ::: details Example
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html)
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -438,35 +438,33 @@ The `VaultAccount` is a regular Solana Token Account.
 
 The `MarketAccount` struct holds all the information about jobs and the nodes queue.
 
-| Name                        | Type                        | Offset  |
-|-----------------------------|-----------------------------|---------|
-| `authority`                 | `publicKey`                 | `8`     |
-| `jobPrice`                  | `u64`                       | `40`    |
-| `jobTimeout`                | `i64`                       | `48`    |
-| `jobType`                   | `u8`                        | `64`    |
-| `vault`                     | `publicKey`                 | `65`    |
-| `vaultBump`                 | `u8`                        | `97`    |
-| `nodeAccessKey`             | `publicKey`                 | `98`    |
-| `nodeStakeMinimum`          | `u64`                       | `130`   |
-| `nodeQueue`                 | `Vec<publicKey>`            | `138`   |
-
+| Name                        | Type                        | Size    | Offset  |
+|-----------------------------|-----------------------------|---------|---------|
+| `authority`                 | `publicKey`                 | `32`    | `8`     |
+| `jobPrice`                  | `u64`                       | `8`     | `40`    |
+| `jobTimeout`                | `i64`                       | `16`    | `48`    |
+| `jobType`                   | `u8`                        | `1`     | `64`    |
+| `vault`                     | `publicKey`                 | `32`    | `65`    |
+| `vaultBump`                 | `u8`                        | `1`     | `97`    |
+| `nodeAccessKey`             | `publicKey`                 | `32`    | `98`    |
+| `nodeStakeMinimum`          | `u64`                       | `8`     | `130`   |
+| `nodeQueue`                 | `Vec<publicKey>`            | `3200`  | `138`   |
 @tab Job Account
 ### Job Account
 
 The `JobAccount` struct holds all the information about any individual jobs.
 
-| Name                        | Type                        | Offset  |
-|-----------------------------|-----------------------------|---------|
-| `authority`                 | `publicKey`                 | `8`     |
-| `ipfsJob`                   | `[u8; 32]`                  | `40`    |
-| `ipfsResult`                | `[u8; 32]`                  | `72`    |
-| `market`                    | `publicKey`                 | `104`   |
-| `node`                      | `publicKey`                 | `136`   |
-| `price`                     | `u64`                       | `168`   |
-| `status`                    | `u8`                        | `176`   |
-| `timeEnd`                   | `i64`                       | `177`   |
-| `timeStart`                 | `i64`                       | `193`   |
-
+| Name                        | Type                        | Size    | Offset  |
+|-----------------------------|-----------------------------|---------|---------|
+| `authority`                 | `publicKey`                 | `32`    | `8`     |
+| `ipfsJob`                   | `[u8; 32]`                  | `32`    | `40`    |
+| `ipfsResult`                | `[u8; 32]`                  | `32`    | `72`    |
+| `market`                    | `publicKey`                 | `32`    | `104`   |
+| `node`                      | `publicKey`                 | `32`    | `136`   |
+| `price`                     | `u64`                       | `8`     | `168`   |
+| `status`                    | `u8`                        | `1`     | `176`   |
+| `timeEnd`                   | `i64`                       | `16`    | `177`   |
+| `timeStart`                 | `i64`                       | `16`    | `193`   |
 :::
 ## Types
 
@@ -484,7 +482,6 @@ A number of 3 variants are defined:
 | `Queued`                              | `0`                                   |
 | `Running`                             | `1`                                   |
 | `Done`                                | `2`                                   |
-
 @tab Job Type
 ### Job Type
 
@@ -499,7 +496,6 @@ A number of 6 variants are defined:
 | `Large`                               | `3`                                   |
 | `Gpu`                                 | `4`                                   |
 | `Unknown`                             | `255`                                 |
-
 :::
 <!-- END_NOS_DOCS -->
 
