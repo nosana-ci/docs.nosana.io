@@ -1,4 +1,4 @@
-# Nosana NFT
+# Nosana Burner Phone
 
 Nosana's collection of 850 Burner Phone NTFs reside on the Solana Blockchain.
 Consider a Burner Phone NFT to be your own network membership card.
@@ -11,7 +11,7 @@ in the Metaverse, or at home.
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | Type               | [SPL Token](https://spl.solana.com/token)                                                                                          |
 | Standard           | [Non-Fungible](https://docs.metaplex.com/programs/token-metadata/token-standard#the-non-fungible-standard)                         |
-| Name               | Nosana Burner Phone NFT                                                                                                            |
+| Name               | Nosana Burner Phone                                                                                                                |
 | Symbol             | `NOS-NFT`                                                                                                                          |
 | Decimals           | `0`                                                                                                                                |
 | Total Supply       | `850`                                                                                                                              |
