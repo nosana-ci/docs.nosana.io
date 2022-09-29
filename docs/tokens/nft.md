@@ -12,10 +12,12 @@ in the Metaverse, or at home.
 | Type               | [SPL Token](https://spl.solana.com/token)                                                                                          |
 | Standard           | [Non-Fungible](https://docs.metaplex.com/programs/token-metadata/token-standard#the-non-fungible-standard)                         |
 | Name               | Nosana Burner Phone                                                                                                                |
-| Symbol             | `NOS-NFT`                                                                                                                          |
+| Symbol             | `PHONE`                                                                                                                            |
+| Description        | A collection of Burner Phones, powering Next Gen CI/CD on the Nosana Network.                                                      |
 | Decimals           | `0`                                                                                                                                |
 | Total Supply       | `850`                                                                                                                              |
 | Collection Address | [`Hq8nseJdPXbZG23nvstPAWprCpiX5kfbtxb76QUpsjnF`](https://explorer.solana.com/address/Hq8nseJdPXbZG23nvstPAWprCpiX5kfbtxb76QUpsjnF) |
+| Mint Location      | nft.nosana.io                                                                                                                      |
 
 ## Certified Collection
 
