@@ -6,15 +6,15 @@ It even comes with exclusive owner benefits that you may use on the Nosana Netwo
 
 ## Info
 
-| Description        | type                                                                                                       |
-|--------------------|------------------------------------------------------------------------------------------------------------|
-| Type               | [SPL Token](https://spl.solana.com/token)                                                                  |
-| Standard           | [Non-Fungible](https://docs.metaplex.com/programs/token-metadata/token-standard#the-non-fungible-standard) |
-| Name               | Nosana NFT                                                                                                 |
-| Symbol             | `NOS-NFT`                                                                                                  |
-| Decimals           | `0`                                                                                                        |
-| Total Supply       | `850`                                                                                                      |
-| Collection Address | `nftNgYSG5pbwL7kHeJ5NeDrX8c4KrG1CzWhEXT8RMJ3`                                                              |
+| Description        | type                                                                                                                               |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Type               | [SPL Token](https://spl.solana.com/token)                                                                                          |
+| Standard           | [Non-Fungible](https://docs.metaplex.com/programs/token-metadata/token-standard#the-non-fungible-standard)                         |
+| Name               | Nosana NFT                                                                                                                         |
+| Symbol             | `NOS-NFT`                                                                                                                          |
+| Decimals           | `0`                                                                                                                                |
+| Total Supply       | `850`                                                                                                                              |
+| Collection Address | [`Hq8nseJdPXbZG23nvstPAWprCpiX5kfbtxb76QUpsjnF`](https://explorer.solana.com/address/Hq8nseJdPXbZG23nvstPAWprCpiX5kfbtxb76QUpsjnF) |
 
 ## Certified Collection
 
