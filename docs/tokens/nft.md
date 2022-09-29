@@ -2,7 +2,8 @@
 
 Nosana's collection of 850 Burner Phone NTFs reside on the Solana Blockchain.
 Consider a Burner Phone NFT to be your own network membership card.
-It even comes with exclusive owner benefits that you may use on the Nosana Network, in the Metaverse, or at home.
+It even comes with exclusive owner benefits that you may use on the Nosana Network,
+in the Metaverse, or at home.
 
 ## Info
 

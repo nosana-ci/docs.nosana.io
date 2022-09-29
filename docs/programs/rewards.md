@@ -58,6 +58,7 @@ const idl = await Program.fetchIdl(programId.toString());
 const program = new Program(idl, programId);
 ```
 
+:::
 :::: tabs
 @tab Init
 ### Init
