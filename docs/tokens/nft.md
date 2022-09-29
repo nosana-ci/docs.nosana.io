@@ -11,7 +11,7 @@ in the Metaverse, or at home.
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | Type               | [SPL Token](https://spl.solana.com/token)                                                                                          |
 | Standard           | [Non-Fungible](https://docs.metaplex.com/programs/token-metadata/token-standard#the-non-fungible-standard)                         |
-| Name               | Nosana NFT                                                                                                                         |
+| Name               | Nosana Burner Phone NFT                                                                                                            |
 | Symbol             | `NOS-NFT`                                                                                                                          |
 | Decimals           | `0`                                                                                                                                |
 | Total Supply       | `850`                                                                                                                              |
