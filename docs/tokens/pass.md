@@ -1,7 +1,7 @@
 # Nosana Mint Pass
 
 Nosana Mint Pass is a Fungible Asset, also known as Semi Fungible Token (SFT).
-With the Nosana Mint Pass it's possible to mint official [Nosana NFTs](/tokens/nft).
+With the Nosana Mint Pass it's possible to mint official [Nosana Burner Phones](/tokens/nft).
 
 ## Info
 
