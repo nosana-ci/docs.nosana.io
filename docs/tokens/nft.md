@@ -57,10 +57,10 @@ No NFT goes without a background. A number of 4 image backgrounds are defined.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
-| `4.3`%  | Gold                    |
-| `21.9`% | Grid                    |
-| `23.4`% | Zoom                    |
-| `26.6`% | NOS                     |
+| `4.3%`  | Gold                    |
+| `21.9%` | Grid                    |
+| `23.4%` | Zoom                    |
+| `26.6%` | NOS                     |
 
 ### Phone
 
@@ -68,11 +68,11 @@ The Burner Phone itself. There are five different types of phones.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
-| `4.5`%  | Rainbow                 |
-| `5.0`%  | Gold                    |
-| `19.7`% | NOS                     |
-| `25.0`% | Blue                    |
-| `30.2`% | Purple                  |
+| `4.5%`  | Rainbow                 |
+| `5.0%`  | Gold                    |
+| `19.7%` | NOS                     |
+| `25.0%` | Blue                    |
+| `30.2%` | Purple                  |
 
 ### Case
 
@@ -80,13 +80,13 @@ A phone must be safeguarded. Our cases are all unique in appearance.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
-| `4.0`%  | Gold                    |
-| `6.4`%  | Weed                    |
-| `7.0`%  | Beer                    |
-| `8.9`%  | Bull                    |
-| `10.1`% | Gun                     |
-| `13.6`% | Bot                     |
-| `24.6`% | Heart                   |
+| `4.0%`  | Gold                    |
+| `6.4%`  | Weed                    |
+| `7.0%`  | Beer                    |
+| `8.9%`  | Bull                    |
+| `10.1%` | Gun                     |
+| `13.6%` | Bot                     |
+| `24.6%` | Heart                   |
 
 ### Keyboard
 
@@ -94,15 +94,15 @@ Your device's peripherals. Some keyboards are more scarce than others.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
-| `1.9`%  | Gold - Priority Queue   |
-| `2.1`%  | Silver - Priority Queue |
-| `3.1`%  | Bronze - Priority Queue |
-| `5.0`%  | Rainbow                 |
-| `5.1`%  | Klingon                 |
-| `10.3`% | LFG                     |
-| `11.8`% | Wagmi                   |
-| `18.3`% | Code                    |
-| `23.2`% | NOS                     |
+| `1.9%`  | Gold - Priority Queue   |
+| `2.1%`  | Silver - Priority Queue |
+| `3.1%`  | Bronze - Priority Queue |
+| `5.0%`  | Rainbow                 |
+| `5.1%`  | Klingon                 |
+| `10.3%` | LFG                     |
+| `11.8%` | Wagmi                   |
+| `18.3%` | Code                    |
+| `23.2%` | NOS                     |
 
 ### Logo
 
@@ -110,12 +110,12 @@ Different logos can be found on burner phones.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
-| `1.4`%  | Gold - Discount         |
-| `3.1`%  | Silver - Discount       |
-| `6.4`%  | Bronze - Discount       |
-| `17.8`% | Done                    |
-| `23.9`% | Pause                   |
-| `24.0`% | Fail                    |
+| `1.4%`  | Gold - Discount         |
+| `3.1%`  | Silver - Discount       |
+| `6.4%`  | Bronze - Discount       |
+| `17.8%` | Done                    |
+| `23.9%` | Pause                   |
+| `24.0%` | Fail                    |
 
 ### Crypto Goal
 
@@ -123,11 +123,11 @@ What's your crypto goal?
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
-| `4.6`%  | To The Moon             |
-| `10.0`% | Gold Chain              |
-| `10.3`% | Luxury Watch            |
-| `27.0`% | Beach House             |
-| `29.4`% | Money                   |
+| `4.6%`  | To The Moon             |
+| `10.0%` | Gold Chain              |
+| `10.3%` | Luxury Watch            |
+| `27.0%` | Beach House             |
+| `29.4%` | Money                   |
 
 ### App
 
@@ -135,27 +135,27 @@ Hey, a message!?
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
-| `1.4`%  | Gold                    |
-| `1.2`%  | Gold Bot 1              |
-| `1.0`%  | Gold Bot 2              |
-| `0.7`%  | Gold Bot 4              |
-| `1.0`%  | Gold Bot 5              |
-| `1.1`%  | Gold Bot 6              |
-| `0.7`%  | Gold Bot 7              |
-| `1.4`%  | Gold Bot 8              |
-| `1.5`%  | Gold Bot 9              |
-| `3.2`%  | Bot 1                   |
-| `2.9`%  | Bot 2                   |
-| `3.4`%  | Bot 3                   |
-| `3.8`%  | Bot 4                   |
-| `2.4`%  | Bot 5                   |
-| `2.4`%  | Bot 6                   |
-| `2.3`%  | Bot 7                   |
-| `4.3`%  | Bot 8                   |
-| `3.0`%  | Bot 9                   |
-| `8.9`%  | Solana                  |
-| `10.2`% | Bitcoin                 |
-| `42.1`% | Nosana                  |
+| `1.4%`  | Gold                    |
+| `1.2%`  | Gold Bot 1              |
+| `1.0%`  | Gold Bot 2              |
+| `0.7%`  | Gold Bot 4              |
+| `1.0%`  | Gold Bot 5              |
+| `1.1%`  | Gold Bot 6              |
+| `0.7%`  | Gold Bot 7              |
+| `1.4%`  | Gold Bot 8              |
+| `1.5%`  | Gold Bot 9              |
+| `3.2%`  | Bot 1                   |
+| `2.9%`  | Bot 2                   |
+| `3.4%`  | Bot 3                   |
+| `3.8%`  | Bot 4                   |
+| `2.4%`  | Bot 5                   |
+| `2.4%`  | Bot 6                   |
+| `2.3%`  | Bot 7                   |
+| `4.3%`  | Bot 8                   |
+| `3.0%`  | Bot 9                   |
+| `8.9%`  | Solana                  |
+| `10.2%` | Bitcoin                 |
+| `42.1%` | Nosana                  |
 
 ### Status
 
@@ -163,9 +163,9 @@ The Nosana Pipelines are always visible on the burner phone interface.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
-| `5.6`%  | Gold - Extra Tickets    |
-| `7.6`%  | 10x - Extra Tickets     |
-| `8.3`%  | Follow                  |
-| `13.1`% | Lambo                   |
-| `16.4`% | 5x - Extra Tickets      |
-| `22.5`% | 2x - Extra Tickets      |
+| `5.6%`  | Gold - Extra Tickets    |
+| `7.6%`  | 10x - Extra Tickets     |
+| `8.3%`  | Follow                  |
+| `13.1%` | Lambo                   |
+| `16.4%` | 5x - Extra Tickets      |
+| `22.5%` | 2x - Extra Tickets      |
