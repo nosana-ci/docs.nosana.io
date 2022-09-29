@@ -27,11 +27,20 @@ It allows the Nosana Network to verify NFT holders onchain.
 For example, in the [Nosana Jobs Program](programs/jobs) nodes are required to hold an Nosana NFT
 to qualify for running pipelines.
 
+![](https://arweave.net/mMBKQ4GAJtAAh8fMRMiFOmQhozbLVxIbCe0ZBeioERc){style="display: block; margin: 0 auto;"}
+
 ## Graphics
 
 An example of a Nosana Burner Phone NFT:
 
-![](https://nosana.io/_nuxt/img/burner-phone.961bb5b.png)
+<p float="left">
+  <img src="https://arweave.net/V5yW8M9up38gR6pt5ydoKtxYK48h58SHJjeWPlOBhZM" width="200" />
+  <img src="https://arweave.net/LP7-_S9W3uSuqKt2uM7AlbmDYWjUaUjRgXbujcexcqs" width="200" />
+  <img src="https://arweave.net/pcAbBwiLwkhnSGYgKSsY-3N2LpMDLFY9Cc3z8KPF7zk" width="200" />
+  <img src="https://arweave.net/dCnZvFciIPGGjgIIfAz8PyoL4qh-WkkF1mJ6d26WDo0" width="200" />
+  <img src="https://arweave.net/IApFmaCPRXPRVVeEDtJhBlFKTDcwesAvdS1KqCja0NE" width="200" />
+  <img src="https://arweave.net/ewMf27ENCIHIaWc3qSIsDsT47JaSsRUXaNdMBQAt-ws" width="200" />
+</p>
 
 ## Attributes
 
