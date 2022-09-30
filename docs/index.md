@@ -37,12 +37,12 @@ features:
   details: Native token of the Nosana Network
   link: tokens/intro
 - icon: mobile
-  title: Nosana NFT
-  details: Nosana Burner Phones Collection
+  title: Nosana Burner Phone
+  details: Nosana Burner Phones - NFT Collection
   link: tokens/nft
 - icon: ticket
   title: Nosana Mint Pass
-  details: Start minting Nosana NFTs
+  details: Start minting Nosana Burner Phones
   link: tokens/pass
 ---
 

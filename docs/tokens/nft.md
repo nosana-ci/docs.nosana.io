@@ -51,9 +51,13 @@ These attributes are displayed when viewing the NFT in your wallet or marketplac
 Some attributes unlock certain perks in the Nosana Nework,
 like skipping the line in the [Nodes Queue](/programs/jobs#nodes-account).
 
+::: tabs
+
+@tab Background
 ### Background
 
-No NFT goes without a background. A number of 4 image backgrounds are defined.
+No NFT goes without a background.
+A number of 5 attributes are defined in this layer.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
@@ -63,9 +67,11 @@ No NFT goes without a background. A number of 4 image backgrounds are defined.
 | `23.8%` | Rust                    |
 | `26.6%` | NOS                     |
 
+@tab Phone
 ### Phone
 
-The Burner Phone itself. There are five different types of phones.
+The Burner Phone itself.
+A number of 6 attributes are defined in this layer.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
@@ -76,9 +82,11 @@ The Burner Phone itself. There are five different types of phones.
 | `25.0%` | Blue                    |
 | `30.2%` | Purple                  |
 
+@tab Case
 ### Case
 
 A phone must be safeguarded. Our cases are all unique in appearance.
+A number of 8 attributes are defined in this layer.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
@@ -91,9 +99,11 @@ A phone must be safeguarded. Our cases are all unique in appearance.
 | `24.6%` | Heart                   |
 | `25.3%` | Smiley                  |
 
+@tab Keyboard
 ### Keyboard
 
 Your device's peripherals. Some keyboards are more scarce than others.
+A number of 10 attributes are defined in this layer.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
@@ -108,9 +118,11 @@ Your device's peripherals. Some keyboards are more scarce than others.
 | `19.1%` | Emoji                   |
 | `23.2%` | NOS                     |
 
-### Logo
+@tab Status
+### Status
 
-Different logos can be found on burner phones.
+The Nosana Pipelines are always visible on the burner phone interface.
+A number of 7 attributes are defined in this layer.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
@@ -122,9 +134,11 @@ Different logos can be found on burner phones.
 | `23.9%` | Pause                   |
 | `24.0%` | Fail                    |
 
+@tab Crypto Goal
 ### Crypto Goal
 
 What's your crypto goal?
+A number of 6 attributes are defined in this layer.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
@@ -135,9 +149,11 @@ What's your crypto goal?
 | `27.0%` | Beach House             |
 | `29.4%` | Money                   |
 
+@tab App
 ### App
 
-Hey, a message!?
+Different logos can be found on burner phones.
+A number of 22 attributes are defined in this layer.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
@@ -164,9 +180,11 @@ Hey, a message!?
 | `10.2%` | Bitcoin                 |
 | `42.1%` | Nosana                  |
 
-### Status
+@tab Notification
+### Notification
 
-The Nosana Pipelines are always visible on the burner phone interface.
+Hey, a message!?
+A number of 7 attributes are defined in this layer.
 
 | Rarity  | Attribute               |
 |---------|-------------------------|
@@ -177,3 +195,5 @@ The Nosana Pipelines are always visible on the burner phone interface.
 | `16.4%` | 5x - Extra Tickets      |
 | `22.5%` | 2x - Extra Tickets      |
 | `26.5%` | Pipeline                |
+
+:::
