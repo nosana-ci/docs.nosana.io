@@ -49,7 +49,7 @@ An example of a Nosana Burner Phone NFT:
 Attributes allow us to define custom properties (key/value pairs) that describe the Nosana NFT.
 These attributes are displayed when viewing the NFT in your wallet or marketplace of choice.
 Some attributes unlock certain perks in the Nosana Nework,
-like skipping the line in the [Nodes Queue](/programs/jobs#nodes-account).
+like skipping the line in the [Nodes Queue](/programs/jobs#market-account).
 
 ::: tabs
 
