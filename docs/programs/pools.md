@@ -230,7 +230,7 @@ The `VaultAccount` is a regular Solana Token Account.
 
 A number of 1 type variants are defined in the Nosana Pools Program's state.
 
-:::: tabs
+::: tabs
 @tab Claim Type
 ### Claim Type
 

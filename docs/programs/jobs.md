@@ -486,7 +486,7 @@ The `VaultAccount` is a regular Solana Token Account.
 
 A number of 2 type variants are defined in the Nosana Jobs Program's state.
 
-:::: tabs
+::: tabs
 @tab Job Status
 ### Job Status
 
