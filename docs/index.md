@@ -45,10 +45,3 @@ features:
   details: Start minting Nosana Burner Phones
   link: tokens/pass
 ---
-
-:::tip
-Check out the how to use the Nosana Programs [here](/programs/intro)!
-```typescript
-await program.hello('Hello Nosana Network!').rpc()
-```
-:::
