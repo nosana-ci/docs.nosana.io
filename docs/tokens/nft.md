@@ -56,6 +56,8 @@ like skipping the line in the [Nodes Queue](/programs/jobs#market-account).
 @tab Background
 ### Background
 
+![](/assets/Background.png){width="150"}
+
 No NFT goes without a background.
 A number of 5 attributes are defined in this layer.
 
@@ -69,6 +71,8 @@ A number of 5 attributes are defined in this layer.
 
 @tab Phone
 ### Phone
+
+![](/assets/Phone.png){width="150"}
 
 The Burner Phone itself.
 A number of 6 attributes are defined in this layer.
@@ -84,6 +88,8 @@ A number of 6 attributes are defined in this layer.
 
 @tab Case
 ### Case
+
+![](/assets/Case.png){width="150"}
 
 A phone must be safeguarded. Our cases are all unique in appearance.
 A number of 8 attributes are defined in this layer.
@@ -101,6 +107,8 @@ A number of 8 attributes are defined in this layer.
 
 @tab Keyboard
 ### Keyboard
+
+![](/assets/Keyboard.png){width="150"}
 
 Your device's peripherals. Some keyboards are more scarce than others.
 A number of 10 attributes are defined in this layer.
@@ -121,6 +129,8 @@ A number of 10 attributes are defined in this layer.
 @tab Status
 ### Status
 
+![](/assets/Status.png){width="150"}
+
 The Nosana Pipelines are always visible on the burner phone interface.
 A number of 7 attributes are defined in this layer.
 
@@ -137,6 +147,8 @@ A number of 7 attributes are defined in this layer.
 @tab Crypto Goal
 ### Crypto Goal
 
+![](/assets/Crypto_Goal.png){width="150"}
+
 What's your crypto goal?
 A number of 6 attributes are defined in this layer.
 
@@ -151,6 +163,8 @@ A number of 6 attributes are defined in this layer.
 
 @tab App
 ### App
+
+![](/assets/App.png){width="150"}
 
 Different logos can be found on burner phones.
 A number of 22 attributes are defined in this layer.
@@ -183,6 +197,8 @@ A number of 22 attributes are defined in this layer.
 @tab Notification
 ### Notification
 
+![](/assets/Notification.png){width="150"}
+
 Hey, a message!?
 A number of 7 attributes are defined in this layer.
 
@@ -197,3 +213,5 @@ A number of 7 attributes are defined in this layer.
 | `26.5%` | Pipeline                |
 
 :::
+
+
