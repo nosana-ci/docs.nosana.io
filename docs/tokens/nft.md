@@ -19,17 +19,71 @@ in the Metaverse, or at home.
 | Collection Address | [`Hq8nseJdPXbZG23nvstPAWprCpiX5kfbtxb76QUpsjnF`](https://explorer.solana.com/address/Hq8nseJdPXbZG23nvstPAWprCpiX5kfbtxb76QUpsjnF) |
 | Mint Location      | nft.nosana.io                                                                                                                      |
 
+## Boosts <FontIcon icon="arrow-up" />
+
+Burner Phones are the official NFT collection by Nosana.
+Holding a Burner Phone is required to access the Nosana mainnet and gives you access to dedicated community channels.
+Next to that, individual Burner Phones can hold special boosts. Let’s explore!
+
+A boost is a special ability that you get when holding a specific Burner Phone.
+Boosts can have various levels and correspond to a visual element of your NFT.
+Currently, there are number of 3 boost in action.
+
+- Priority Queue
+- Discount
+- Extra Tickets
+
+:::: tabs
+
+@tab 🕑 Priority Queue
+
+### Priority Queue
+
+This boost allows nodes to skip places in the Nodes Queue.
+This means your node will be able to get jobs quicker.
+Sounds a bit unfair, that’s why this boost will be rare.
+Wait less and earn more `$NOS`!
+
+::: tip
+Wait less and earn more `$NOS`!
+:::
+
+@tab 🏷 Discount
+
+### Discount
+
+With the discount boost you will pay less `$NOS` fees for posting a new job.
+This boost will be very valuable for power users that need a lot of compute.
+A lifetime discount to the Nosana platform. Think of it. Wow!
+
+::: tip
+A lifetime discount to the Nosana platform with the Discount boost.
+:::
+
+@tab 🎟 Extra tickets
+
+### Extra Tickets
+
+Holding this boost will give you more tickets in all future raffles that use the ticket system.
+Time to get lucky! 🍀
+
+::: tip
+Hold to this boost to increase your luck forever!
+:::
+
+::::
+
 ## Certified Collection
+
+![](https://arweave.net/mMBKQ4GAJtAAh8fMRMiFOmQhozbLVxIbCe0ZBeioERc){style="display: block; margin: 0 auto;"}
 
 Certified Collections enables NFTs – and tokens in general — to be grouped together and for that information
 to be verified on-chain.
 Additionally, it makes it easier to manage these collections by allocating data for them on-chain.
 
-It allows the Nosana Network to verify NFT holders onchain.
+It allows the Nosana Network to verify NFT holders on-chain.
 For example, in the [Nosana Jobs Program](programs/jobs) nodes are required to hold an Nosana NFT
 to qualify for running pipelines.
-
-![](https://arweave.net/mMBKQ4GAJtAAh8fMRMiFOmQhozbLVxIbCe0ZBeioERc){style="display: block; margin: 0 auto;"}
 
 ## Graphics
 
@@ -213,5 +267,3 @@ A number of 7 attributes are defined in this layer.
 | `26.5%` | Pipeline                |
 
 :::
-
-
