@@ -44,4 +44,8 @@ features:
   title: Nosana Mint Pass
   details: Start minting Nosana Burner Phones
   link: tokens/pass
+- icon: arrow-up
+  title: Boosts
+  details: Network Boosts with Nosana Burner Phones
+  link: tokens/nft#boosts
 ---
