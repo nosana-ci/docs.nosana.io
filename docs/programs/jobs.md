@@ -13,14 +13,14 @@ It lets nodes in the Nosana Network earn tokens by doing those jobs.
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                              |
 | Build Status    | [Anchor Verified](https://www.apr.dev/program/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM)                                          |
 | Accounts        | [`3`](#accounts)                                                                                                                    |
-| Instructions    | [`9`](#instructions)                                                                                                                |
+| Instructions    | [`11`](#instructions)                                                                                                               |
 | Types           | [`4`](#types)                                                                                                                       |
 | Domain          | `nosana-jobs.sol`                                                                                                                   |
 |  Address        | [`nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM`](https://explorer.solana.com/address/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM)    |
 
 ## Instructions
 
-A number of 9 instruction are defined in the Nosana Jobs program.
+A number of 11 instruction are defined in the Nosana Jobs program.
 
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -146,7 +146,7 @@ The vault has to be empty of tokens.
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
-| `vault`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [VaultAccount](#vault-account) address.                                                       |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 
@@ -159,7 +159,7 @@ let tx = await program.methods
   .close()
   .accounts({
     market,            // ✓ writable, 𐄂 signer
-    vault,             // 𐄂 writable, 𐄂 signer
+    vault,             // ✓ writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
     tokenProgram,      // 𐄂 writable, 𐄂 signer
   })
@@ -220,6 +220,42 @@ let tx = await program.methods
     systemProgram,     // 𐄂 writable, 𐄂 signer
   })
   .signers([payerKey, authorityKey])
+  .rpc();
+```
+
+@tab Recover
+### Recover
+
+The `recover()` instruction recovers funds from a jobs that has been [Quit](#quit)'ed.
+When there is a node available, a [JobAccount](#job-account) will automatically be created.
+
+#### Account Info
+
+| Name                   | Type                                                                                    | Description                                                                                       |
+|------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
+| `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
+
+::: details Example
+
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+
+```typescript
+let tx = await program.methods
+  .recover()
+  .accounts({
+    job,               // ✓ writable, 𐄂 signer
+    market,            // 𐄂 writable, 𐄂 signer
+    vault,             // ✓ writable, 𐄂 signer
+    user,              // ✓ writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
+    tokenProgram,      // 𐄂 writable, 𐄂 signer
+  })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -293,6 +329,44 @@ let tx = await program.methods
   .stop()
   .accounts({
     market,            // ✓ writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
+  })
+  .signers([authorityKey])
+  .rpc();
+```
+
+@tab Claim
+### Claim
+
+With the `claim()` instruction a node exits the node queue
+from a [MarketAccount](#market-account).
+
+#### Account Info
+
+| Name                   | Type                                                                                    | Description                                                                                       |
+|------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
+| `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
+| `vault`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [VaultAccount](#vault-account) address.                                                       |
+| `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [StakeAccount](/programs/staking#stake-account) address.                                      |
+| `nft`                  | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Account address that holds the NFT.                                                     |
+| `metadata`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Metaplex Metadata address, that belongs to the NFT.                                           |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+
+::: details Example
+
+To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+
+```typescript
+let tx = await program.methods
+  .claim()
+  .accounts({
+    job,               // ✓ writable, 𐄂 signer
+    market,            // 𐄂 writable, 𐄂 signer
+    vault,             // 𐄂 writable, 𐄂 signer
+    stake,             // 𐄂 writable, 𐄂 signer
+    nft,               // 𐄂 writable, 𐄂 signer
+    metadata,          // 𐄂 writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
   })
   .signers([authorityKey])
@@ -448,7 +522,7 @@ The total size of this account is `241` bytes.
 | `payer`                     | `publicKey`                 | `32`    | `136`   | The paying identy for the rent.                                                                   |
 | `price`                     | `u64`                       | `8`     | `168`   | The price in [$NOS](/tokens/token).                                                               |
 | `project`                   | `publicKey`                 | `32`    | `176`   | The project that listed this job.                                                                 |
-| `status`                    | `u8`                        | `1`     | `208`   | The job status (queued | running | done).                                                         |
+| `status`                    | `u8`                        | `1`     | `208`   | The job status (queued / running / done).                                                         |
 | `timeEnd`                   | `i64`                       | `16`    | `209`   | The unix time this job has finished running.                                                      |
 | `timeStart`                 | `i64`                       | `16`    | `225`   | The unix time this job has started running.                                                       |
 
@@ -492,12 +566,13 @@ A number of 3 variants are defined in this `enum`:
 
 The `JobStatus` describes the status of any job
 
-A number of 3 variants are defined in this `enum`:
+A number of 4 variants are defined in this `enum`:
 | Name                                  | Number                                |
 |---------------------------------------|---------------------------------------|
 | `Queued`                              | `0`                                   |
 | `Running`                             | `1`                                   |
 | `Done`                                | `2`                                   |
+| `Stopped`                             | `3`                                   |
 
 @tab Job Type
 ### Job Type
