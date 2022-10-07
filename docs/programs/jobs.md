@@ -598,27 +598,22 @@ A number of 6 variants are defined in this `enum`:
 
 ```mermaid
 flowchart TB
-    Project -- list --> di1{Market Account}
-    
-    Anonymous -- clean --> di2{Job Account}
-
-    Node -- work --> di1{Market Account}
-    Node -- stop --> di1{Market Account}
-    
-    Node -- quit --> di2{Job Account}
-    Node -- finish --> di2{Job Account}
-    
-    di1{Market Account} -.- list -.-> di2{Job Account}
-    di1{Market Account} -.- work -.-> di2{Job Account}
-
-    Project -.- sq1[NOS] -.-> di3{Vault Account} -.- sq2[NOS] -.-> Node
-    Project -.- sq3[NOS] -.-> ci(Network Fees)
-
     Admin -- open --> di1{Market Account}
     Admin -- update --> di1{Market Account}
     Admin -- close --> di1{Market Account}
-    Admin -- open --> di3{Vault Account}
-    Admin -- close --> di3{Vault Account}
+
+    Anonymous -- clean --> di2{Job Account}
+
+    Project -- list --> di1{Market Account} -- list --> di2{Job Account}
+    Project -- recover --> di2{Job Account}
+    Project -.- sq1[NOS] -.-> di3{Vault Account} -.- sq2[NOS] -.-> Node
+    Project -.- sq3[NOS] -.-> ci(Network Fees)
+
+    Node -- work --> di1{Market Account} -- work --> di2{Job Account}
+    Node -- stop --> di1{Market Account}
+    Node -- finish --> di2{Job Account}
+    Node -- claim --> di2{Job Account}
+    Node -- quit --> di2{Job Account}
 
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
     classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
