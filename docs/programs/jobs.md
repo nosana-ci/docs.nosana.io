@@ -171,8 +171,7 @@ let tx = await program.methods
 ### List
 
 The `list()` instruction lists a job, with its required data.
-When there is a node ready in the queue it will immediately start running.
-The [JobAccount](#job-account) is optionally created
+When there is a node available, a [JobAccount](#job-account) will automatically be created.
 
 #### Accounts
 
@@ -228,7 +227,7 @@ let tx = await program.methods
 ### Work
 
 With the `work()` instruction a node enters the [MarketAccount](#market-account) queue.
-When there is a job available, a job account will automatically be created.
+When there is a job available, a [JobAccount](#job-account) will automatically be created.
 
 A few requirements are enforced:
 
