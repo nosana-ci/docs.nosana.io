@@ -37,7 +37,7 @@ const program = new Program(idl, programId);
 The `open()` instruction initializes a [MarketAccount](#market-account) and an
 associated [VaultAccount](#vault-account) for token deposits.
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -94,7 +94,7 @@ let tx = await program.methods
 
 The `update()` instruction updates a [MarketAccount](#market-account) configurations.
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -141,7 +141,7 @@ The `close()` instruction closes a [MarketAccount](#market-account) and the
 associated [VaultAccount](#vault-account).
 The vault has to be empty of tokens.
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -173,7 +173,7 @@ let tx = await program.methods
 The `list()` instruction lists a job, with its required data.
 When there is a node available, a [JobAccount](#job-account) will automatically be created.
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -235,7 +235,7 @@ A few requirements are enforced:
 - A node needs to hold an official Nosana NFT.
 - A node can only enter the queue once
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -277,7 +277,7 @@ let tx = await program.methods
 With the `stop()` instruction a node exits the node queue
 from a [MarketAccount](#market-account).
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -305,7 +305,7 @@ let tx = await program.methods
 With the `finish()` instruction a node can can post the result for a job it has finished,
 and be reimbursed for the work.
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -348,7 +348,7 @@ let tx = await program.methods
 
 With the `quit()` instruction a node can quit a job that it has started.
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -382,7 +382,7 @@ This [filter](https://solanacookbook.com/guides/get-program-accounts) finds fini
 { "memcmp": { "offset": 208, "bytes": "2" } }
 ```
 
-#### Accounts
+#### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
