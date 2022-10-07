@@ -596,6 +596,8 @@ A number of 6 variants are defined in this `enum`:
 
 ## Diagram
 
+### Instructions
+
 ```mermaid
 flowchart TB
     Admin -- open --> di1{Market Account}
@@ -620,4 +622,93 @@ flowchart TB
 
     class di1,di2,di3 orange
     class sq1,sq2,sq3 yellow
+```
+
+### Queue
+
+Below a representation of the functioning of the different queues.
+
+#### Nodes
+
+When there a more nodes than jobs in a given Market, the queue will fill up with nodes.
+The [`QueueType`](#queue-type) will be `Node` in this case.
+
+```mermaid
+flowchart TB
+    subgraph Market
+        a(Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake)
+        subgraph Queue
+            o1 --> o2 --> o3
+        end
+    end
+    n --> o1
+    n --> a
+    p --> o3
+    p --> a
+    o3 --> ja
+
+    n(Node)
+    p(Project)
+    o1{Node}
+    o2{Node}
+    o3{Node}
+    ja{JobAccount}
+
+    classDef orange fill:#f96,stroke:#333,stroke-width:3px;
+    class o1,o2,o3 orange;
+```
+
+#### Jobs
+
+Vise versa, When there a more jobs than nodes in a given Market, the queue will fill up with jobs.
+The [`QueueType`](#queue-type) will be `Job` in this case.
+
+```mermaid
+flowchart TB
+    subgraph Market
+        a(Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake)
+        subgraph Queue
+            o1 --> o2 --> o3
+        end
+    end
+    n --> o3
+    n --> a
+    p --> o1
+    p --> a
+    o3 --> ja
+
+    n(Node)
+    p(Project)
+    o1{Job}
+    o2{Job}
+    o3{Job}
+    ja{JobAccount}
+
+    classDef blue fill:#0083B1,stroke:#333,stroke-width:3px;
+    class o1,o2,o3 blue;
+```
+
+#### Empty
+
+Finally, at the point when the market is satisfied, the queue will be empty.
+The [`QueueType`](#queue-type) will be `Unknown` in this case.
+
+```mermaid
+flowchart TB
+    subgraph Market
+        a(Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake)
+        subgraph Queue
+             o
+        end
+    end
+
+    n --> o
+    p --> o
+
+    n(Node)
+    p(Project)
+    o{Order}
+
+    classDef brown fill:#2e00b1,stroke:#333,stroke-width:3px;
+    class o brown;
 ```
