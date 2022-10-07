@@ -28,8 +28,6 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 
 A number of 9 instruction are defined in the Nosana Staking program.
 
-::: details Example
-
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
@@ -38,7 +36,6 @@ const idl = await Program.fetchIdl(programId.toString());
 const program = new Program(idl, programId);
 ```
 
-:::
 :::: tabs
 @tab Init
 ### Init
@@ -397,6 +394,7 @@ A number of 3 accounts make up for the Nosana Staking Program's state.
 The `SettingsAccount` struct holds the information about the
 slashing authority and token account.
 
+The total size of this account is `72` bytes.
 | Name                        | Type                        | Size    | Offset  | Description                                                                                       |
 |-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
 | `authority`                 | `publicKey`                 | `32`    | `8`     | The signing authority of the program invocation.                                                  |
@@ -407,6 +405,7 @@ slashing authority and token account.
 
 The `StakeAccount` struct holds all the information for any given stake.
 
+The total size of this account is `121` bytes.
 | Name                        | Type                        | Size    | Offset  | Description                                                                                       |
 |-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
 | `amount`                    | `u64`                       | `8`     | `8`     | The number of tokens.                                                                             |

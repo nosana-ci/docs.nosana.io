@@ -48,8 +48,6 @@ The following are some of the Nosana Rewards program's characteristics:
 
 A number of 6 instruction are defined in the Nosana Rewards program.
 
-::: details Example
-
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
@@ -58,7 +56,6 @@ const idl = await Program.fetchIdl(programId.toString());
 const program = new Program(idl, programId);
 ```
 
-:::
 :::: tabs
 @tab Init
 ### Init
@@ -278,6 +275,7 @@ A number of 3 accounts make up for the Nosana Rewards Program's state.
 
 The `ReflectionAccount` struct holds all the information on the reflection pool.
 
+The total size of this account is `89` bytes.
 | Name                        | Type                        | Size    | Offset  | Description                                                                                       |
 |-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
 | `rate`                      | `u128`                      | `16`    | `8`     | The current reward rate.                                                                          |
@@ -291,6 +289,7 @@ The `ReflectionAccount` struct holds all the information on the reflection pool.
 
 The `RewardAccount` struct holds all the information for any given user account.
 
+The total size of this account is `73` bytes.
 | Name                        | Type                        | Size    | Offset  | Description                                                                                       |
 |-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
 | `authority`                 | `publicKey`                 | `32`    | `8`     | The signing authority of the program invocation.                                                  |
