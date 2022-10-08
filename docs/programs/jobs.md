@@ -44,7 +44,7 @@ associated [VaultAccount](#vault-account) for token deposits.
 | `mint`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The token Mint address for this instruction.                                                      |
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [MarketAccount](#market-account) address.                                                     |
 | `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
-| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [JobAccount](#job-account) address.                                                           |
 | `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The signing authority of the program invocation.                                                  |
 | `accessKey`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Node Access Key address.                                                                      |
 | `rent`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana rent address. Responsible for lamports.                                       |
@@ -59,7 +59,7 @@ associated [VaultAccount](#vault-account) for token deposits.
 | `jobPrice`             | `u64`             | `8`     | `16`    | The price for jobs in this market.                        |
 | `jobTimeout`           | `i64`             | `16`    | `24`    | The timeout time in seconds for jobs.                     |
 | `jobType`              | `u8`              | `1`     | `40`    | The [JobType](#job-type) number.                          |
-| `nodeStakeMinimum`     | `u64`             | `8`     | `41`    | The number of tokens a node needs to stake to qualify.    |
+| `nodeXnosMinimum`      | `u64`             | `8`     | `41`    | n/a                                                       |
 
 ::: details Example
 
@@ -72,20 +72,20 @@ let tx = await program.methods
     jobPrice,          // type: u64
     jobTimeout,        // type: i64
     jobType,           // type: u8
-    nodeStakeMinimum,  // type: u64
+    nodeXnosMinimum,   // type: u64
   )
   .accounts({
     mint,              // 𐄂 writable, 𐄂 signer
     market,            // ✓ writable, ✓ signer
     vault,             // ✓ writable, 𐄂 signer
-    job,               // ✓ writable, 𐄂 signer
+    job,               // ✓ writable, ✓ signer
     authority,         // ✓ writable, ✓ signer
     accessKey,         // 𐄂 writable, 𐄂 signer
     rent,              // 𐄂 writable, 𐄂 signer
     systemProgram,     // 𐄂 writable, 𐄂 signer
     tokenProgram,      // 𐄂 writable, 𐄂 signer
   })
-  .signers([marketKey, authorityKey])
+  .signers([marketKey, jobKey, authorityKey])
   .rpc();
 ```
 
@@ -177,15 +177,14 @@ When there is a node available, a [JobAccount](#job-account) will automatically 
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
-| `seed`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | A new pubkey, or the system program pubkey                                                        |
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [JobAccount](#job-account) address.                                                           |
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
 | `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
 | `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
 | `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The paying identy for the rent.                                                                   |
-| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 | `rewardsReflection`    | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Nosana Rewards Program's [ReflectionAccount](/programs/rewards#reflection-account) address.   |
 | `rewardsVault`         | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Nosana Rewards Program's [VaultAccount](/programs/rewards#vault-account) address.             |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 | `rewardsProgram`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [Nosana Rewards](/programs/rewards) Program address.                                          |
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 | `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana system program address. Responsible for system CPIs.                          |
@@ -206,20 +205,19 @@ let tx = await program.methods
     ipfsJob,           // type: ["u8",32]
   )
   .accounts({
-    job,               // ✓ writable, 𐄂 signer
-    seed,              // 𐄂 writable, 𐄂 signer
+    job,               // ✓ writable, ✓ signer
     market,            // ✓ writable, 𐄂 signer
     vault,             // ✓ writable, 𐄂 signer
     user,              // ✓ writable, 𐄂 signer
     payer,             // ✓ writable, ✓ signer
-    authority,         // 𐄂 writable, ✓ signer
     rewardsReflection, // ✓ writable, 𐄂 signer
     rewardsVault,      // ✓ writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
     rewardsProgram,    // 𐄂 writable, 𐄂 signer
     tokenProgram,      // 𐄂 writable, 𐄂 signer
     systemProgram,     // 𐄂 writable, 𐄂 signer
   })
-  .signers([payerKey, authorityKey])
+  .signers([jobKey, payerKey, authorityKey])
   .rpc();
 ```
 
@@ -277,13 +275,12 @@ A few requirements are enforced:
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
-| `seed`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | A new pubkey, or the system program pubkey                                                        |
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [JobAccount](#job-account) address.                                                           |
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The paying identy for the rent.                                                                   |
 | `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [StakeAccount](/programs/staking#stake-account) address.                                      |
 | `nft`                  | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Account address that holds the NFT.                                                     |
 | `metadata`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Metaplex Metadata address, that belongs to the NFT.                                           |
-| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The paying identy for the rent.                                                                   |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 | `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana system program address. Responsible for system CPIs.                          |
 
@@ -295,17 +292,16 @@ To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/inde
 let tx = await program.methods
   .work()
   .accounts({
-    job,               // ✓ writable, 𐄂 signer
-    seed,              // 𐄂 writable, 𐄂 signer
+    job,               // ✓ writable, ✓ signer
     market,            // ✓ writable, 𐄂 signer
+    payer,             // ✓ writable, ✓ signer
     stake,             // 𐄂 writable, 𐄂 signer
     nft,               // 𐄂 writable, 𐄂 signer
     metadata,          // 𐄂 writable, 𐄂 signer
-    payer,             // ✓ writable, ✓ signer
     authority,         // 𐄂 writable, ✓ signer
     systemProgram,     // 𐄂 writable, 𐄂 signer
   })
-  .signers([payerKey, authorityKey])
+  .signers([jobKey, payerKey, authorityKey])
   .rpc();
 ```
 
@@ -349,7 +345,6 @@ from a [MarketAccount](#market-account).
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
 | `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
-| `vault`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [VaultAccount](#vault-account) address.                                                       |
 | `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [StakeAccount](/programs/staking#stake-account) address.                                      |
 | `nft`                  | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Account address that holds the NFT.                                                     |
 | `metadata`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Metaplex Metadata address, that belongs to the NFT.                                           |
@@ -365,7 +360,6 @@ let tx = await program.methods
   .accounts({
     job,               // ✓ writable, 𐄂 signer
     market,            // 𐄂 writable, 𐄂 signer
-    vault,             // 𐄂 writable, 𐄂 signer
     stake,             // 𐄂 writable, 𐄂 signer
     nft,               // 𐄂 writable, 𐄂 signer
     metadata,          // 𐄂 writable, 𐄂 signer
@@ -463,8 +457,8 @@ This [filter](https://solanacookbook.com/guides/get-program-accounts) finds fini
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
-| `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
 | `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
+| `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
 
 ::: details Example
 
@@ -475,8 +469,8 @@ let tx = await program.methods
   .clean()
   .accounts({
     job,               // ✓ writable, 𐄂 signer
-    payer,             // 𐄂 writable, 𐄂 signer
     market,            // 𐄂 writable, 𐄂 signer
+    payer,             // 𐄂 writable, 𐄂 signer
   })
   .rpc();
 ```
@@ -505,7 +499,7 @@ The total size of this account is `7,355` bytes.
 | `vault`                     | `publicKey`                 | `32`    | `81`    | The [VaultAccount](#vault-account) address.                                                       |
 | `vaultBump`                 | `u8`                        | `1`     | `113`   | The bump for the [VaultAccount](#vault-account).                                                  |
 | `nodeAccessKey`             | `publicKey`                 | `32`    | `114`   | The NFT collection address of an NFT that the node holds, in order to access this market.         |
-| `nodeStakeMinimum`          | `u64`                       | `8`     | `146`   | The number of tokens a node needs to stake to qualify.                                            |
+| `nodeXnosMinimum`           | `u64`                       | `8`     | `146`   | n/a                                                                                               |
 | `queueType`                 | `u8`                        | `1`     | `154`   | The [QueueType](#queue-type) of the queue. Either Nodes or Jobs.                                  |
 | `queue`                     | `Vec<Order>`                | `7200`  | `155`   | The queue of order in the market.                                                                 |
 
@@ -561,20 +555,21 @@ A number of 3 variants are defined in this `enum`:
 |---------------------------------------|---------------------------------------|
 | `Job`                                 | `0`                                   |
 | `Node`                                | `1`                                   |
-| `Unknown`                             | `255`                                 |
+| `Empty`                               | `2`                                   |
 
 @tab Job Status
 ### Job Status
 
-The `JobStatus` describes the status of any job
+The `JobStatus` describes the status of a job.
 
-A number of 4 variants are defined in this `enum`:
+A number of 5 variants are defined in this `enum`:
 | Name                                  | Number                                |
 |---------------------------------------|---------------------------------------|
-| `Queued`                              | `0`                                   |
+| `Null`                                | `0`                                   |
 | `Running`                             | `1`                                   |
 | `Done`                                | `2`                                   |
 | `Stopped`                             | `3`                                   |
+| `Dummy`                               | `4`                                   |
 
 @tab Job Type
 ### Job Type
@@ -672,9 +667,10 @@ flowchart TB
         end
     end
     n --> o3
-    n --> a
-    p --> o1
     p --> a
+
+    a --> ja
+    a --> o1
     o3 --> ja
 
     n(Node)
