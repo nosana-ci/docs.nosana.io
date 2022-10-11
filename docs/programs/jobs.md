@@ -641,13 +641,15 @@ The [`QueueType`](#queue-type) will be `Node` in this case.
 flowchart TB
     subgraph Market
         market
+        node
+        project
         subgraph Queue
             order1 --> order2 --> order3
         end
     end
-    node --> order1
-    node --> market
-    project --> market
+
+
+    node --> Queue
     order3 --> run
     project --> run
 
@@ -675,15 +677,19 @@ The [`QueueType`](#queue-type) will be `Job` in this case.
 
 ```mermaid
 flowchart TB
-   subgraph Market
+    subgraph Market
         market
+        node
+        project
         subgraph Queue
             order1 --> order2 --> order3
         end
     end
-    project --> order1
-    node --> market
-    project --> market
+
+    vault
+
+    project --> Queue
+    project --> vault
     order3 --> run
     node --> run
 
@@ -692,6 +698,7 @@ flowchart TB
     order1{Job}
     order2{Job}
     order3{Job}
+    vault{Vault}
     run{Run Account}
     market[Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake]
 
@@ -699,7 +706,7 @@ flowchart TB
     classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
     classDef grey fill:#BFC9CA,stroke:#333,stroke-width:2px;
     class order1,order2,order3 blue;
-    class run yellow;
+    class run,vault yellow;
     class market grey;
 ```
 
@@ -711,19 +718,25 @@ The [`QueueType`](#queue-type) will be `Unknown` in this case.
 ```mermaid
 flowchart TB
     subgraph Market
-        market(Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake)
+        node
+        project
+        market
         subgraph Queue
-             order
+            order
         end
     end
 
-    node --> order
-    project --> order
+    node --> Queue
+    project --> Queue
 
     node(Node)
     project(Project)
     order{Order}
+    market[Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake]
+
 
     classDef purple fill:#FC33FF,stroke:#333,stroke-width:3px;
+    classDef grey fill:#BFC9CA,stroke:#333,stroke-width:2px;
     class order purple;
+    class market grey;
 ```
