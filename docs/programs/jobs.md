@@ -42,7 +42,7 @@ associated [VaultAccount](#vault-account) for token deposits.
 | `mint`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The token Mint address for this instruction.                                                      |
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [MarketAccount](#market-account) address.                                                     |
 | `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
-| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | n/a                                                                                               |
+| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [RunAccount](#run-account) address.                                                           |
 | `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The signing authority of the program invocation.                                                  |
 | `accessKey`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Node Access Key address.                                                                      |
 | `rent`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana rent address. Responsible for lamports.                                       |
@@ -170,7 +170,7 @@ When there is a node available, a [JobAccount](#job-account) will automatically 
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [JobAccount](#job-account) address.                                                           |
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
-| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | n/a                                                                                               |
+| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [RunAccount](#run-account) address.                                                           |
 | `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
 | `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
 | `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The paying identy for the rent.                                                                   |
@@ -258,7 +258,7 @@ When there is a job available, a [JobAccount](#job-account) will automatically b
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | n/a                                                                                               |
+| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [RunAccount](#run-account) address.                                                           |
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
 | `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The paying identy for the rent.                                                                   |
 | `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [StakeAccount](/programs/staking#stake-account) address.                                      |
@@ -321,11 +321,14 @@ With the `claim()` instruction a node claims a job that is [stopped](#stop).
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
+| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [RunAccount](#run-account) address.                                                           |
 | `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
 | `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [StakeAccount](/programs/staking#stake-account) address.                                      |
 | `nft`                  | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Token Account address that holds the NFT.                                                     |
 | `metadata`             | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The Metaplex Metadata address, that belongs to the NFT.                                           |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The paying identy for the rent.                                                                   |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana system program address. Responsible for system CPIs.                          |
 
 ::: details Example
 
@@ -336,13 +339,16 @@ let tx = await program.methods
   .claim()
   .accounts({
     job,               // ✓ writable, 𐄂 signer
+    run,               // ✓ writable, ✓ signer
     market,            // 𐄂 writable, 𐄂 signer
     stake,             // 𐄂 writable, 𐄂 signer
     nft,               // 𐄂 writable, 𐄂 signer
     metadata,          // 𐄂 writable, 𐄂 signer
+    payer,             // ✓ writable, ✓ signer
     authority,         // 𐄂 writable, ✓ signer
+    systemProgram,     // 𐄂 writable, 𐄂 signer
   })
-  .signers([authorityKey])
+  .signers([runKey, payerKey, authorityKey])
   .rpc();
 ```
 
@@ -355,7 +361,7 @@ and be reimbursed for the work.
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
-| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | n/a                                                                                               |
+| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [RunAccount](#run-account) address.                                                           |
 | `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
 | `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
 | `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
@@ -399,7 +405,8 @@ With the `quit()` instruction a node can quit a job that it has started.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | n/a                                                                                               |
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
+| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [RunAccount](#run-account) address.                                                           |
 | `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 
@@ -411,6 +418,7 @@ To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/inde
 let tx = await program.methods
   .quit()
   .accounts({
+    job,               // ✓ writable, 𐄂 signer
     run,               // ✓ writable, 𐄂 signer
     payer,             // 𐄂 writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
@@ -579,28 +587,45 @@ A number of 6 variants are defined in this `enum`:
 
 ```mermaid
 flowchart TB
-    Admin -- open --> di1{Market Account}
-    Admin -- update --> di1{Market Account}
-    Admin -- close --> di1{Market Account}
+    admin -- open --> market
+    admin -- update --> market
+    admin -- close --> market
 
-    Anonymous -- clean --> di2{Job Account}
 
-    Project -- list --> di1{Market Account} -- list --> di2{Job Account}
-    Project -- recover --> di2{Job Account}
-    Project -.- sq1[NOS] -.-> di3{Vault Account} -.- sq2[NOS] -.-> Node
-    Project -.- sq3[NOS] -.-> ci(Network Fees)
+    project -- list --> job
+    project -- list --> run
+    project --> run
+    project -- recover --> job
+    project -.- nos1 -.-> vault -.- nos2 -.-> node
+    project -.- nos3 -.-> fee
 
-    Node -- work --> di1{Market Account} -- work --> di2{Job Account}
-    Node -- stop --> di1{Market Account}
-    Node -- finish --> di2{Job Account}
-    Node -- claim --> di2{Job Account}
-    Node -- quit --> di2{Job Account}
+    node -- work --> market -- work --> run
+    node -- stop --> market
+    node -- finish --> run -- finish --> job
+    node -- claim --> job
+    node -- quit --> job
+
+    job -- clean --> job
+
+    node(Worker Node)
+    project(Software Project)
+    admin(Administrator)
+    fee(Network Fees)
+
+    nos1[NOS]
+    nos2[NOS]
+    nos3[NOS]
+
+    market{Market Account}
+    job{Job Account}
+    run{Run Account}
+    vault{Vault Account}
 
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
     classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
 
-    class di1,di2,di3 orange
-    class sq1,sq2,sq3 yellow
+    class market,job,vault,run orange
+    class nos1,nos2,nos3 yellow
 ```
 
 ### Queue
@@ -615,26 +640,32 @@ The [`QueueType`](#queue-type) will be `Node` in this case.
 ```mermaid
 flowchart TB
     subgraph Market
-        a(Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake)
+        market
         subgraph Queue
-            o1 --> o2 --> o3
+            order1 --> order2 --> order3
         end
     end
-    n --> o1
-    n --> a
-    p --> o3
-    p --> a
-    o3 --> ja
+    node --> order1
+    node --> market
+    project --> market
+    order3 --> run
+    project --> run
 
-    n(Node)
-    p(Project)
-    o1{Node}
-    o2{Node}
-    o3{Node}
-    ja{JobAccount}
+    node(Worker Node)
+    project(Software Project)
+    order1{Node}
+    order2{Node}
+    order3{Node}
+    run{Run Account}
+    market[Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake]
 
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
-    class o1,o2,o3 orange;
+    classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
+    classDef grey fill:#BFC9CA,stroke:#333,stroke-width:2px;
+
+    class order1,order2,order3 orange;
+    class run yellow;
+    class market grey;
 ```
 
 #### Jobs
@@ -644,28 +675,32 @@ The [`QueueType`](#queue-type) will be `Job` in this case.
 
 ```mermaid
 flowchart TB
-    subgraph Market
-        a(Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake)
+   subgraph Market
+        market
         subgraph Queue
-            o1 --> o2 --> o3
+            order1 --> order2 --> order3
         end
     end
-    n --> o3
-    p --> a
+    project --> order1
+    node --> market
+    project --> market
+    order3 --> run
+    node --> run
 
-    a --> ja
-    a --> o1
-    o3 --> ja
-
-    n(Node)
-    p(Project)
-    o1{Job}
-    o2{Job}
-    o3{Job}
-    ja{JobAccount}
+    node(Worker Node)
+    project(Software Project)
+    order1{Job}
+    order2{Job}
+    order3{Job}
+    run{Run Account}
+    market[Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake]
 
     classDef blue fill:#0083B1,stroke:#333,stroke-width:3px;
-    class o1,o2,o3 blue;
+    classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
+    classDef grey fill:#BFC9CA,stroke:#333,stroke-width:2px;
+    class order1,order2,order3 blue;
+    class run yellow;
+    class market grey;
 ```
 
 #### Empty
@@ -676,19 +711,19 @@ The [`QueueType`](#queue-type) will be `Unknown` in this case.
 ```mermaid
 flowchart TB
     subgraph Market
-        a(Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake)
+        market(Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake)
         subgraph Queue
-             o
+             order
         end
     end
 
-    n --> o
-    p --> o
+    node --> order
+    project --> order
 
-    n(Node)
-    p(Project)
-    o{Order}
+    node(Node)
+    project(Project)
+    order{Order}
 
-    classDef brown fill:#2e00b1,stroke:#333,stroke-width:3px;
-    class o brown;
+    classDef purple fill:#FC33FF,stroke:#333,stroke-width:3px;
+    class order purple;
 ```
