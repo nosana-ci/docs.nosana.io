@@ -33,8 +33,10 @@ const program = new Program(idl, programId);
 :::: tabs
 @tab Open
 ### Open
+
 The `open()` instruction initializes a [MarketAccount](#market-account)
 and [VaultAccount](#vault-account).
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -89,7 +91,9 @@ let tx = await program.methods
 
 @tab Update
 ### Update
+
 The `update()` instruction updates a [MarketAccount](#market-account) configurations.
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -132,8 +136,10 @@ let tx = await program.methods
 
 @tab Close
 ### Close
+
 The `close()` instruction closes a [MarketAccount](#market-account) and the
 associated [VaultAccount](#vault-account). The vault has to be empty of tokens.
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -164,8 +170,10 @@ let tx = await program.methods
 
 @tab List
 ### List
+
 The `list()` instruction lists a job, with its required data.
 When there is a job available, a [RunAccount](#run-account) will automatically be created.
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -218,7 +226,9 @@ let tx = await program.methods
 
 @tab Recover
 ### Recover
+
 The `recover()` instruction recovers funds from a jobs that has been [Quit](#quit)'ed.
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -253,8 +263,12 @@ let tx = await program.methods
 
 @tab Work
 ### Work
+
 With the `work()` instruction a node enters the [MarketAccount](#market-account) queue.
 When there is a job available, a [RunAccount](#run-account) will automatically be created.
+The node needs to hold a [Burner Phone](/tokens/nft) and have [`xNOS`](/programs/stake).
+```
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -291,7 +305,10 @@ let tx = await program.methods
 
 @tab Stop
 ### Stop
-With the `stop()` instruction a node exits the node queue from a [MarketAccount](#market-account).
+
+With the `stop()` instruction a node exits the node queue from a
+[MarketAccount](#market-account).
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -316,7 +333,10 @@ let tx = await program.methods
 
 @tab Claim
 ### Claim
+
 With the `claim()` instruction a node claims a job that is [stopped](#stop).
+The node needs to hold a [Burner Phone](/tokens/nft) and have [`xNOS`](/programs/stake).
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -355,8 +375,10 @@ let tx = await program.methods
 
 @tab Finish
 ### Finish
+
 With the `finish()` instruction a node can can post the result for a job it has finished,
 and be reimbursed for the work.
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -401,7 +423,9 @@ let tx = await program.methods
 
 @tab Quit
 ### Quit
+
 With the `quit()` instruction a node can quit a job that it has started.
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -430,8 +454,10 @@ let tx = await program.methods
 
 @tab Clean
 ### Clean
+
 The `clean()` instruction closes an [JobAccount](#job-account).
 The job has be finished and the job expiration time has to be exceeded.
+
 #### Account Info
 
 | Name                   | Type                                                                                    | Description                                                                                       |
@@ -468,7 +494,7 @@ A number of 4 accounts make up for the Nosana Jobs Program's state.
 
 The `MarketAccount` struct holds all the information about jobs and the nodes queue.
 
-The total size of this account is `NaN` bytes.
+The total size of this account is `3,355` bytes.
 | Name                        | Type                        | Size    | Offset  | Description                                                                                       |
 |-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
 | `authority`                 | `publicKey`                 | `32`    | `8`     | The signing authority of the program invocation.                                                  |
@@ -481,7 +507,7 @@ The total size of this account is `NaN` bytes.
 | `nodeAccessKey`             | `publicKey`                 | `32`    | `114`   | The NFT collection address of an NFT that the node holds, in order to access this market.         |
 | `nodeXnosMinimum`           | `u64`                       | `8`     | `146`   | n/a                                                                                               |
 | `queueType`                 | `u8`                        | `1`     | `154`   | The [QueueType](#queue-type) of the queue. Either Nodes or Jobs.                                  |
-| `queue`                     | `Vec<p>`                    | `undefined`| `155`   | The queue of order in the market.                                                                 |
+| `queue`                     | `Vec<publicKey>`            | `3200`  | `155`   | The queue of order in the market.                                                                 |
 
 @tab Run Account
 ### Run Account
@@ -530,6 +556,7 @@ A number of 4 type variants are defined in the Nosana Jobs Program's state.
 @tab Queue Type
 ### Queue Type
 
+
 The `QueueType` describes the type of queue
 
 A number of 3 variants are defined in this `enum`:
@@ -542,7 +569,8 @@ A number of 3 variants are defined in this `enum`:
 @tab Run State
 ### Run State
 
-The `RunState` describes the status of a run account.
+
+The `RunState` type describes the state a run account could have.
 
 A number of 3 variants are defined in this `enum`:
 | Name                                  | Number                                |
@@ -553,6 +581,7 @@ A number of 3 variants are defined in this `enum`:
 
 @tab Job State
 ### Job State
+
 
 The `JobState` describes the status of a job.
 
@@ -566,6 +595,7 @@ A number of 4 variants are defined in this `enum`:
 
 @tab Job Type
 ### Job Type
+
 
 The `JobType` describes the type of any job.
 

@@ -171,6 +171,7 @@ let tx = await program.methods
 
 @tab Claim
 ### Claim
+
 The `claim()` instruction sends a user's rewards to a given wallet.
 
 #### Account Info
@@ -208,7 +209,7 @@ let tx = await program.methods
 @tab Sync
 ### Sync
 
-The `sync()` instruction re-calculates a users' reflection score.
+The `sync()` instruction re-calculates a users' reflection points.
 
 #### Account Info
 
