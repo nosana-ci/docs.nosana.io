@@ -739,9 +739,10 @@ The total size of this account is `3,355` bytes.
 | `queueType`                 | `u8`                        | `1`     | `154`   | The [QueueType](#queue-type) of the queue. Either Nodes or Jobs.                                  |
 | `queue`                     | `Vec<publicKey>`            | `3200`  | `155`   | The queue of order in the market.                                                                 |
 
-::: details Discriminator
+::: details Anchor Account Discriminator
 
-The Market Account's 8 byte discriminator is:
+The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Market Account
+are **`c94ebbe1f0c6c9fb`**, which can also be expressed in byte array:
 
 ```json
 [
@@ -770,9 +771,10 @@ The total size of this account is `121` bytes.
 | `state`                     | `u8`                        | `1`     | `104`   | n/a                                                                                               |
 | `time`                      | `i64`                       | `16`    | `105`   | n/a                                                                                               |
 
-::: details Discriminator
+::: details Anchor Account Discriminator
 
-The Run Account's 8 byte discriminator is:
+The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Run Account
+are **`c2a96ee6eb0be116`**, which can also be expressed in byte array:
 
 ```json
 [
@@ -806,9 +808,10 @@ The total size of this account is `241` bytes.
 | `timeEnd`                   | `i64`                       | `16`    | `209`   | The unix time this job has finished running.                                                      |
 | `timeStart`                 | `i64`                       | `16`    | `225`   | The unix time this job has started running.                                                       |
 
-::: details Discriminator
+::: details Anchor Account Discriminator
 
-The Job Account's 8 byte discriminator is:
+The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Job Account
+are **`5b10a2052dd27d41`**, which can also be expressed in byte array:
 
 ```json
 [

@@ -300,9 +300,10 @@ The total size of this account is `139` bytes.
 | `vault`                     | `publicKey`                 | `32`    | `106`   | The [VaultAccount](#vault-account) address.                                                       |
 | `vaultBump`                 | `u8`                        | `1`     | `138`   | The bump for the [VaultAccount](#vault-account).                                                  |
 
-::: details Discriminator
+::: details Anchor Account Discriminator
 
-The Pool Account's 8 byte discriminator is:
+The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Pool Account
+are **`74d2bb77c4c43489`**, which can also be expressed in byte array:
 
 ```json
 [

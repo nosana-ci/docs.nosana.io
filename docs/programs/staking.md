@@ -579,9 +579,10 @@ The total size of this account is `72` bytes.
 | `authority`                 | `publicKey`                 | `32`    | `8`     | The signing authority of the program invocation.                                                  |
 | `tokenAccount`              | `publicKey`                 | `32`    | `40`    | The token account where slash deposits will go.                                                   |
 
-::: details Discriminator
+::: details Anchor Account Discriminator
 
-The Settings Account's 8 byte discriminator is:
+The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Settings Account
+are **`3f59cb9b4ced733a`**, which can also be expressed in byte array:
 
 ```json
 [
@@ -612,9 +613,10 @@ The total size of this account is `121` bytes.
 | `vaultBump`                 | `u8`                        | `1`     | `104`   | The bump for the [VaultAccount](#vault-account).                                                  |
 | `xnos`                      | `u128`                      | `16`    | `105`   | n/a                                                                                               |
 
-::: details Discriminator
+::: details Anchor Account Discriminator
 
-The Stake Account's 8 byte discriminator is:
+The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Stake Account
+are **`509e437c32bdc0ff`**, which can also be expressed in byte array:
 
 ```json
 [
