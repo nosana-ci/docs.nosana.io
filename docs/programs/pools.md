@@ -58,7 +58,28 @@ and [VaultAccount](#vault-account).
 | `claimType`            | `u8`              | `1`     | `24`    | The [ClaimType](#claim-type) for this pool.               |
 | `closeable`            | `bool`            | `1`     | `25`    | Whether the pool should be closable or not.               |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Open Instruction
+is **`e4dc9b47c7bd3c2d`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  228,
+  220,
+  155,
+  71,
+  199,
+  189,
+  60,
+  45
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -102,7 +123,28 @@ The `claimFee()` instruction claims emissions from a Nosana Pool with claim type
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 | `rewardsProgram`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [Nosana Rewards](/programs/rewards) Program address.                                          |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Claim Fee Instruction
+is **`a9204f8988e84689`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  169,
+  32,
+  79,
+  137,
+  136,
+  232,
+  70,
+  137
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -138,7 +180,28 @@ with claim type [`0`](#claim-type), and transfer these to a given user.
 | `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The signing authority of the program invocation.                                                  |
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Claim Transfer Instruction
+is **`cab23abee6eae511`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  202,
+  178,
+  58,
+  190,
+  230,
+  234,
+  229,
+  17
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -172,7 +235,28 @@ and [VaultAccount](#vault-account).
 | `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The signing authority of the program invocation.                                                  |
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Close Instruction
+is **`62a5c9b16c41ce60`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  98,
+  165,
+  201,
+  177,
+  108,
+  65,
+  206,
+  96
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 

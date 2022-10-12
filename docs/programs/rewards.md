@@ -75,7 +75,28 @@ and [VaultAccount](#vault-account).
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 | `rent`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana rent address. Responsible for lamports.                                       |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Init Instruction
+is **`dc3bcfec6cfa2f64`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  220,
+  59,
+  207,
+  236,
+  108,
+  250,
+  47,
+  100
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -110,7 +131,28 @@ The `enter()` instruction initializes a user's [RewardsAccount](#rewards-account
 | `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The signing authority of the program invocation.                                                  |
 | `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana system program address. Responsible for system CPIs.                          |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Enter Instruction
+is **`8b31d172585b4d86`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  139,
+  49,
+  209,
+  114,
+  88,
+  91,
+  77,
+  134
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -149,7 +191,28 @@ The `addFee()` instruction sends amount of tokens to the [VaultAccount](#vault-a
 |------------------------|-------------------|---------|---------|-----------------------------------------------------------|
 | `amount`               | `u64`             | `8`     | `0`     | The number of tokens.                                     |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Add Fee Instruction
+is **`43e1bdd4fd7b4c70`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  67,
+  225,
+  189,
+  212,
+  253,
+  123,
+  76,
+  112
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -186,7 +249,28 @@ The `claim()` instruction sends a user's rewards to a given wallet.
 | `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The signing authority of the program invocation.                                                  |
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Claim Instruction
+is **`3ec6d6c1d59f6cd2`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  62,
+  198,
+  214,
+  193,
+  213,
+  159,
+  108,
+  210
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -219,7 +303,28 @@ The `sync()` instruction re-calculates a users' reflection points.
 | `stake`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [StakeAccount](/programs/staking#stake-account) address.                                      |
 | `reflection`           | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [ReflectionAccount](#reflection-account) address.                                             |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Sync Instruction
+is **`04db28a4159dbd58`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  4,
+  219,
+  40,
+  164,
+  21,
+  157,
+  189,
+  88
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -247,7 +352,28 @@ The `close()` instruction closes a users' [RewardsAccount](#rewards-account).
 | `reward`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [RewardAccount](#reward-account) address.                                                     |
 | `authority`            | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The signing authority of the program invocation.                                                  |
 
-::: details Example
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Close Instruction
+is **`62a5c9b16c41ce60`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[
+  98,
+  165,
+  201,
+  177,
+  108,
+  65,
+  206,
+  96
+]
+```
+
+:::
+::: details Example with Anchor
 
 To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
