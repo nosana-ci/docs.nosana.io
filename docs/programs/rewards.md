@@ -269,7 +269,7 @@ let tx = await program.methods
 
 A number of 3 accounts make up for the Nosana Rewards Program's state.
 
-::: tabs
+:::: tabs
 
 @tab Reflection Account
 ### Reflection Account
@@ -333,33 +333,44 @@ The Reward Account's 8 byte discriminator is:
 ```
 
 :::
+
 @tab Vault Account
 ### Vault Account
 
 The `VaultAccount` is a regular Solana Token Account.
 
-:::
-<!-- END_NOS_DOCS -->
+::::
 
 ## Diagram
 
 ```mermaid
 flowchart TB
-    Authority -- enter --> di1{Reward Account}
-    Authority -- claim --> di1{Reward Account}
-    Authority -- close --> di1{Reward Account}
+    authority -- enter --> reward
+    authority -- claim --> reward
+    authority -- close --> reward
 
-    Anonymous -- sync --> di1{Reward Account}
-    Anonymous -- sync --> di3{Reflection Account}
+    anybody -- sync --> reflection
+    anybody -- sync --> reward
 
-    Payer -- init --> di3{Sats Account}
+    network -- addFee --> reflection
+    network -.- nos1 -.-> vault -.- nos2 -.-> authority
 
-    ci(Network Fees) -- addFee --> di3{Reflection Account}
-    ci(Network Fees) -.- sq1[NOS] -.->di2{Vault Account} -.- sq2[NOS] -.-> Authority
+    authority(Staking Authority)
+    network(Nosana Network)
+    anybody(Anonymous)
+
+    reward{Reward Account}
+    vault{Vault Account}
+    reflection{Reflection Account}
+
+    nos1[NOS]
+    nos2[NOS]
 
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
     classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
 
-    class di1,di2,di3 orange
-    class sq1,sq2 yellow
+    class reward,vault,reflection orange
+    class nos1,nos2 yellow
 ```
+
+<!-- END_NOS_DOCS -->

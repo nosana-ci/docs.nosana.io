@@ -196,7 +196,7 @@ let tx = await program.methods
 
 A number of 2 accounts make up for the Nosana Pools Program's state.
 
-::: tabs
+:::: tabs
 
 @tab Pool Account
 ### Pool Account
@@ -234,12 +234,14 @@ The Pool Account's 8 byte discriminator is:
 ```
 
 :::
+
 @tab Vault Account
 ### Vault Account
 
 The `VaultAccount` is a regular Solana Token Account.
 
-:::
+::::
+
 ## Types
 
 A number of 1 type variants are defined in the Nosana Pools Program's state.
@@ -259,22 +261,31 @@ A number of 3 variants are defined in this `enum`:
 | `Unknown`                             | `255`                                 |
 
 :::
-<!-- END_NOS_DOCS -->
-
 ## Diagram
 
 ```mermaid
 flowchart TB
-    Authority -- open --> di1{Pool Account}
-    Authority -- close --> di1{Pool Account}
+    authority -- open --> pool
+    authority -- close --> pool
 
-    Beneficiary -- claim --> di1{Pool Account}
+    beneficiary -- claim --> pool
 
-    Authority -.- sq1[NOS] -.->di2{Vault Account} -.- sq2[NOS] -.-> Beneficiary
+    authority -.- nos1 -.-> vault -.- nos2 -.-> beneficiary
+
+    authority(Pool Authority)
+    beneficiary(Beneficiary Wallet)
+
+    pool{Pool Account}
+    vault{Vault Account}
+
+    nos1[NOS]
+    nos2[NOS]
 
     classDef orange fill:#f96,stroke:#333,stroke-width:3px;
     classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
 
-    class di1,di2 orange
-    class sq1,sq2 yellow
+    class pool,vault orange
+    class nos1,nos2 yellow
 ```
+
+<!-- END_NOS_DOCS -->

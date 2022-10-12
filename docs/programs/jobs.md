@@ -59,7 +59,7 @@ and [VaultAccount](#vault-account).
 | `jobPrice`             | `u64`             | `8`     | `16`    | The price for jobs in this market.                        |
 | `jobTimeout`           | `i64`             | `16`    | `24`    | The timeout time in seconds for jobs.                     |
 | `jobType`              | `u8`              | `1`     | `40`    | The [JobType](#job-type) number.                          |
-| `nodeXnosMinimum`      | `u64`             | `8`     | `41`    | n/a                                                       |
+| `nodeXnosMinimum`      | `u64`             | `8`     | `41`    | The amount of [`xNOS`](#/programs/staking) a node needs to qualify for a market.|
 
 ::: details Example
 
@@ -110,7 +110,7 @@ The `update()` instruction updates a [MarketAccount](#market-account) configurat
 | `jobPrice`             | `u64`             | `8`     | `16`    | The price for jobs in this market.                        |
 | `jobTimeout`           | `i64`             | `16`    | `24`    | The timeout time in seconds for jobs.                     |
 | `jobType`              | `u8`              | `1`     | `40`    | The [JobType](#job-type) number.                          |
-| `nodeStakeMinimum`     | `u64`             | `8`     | `41`    | The number of tokens a node needs to stake to qualify.    |
+| `nodeStakeMinimum`     | `u64`             | `8`     | `41`    | The amount of [`xNOS`](#/programs/staking) a node needs to qualify for a market.|
 
 ::: details Example
 
@@ -486,7 +486,7 @@ let tx = await program.methods
 
 A number of 4 accounts make up for the Nosana Jobs Program's state.
 
-::: tabs
+:::: tabs
 
 @tab Market Account
 ### Market Account
@@ -504,7 +504,7 @@ The total size of this account is `3,355` bytes.
 | `vault`                     | `publicKey`                 | `32`    | `81`    | The [VaultAccount](#vault-account) address.                                                       |
 | `vaultBump`                 | `u8`                        | `1`     | `113`   | The bump for the [VaultAccount](#vault-account).                                                  |
 | `nodeAccessKey`             | `publicKey`                 | `32`    | `114`   | The NFT collection address of an NFT that the node holds, in order to access this market.         |
-| `nodeXnosMinimum`           | `u64`                       | `8`     | `146`   | n/a                                                                                               |
+| `nodeXnosMinimum`           | `u64`                       | `8`     | `146`   | The amount of [`xNOS`](#/programs/staking) a node needs to qualify for a market.                  |
 | `queueType`                 | `u8`                        | `1`     | `154`   | The [QueueType](#queue-type) of the queue. Either Nodes or Jobs.                                  |
 | `queue`                     | `Vec<publicKey>`            | `3200`  | `155`   | The queue of order in the market.                                                                 |
 
@@ -593,12 +593,14 @@ The Job Account's 8 byte discriminator is:
 ```
 
 :::
+
 @tab Vault Account
 ### Vault Account
 
 The `VaultAccount` is a regular Solana Token Account.
 
-:::
+::::
+
 ## Types
 
 A number of 4 type variants are defined in the Nosana Jobs Program's state.
@@ -661,8 +663,6 @@ A number of 6 variants are defined in this `enum`:
 | `Unknown`                             | `255`                                 |
 
 :::
-<!-- END_NOS_DOCS -->
-
 ## Diagram
 
 ### Instructions
@@ -672,7 +672,6 @@ flowchart TB
     admin -- open --> market
     admin -- update --> market
     admin -- close --> market
-
 
     project -- list --> job
     project -- list --> run
@@ -714,6 +713,9 @@ flowchart TB
 
 Below a representation of the functioning of the different queues.
 
+::: tabs
+
+@tab Nodes
 #### Nodes
 
 When there a more nodes than jobs in a given Market, the queue will fill up with nodes.
@@ -729,7 +731,6 @@ flowchart TB
             order1 --> order2 --> order3
         end
     end
-
 
     node --> Queue
     order3 --> run
@@ -752,6 +753,7 @@ flowchart TB
     class market grey;
 ```
 
+@tab Jobs
 #### Jobs
 
 Vise versa, When there a more jobs than nodes in a given Market, the queue will fill up with jobs.
@@ -766,9 +768,8 @@ flowchart TB
         subgraph Queue
             order1 --> order2 --> order3
         end
+        vault
     end
-
-    vault
 
     project --> Queue
     project --> vault
@@ -792,6 +793,7 @@ flowchart TB
     class market grey;
 ```
 
+@tab Empty
 #### Empty
 
 Finally, at the point when the market is satisfied, the queue will be empty.
@@ -816,9 +818,12 @@ flowchart TB
     order{Order}
     market[Job Price<br>Job Timeout<br>Job Type<br>Job Expiration<br>Node Access Key<br>Node Minimum Stake]
 
-
     classDef purple fill:#FC33FF,stroke:#333,stroke-width:3px;
     classDef grey fill:#BFC9CA,stroke:#333,stroke-width:2px;
     class order purple;
     class market grey;
 ```
+
+:::
+
+<!-- END_NOS_DOCS -->

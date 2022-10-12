@@ -376,7 +376,7 @@ let tx = await program.methods
 
 A number of 3 accounts make up for the Nosana Staking Program's state.
 
-::: tabs
+:::: tabs
 
 @tab Settings Account
 ### Settings Account
@@ -441,12 +441,44 @@ The Stake Account's 8 byte discriminator is:
 ```
 
 :::
+
 @tab Vault Account
 ### Vault Account
 
 The `VaultAccount` is a regular Solana Token Account.
 
-:::
+::::
+
+## Diagram
+
+```mermaid
+flowchart TB
+    authority -- stake<br>unstake<br>restake<br>extend<br>topup<br>claim --> stake
+    authority -.- nos -.- vault
+
+    dao -- slash --> stake
+    dao -- updateSettings --> settings
+
+    stake -.- xnos -.- network
+
+    authority(Staking Authority)
+    dao(Nosana Voting)
+    network(Nosana Network)
+
+    stake{Stake Account}
+    vault{Vault Account}
+    settings{Settings Account}
+
+    nos[NOS]
+    xnos[xNOS]
+
+    classDef orange fill:#f96,stroke:#333,stroke-width:3px;
+    classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
+
+    class stake,vault,settings orange
+    class nos,xnos yellow
+```
+
 <!-- END_NOS_DOCS -->
 
 ## xNOS calculation
@@ -488,24 +520,3 @@ In more simple phrasing.
 A staker can stake Nosana Tokens for a minimum of two weeks and a maximum of one year.
 The longer the duration of a stake, the higher the multiplier against the number of tokens in stake.
 The maximum multiplier is this system is $4$, because $1 \frac{ 365 }{ 121 \frac{ 2 }{ 3 } } = 4$.
-
-## Diagram
-
-```mermaid
-flowchart TB
-    Authority -- stake<br>unstake<br>restake<br>extend<br>topup<br>claim --> di1{Stake Account}
-    Authority -.- sq1[NOS] -.- di2{Vault Account}
-
-    DAO -- slash --> di1{Stake Account}
-    DAO -- updateSettings --> di3{Settings Account}
-
-    Payer -- init --> di3{Settings Account}
-
-    di1{Stake Account} -.- sq3[xNOS] -.-> ci(Other Programs)
-
-    classDef orange fill:#f96,stroke:#333,stroke-width:3px;
-    classDef yellow fill:#ff7,stroke:#333,stroke-width:2px;
-
-    class di1,di2,di3 orange
-    class sq1,sq2,sq3 yellow
-```
