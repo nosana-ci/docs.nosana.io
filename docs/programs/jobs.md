@@ -39,6 +39,8 @@ and [VaultAccount](#vault-account).
 
 #### Account Info
 
+The following 9 account addresses should be provided when invoking this instruction.
+
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `mint`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The token Mint address for this instruction.                                                      |
@@ -53,13 +55,15 @@ and [VaultAccount](#vault-account).
 
 #### Arguments
 
+The following 5 arguments should also be provided when invoking this instruction.
+
 | Name                   | Type              | Size    | Offset  | Description                                               |
 |------------------------|-------------------|---------|---------|-----------------------------------------------------------|
 | `jobExpiration`        | `i64`             | `16`    | `0`     | The expiration time in seconds for jobs.                  |
 | `jobPrice`             | `u64`             | `8`     | `16`    | The price for jobs in this market.                        |
 | `jobTimeout`           | `i64`             | `16`    | `24`    | The timeout time in seconds for jobs.                     |
 | `jobType`              | `u8`              | `1`     | `40`    | The [JobType](#job-type) number.                          |
-| `nodeXnosMinimum`      | `u64`             | `8`     | `41`    | The amount of [`xNOS`](#/programs/staking) a node needs to qualify for a market.|
+| `nodeXnosMinimum`      | `u64`             | `8`     | `41`    | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.|
 
 
 ::: details Solana Dispatch ID
@@ -84,7 +88,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Open Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -117,6 +122,8 @@ The `update()` instruction updates a [MarketAccount](#market-account) configurat
 
 #### Account Info
 
+The following 3 account addresses should be provided when invoking this instruction.
+
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
@@ -125,13 +132,15 @@ The `update()` instruction updates a [MarketAccount](#market-account) configurat
 
 #### Arguments
 
+The following 5 arguments should also be provided when invoking this instruction.
+
 | Name                   | Type              | Size    | Offset  | Description                                               |
 |------------------------|-------------------|---------|---------|-----------------------------------------------------------|
 | `jobExpiration`        | `i64`             | `16`    | `0`     | The expiration time in seconds for jobs.                  |
 | `jobPrice`             | `u64`             | `8`     | `16`    | The price for jobs in this market.                        |
 | `jobTimeout`           | `i64`             | `16`    | `24`    | The timeout time in seconds for jobs.                     |
 | `jobType`              | `u8`              | `1`     | `40`    | The [JobType](#job-type) number.                          |
-| `nodeStakeMinimum`     | `u64`             | `8`     | `41`    | The amount of [`xNOS`](#/programs/staking) a node needs to qualify for a market.|
+| `nodeStakeMinimum`     | `u64`             | `8`     | `41`    | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.|
 
 
 ::: details Solana Dispatch ID
@@ -156,7 +165,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Update Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -183,6 +193,8 @@ The `close()` instruction closes a [MarketAccount](#market-account) and the
 associated [VaultAccount](#vault-account). The vault has to be empty of tokens.
 
 #### Account Info
+
+The following 5 account addresses should be provided when invoking this instruction.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -215,7 +227,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Close Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -239,6 +252,8 @@ When there is a job available, a [RunAccount](#run-account) will automatically b
 
 #### Account Info
 
+The following 12 account addresses should be provided when invoking this instruction.
+
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [JobAccount](#job-account) address.                                                           |
@@ -255,6 +270,8 @@ When there is a job available, a [RunAccount](#run-account) will automatically b
 | `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana system program address. Responsible for system CPIs.                          |
 
 #### Arguments
+
+The following 1 arguments should also be provided when invoking this instruction.
 
 | Name                   | Type              | Size    | Offset  | Description                                               |
 |------------------------|-------------------|---------|---------|-----------------------------------------------------------|
@@ -283,7 +300,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the List Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -314,6 +332,8 @@ let tx = await program.methods
 The `recover()` instruction recovers funds from a jobs that has been [Quit](#quit)'ed.
 
 #### Account Info
+
+The following 7 account addresses should be provided when invoking this instruction.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -348,7 +368,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Recover Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -374,6 +395,8 @@ When there is a job available, a [RunAccount](#run-account) will automatically b
 The node needs to hold a [Burner Phone](/tokens/nft) and have [`xNOS`](/programs/staking).
 
 #### Account Info
+
+The following 8 account addresses should be provided when invoking this instruction.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -409,7 +432,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Work Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -435,6 +459,8 @@ With the `stop()` instruction a node exits the node queue from a
 [MarketAccount](#market-account).
 
 #### Account Info
+
+The following 2 account addresses should be provided when invoking this instruction.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -464,7 +490,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Stop Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -484,6 +511,8 @@ With the `claim()` instruction a node claims a job that is [stopped](#stop).
 The node needs to hold a [Burner Phone](/tokens/nft) and have [`xNOS`](/programs/stake).
 
 #### Account Info
+
+The following 9 account addresses should be provided when invoking this instruction.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -520,7 +549,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Claim Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -548,6 +578,8 @@ and be reimbursed for the work.
 
 #### Account Info
 
+The following 8 account addresses should be provided when invoking this instruction.
+
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
@@ -560,6 +592,8 @@ and be reimbursed for the work.
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 
 #### Arguments
+
+The following 1 arguments should also be provided when invoking this instruction.
 
 | Name                   | Type              | Size    | Offset  | Description                                               |
 |------------------------|-------------------|---------|---------|-----------------------------------------------------------|
@@ -588,7 +622,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Finish Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -615,6 +650,8 @@ let tx = await program.methods
 With the `quit()` instruction a node can quit a job that it has started.
 
 #### Account Info
+
+The following 4 account addresses should be provided when invoking this instruction.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -646,7 +683,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Quit Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -668,6 +706,8 @@ The `clean()` instruction closes an [JobAccount](#job-account).
 The job has be finished and the job expiration time has to be exceeded.
 
 #### Account Info
+
+The following 3 account addresses should be provided when invoking this instruction.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -698,7 +738,8 @@ which can also be expressed as an 8 byte discriminator:
 :::
 ::: details Example with Anchor
 
-To run the instructions with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
+To invoke the Clean Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 
 ```typescript
 let tx = await program.methods
@@ -735,7 +776,7 @@ The total size of this account is `3,355` bytes.
 | `vault`                     | `publicKey`                 | `32`    | `81`    | The [VaultAccount](#vault-account) address.                                                       |
 | `vaultBump`                 | `u8`                        | `1`     | `113`   | The bump for the [VaultAccount](#vault-account).                                                  |
 | `nodeAccessKey`             | `publicKey`                 | `32`    | `114`   | The NFT collection address of an NFT that the node holds, in order to access this market.         |
-| `nodeXnosMinimum`           | `u64`                       | `8`     | `146`   | The amount of [`xNOS`](#/programs/staking) a node needs to qualify for a market.                  |
+| `nodeXnosMinimum`           | `u64`                       | `8`     | `146`   | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.                   |
 | `queueType`                 | `u8`                        | `1`     | `154`   | The [QueueType](#queue-type) of the queue. Either Nodes or Jobs.                                  |
 | `queue`                     | `Vec<publicKey>`            | `3200`  | `155`   | The queue of order in the market.                                                                 |
 
