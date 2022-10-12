@@ -27,9 +27,22 @@ export default hopeTheme({
   navbar: [
     ...pages,
     {
-      text: 'Website',
-      icon: 'link',
-      link: 'https://nosana.io',
+      text: 'Site',
+      // icon: 'link',
+      icon: 'globe',
+      link: 'https://nosana.io/',
+    },
+    {
+      text: 'App',
+      icon: 'gauge',
+      // icon: 'network-wired',
+      link: 'https://app.nosana.io/',
+    },
+    {
+      text: 'NFT',
+      // icon: 'link',
+      icon: 'mobile',
+      link: 'https://nft.nosana.io/',
     },
   ],
 
