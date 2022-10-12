@@ -945,36 +945,33 @@ A number of 6 variants are defined in this `enum`:
 ```mermaid
 flowchart TB
 
-    project --  recover -->  job
-    project --  list    ---  market
-    market  --  list    -->  job
-    market  --  list    -->  run
-    project -.- nos1    -.-> vault
-    vault   -.- nos2    -.-> node
-    project -.- nos3    -.-> fee
+    project -->| recover | job
+    project ---| list | market -->| list | job
+                        market -->| list | run
+    project -.- nos1 -.-> vault
+    vault   -.- nos2 -.-> node
+    project -.- nos3 -.-> fee
 
-    node -- stop  --> market
-    node -- work  --- market -- work  --> run
-    node -- claim --- run    -- claim --> job
-    node -- finish --- run    -- finish --> job
-    node -- quit  --- run    -- quit --> job
+    node -->| stop   | market
+    node ---| work   | market -->| work   | run
+    node ---| claim  | run    -->| claim  | job
+    node ---| finish | run    -->| finish | job
+    node ---| quit   | run    -->| quit   | job
 
-    admin -- open   --> market
-    admin -- update --> market
-    admin -- close  --> market
+    admin -->| open   | market
+    admin -->| close  | market
+    admin -->| update | market
 
-    all -- clean --> job
+    all -->| clean | job
 
     all(Everybody)
     node(Worker Node)
     project(Software Project)
     admin(Administrator)
     fee(Network Fees)
-
     nos1[NOS]
     nos2[NOS]
     nos3[NOS]
-
     market{Market Account}
     job{Job Account}
     run{Run Account}
@@ -1049,8 +1046,8 @@ flowchart TB
     end
 
     vault
-    project --> Queue
-    project --> vault
+    project -->|list| Queue
+    project -->|list| vault
     order3 --> run
     node --> run
 

@@ -493,24 +493,22 @@ The `VaultAccount` is a regular Solana Token Account.
 
 ```mermaid
 flowchart TB
-    authority -- enter --> reward
-    authority -- claim --> reward
-    authority -- close --> reward
+    authority -->|enter| reward
+    authority -->|claim| reward
+    authority -->|close| reward
 
-    anybody -- sync --> reflection
-    anybody -- sync --> reward
+    anybody -->|sync| reflection
+    anybody -->|sync| reward
 
-    network -- addFee --> reflection
+    network -->|addFee| reflection
     network -.- nos1 -.-> vault -.- nos2 -.-> authority
 
     authority(Staking Authority)
     network(Nosana Network)
     anybody(Anonymous)
-
     reward{Reward Account}
     vault{Vault Account}
     reflection{Reflection Account}
-
     nos1[NOS]
     nos2[NOS]
 
