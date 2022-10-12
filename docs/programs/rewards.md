@@ -285,6 +285,23 @@ The total size of this account is `89` bytes.
 | `vault`                     | `publicKey`                 | `32`    | `56`    | The [VaultAccount](#vault-account) address.                                                       |
 | `vaultBump`                 | `u8`                        | `1`     | `88`    | The bump for the [VaultAccount](#vault-account).                                                  |
 
+::: details Discriminator
+
+The Reflection Account's 8 byte discriminator is:
+
+```json
+[
+  205,
+  153,
+  160,
+  54,
+  239,
+  26,
+  219,
+  188
+]
+```
+
 @tab Reward Account
 ### Reward Account
 
@@ -298,6 +315,24 @@ The total size of this account is `73` bytes.
 | `reflection`                | `u128`                      | `16`    | `41`    | The [ReflectionAccount](#reflection-account) address.                                             |
 | `xnos`                      | `u128`                      | `16`    | `57`    | n/a                                                                                               |
 
+::: details Discriminator
+
+The Reward Account's 8 byte discriminator is:
+
+```json
+[
+  225,
+  81,
+  31,
+  253,
+  84,
+  234,
+  171,
+  129
+]
+```
+
+:::
 @tab Vault Account
 ### Vault Account
 
