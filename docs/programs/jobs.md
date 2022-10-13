@@ -585,7 +585,7 @@ The following 8 account addresses should be provided when invoking this instruct
 | `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
 | `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
 | `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
-| `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The paying identy for the rent.                                                                   |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 
@@ -634,7 +634,7 @@ let tx = await program.methods
     market,            // 𐄂 writable, 𐄂 signer
     vault,             // ✓ writable, 𐄂 signer
     user,              // ✓ writable, 𐄂 signer
-    payer,             // 𐄂 writable, 𐄂 signer
+    payer,             // ✓ writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
     tokenProgram,      // 𐄂 writable, 𐄂 signer
   })
@@ -796,38 +796,6 @@ are **`c94ebbe1f0c6c9fb`**, which can also be expressed in byte array:
 ]
 ```
 
-@tab Run Account
-### Run Account
-
-The `RunAccount` struct holds temporary information that matches nodes to jobs.
-The total size of this account is `121` bytes.
-
-| Name                        | Type                        | Size    | Offset  | Description                                                                                       |
-|-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
-| `job`                       | `publicKey`                 | `32`    | `8`     | The [JobAccount](#job-account) address.                                                           |
-| `node`                      | `publicKey`                 | `32`    | `40`    | The node that runs this job.                                                                      |
-| `payer`                     | `publicKey`                 | `32`    | `72`    | The paying identy for the rent.                                                                   |
-| `state`                     | `u8`                        | `1`     | `104`   | n/a                                                                                               |
-| `time`                      | `i64`                       | `16`    | `105`   | n/a                                                                                               |
-
-::: details Anchor Account Discriminator
-
-The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Run Account
-are **`c2a96ee6eb0be116`**, which can also be expressed in byte array:
-
-```json
-[
-  194,
-  169,
-  110,
-  230,
-  235,
-  11,
-  225,
-  22
-]
-```
-
 @tab Job Account
 ### Job Account
 
@@ -862,6 +830,38 @@ are **`5b10a2052dd27d41`**, which can also be expressed in byte array:
   210,
   125,
   65
+]
+```
+
+@tab Run Account
+### Run Account
+
+The `RunAccount` struct holds temporary information that matches nodes to jobs.
+The total size of this account is `121` bytes.
+
+| Name                        | Type                        | Size    | Offset  | Description                                                                                       |
+|-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
+| `job`                       | `publicKey`                 | `32`    | `8`     | The [JobAccount](#job-account) address.                                                           |
+| `node`                      | `publicKey`                 | `32`    | `40`    | The node that runs this job.                                                                      |
+| `payer`                     | `publicKey`                 | `32`    | `72`    | The paying identy for the rent.                                                                   |
+| `state`                     | `u8`                        | `1`     | `104`   | n/a                                                                                               |
+| `time`                      | `i64`                       | `16`    | `105`   | n/a                                                                                               |
+
+::: details Anchor Account Discriminator
+
+The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Run Account
+are **`c2a96ee6eb0be116`**, which can also be expressed in byte array:
+
+```json
+[
+  194,
+  169,
+  110,
+  230,
+  235,
+  11,
+  225,
+  22
 ]
 ```
 
