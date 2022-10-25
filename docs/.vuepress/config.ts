@@ -10,6 +10,6 @@ export default defineUserConfig({
   theme,
   shouldPrefetch: false,
   extendsBundlerOptions: (config, app) => {
-    addViteSsrNoExternal ({ app, config }, 'vuepress-shared');
+    addViteSsrNoExternal({ app, config }, 'vuepress-shared');
   },
 });
