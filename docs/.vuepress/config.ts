@@ -1,4 +1,5 @@
 import { defineUserConfig } from 'vuepress';
+import { addViteSsrNoExternal } from 'vuepress-shared';
 import theme from './theme.js';
 
 export default defineUserConfig({
@@ -8,4 +9,7 @@ export default defineUserConfig({
   base: '/',
   theme,
   shouldPrefetch: false,
+  extendsBundlerOptions: (config, app) => {
+    addViteSsrNoExternal ({ app, config }, 'vuepress-shared');
+  },
 });
