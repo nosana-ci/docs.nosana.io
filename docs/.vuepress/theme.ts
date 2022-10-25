@@ -48,13 +48,9 @@ export default hopeTheme({
 
   pageInfo: ['Category', 'Tag', 'ReadingTime'],
 
-  encrypt: {
-    config: {
-      '/guide/encrypt.html': ['1234'],
-    },
-  },
-
   plugins: {
+    copyright: true,
+
     // Disable features you don't want here
     mdEnhance: {
       align: true,
@@ -66,7 +62,9 @@ export default hopeTheme({
       echarts: true,
       flowchart: true,
       gfm: true,
+      imageMark: true,
       imageSize: true,
+      imageTitle: true,
       include: true,
       katex: true,
       lazyLoad: true,
