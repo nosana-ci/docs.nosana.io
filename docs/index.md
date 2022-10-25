@@ -1,5 +1,6 @@
 ---
 home: true
+title: Home
 icon: home
 heroImage: https://nosana.io/img/Nosana_Logomark_black.svg
 heroImageDark: https://nosana.io/img/Nosana_Logomark_white.svg
