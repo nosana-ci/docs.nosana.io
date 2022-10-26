@@ -33,8 +33,7 @@ const program = new Program(idl, programId);
 @tab Open
 ### Open
 
-The `open()` instruction lets you open a Nosana Pool's [PoolAccount](#pool-account)
-and [VaultAccount](#vault-account).
+Open a [PoolAccount](#pool-account) and [VaultAccount](#vault-account).
 
 #### Account Info
 
@@ -70,16 +69,7 @@ is **`e4dc9b47c7bd3c2d`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  228,
-  220,
-  155,
-  71,
-  199,
-  189,
-  60,
-  45
-]
+[228,220,155,71,199,189,60,45]
 ```
 
 :::
@@ -113,8 +103,7 @@ let tx = await program.methods
 @tab Claim Fee
 ### Claim Fee
 
-The `claimFee()` instruction claims emissions from a Nosana Pool with claim type
-[`1`](#claim-type), and adds these as fees to the [Rewards Program](/programs/rewards).
+Add fees from a [PoolAccount](#pool-account) with claim type [`1`](#claim-type)
 
 #### Account Info
 
@@ -138,16 +127,7 @@ is **`a9204f8988e84689`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  169,
-  32,
-  79,
-  137,
-  136,
-  232,
-  70,
-  137
-]
+[169,32,79,137,136,232,70,137]
 ```
 
 :::
@@ -175,8 +155,7 @@ let tx = await program.methods
 @tab Claim Transfer
 ### Claim Transfer
 
-The `claimTransfer()` instruction claims emissions from a Nosana Pool
-with claim type [`0`](#claim-type), and transfer these to a given user.
+Claim emission from a [PoolAccount](#pool-account) with claim type [`0`](#claim-type)
 
 #### Account Info
 
@@ -198,16 +177,7 @@ is **`cab23abee6eae511`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  202,
-  178,
-  58,
-  190,
-  230,
-  234,
-  229,
-  17
-]
+[202,178,58,190,230,234,229,17]
 ```
 
 :::
@@ -233,8 +203,7 @@ let tx = await program.methods
 @tab Close
 ### Close
 
-The `close()` instruction closes a Nosana Pool's [PoolAccount](#pool-account)
-and [VaultAccount](#vault-account).
+Close a [PoolAccount](#pool-account) and [VaultAccount](#vault-account).
 
 #### Account Info
 
@@ -256,16 +225,7 @@ is **`62a5c9b16c41ce60`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  98,
-  165,
-  201,
-  177,
-  108,
-  65,
-  206,
-  96
-]
+[98,165,201,177,108,65,206,96]
 ```
 
 :::
@@ -320,16 +280,7 @@ The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Pool Acc
 are **`74d2bb77c4c43489`**, which can also be expressed in byte array:
 
 ```json
-[
-  116,
-  210,
-  187,
-  119,
-  196,
-  196,
-  52,
-  137
-]
+[116,210,187,119,196,196,52,137]
 ```
 
 :::

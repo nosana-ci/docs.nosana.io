@@ -60,8 +60,7 @@ const program = new Program(idl, programId);
 @tab Init
 ### Init
 
-The `init()` instruction initializes the [ReflectionAccount](#reflection-account)
-and [VaultAccount](#vault-account).
+Initialize the [ReflectionAccount](#reflection-account) and [VaultAccount](#vault-account).
 
 #### Account Info
 
@@ -85,16 +84,7 @@ is **`dc3bcfec6cfa2f64`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  220,
-  59,
-  207,
-  236,
-  108,
-  250,
-  47,
-  100
-]
+[220,59,207,236,108,250,47,100]
 ```
 
 :::
@@ -122,7 +112,7 @@ let tx = await program.methods
 @tab Enter
 ### Enter
 
-The `enter()` instruction initializes a user's [RewardsAccount](#rewards-account).
+Initialize a [RewardsAccount](#rewards-account).
 
 #### Account Info
 
@@ -144,16 +134,7 @@ is **`8b31d172585b4d86`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  139,
-  49,
-  209,
-  114,
-  88,
-  91,
-  77,
-  134
-]
+[139,49,209,114,88,91,77,134]
 ```
 
 :::
@@ -179,7 +160,7 @@ let tx = await program.methods
 @tab Add Fee
 ### Add Fee
 
-The `addFee()` instruction sends amount of tokens to the [VaultAccount](#vault-account).
+Send [NOS](/tokens/token) to the [VaultAccount](#vault-account).
 
 #### Account Info
 
@@ -209,16 +190,7 @@ is **`43e1bdd4fd7b4c70`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  67,
-  225,
-  189,
-  212,
-  253,
-  123,
-  76,
-  112
-]
+[67,225,189,212,253,123,76,112]
 ```
 
 :::
@@ -246,7 +218,7 @@ let tx = await program.methods
 @tab Claim
 ### Claim
 
-The `claim()` instruction sends a user's rewards to a given wallet.
+Claim rewards from a [RewardsAccount](#rewards-account) and [VaultAccount](#vault-account).
 
 #### Account Info
 
@@ -270,16 +242,7 @@ is **`3ec6d6c1d59f6cd2`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  62,
-  198,
-  214,
-  193,
-  213,
-  159,
-  108,
-  210
-]
+[62,198,214,193,213,159,108,210]
 ```
 
 :::
@@ -307,7 +270,7 @@ let tx = await program.methods
 @tab Sync
 ### Sync
 
-The `sync()` instruction re-calculates a users' reflection points.
+Re-calculate reflection points.
 
 #### Account Info
 
@@ -327,16 +290,7 @@ is **`04db28a4159dbd58`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  4,
-  219,
-  40,
-  164,
-  21,
-  157,
-  189,
-  88
-]
+[4,219,40,164,21,157,189,88]
 ```
 
 :::
@@ -359,7 +313,7 @@ let tx = await program.methods
 @tab Close
 ### Close
 
-The `close()` instruction closes a users' [RewardsAccount](#rewards-account).
+Close a [RewardsAccount](#rewards-account).
 
 #### Account Info
 
@@ -379,16 +333,7 @@ is **`62a5c9b16c41ce60`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  98,
-  165,
-  201,
-  177,
-  108,
-  65,
-  206,
-  96
-]
+[98,165,201,177,108,65,206,96]
 ```
 
 :::
@@ -437,16 +382,7 @@ The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Reflecti
 are **`cd99a036ef1adbbc`**, which can also be expressed in byte array:
 
 ```json
-[
-  205,
-  153,
-  160,
-  54,
-  239,
-  26,
-  219,
-  188
-]
+[205,153,160,54,239,26,219,188]
 ```
 
 @tab Reward Account
@@ -468,16 +404,7 @@ The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Reward A
 are **`e1511ffd54eaab81`**, which can also be expressed in byte array:
 
 ```json
-[
-  225,
-  81,
-  31,
-  253,
-  84,
-  234,
-  171,
-  129
-]
+[225,81,31,253,84,234,171,129]
 ```
 
 :::

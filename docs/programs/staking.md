@@ -40,8 +40,7 @@ const program = new Program(idl, programId);
 @tab Init
 ### Init
 
-The `init()` instruction initializes the [SettingsAccount](#settings-account)
-of the Nosana Staking program.
+Initialize the [SettingsAccount](#settings-account).
 
 #### Account Info
 
@@ -62,16 +61,7 @@ is **`dc3bcfec6cfa2f64`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  220,
-  59,
-  207,
-  236,
-  108,
-  250,
-  47,
-  100
-]
+[220,59,207,236,108,250,47,100]
 ```
 
 :::
@@ -96,10 +86,8 @@ let tx = await program.methods
 @tab Stake
 ### Stake
 
-The `stake()` instruction creates a new stake [StakeAccount](#stake-account)
-for the authority. It initializes a unique [VaultAccount](#vault-account) for the staker.
-It transfers `amount` of [NOS](/tokens/token) tokens from user to the vault locked for
-duration seconds of time. The stake and vault account is a PDA based on the authority.
+Create a [StakeAccount](#stake-account) and [VaultAccount](#vault-account).
+Stake `amount` of [NOS](/tokens/token) tokens for `duration` fo seconds.
 
 #### Account Info
 
@@ -133,16 +121,7 @@ is **`ceb0ca12c8d1b36c`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  206,
-  176,
-  202,
-  18,
-  200,
-  209,
-  179,
-  108
-]
+[206,176,202,18,200,209,179,108]
 ```
 
 :::
@@ -174,7 +153,7 @@ let tx = await program.methods
 @tab Unstake
 ### Unstake
 
-The `unstake()` instruction will initiate the unstake delay.
+Start the unstake duration.
 
 #### Account Info
 
@@ -194,16 +173,7 @@ is **`5a5f6b2acd7c32e1`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  90,
-  95,
-  107,
-  42,
-  205,
-  124,
-  50,
-  225
-]
+[90,95,107,42,205,124,50,225]
 ```
 
 :::
@@ -227,8 +197,7 @@ let tx = await program.methods
 @tab Restake
 ### Restake
 
-The `restake()` instruction undoes an unstake.
-This will make a stake active again and reset the unstake time.
+Make a stake active again and reset the unstake time.
 
 #### Account Info
 
@@ -247,16 +216,7 @@ is **`61a1f1a70620d535`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  97,
-  161,
-  241,
-  167,
-  6,
-  32,
-  213,
-  53
-]
+[97,161,241,167,6,32,213,53]
 ```
 
 :::
@@ -279,8 +239,7 @@ let tx = await program.methods
 @tab Topup
 ### Topup
 
-The `topup()` instruction performs a top-up of an existing stake.
-An `amount` of NOS is transferred to the vault and the stake is update.
+Top-up `amount` of [NOS](/tokens/token) of a [StakeAccount](#stake-account).
 
 #### Account Info
 
@@ -310,16 +269,7 @@ is **`7e2a314ee197634d`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  126,
-  42,
-  49,
-  78,
-  225,
-  151,
-  99,
-  77
-]
+[126,42,49,78,225,151,99,77]
 ```
 
 :::
@@ -347,8 +297,7 @@ let tx = await program.methods
 @tab Extend
 ### Extend
 
-The `extend()` instruction extends the duration of a stake.
-The duration can only be increased which will result in a higher `xnos`.
+Extend the `duration` of a [StakeAccount](#stake-account).
 
 #### Account Info
 
@@ -375,16 +324,7 @@ is **`e47f0001e39a36a8`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  228,
-  127,
-  0,
-  1,
-  227,
-  154,
-  54,
-  168
-]
+[228,127,0,1,227,154,54,168]
 ```
 
 :::
@@ -433,16 +373,7 @@ is **`3ec6d6c1d59f6cd2`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  62,
-  198,
-  214,
-  193,
-  213,
-  159,
-  108,
-  210
-]
+[62,198,214,193,213,159,108,210]
 ```
 
 :::
@@ -468,10 +399,8 @@ let tx = await program.methods
 @tab Slash
 ### Slash
 
-The `slash()` instruction reduces a stake's NOS tokens. This can only be done by the
-Slashing Authority declared in [SettingsAccount](#settings-account) authority. The tokens
-are be sent to the [SettingsAccount](#settings-account) tokenAccount account.
-
+Reduces a [StakeAccount](#stake-account)'s  [NOS](/tokens/token) tokens.
+This can only be done by the Slashing Authority.
 Slashing is a feature used by the Nosana Protocol to punish bad actors.
 
 #### Account Info
@@ -503,16 +432,7 @@ is **`cc8d12a108b15c8e`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  204,
-  141,
-  18,
-  161,
-  8,
-  177,
-  92,
-  142
-]
+[204,141,18,161,8,177,92,142]
 ```
 
 :::
@@ -541,8 +461,7 @@ let tx = await program.methods
 @tab Update Settings
 ### Update Settings
 
-The `updateSettings()` instruction sets the Slashing Authority to a new account. It also
-sets the token account to a `tokenAccount`. This may be done by the current `authority`.
+Update the Slashing Authority and Token Account.
 
 #### Account Info
 
@@ -563,16 +482,7 @@ is **`51a633d59e549d6c`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  81,
-  166,
-  51,
-  213,
-  158,
-  84,
-  157,
-  108
-]
+[81,166,51,213,158,84,157,108]
 ```
 
 :::
@@ -620,16 +530,7 @@ The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Settings
 are **`3f59cb9b4ced733a`**, which can also be expressed in byte array:
 
 ```json
-[
-  63,
-  89,
-  203,
-  155,
-  76,
-  237,
-  115,
-  58
-]
+[63,89,203,155,76,237,115,58]
 ```
 
 @tab Stake Account
@@ -654,16 +555,7 @@ The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Stake Ac
 are **`509e437c32bdc0ff`**, which can also be expressed in byte array:
 
 ```json
-[
-  80,
-  158,
-  67,
-  124,
-  50,
-  189,
-  192,
-  255
-]
+[80,158,67,124,50,189,192,255]
 ```
 
 :::

@@ -34,8 +34,7 @@ const program = new Program(idl, programId);
 @tab Open
 ### Open
 
-The `open()` instruction initializes a [MarketAccount](#market-account)
-and [VaultAccount](#vault-account).
+Initialize a [MarketAccount](#market-account) and [VaultAccount](#vault-account).
 
 #### Account Info
 
@@ -62,7 +61,7 @@ The following 5 arguments should also be provided when invoking this instruction
 | `jobPrice`             | `u64`             | `8`     | `16`    | The price for jobs in this market.                        |
 | `jobTimeout`           | `i64`             | `16`    | `24`    | The timeout time in seconds for jobs.                     |
 | `jobType`              | `u8`              | `1`     | `40`    | The [JobType](#job-type) number.                          |
-| `nodeXnosMinimum`      | `u64`             | `8`     | `41`    | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.|
+| `nodeXnosMinimum`      | `u128`            | `16`    | `41`    | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.|
 
 
 ::: details Solana Dispatch ID
@@ -72,16 +71,7 @@ is **`e4dc9b47c7bd3c2d`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  228,
-  220,
-  155,
-  71,
-  199,
-  189,
-  60,
-  45
-]
+[228,220,155,71,199,189,60,45]
 ```
 
 :::
@@ -97,7 +87,7 @@ let tx = await program.methods
     jobPrice,          // type: u64
     jobTimeout,        // type: i64
     jobType,           // type: u8
-    nodeXnosMinimum,   // type: u64
+    nodeXnosMinimum,   // type: u128
   )
   .accounts({
     mint,              // 𐄂 writable, 𐄂 signer
@@ -116,7 +106,7 @@ let tx = await program.methods
 @tab Update
 ### Update
 
-The `update()` instruction updates a [MarketAccount](#market-account) configurations.
+Update a [MarketAccount](#market-account)'s configurations.
 
 #### Account Info
 
@@ -138,7 +128,7 @@ The following 5 arguments should also be provided when invoking this instruction
 | `jobPrice`             | `u64`             | `8`     | `16`    | The price for jobs in this market.                        |
 | `jobTimeout`           | `i64`             | `16`    | `24`    | The timeout time in seconds for jobs.                     |
 | `jobType`              | `u8`              | `1`     | `40`    | The [JobType](#job-type) number.                          |
-| `nodeStakeMinimum`     | `u64`             | `8`     | `41`    | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.|
+| `nodeStakeMinimum`     | `u128`            | `16`    | `41`    | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.|
 
 
 ::: details Solana Dispatch ID
@@ -148,16 +138,7 @@ is **`dbc858b09e3ffd7f`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  219,
-  200,
-  88,
-  176,
-  158,
-  63,
-  253,
-  127
-]
+[219,200,88,176,158,63,253,127]
 ```
 
 :::
@@ -173,7 +154,7 @@ let tx = await program.methods
     jobPrice,          // type: u64
     jobTimeout,        // type: i64
     jobType,           // type: u8
-    nodeStakeMinimum,  // type: u64
+    nodeStakeMinimum,  // type: u128
   )
   .accounts({
     market,            // ✓ writable, 𐄂 signer
@@ -187,8 +168,7 @@ let tx = await program.methods
 @tab Close
 ### Close
 
-The `close()` instruction closes a [MarketAccount](#market-account) and the
-associated [VaultAccount](#vault-account). The vault has to be empty of tokens.
+Close a [MarketAccount](#market-account) and the associated [VaultAccount](#vault-account).
 
 #### Account Info
 
@@ -210,16 +190,7 @@ is **`62a5c9b16c41ce60`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  98,
-  165,
-  201,
-  177,
-  108,
-  65,
-  206,
-  96
-]
+[98,165,201,177,108,65,206,96]
 ```
 
 :::
@@ -245,8 +216,7 @@ let tx = await program.methods
 @tab List
 ### List
 
-The `list()` instruction lists a job, with its required data.
-When there is a job available, a [RunAccount](#run-account) will automatically be created.
+Create a [JobAccount](#job-account) and optional [RunAccount](#run-account).
 
 #### Account Info
 
@@ -283,16 +253,7 @@ is **`36aec14311298426`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  54,
-  174,
-  193,
-  67,
-  17,
-  41,
-  132,
-  38
-]
+[54,174,193,67,17,41,132,38]
 ```
 
 :::
@@ -327,7 +288,7 @@ let tx = await program.methods
 @tab Recover
 ### Recover
 
-The `recover()` instruction recovers funds from a jobs that has been [Quit](#quit)'ed.
+Recover funds from a [JobAccount](#job-account) that has been [quit](#quit).
 
 #### Account Info
 
@@ -351,16 +312,7 @@ is **`6cd8263a6d927411`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  108,
-  216,
-  38,
-  58,
-  109,
-  146,
-  116,
-  17
-]
+[108,216,38,58,109,146,116,17]
 ```
 
 :::
@@ -388,9 +340,7 @@ let tx = await program.methods
 @tab Work
 ### Work
 
-With the `work()` instruction a node enters the [MarketAccount](#market-account) queue.
-When there is a job available, a [RunAccount](#run-account) will automatically be created.
-The node needs to hold a [Burner Phone](/tokens/nft) and have [`xNOS`](/programs/staking).
+Enters the [MarketAccount](#market-account) queue, or create  a [RunAccount](#run-account).
 
 #### Account Info
 
@@ -415,16 +365,7 @@ is **`0f432dc3d789e52f`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  15,
-  67,
-  45,
-  195,
-  215,
-  137,
-  229,
-  47
-]
+[15,67,45,195,215,137,229,47]
 ```
 
 :::
@@ -453,8 +394,7 @@ let tx = await program.methods
 @tab Stop
 ### Stop
 
-With the `stop()` instruction a node exits the node queue from a
-[MarketAccount](#market-account).
+Exit the node queue from [MarketAccount](#market-account).
 
 #### Account Info
 
@@ -473,16 +413,7 @@ is **`2a85203cabfdb89b`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  42,
-  133,
-  32,
-  60,
-  171,
-  253,
-  184,
-  155
-]
+[42,133,32,60,171,253,184,155]
 ```
 
 :::
@@ -505,8 +436,7 @@ let tx = await program.methods
 @tab Claim
 ### Claim
 
-With the `claim()` instruction a node claims a job that is [stopped](#stop).
-The node needs to hold a [Burner Phone](/tokens/nft) and have [`xNOS`](/programs/stake).
+Claim a job that is [stopped](#stop).
 
 #### Account Info
 
@@ -532,16 +462,7 @@ is **`3ec6d6c1d59f6cd2`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  62,
-  198,
-  214,
-  193,
-  213,
-  159,
-  108,
-  210
-]
+[62,198,214,193,213,159,108,210]
 ```
 
 :::
@@ -571,8 +492,7 @@ let tx = await program.methods
 @tab Finish
 ### Finish
 
-With the `finish()` instruction a node can can post the result for a job it has finished,
-and be reimbursed for the work.
+Post the result for a  [JobAccount](#job-account) to finish it and get paid.
 
 #### Account Info
 
@@ -605,16 +525,7 @@ is **`434aaa847de9b625`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  67,
-  74,
-  170,
-  132,
-  125,
-  233,
-  182,
-  37
-]
+[67,74,170,132,125,233,182,37]
 ```
 
 :::
@@ -645,7 +556,7 @@ let tx = await program.methods
 @tab Quit
 ### Quit
 
-With the `quit()` instruction a node can quit a job that it has started.
+Quit a [JobAccount](#job-account) that you have started.
 
 #### Account Info
 
@@ -666,16 +577,7 @@ is **`bf678df050816799`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  191,
-  103,
-  141,
-  240,
-  80,
-  129,
-  103,
-  153
-]
+[191,103,141,240,80,129,103,153]
 ```
 
 :::
@@ -700,8 +602,7 @@ let tx = await program.methods
 @tab Clean
 ### Clean
 
-The `clean()` instruction closes an [JobAccount](#job-account).
-The job has be finished and the job expiration time has to be exceeded.
+Close an [JobAccount](#job-account).
 
 #### Account Info
 
@@ -721,16 +622,7 @@ is **`fabf388096fb0167`**,
 which can also be expressed as an 8 byte discriminator:
 
 ```json
-[
-  250,
-  191,
-  56,
-  128,
-  150,
-  251,
-  1,
-  103
-]
+[250,191,56,128,150,251,1,103]
 ```
 
 :::
@@ -762,7 +654,7 @@ A number of 4 accounts make up for the Nosana Jobs Program's state.
 ### Market Account
 
 The `MarketAccount` struct holds all the information about jobs and the nodes queue.
-The total size of this account is `3,355` bytes.
+The total size of this account is `3,363` bytes.
 
 | Name                        | Type                        | Size    | Offset  | Description                                                                                       |
 |-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
@@ -774,9 +666,9 @@ The total size of this account is `3,355` bytes.
 | `vault`                     | `publicKey`                 | `32`    | `81`    | The [VaultAccount](#vault-account) address.                                                       |
 | `vaultBump`                 | `u8`                        | `1`     | `113`   | The bump for the [VaultAccount](#vault-account).                                                  |
 | `nodeAccessKey`             | `publicKey`                 | `32`    | `114`   | The NFT collection address of an NFT that the node holds, in order to access this market.         |
-| `nodeXnosMinimum`           | `u64`                       | `8`     | `146`   | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.                   |
-| `queueType`                 | `u8`                        | `1`     | `154`   | The [QueueType](#queue-type) of the queue. Either Nodes or Jobs.                                  |
-| `queue`                     | `Vec<publicKey>`            | `3200`  | `155`   | The queue of order in the market.                                                                 |
+| `nodeXnosMinimum`           | `u128`                      | `16`    | `146`   | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.                   |
+| `queueType`                 | `u8`                        | `1`     | `162`   | The [QueueType](#queue-type) of the queue. Either Nodes or Jobs.                                  |
+| `queue`                     | `Vec<publicKey>`            | `3200`  | `163`   | The queue of order in the market.                                                                 |
 
 ::: details Anchor Account Discriminator
 
@@ -784,16 +676,7 @@ The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Market A
 are **`c94ebbe1f0c6c9fb`**, which can also be expressed in byte array:
 
 ```json
-[
-  201,
-  78,
-  187,
-  225,
-  240,
-  198,
-  201,
-  251
-]
+[201,78,187,225,240,198,201,251]
 ```
 
 @tab Job Account
@@ -821,16 +704,7 @@ The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Job Acco
 are **`5b10a2052dd27d41`**, which can also be expressed in byte array:
 
 ```json
-[
-  91,
-  16,
-  162,
-  5,
-  45,
-  210,
-  125,
-  65
-]
+[91,16,162,5,45,210,125,65]
 ```
 
 @tab Run Account
@@ -853,16 +727,7 @@ The first 8 bytes, also known as Anchor's 8 byte discriminator, for the Run Acco
 are **`c2a96ee6eb0be116`**, which can also be expressed in byte array:
 
 ```json
-[
-  194,
-  169,
-  110,
-  230,
-  235,
-  11,
-  225,
-  22
-]
+[194,169,110,230,235,11,225,22]
 ```
 
 :::
