@@ -3,7 +3,7 @@ export default [
     text: 'Pipelines',
     icon: 'rocket',
     prefix: '/pipelines/',
-    children: ['start'],
+    children: ['intro', 'start', 'specification', 'examples'],
   },
   {
     text: 'Nodes',

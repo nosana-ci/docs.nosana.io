@@ -24,7 +24,7 @@ features:
 - icon: rocket
   title: Nosana Pipelines
   details: Get started with a Nosana Pipeline
-  link: pipelines/start
+  link: pipelines/intro
 - icon: server
   title: Nosana Nodes
   details: Get started as a Nosana Node
