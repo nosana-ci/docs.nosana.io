@@ -41,6 +41,7 @@ The following are some of the Nosana Rewards program's characteristics:
 | Accounts        | [`3`](#accounts)                                                                                                                    |
 | Instructions    | [`6`](#instructions)                                                                                                                |
 | Types           | [`0`](#types)                                                                                                                       |
+| Errors          | [`0`](#errors)                                                                                                                      |
 | Domain          | `nosana-rewards.sol`                                                                                                                |
 |  Address        | [`nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp`](https://explorer.solana.com/address/nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp)    |
 

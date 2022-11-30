@@ -14,6 +14,7 @@ The Nosana Pools program allows users to open token pools with predefined emissi
 | Accounts        | [`2`](#accounts)                                                                                                                    |
 | Instructions    | [`4`](#instructions)                                                                                                                |
 | Types           | [`1`](#types)                                                                                                                       |
+| Errors          | [`5`](#errors)                                                                                                                      |
 | Domain          | `nosana-pools.sol`                                                                                                                  |
 |  Address        | [`nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD`](https://explorer.solana.com/address/nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD)    |
 

@@ -21,6 +21,7 @@ while xNOS is a value indicating a users rank for purposes like giveaways and vo
 | Accounts        | [`3`](#accounts)                                                                                                                    |
 | Instructions    | [`10`](#instructions)                                                                                                               |
 | Types           | [`0`](#types)                                                                                                                       |
+| Errors          | [`13`](#errors)                                                                                                                     |
 | Domain          | `nosana-staking.sol`                                                                                                                |
 |  Address        | [`nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE`](https://explorer.solana.com/address/nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE)    |
 
