@@ -29,6 +29,10 @@ features:
   title: Nosana Nodes
   details: Get started as a Nosana Node
   link: nodes/start
+- icon: key
+  title: Nosana Secrets
+  details: Get started with Nosana Secrets
+  link: secrets/start
 - icon: code
   title: Nosana Programs
   details: Learn how to use the Smart Contracts

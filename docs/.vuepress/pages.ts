@@ -12,6 +12,12 @@ export default [
     children: ['start', 'stake', 'nft'],
   },
   {
+    text: 'Secrets',
+    icon: 'key',
+    prefix: '/secrets/',
+    children: ['start', 'api'],
+  },
+  {
     text: 'Programs',
     icon: 'code',
     prefix: '/programs/',

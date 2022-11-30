@@ -7,6 +7,7 @@ export default hopeTheme({
   repo: 'https://github.com/nosana-ci/docs.nosana.io',
   docsDir: 'docs',
   iconAssets: 'fontawesome',
+  editLink: false,
 
   // footer
   footer: 'MIT Licensed | Copyright © 2021-present Nosana',

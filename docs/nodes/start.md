@@ -1,7 +1,5 @@
 # Getting Started
 
-![Nosana](https://nosana.io/img/Nosana_Logo_vertical_color_white.svg)
-
 Join us in creating the decentralized future of CI/CD! Our passion is helping open source communities to build better software faster and more efficiently.
 Open source software is developed out in the open, so why wouldn't you use an open source CI/CD tool?
 
