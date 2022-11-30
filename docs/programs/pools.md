@@ -311,6 +311,65 @@ A number of 3 variants are defined in this `enum`:
 | `Unknown`                             | `255`                                 |
 
 :::
+
+## Errors
+
+A number of 5 errors are defined in the Nosana Pools Program.
+
+:::: tabs
+
+@tab 6000
+
+::: warning Nosana Error
+
+### `6000` - Not Started
+
+This pool has not started yet.
+
+:::
+
+@tab 6001
+
+::: warning Nosana Error
+
+### `6001` - Underfunded
+
+This pool does not have enough funds.
+
+:::
+
+@tab 6002
+
+::: warning Nosana Error
+
+### `6002` - Not Closeable
+
+This pool is not closeable.
+
+:::
+
+@tab 6003
+
+::: warning Nosana Error
+
+### `6003` - Wrong Claim Type
+
+This pool has a different claim type.
+
+:::
+
+@tab 6004
+
+::: warning Nosana Error
+
+### `6004` - Wrong Beneficiary
+
+This pool does not match the beneficiary.
+
+:::
+
+::::
+
 ## Diagram
 
 ```mermaid

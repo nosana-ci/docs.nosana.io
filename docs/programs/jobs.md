@@ -788,6 +788,125 @@ A number of 6 variants are defined in this `enum`:
 | `Unknown`                             | `255`                                 |
 
 :::
+
+## Errors
+
+A number of 11 errors are defined in the Nosana Jobs Program.
+
+:::: tabs
+
+@tab 6000
+
+::: warning Nosana Error
+
+### `6000` - Invalid Market Account
+
+This market account is not valid.
+
+:::
+
+@tab 6001
+
+::: warning Nosana Error
+
+### `6001` - Invalid Job Account
+
+This job account is not valid.
+
+:::
+
+@tab 6002
+
+::: warning Nosana Error
+
+### `6002` - Job In Wrong State
+
+This job does not have the right status.
+
+:::
+
+@tab 6003
+
+::: warning Nosana Error
+
+### `6003` - Job Not Expired
+
+The job has not yet expired.
+
+:::
+
+@tab 6004
+
+::: warning Nosana Error
+
+### `6004` - Node Queue Does Not Match
+
+This node queue does not match.
+
+:::
+
+@tab 6005
+
+::: warning Nosana Error
+
+### `6005` - Node Stake Unauthorized
+
+This node is not authorizing this stake.
+
+:::
+
+@tab 6006
+
+::: warning Nosana Error
+
+### `6006` - Node Not Enough Stake
+
+This node has not staked enough tokens.
+
+:::
+
+@tab 6007
+
+::: warning Nosana Error
+
+### `6007` - Node Already Queued
+
+This node is already present in the queue.
+
+:::
+
+@tab 6008
+
+::: warning Nosana Error
+
+### `6008` - Node Nft Wrong Metadata
+
+This metadata does not have the correct address.
+
+:::
+
+@tab 6009
+
+::: warning Nosana Error
+
+### `6009` - Node Nft Wrong Owner
+
+This NFT is not owned by this node.
+
+:::
+
+@tab 6010
+
+::: warning Nosana Error
+
+### `6010` - Node Key Invalid Collection
+
+This access key does not belong to a verified collection.
+
+:::
+
+::::
+
 ## Diagram
 
 ### Instruction Diagram

@@ -614,6 +614,144 @@ The `VaultAccount` is a regular Solana Token Account.
 
 ::::
 
+## Errors
+
+A number of 13 errors are defined in the Nosana Staking Program.
+
+:::: tabs
+
+@tab 6000
+
+::: warning Nosana Error
+
+### `6000` - Amount Not Enough
+
+This amount is not enough.
+
+:::
+
+@tab 6001
+
+::: warning Nosana Error
+
+### `6001` - Already Initialized
+
+This stake is already running.
+
+:::
+
+@tab 6002
+
+::: warning Nosana Error
+
+### `6002` - Already Claimed
+
+This stake is already claimed.
+
+:::
+
+@tab 6003
+
+::: warning Nosana Error
+
+### `6003` - Already Staked
+
+This stake is already staked.
+
+:::
+
+@tab 6004
+
+::: warning Nosana Error
+
+### `6004` - Already Unstaked
+
+This stake is already unstaked.
+
+:::
+
+@tab 6005
+
+::: warning Nosana Error
+
+### `6005` - Not Unstaked
+
+This stake is not yet unstaked.
+
+:::
+
+@tab 6006
+
+::: warning Nosana Error
+
+### `6006` - Locked
+
+This stake is still locked.
+
+:::
+
+@tab 6007
+
+::: warning Nosana Error
+
+### `6007` - Duration Too Short
+
+This stake duration is not long enough.
+
+:::
+
+@tab 6008
+
+::: warning Nosana Error
+
+### `6008` - Duration Too Long
+
+This stake duration is too long.
+
+:::
+
+@tab 6009
+
+::: warning Nosana Error
+
+### `6009` - Does Not Exist
+
+This stake account does not exist.
+
+:::
+
+@tab 6010
+
+::: warning Nosana Error
+
+### `6010` - Decreased
+
+This stake is not allowed to decrease.
+
+:::
+
+@tab 6011
+
+::: warning Nosana Error
+
+### `6011` - Has Reward
+
+This stake still has a reward account.
+
+:::
+
+@tab 6012
+
+::: warning Nosana Error
+
+### `6012` - Invalid Stake Account
+
+This stake does not belong to the authority.
+
+:::
+
+::::
+
 ## Diagram
 
 ```mermaid
