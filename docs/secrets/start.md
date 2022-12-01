@@ -114,10 +114,10 @@ You also need to make sure to set the `JWT_SECRET` environment variable to a ran
 You can also run the nosana secret manager in a docker container:<br>
 https://hub.docker.com/r/nosana/nosana-secrets
 ``` sh
-docker run -d -t -i  \
--e STORAGE_CONNECTION='sqlite://db.sqlite' \
--e JWT_SECRET='your-random-secret' \
--p 4124:4124 \
---name nosana_secrets nosana/nosana-secrets
+docker run -d --rm --name nosana-secrets     \
+  -e STORAGE_CONNECTION='sqlite://db.sqlite' \
+  -e JWT_SECRET='your-random-secret'         \
+  -p 4124:4124                               \
+  nosana/nosana-secrets:latest
 ```
 Then verify if the secret manager is running by going to `http://localhost:4124`
