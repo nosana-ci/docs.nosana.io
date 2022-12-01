@@ -47,15 +47,16 @@ file and put them in your Job IPFS JSON file.
 Here an example how you would use the secrets in your [`.nosana-ci.yml`](pipelines/specification) file:
 
 ``` yml
-global:
-  image: node:16
-
-  environment:
-    APP_ENV: production
-    SSH_KEY:
-      type: nosana/secret
-      endpoint: https://secrets.nosana.ci
-      value: pipeline1-ssh-key
+jobs:
+  - name: test-secret-manager
+    environment:
+      SECRET_VALUE:
+        type: nosana/secret
+        endpoint: https://secrets.nosana.ci
+        value: pipeline1-ssh-key
+    commands:
+      - env
+      - sh -c 'echo test secret manager value $SECRET_VALUE'
 ```
 
 The Nosana Node will try to authenticate to the secret manager endpoint and replace the value with
