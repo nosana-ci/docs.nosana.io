@@ -31,7 +31,7 @@ POST /login
 | Name      | Type    | Description                                                                                                     | Required |
 |-----------|---------|-----------------------------------------------------------------------------------------------------------------|----------|
 | address   | string  | Your Solana public key                                                                                          | Required |
-| address   | string  | Your signature for the message `nosana_secret_${timestamp}`                                                     | Required |
+| signature | string  | Your signature for the message `nosana_secret_${timestamp}`                                                     | Required |
 | timestamp | integer | The unix timestamp that you signed                                                                              | Required |
 | job       | string  | The public key of the job you want to retrieve secrets for. Make sure the node (`address`) has this job claimed | Optional |
 
