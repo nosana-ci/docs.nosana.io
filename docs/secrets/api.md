@@ -5,7 +5,7 @@ Welcome to the Nosana Secrets API documentation.
 `https://secrets.k8s.dev.nos.ci`
 
 ##### Nosana Prod Secret Manager
-`https://secrets.nosana.io`
+`https://secrets.nosana.ci`
 
 ## Authentication
 You can use the authentication endpoint to get a JWT token to access secrets as a node or to store secrets as a project by adding the following header to your request:
