@@ -9,7 +9,7 @@ Projects that are posting jobs/pipelines to the Nosana Network might want to sha
 to run their job with the Nodes that are running their jobs.
 This can now be achieved with the **Nosana Secret Manager**.
 Projects can securely store their secrets to a Secret Manager
-(hosted by Nosana, or you can [host your own](#host-your-own-secrets-manager))
+(hosted by Nosana, or you can [host your own](#host-your-own-secret-manager))
 and specify per job which secrets the node that will run that job can retrieve.
 
 ## How does it work?
@@ -64,22 +64,71 @@ the secret value retrieved from the secret manager.
 
 ## API
 
-[API Specification](api)
+The [API Specification](api) can be found in a dedicated part of the documentation.
 
 ## Nosana's Secret Managers
 
-Nosana is currently hosting two secret managers, one for dev purposes and one production secret manager.
-You can find them here:
+Nosana hosts 2 community versions of the Secret Manager, for users of the Nosana Network.
 
-##### Nosana Secret Manager on Solana Mainnet
-https://secrets.nosana.ci
+If you don't want to [host your own](#host-your-own-secret-manager) Secrets Manager,
+you are free to use the publicly available one.
 
-##### Nosana Secret Manager on Solana Devnet
-https://secrets.k8s.dev.nos.ci
+For transparency’s sake we've documented the setup.
+We follow AWS's cloud best practices, and are open for suggestions and improvements.
+
+The source code of the manager is [open source](https://github.com/nosana-ci/nosana-secrets).
+
+| Purpose     | Endpoint 	                     |
+|-------------|--------------------------------|
+| Development | https://secrets.k8s.dev.nos.ci |
+| Production  | https://secrets.nosana.ci      |
 
 ### Infrastructure
 
-documentation coming soon!
+So Nosana hosts 2 different Secret Managers, in two different AWS accounts.
+
+#### DocumentDB
+
+Secrets are stored, encrypted, in an [AWS DocumentDB](https://aws.amazon.com/documentdb/) cluster.
+Data is encrypted at rest, and encryption keys are rotated each week.
+Nobody within Nosana has encryption/decryption right with these keys.
+Only the secret manager application has that right.
+
+#### Kubernetes
+
+The secrets manager application is hosted in an autoscaling setup within an
+AWS EKS Kubernetes cluster.
+Firewall rules limit ingress and egress to only the necessary communications for the manager.
+Hence, no other application in the cluster will be able to communicate with the manager.
+
+#### Load Balancer
+
+Finally, an AWS Application Loadbalancer routes incoming traffic to the managers.
+
+### Networking
+
+In terms of networking there are 3 subnets associated with the infrastructure.
+These are:
+
+- Public Subnet
+- Private Subnet
+- Database Subnet
+
+#### Public Subnet
+
+The application load balancer resides in a public subnet that can be reached over the internet
+via an internet gateway. The loadbalancer can only communicate over port `443`, for encrypted
+`HTTPS` communication.
+
+#### Private Subnet
+
+The Secrets Manager application resides in a private subnet in the EKS cluster,
+and allows only incoming connections from the load balancer.
+
+#### Database Subnet
+
+Finally, the database lives in a database subnet with no internet connection.
+It only allows incoming connections from the proxy.
 
 ## Host your own Secret Manager
 
@@ -89,28 +138,26 @@ can also decide to host your own Secret Manager!
 You can find the source code of the secret manager here:<br>
 https://github.com/nosana-ci/nosana-secrets
 
-Currently the following storage backends are supported:
+Currently, the following storage backends are supported by setting the `STORAGE_CONNECTION`
+variable in the environment of the runtime of the Secret Manager application.
 
-* **sqlite**<br>
-`STORAGE_CONNECTION = sqlite://path/to/database.sqlite`<br><br>
-* **mongodb**<br>
-`STORAGE_CONNECTION = mongodb://user:pass@localhost:27017/dbname`<br><br>
-* **documentdb**<br>
-`STORAGE_CONNECTION = mongodb://user:pass@sample-cluster.node.us-east-1.docdb.amazonaws.com:27017/dbname?tls=true`<br><br>
-* **postgresql**<br>
-`STORAGE_CONNECTION = postgresql://user:pass@localhost:5432/dbname`<br><br>
-* **mysql**<br>
-`STORAGE_CONNECTION = mysql://user:pass@localhost:3306/dbname`<br><br>
-* **redis**<br>
-`STORAGE_CONNECTION = redis://user:pass@localhost:6379`<br><br>
+| Backend 	                                        | `STORAGE_CONNECTION` 	                                                |
+|--------------------------------------------------|-----------------------------------------------------------------------|
+| [sqlite](https://www.sqlite.org/)   	            | `sqlite://path/to/database.sqlite`                                    |
+| [mongodb](https://www.mongodb.com/) 	            | `mongodb://user:pass@localhost:27017/dbname`                          |
+| [documentdb](https://aws.amazon.com/documentdb/) | `mongodb://user:pass@my-db.docdb.amazonaws.com:27017/dbname?tls=true` |
+| [postgresql](https://www.postgresql.org/)        | `postgresql://user:pass@localhost:5432/dbname`                        |
+| [mysql](https://www.mysql.com/)                  | `mysql://user:pass@localhost:3306/dbname`                             |
+| [redis](https://redis.io/)                       | `redis://user:pass@localhost:6379`                                    |
 
 If you don't specify the environment variable `STORAGE_CONNECTION` string then it will default to `sqlite://db.sqlite`
 
 You also need to make sure to set the `JWT_SECRET` environment variable to a random secret string.
 
 ### Docker
-You can also run the nosana secret manager in a docker container:<br>
-https://hub.docker.com/r/nosana/nosana-secrets
+
+You can also run the Nosana Secret Manager in a docker container:
+
 ``` sh
 docker run -d --name nosana-secrets          \
   -e STORAGE_CONNECTION='sqlite://db.sqlite' \
@@ -118,4 +165,8 @@ docker run -d --name nosana-secrets          \
   -p 4124:4124                               \
   nosana/nosana-secrets:latest
 ```
+
 Then verify if the secret manager is running by going to `http://localhost:4124`
+
+The container image is publicly available under:
+https://hub.docker.com/r/nosana/nosana-secrets
