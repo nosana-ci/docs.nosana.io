@@ -72,12 +72,10 @@ Nosana is currently hosting two secret managers, one for dev purposes and one pr
 You can find them here:
 
 ##### Nosana Secret Manager on Solana Mainnet
-
-`https://secrets.nosana.ci`
+https://secrets.nosana.ci
 
 ##### Nosana Secret Manager on Solana Devnet
-
-`https://secrets.k8s.dev.nos.ci`
+https://secrets.k8s.dev.nos.ci
 
 ### Infrastructure
 
