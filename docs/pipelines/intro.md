@@ -76,7 +76,7 @@ Here is a simple representation of the diagram that we can use to describe a pip
 flowchart TB
 
     subgraph Pipeline
-        
+
         subgraph Nosana
             description
             storage

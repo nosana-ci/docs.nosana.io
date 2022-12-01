@@ -29,7 +29,7 @@ We'll explore the `nosana` section first.
 
 ```yaml
 # .nosana-ci.yml
-nosana: 
+nosana:
     # the name of the nosana pipeline
     description: build and deploy the nosana documentation site
     # backend storage service
@@ -63,11 +63,11 @@ global:
     image: registry.hub.docker.com/library/node:16
 
     # event that will trigger the pipeline.
-    trigger: 
+    trigger:
         branch:
             - main
             - develop
-    
+
     # environment variables that will be available to the pipeline
     environment:
         APP_ENV: production
@@ -124,7 +124,7 @@ For this example let's take a look at the `jobs` section of our example:
     artifacts:
       - name: node_modules_18
         path: ./node_modules/
-  
+
   - name: generate-docs_18
     commands:
      - npm run build
