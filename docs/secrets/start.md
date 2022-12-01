@@ -86,4 +86,38 @@ documentation coming soon!
 ## Host your own Secret Manager
 
 Although Nosana is providing you with a very safe and secure way to store secrets in their hosted Secret Manager, you
-can also decide to host your own Secret Manager! More documentation about how to do this is coming soon!
+can also decide to host your own Secret Manager!
+
+You can find the source code of the secret manager here:<br>
+https://github.com/nosana-ci/nosana-secrets
+
+Currently the following storage backends are supported:
+
+* **sqlite**<br>
+`STORAGE_CONNECTION = sqlite://path/to/database.sqlite`<br><br>
+* **mongodb**<br>
+`STORAGE_CONNECTION = mongodb://user:pass@localhost:27017/dbname`<br><br>
+* **documentdb**<br>
+`STORAGE_CONNECTION = mongodb://user:pass@sample-cluster.node.us-east-1.docdb.amazonaws.com:27017/dbname?tls=true`<br><br>
+* **postgresql**<br>
+`STORAGE_CONNECTION = postgresql://user:pass@localhost:5432/dbname`<br><br>
+* **mysql**<br>
+`STORAGE_CONNECTION = mysql://user:pass@localhost:3306/dbname`<br><br>
+* **redis**<br>
+`STORAGE_CONNECTION = redis://user:pass@localhost:6379`<br><br>
+
+If you don't specify the environment variable `STORAGE_CONNECTION` string then it will default to `sqlite://db.sqlite`
+
+You also need to make sure to set the `JWT_SECRET` environment variable to a random secret string.
+
+### Docker
+You can also run the nosana secret manager in a docker container:<br>
+https://hub.docker.com/r/nosana/nosana-secrets
+``` sh
+docker run -d -t -i  \
+-e STORAGE_CONNECTION='sqlite://db.sqlite' \
+-e JWT_SECRET='your-random-secret' \
+-p 4124:4124 \
+--name nosana_secrets nosana/nosana-secrets
+```
+Then verify if the secret manager is running by going to `http://localhost:4124`
