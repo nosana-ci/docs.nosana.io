@@ -1,22 +1,31 @@
-# API
+# Secrets API
 
 Welcome to the Nosana Secrets API documentation.
-##### Nosana Dev Secret Manager
-`https://secrets.k8s.dev.nos.ci`
 
-##### Nosana Prod Secret Manager
+
+##### Nosana Secret Manager on Solana Mainnet
+
 `https://secrets.nosana.ci`
 
+##### Nosana Secret Manager on Solana Devnet
+
+`https://secrets.k8s.dev.nos.ci`
+
 ## Authentication
-You can use the authentication endpoint to get a JWT token to access secrets as a node or to store secrets as a project by adding the following header to your request:
+
+You can use the authentication endpoint to get a JWT token to access secrets as a node or to store secrets
+as a project by adding the following header to your request:
+
 ``` headers
 Authorization: Bearer your-jwt-token-here
 ```
 
 ### Endpoint
+
 ``` sh
 POST /login
 ```
+
 ### Parameters
 
 | Name      | Type    | Description                                                                                                     | Required |
@@ -27,6 +36,7 @@ POST /login
 | job       | string  | The public key of the job you want to retrieve secrets for. Make sure the node (`address`) has this job claimed | Optional |
 
 ### Response
+
 ``` json
 Status: 200
 
@@ -36,14 +46,20 @@ Status: 200
 ```
 
 ## Retrieve secrets
-Use this endpoint to retrieve your own secrets or the secrets for a specific job. Your JWT token will decide what secrets you can access.
-Either the `address` parameter (your own secrets) from the authentication workflow or the `job` parameter (secrets for a specific job that you claimed) decide the scope of your secrets
+
+Use this endpoint to retrieve your own secrets or the secrets for a specific job.
+Your JWT token will decide what secrets you can access.
+Either the `address` parameter (your own secrets) from the authentication workflow or the `job` parameter
+(secrets for a specific job that you claimed) decide the scope of your secrets
 
 ### Endpoint
+
 ``` sh
 GET /secrets
 ```
+
 ### Response
+
 ``` json
 Status: 200
 
@@ -54,13 +70,17 @@ Status: 200
 ```
 
 ## Add/Update secrets
-Add or update your own secrets. Make sure you requested a JWT token at the authorization endpoint without specifing a `job` parameter.
+
+Add or update your own secrets.
+Make sure you requested a JWT token at the authorization endpoint without specifing a `job` parameter.
 That way you get a token with access to your own secrets (mainly useful for projects posting jobs)
 
 ### Endpoint
+
 ``` sh
 POST /secrets
 ```
+
 ### Parameters
 
 | Name      | Type         | Description                                                                                                                                                    | Required |
@@ -68,6 +88,7 @@ POST /secrets
 | secrets   | JSON object  | JSON object where the keys are the secret names and the values the secret values. If a secret key already exists, it will overwrite the currently stored value | Required |
 
 ### Response
+
 ``` json
 Status: 200
 
@@ -75,13 +96,17 @@ OK
 ```
 
 ## Delete secrets
-Delete your own secrets. Make sure you requested a JWT token at the authorization endpoint without specifing a `job` parameter.
+
+Delete your own secrets. Make sure you requested a JWT token at the authorization endpoint without
+specifing a `job` parameter.
 That way you get a token with access to your own secrets (mainly useful for projects posting jobs)
 
 ### Endpoint
+
 ``` sh
 DELETE /secrets
 ```
+
 ### Parameters
 
 | Name      | Type         | Description                                    | Required |
@@ -89,6 +114,7 @@ DELETE /secrets
 | key       | string       | name of the secret key that you want to delete | Required |
 
 ### Response
+
 ``` json
 Status: 200
 
