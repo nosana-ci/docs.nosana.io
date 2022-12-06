@@ -1,7 +1,9 @@
-#
+# Node Installation
 
-Join us in creating the decentralized future of CI/CD! Our passion is helping open-source communities to build better software faster and more efficiently.
-Open-source software is developed out in the open, so why wouldn't you use an open-source CI/CD tool?
+This guide is a deep dive in to how to get a Nosana Node running with your own configuration.
+The first part will focus on how to run the Node using Docker, and the second part will focus on running the Node via a Clojure Repl.
+
+More information can be found at our [GitHub](https://github.com/nosana-ci/nosana-node)
 
 ## Development
 
@@ -9,12 +11,12 @@ Development happens primarily on Linux and macOS. So this guide will focus on th
 
 ## Requirements
 
-You will need to install the following to get started with Nosana:
+You will need to install the following to get started with a Nosana Node:
 
-- [Solana Tools Suite 1.0 + (Required)](https://docs.solana.com/cli/install-solana-cli-tools)
-- [Docker 1.13 + (Required)](https://docs.docker.com/desktop/linux/install/)
-- [JVM 11 + (Optional - Required for development build)](https://openjdk.org/install/)
-- [Clojure 1.10 + (Optional - Required for development build)](https://clojure.org/guides/install_clojure)
+- [Solana Tools Suite (Required)](https://docs.solana.com/cli/install-solana-cli-tools)
+- [Docker (Required)](https://docs.docker.com/desktop/linux/install/)
+- [JVM (Optional - Required for development build)](https://openjdk.org/install/)
+- [Clojure (Optional - Required for development build)](https://clojure.org/guides/install_clojure)
 
 ### IPFS
 
@@ -114,6 +116,7 @@ The first time you run this, it will pull the Podman image. Podman will be used 
 After Podman is up and running in the background, you can run the node. You will first need to check what the address is of Podman.
 
 ### Running Nosana Node with Docker
+
 The recommended way to run the Nosana-Node is to run it inside of Docker.
 That way it will get daemonized and it can run in the background without you having to take care of it.
 
