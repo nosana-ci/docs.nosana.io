@@ -10,6 +10,7 @@
     "docs:dev": "vuepress dev docs",
     "generate": "vuepress build docs -d dist",
     "lint": "npm run prettier && npm run eslint && npm run check-types",
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix",
     "prettier": "prettier --check 'docs/.vuepress/**/*.ts'",
     "prettier:fix": "prettier --write 'docs/.vuepress/**/*.ts'",
     "check-types": "tsc -p docs/.vuepress",
@@ -17,12 +18,12 @@
     "eslint:fix": "eslint 'docs/.vuepress/**/*.ts' --fix"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.45.0",
-    "@typescript-eslint/parser": "5.45.0",
+    "@typescript-eslint/eslint-plugin": "5.46.0",
+    "@typescript-eslint/parser": "5.46.0",
     "@vuepress/client": "2.0.0-beta.53",
-    "prettier": "2.8.0",
+    "prettier": "2.8.1",
     "vue": "3.2.45",
     "vuepress": "2.0.0-beta.53",
-    "vuepress-theme-hope": "2.0.0-beta.133"
+    "vuepress-theme-hope": "2.0.0-beta.135"
   }
 }
