@@ -24,9 +24,9 @@ export default [
     children: ['intro', 'staking', 'rewards', 'pools', 'jobs', 'voting'],
   },
   {
-    text: 'Tokens',
+    text: 'Credits',
     icon: 'coins',
-    prefix: '/tokens/',
-    children: ['intro', 'token', 'nft', 'pass'],
+    prefix: '/credits/',
+    children: ['intro', 'credits', 'nft', 'pass'],
   },
 ];

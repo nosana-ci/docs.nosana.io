@@ -29,28 +29,24 @@ features:
   title: Nosana Nodes
   details: Get started as a Nosana Node
   link: nodes/start
+- icon: coins
+  title: Nosana Credits
+  details: Get credits to run your CI/CD Pipelines
+  link: credits/credits
 - icon: key
   title: Nosana Secrets
-  details: Get started with Nosana Secrets
+  details: Store your secrets securely with Nosana Secrets
   link: secrets/start
 - icon: code
   title: Nosana Programs
-  details: Learn how to use the Smart Contracts
+  details: Learn how to use the Nosana Smart Contracts
   link: programs/intro
-- icon: coins
-  title: Nosana Tokens
-  details: Native token of the Nosana Network
-  link: tokens/intro
 - icon: mobile
   title: Nosana Burner Phone
-  details: Nosana Burner Phones - NFT Collection
-  link: tokens/nft
+  details: Nosana Burner Phones - Boost your network access!
+  link: credits/nft
 - icon: ticket
   title: Nosana Mint Pass
   details: Start minting Nosana Burner Phones
-  link: tokens/pass
-- icon: arrow-up
-  title: Boosts
-  details: Network Boosts with Nosana Burner Phones
-  link: tokens/nft#boosts
+  link: credits/pass
 ---
