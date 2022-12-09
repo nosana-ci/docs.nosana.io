@@ -25,14 +25,14 @@ features:
   title: Nosana Pipelines
   details: Get started with a Nosana Pipeline
   link: pipelines/intro
-- icon: server
-  title: Nosana Nodes
-  details: Get started as a Nosana Node
-  link: nodes/start
 - icon: coins
   title: Nosana Credits
   details: Get credits to run your CI/CD Pipelines
   link: credits/credits
+- icon: server
+  title: Nosana Nodes
+  details: Get started as a Nosana Node
+  link: nodes/start
 - icon: key
   title: Nosana Secrets
   details: Store your secrets securely with Nosana Secrets

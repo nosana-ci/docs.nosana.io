@@ -6,6 +6,12 @@ export default [
     children: ['intro', 'start', 'specification', 'examples'],
   },
   {
+    text: 'Credits',
+    icon: 'coins',
+    prefix: '/credits/',
+    children: ['intro', 'credits', 'nft', 'pass'],
+  },
+  {
     text: 'Nodes',
     icon: 'server',
     prefix: '/nodes/',
@@ -22,11 +28,5 @@ export default [
     icon: 'code',
     prefix: '/programs/',
     children: ['intro', 'staking', 'rewards', 'pools', 'jobs', 'voting'],
-  },
-  {
-    text: 'Credits',
-    icon: 'coins',
-    prefix: '/credits/',
-    children: ['intro', 'credits', 'nft', 'pass'],
   },
 ];

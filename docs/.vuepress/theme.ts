@@ -40,7 +40,7 @@ export default hopeTheme({
       link: 'https://app.nosana.io/',
     },
     {
-      text: 'NFT',
+      text: 'Burner Phones',
       // icon: 'link',
       icon: 'mobile',
       link: 'https://nft.nosana.io/',
@@ -61,12 +61,12 @@ export default hopeTheme({
       container: true,
       demo: true,
       echarts: true,
+      figure: true,
       flowchart: true,
       gfm: true,
       imageLazyload: true,
       imageMark: true,
       imageSize: true,
-      imageTitle: true,
       include: true,
       katex: true,
       mark: true,
@@ -79,13 +79,13 @@ export default hopeTheme({
       },
       stylize: [
         {
-          matcher: 'Recommanded',
+          matcher: 'Recommended',
           replacer: ({ tag }) => {
             if (tag === 'em')
               return {
                 tag: 'Badge',
                 attrs: { type: 'tip' },
-                content: 'Recommanded',
+                content: 'Recommended',
               };
           },
         },
