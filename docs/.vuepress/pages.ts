@@ -15,7 +15,7 @@ export default [
     text: 'Nodes',
     icon: 'server',
     prefix: '/nodes/',
-    children: ['start', 'stake', 'nft'],
+    children: ['start', 'install'],
   },
   {
     text: 'Secrets',
