@@ -129,7 +129,8 @@ For this example let's take a look at the `jobs` section of our example:
     commands:
      - npm run build
     resources:
-      - node_modules_18
+      - name: node_modules_18
+        path: ./node_modules/
     artifacts:
       - name: dist_folder
         path: ./dist/
