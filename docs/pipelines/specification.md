@@ -51,8 +51,10 @@ jobs: # required
                   path: <artifact_relative_path> # required
 
       resources: # optional
-          - <artifact_name> # optional
-          - <other_artifact_name> # optional
+          - name: <artifact_name> # optional
+            path: <artifact_relative_path> # optional
+          - name: <other_artifact_name> # optional
+            path: <other_artifact_relative_path> # optional
 
       artifacts: # optional
           - name: <artifact_name> # required
@@ -69,8 +71,10 @@ jobs: # required
           - <other_shell_command> # optional
 
       resources: # optional
-          - <artifact_name> # required
-          - <other_artifact_name> # optional
+          - name: <artifact_name> # required
+            path: <artifact_relative_path> # required
+          - name: <other_artifact_name> # optional
+            path: <other_artifact_relative_path> # optional
 
       artifacts: # optional
           - name: <artifact_name> # required
