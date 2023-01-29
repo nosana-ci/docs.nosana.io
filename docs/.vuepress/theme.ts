@@ -6,7 +6,7 @@ export default hopeTheme({
   logo: 'https://nosana.io/img/NOS_logo.png',
   repo: 'https://github.com/nosana-ci/docs.nosana.io',
   docsDir: 'docs',
-  iconAssets: 'fontawesome',
+  iconAssets: 'https://kit.fontawesome.com/843c7afeaa.js',
   editLink: false,
 
   // footer
@@ -64,9 +64,8 @@ export default hopeTheme({
       figure: true,
       flowchart: true,
       gfm: true,
-      imageLazyload: true,
-      imageMark: true,
-      imageSize: true,
+      imgLazyload: true,
+      imgSize: true,
       include: true,
       katex: true,
       mark: true,
