@@ -40,7 +40,7 @@ jobs:
       - SECRET_KEY
     commands:
       - env
-      - sh -c 'echo test secret manager value $SECRET_KEY'
+      - echo test secret manager value $SECRET_KEY
 ```
 
 #### Global secrets
@@ -54,7 +54,7 @@ jobs:
   - name: test-secret-manager-global
     commands:
       - env
-      - sh -c 'echo test secret manager value $GLOBAL_SECRET'
+      - echo test secret manager value $GLOBAL_SECRET
 ```
 
 #### Advanced Secrets
@@ -69,7 +69,7 @@ jobs:
       value: secret-key
     commands:
       - env
-      - sh -c 'echo test secret manager value $ADVANCED_SECRET'
+      - echo test secret manager value $ADVANCED_SECRET
 ```
 
 The Nosana Node will try to authenticate to the secret manager endpoint and replace the value with
