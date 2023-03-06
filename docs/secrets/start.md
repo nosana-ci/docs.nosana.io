@@ -23,42 +23,53 @@ With this signature you can [retrieve a JWT token](api#authentication) to manage
 
 ### Adding secrets to your jobs
 
-After you have added secrets to a secret manager you can add them to your job IPFS JSON file to give the node
-that is running your job access to these secrets:
+After you have added secrets to a secret manager you can add them to your YAML file to give the node
+that is running your job access to these secrets.
 
-``` javascript
-{
-  "type": "Github",
-  "state": {
-    "nosana/secrets": ["pipeline1-ssh-key"]
-  },
-  "url": "https://github.com/nosana-ci/secrets.git",
-  "commit": "c47115da3e1dbb3666784ab3f0a6af316acc4a77",
-  "pipeline": "pipeline1-yml-goes-here"
-}
-```
-
-Nodes that are running jobs can access the secret keys specified in the `secrets` array in this file.
+Nodes that are running jobs can access all secret keys that are used in your job.
 Nodes can get read-only access to these secrets by authentication to the secret manager with an
 additional `job` parameter during authentication.
 
-If you are using the Nosana Platform with the Github App integration, then you can just specify these secrets
-in your `.nosana-ci.yml` file and the Nosana Platform will automatically retrieve the secret keys from this YAML
-file and put them in your Job IPFS JSON file.
-
-Here an example how you would use the secrets in your [`.nosana-ci.yml`](pipelines/specification) file:
+#### Simple Secrets
+Here an example how you would use the secrets in your [`.nosana-ci.yml`](pipelines/specification) file in simple mode:
 
 ``` yml
 jobs:
   - name: test-secret-manager
-    environment:
-      SECRET_VALUE:
-        type: nosana/secret
-        endpoint: https://secrets.nosana.ci
-        value: pipeline1-ssh-key
+    secrets:
+      - SECRET_KEY
     commands:
       - env
-      - sh -c 'echo test secret manager value $SECRET_VALUE'
+      - sh -c 'echo test secret manager value $SECRET_KEY'
+```
+
+#### Global secrets
+By default, secrets you add on the Nosana Platform through the Github integration are automatically scoped by prefixing them with your repository id. You can also add global secrets (without any prefix) on the Nosana Platform if you want to reuse secrets across different repos. You can use them by prefixing the secrey key with `global.`:
+``` yml
+nosana:
+  global:
+    secrets:
+      - global.GLOBAL_SECRET    
+jobs:
+  - name: test-secret-manager-global
+    commands:
+      - env
+      - sh -c 'echo test secret manager value $GLOBAL_SECRET'
+```
+
+#### Advanced Secrets
+The secret keys in the `secrets` array from the above examples are automically converted to be available as environment variables with the default secret manager url. If you want to specify a different secret manager url or you want to use secrets at a different place then environment variables, you can also use the advanced syntax:
+``` yml
+jobs:
+  - name: test-secret-manager-advanced
+  environment:
+    ADVANCED_SECRET:
+      type: nosana/secret
+      endpoint: https://secrets.nosana.ci
+      value: secret-key
+    commands:
+      - env
+      - sh -c 'echo test secret manager value $ADVANCED_SECRET'
 ```
 
 The Nosana Node will try to authenticate to the secret manager endpoint and replace the value with
