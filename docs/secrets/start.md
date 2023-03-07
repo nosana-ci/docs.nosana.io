@@ -62,11 +62,11 @@ The secret keys in the `secrets` array from the above examples are automically c
 ``` yml
 jobs:
   - name: test-secret-manager-advanced
-  environment:
-    ADVANCED_SECRET:
-      type: nosana/secret
-      endpoint: https://secrets.nosana.ci
-      value: secret-key
+    environment:
+      ADVANCED_SECRET:
+        type: nosana/secret
+        endpoint: https://secrets.nosana.ci
+        value: secret-key
     commands:
       - env
       - echo test secret manager value $ADVANCED_SECRET
