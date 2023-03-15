@@ -5,7 +5,7 @@ icon: home
 heroImage: https://nosana.io/img/Nosana_Logomark_black.svg
 heroImageDark: https://nosana.io/img/Nosana_Logomark_white.svg
 heroText: Nosana Documentation
-tagline: Next Gen CI/CD
+tagline: Trustless CI/CD for Web3
 heroFullScreen: true
 actions:
 - text: " Introduction"

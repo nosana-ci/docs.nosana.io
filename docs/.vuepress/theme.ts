@@ -6,7 +6,7 @@ export default hopeTheme({
   logo: 'https://nosana.io/img/NOS_logo.png',
   repo: 'https://github.com/nosana-ci/docs.nosana.io',
   docsDir: 'docs',
-  iconAssets: 'https://kit.fontawesome.com/843c7afeaa.js',
+  iconAssets: 'fontawesome',
   editLink: false,
 
   // footer
