@@ -47,6 +47,33 @@ it is possible to define the image in the `global` section, or in the `jobs` sec
 this is useful if you want to use a different image for each job. if the image is not defined in the jobs section, the image defined in the `global` section will be used.
 `market`the Solana address of the Nosana market that will be used to pay for the pipeline.
 
+```yaml
+...
+
+# global settings
+global:
+    # image used to run the pipeline
+    image: registry.hub.docker.com/library/node:16
+
+    # event that will trigger the pipeline.
+    trigger:
+        branch:
+            - main
+            - develop
+
+    # environment variables that will be available to the pipeline
+    environment:
+        APP_ENV: production
+        APP_DEBUG: false
+
+    # allow the pipeline to abort if one of the commands returns a failure state.
+    allow_failure: true # false
+...
+```
+
+- `market`: the solana address of the nosana market that will be used to pay for the pipeline.
+- `image`: the image that will be used to run the pipeline. this can be any docker image that is available on docker hub. the image will be pulled from docker hub when the pipeline is executed. If the image is not defined in the `jobs` section, the image defined in the `global` section will be used. Note the format of the resource identifier used when pulling down an image: `registry.hub.docker.com/user/image:tag` or `docker.io/user/image:tag`. More information about docker images can be found [here](https://docs.docker.com/registry/introduction/).
+- `trigger`: the event that will trigger the pipeline. this can be a branch, tag, or a schedule.
 - `image`: the image that will be used to run the pipeline. this can be any docker image that is available on Docker hub. the image will be pulled from docker hub when the pipeline is executed. If the image is not defined in the `jobs` section, the image defined in the `global` section will be used. Note the format of the resource identifier used when pulling down an image: `registry.hub.docker.com/user/image:tag` or `docker.io/user/image:tag`. More information about docker images can be found [here](https://docs.docker.com/registry/introduction/).
 - `trigger`: the event that will trigger the pipeline. this can be a branch, tag, or schedule.
   - `branch`: the pipeline will be triggered when a commit is created on the specified branch.
