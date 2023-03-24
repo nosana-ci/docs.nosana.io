@@ -55,17 +55,15 @@ jobs: # required
             allow_failure: <boolean> # optional, overrides global allow_failure
             artifacts: # optional
                 - name: <artifact_name> # required
-                  path: <artifact_relative_path> # required
+                  path: <artifact_relative_path> # optional, default: <artifact_name>
 
       resources: # optional
           - name: <artifact_name> # optional
-            path: <artifact_relative_path> # optional
-          - name: <other_artifact_name> # optional
-            path: <other_artifact_relative_path> # optional
+            path: <artifact_relative_path> # optional, default: '.'
 
       artifacts: # optional
           - name: <artifact_name> # required
-            path: <artifact_relative_path> # required
+            path: <artifact_relative_path> # required, default: <artifact_name>
 
       # Optional nth job
     - name: <job_name> # required
@@ -79,11 +77,9 @@ jobs: # required
 
       resources: # optional
           - name: <artifact_name> # required
-            path: <artifact_relative_path> # required
-          - name: <other_artifact_name> # optional
-            path: <other_artifact_relative_path> # optional
+            path: <artifact_relative_path> # optional, default: '.'
 
       artifacts: # optional
           - name: <artifact_name> # required
-            path: <artifact_relative_path> # required
+            path: <artifact_relative_path> # required, default: <artifact_name>
 ```
