@@ -63,7 +63,7 @@ jobs: # required
 
       artifacts: # optional
           - name: <artifact_name> # required
-            path: <artifact_relative_path> # required, default: <artifact_name>
+            path: <artifact_relative_path> # optional, default: <artifact_name>
 
       # Optional nth job
     - name: <job_name> # required
@@ -81,5 +81,5 @@ jobs: # required
 
       artifacts: # optional
           - name: <artifact_name> # required
-            path: <artifact_relative_path> # required, default: <artifact_name>
+            path: <artifact_relative_path> # optional, default: <artifact_name>
 ```
