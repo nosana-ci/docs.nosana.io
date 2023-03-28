@@ -12,11 +12,18 @@ Use this resource to learn more about the YAML syntax used in the `.nosana-ci.ym
 # .nosana-ci.yml
 nosana: # required
     description: <pipeline_name> # required
-    storage: <storage_backend> # optional, default: IPFS
 
 # Global configuration
 global: # required
-    image: <container_image> # required (full url required)
+    image: <container_image> # required
+    image_pull_secret: # optional this can be added if the image you are pulling needs authentication
+      url: <url-to-registry> # required
+      username: <username> # required
+      password: # required
+        type: nosana/secret # required
+        endpoint: https://secrets.nosana.io # required
+        value: <password-secret-key> # required
+
 
     # Trigger event that starts the pipeline, default will trigger on every commit on every branch
     trigger: # optional
@@ -36,6 +43,9 @@ global: # required
         <key>: <value> # optional
         <other_key>: <other_value> # optional nth environment variable
 
+    secrets: # optional
+      - <secret-key> # optional
+
     # allow pipeline to continue if one job fails
     allow_failure: <boolean> # default: true
 
@@ -44,6 +54,13 @@ jobs: # required
 
     - name: <job_name> # required
       image: <container_image> # optional, overrides global image
+      image_pull_secret: # optional this can be added if the image you are pulling needs authentication
+        url: <url-to-registry> # required
+        username: <username> # required
+        password: # required
+          type: nosana/secret # required
+          endpoint: https://secrets.nosana.io # required
+          value: <password-secret-key> # required
       environment: # optional
           <key>: <value> # optional, overrides global environment
       allow_failure: <boolean> # optional, overrides global allow_failure

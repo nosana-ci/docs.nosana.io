@@ -6,13 +6,12 @@ This site is created with [vuepress](https://vuepress.vuejs.org/), a static site
 It's great for creating documentation sites, and it's pretty straightforward to get started with.
 
 You can find the source code for this site on [gitlab](https://gitlab.com/nosana-ci/nosana-docs).
-
-To start off this journey we'll have to take a look at the `.nosana-ci.yml` file that is used to configure this pipeline.
+To start this journey we'll have to take a look at the `.nosana-ci.yml` file that is used to configure this pipeline.
 You should be able to find it in the root of the repository.
 
-Yaml is a human readable data serialization format that is commonly used for configuration files.
+Yaml is a human-readable data serialization format that is commonly used for configuration files.
 It's easy to read and write, and it's supported by most programming languages.
-It's the standard for configuring ci/cd pipelines on gitlab, github and other popular code hosting platforms.
+It's standard for configuring ci/cd pipelines on gitlab, github and other popular code hosting platforms.
 You can find more information about yaml [here](https://yaml.org/).
 
 Let's take a look at the `.nosana-ci.yml` file for this site:
@@ -35,7 +34,7 @@ nosana:
 ...
 ```
 
-- `description`: the name of the pipeline. this is used to identify the pipeline in the nosana network.
+- `description`: the name of the pipeline. this is used to identify the pipeline in the Nosana network.
 
 @tab global
 
@@ -45,7 +44,7 @@ The `global` section is used to configure the environment that the pipeline will
 this includes the image that will be used to run the pipeline, and the environment variables that will be available to the pipeline.
 it is possible to define the image in the `global` section, or in the `jobs` section.
 this is useful if you want to use a different image for each job. if the image is not defined in the jobs section, the image defined in the `global` section will be used.
-`market`the Solana address of the Nosana market that will be used to pay for the pipeline.
+`market` the Solana address of the Nosana market that will be used to pay for the pipeline.
 
 ```yaml
 ...
@@ -54,6 +53,13 @@ this is useful if you want to use a different image for each job. if the image i
 global:
     # image used to run the pipeline
     image: registry.hub.docker.com/library/node:16
+    image_pull_secret: # optional this can be added if the image you are pulling needs authentication
+      url: <registry-url> # required
+      username: <username> # required
+      password: # required
+        type: nosana/secret # required
+        endpoint: https://secrets.nosana.io # required
+        value: <password-secret-key> # required
 
     # event that will trigger the pipeline.
     trigger:
@@ -78,7 +84,11 @@ global:
 ```
 
 - `market`: the solana address of the nosana market that will be used to pay for the pipeline.
-- `image`: the image that will be used to run the pipeline. this can be any docker image that is available on docker hub. the image will be pulled from docker hub when the pipeline is executed. If the image is not defined in the `jobs` section, the image defined in the `global` section will be used. Note the format of the resource identifier used when pulling down an image: `registry.hub.docker.com/user/image:tag` or `docker.io/user/image:tag`. More information about docker images can be found [here](https://docs.docker.com/registry/introduction/).
+- `image`: the image that will be used to run the pipeline. this can be any docker image that is available on the Docker hub. the image will be pulled from docker hub when the pipeline is executed. If the image is not defined in the `jobs` section, the image defined in the `global` section will be used. Note the format of the resource identifier used when pulling down an image: `registry.hub.docker.com/user/image:tag` or `docker.io/user/image:tag`. More information about docker images can be found [here](https://docs.docker.com/registry/introduction/).
+- `image_pull_secret`: If you need to use an image that requires authentication, you can provide the necessary authentication details here. 
+  - `url`: This is the url to where the registry is located
+  - `username`: The username you use to login to the registry
+  - `password`: This is the password needed to login to the registry. As you can see it includes several properties that look similar to the secret properties. You will need to provide all of these properties. You can copy them as is except for the value property. That one will require the name of the secret you gave to the secret manager. You can read more about secrets [here](../secrets/start.md).
 - `trigger`: the event that will trigger the pipeline. this can be a branch, tag, or a schedule.
 - `image`: the image that will be used to run the pipeline. this can be any docker image that is available on Docker hub. the image will be pulled from docker hub when the pipeline is executed. If the image is not defined in the `jobs` section, the image defined in the `global` section will be used. Note the format of the resource identifier used when pulling down an image: `registry.hub.docker.com/user/image:tag` or `docker.io/user/image:tag`. More information about docker images can be found [here](https://docs.docker.com/registry/introduction/).
 - `trigger`: the event that will trigger the pipeline. this can be a branch, tag, or schedule.
@@ -112,6 +122,7 @@ On top of this intricacy, it is also possible to specify the configuration per c
 
 Note that the configuration defined per job is optional. If the configuration is not defined, the configuration defined in the `global` section will be used.
 For more information, you can take a look at the [specification](specification.md).
+But as you can see, you can define the image that you want to use for a specific job, and if it requires it, you can also add the credentials to get access for a private image.
 
 Let's take a look at the following example break it down and figure out what is happening:
 For this example let's take a look at the `jobs` section of our example:
@@ -121,6 +132,13 @@ For this example let's take a look at the `jobs` section of our example:
   # Node V18
   - name: setup-node_18
     image: registry.hub.docker.com/library/node:18
+    image_pull_secret: # optional this can be added if the image you are pulling needs authentication
+      url: <registry-url> # required
+      username: <username> # required
+      password: # required
+        type: nosana/secret # required
+        endpoint: https://secrets.nosana.io # required
+        value: <password-secret-key> # required
     environment:
       APP_ENV: production
       APP_DEBUG: false
