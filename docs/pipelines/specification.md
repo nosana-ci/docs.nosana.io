@@ -16,7 +16,7 @@ nosana: # required
 # Global configuration
 global: # required
     image: <container_image> # required
-    image_pull_secret: # optional this can be added if the image you are pulling needs authentication
+    image-pull-secret: # optional this can be added if the image you are pulling needs authentication
       url: <url-to-registry> # required
       username: <username> # required
       password: # required
@@ -54,7 +54,7 @@ jobs: # required
 
     - name: <job_name> # required
       image: <container_image> # optional, overrides global image
-      image_pull_secret: # optional this can be added if the image you are pulling needs authentication
+      image-pull-secret: # optional this can be added if the image you are pulling needs authentication
         url: <url-to-registry> # required
         username: <username> # required
         password: # required

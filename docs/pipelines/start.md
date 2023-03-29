@@ -53,7 +53,7 @@ this is useful if you want to use a different image for each job. if the image i
 global:
     # image used to run the pipeline
     image: registry.hub.docker.com/library/node:16
-    image_pull_secret: # optional this can be added if the image you are pulling needs authentication
+    image-pull-secret: # optional this can be added if the image you are pulling needs authentication
       url: <registry-url> # required
       username: <username> # required
       password: # required
@@ -85,7 +85,7 @@ global:
 
 - `market`: the solana address of the nosana market that will be used to pay for the pipeline.
 - `image`: the image that will be used to run the pipeline. this can be any docker image that is available on the Docker hub. the image will be pulled from docker hub when the pipeline is executed. If the image is not defined in the `jobs` section, the image defined in the `global` section will be used. Note the format of the resource identifier used when pulling down an image: `registry.hub.docker.com/user/image:tag` or `docker.io/user/image:tag`. More information about docker images can be found [here](https://docs.docker.com/registry/introduction/).
-- `image_pull_secret`: If you need to use an image that requires authentication, you can provide the necessary authentication details here. 
+- `image-pull-secret`: If you need to use an image that requires authentication, you can provide the necessary authentication details here. 
   - `url`: This is the url to where the registry is located
   - `username`: The username you use to login to the registry
   - `password`: This is the password needed to login to the registry. As you can see it includes several properties that look similar to the secret properties. You will need to provide all of these properties. You can copy them as is except for the value property. That one will require the name of the secret you gave to the secret manager. You can read more about secrets [here](../secrets/start.md).
@@ -132,7 +132,7 @@ For this example let's take a look at the `jobs` section of our example:
   # Node V18
   - name: setup-node_18
     image: registry.hub.docker.com/library/node:18
-    image_pull_secret: # optional this can be added if the image you are pulling needs authentication
+    image-pull-secret: # optional this can be added if the image you are pulling needs authentication
       url: <registry-url> # required
       username: <username> # required
       password: # required
