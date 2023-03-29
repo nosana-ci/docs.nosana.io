@@ -20,9 +20,16 @@ global: # required
 
     # Trigger event that starts the pipeline, default will trigger on every commit on every branch
     trigger: # optional
-        branch: # optional
-            - <git_branch> # optional, default: all branches
-            - <other_git_branch> # optional
+        push: # optional
+            branches:
+                - <git_branch> # optional, default: all branches, glob patterns supported
+                - <other_git_branch> # optional
+            tags:
+                - <tag_name> # optional, default: all tags, glob patterns supported
+        pull_request:
+            branches:
+                - <git_branch> # optional, default: all branches, glob patterns supported
+                - <other_git_branch> # optional
 
     # environment variables
     environment: # optional

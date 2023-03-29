@@ -41,9 +41,10 @@ global:
 
     # Git, trigger on these branches
     trigger:
-        branch:
-            - main
-            - develop
+        push:
+            branches:
+                - main
+                - develop
 
     # Environment variables
     environment:
@@ -116,8 +117,9 @@ global:
 
     # Trigger pipeline on these branches:
     trigger:
-        branch:
-            - main
+        push:
+            branches:
+                - main
 
     # Allow pipeline to stop if one job fails
     allow_failure: true # default: false
