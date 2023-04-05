@@ -1,5 +1,5 @@
 import { defineUserConfig } from 'vuepress';
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import theme from './theme.js';
 
 export default defineUserConfig({
@@ -14,6 +14,6 @@ export default defineUserConfig({
       appId: 'O80DOX8SB5',
       apiKey: '4cda0685d3eac8d69041dd61f5d5d68e',
       indexName: 'nosana',
-    })
-  ]
+    }),
+  ],
 });
