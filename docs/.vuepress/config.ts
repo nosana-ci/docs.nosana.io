@@ -12,7 +12,7 @@ export default defineUserConfig({
   plugins: [
     docsearchPlugin({
       appId: 'O80DOX8SB5',
-      apiKey: '4cda0685d3eac8d69041dd61f5d5d68e',
+      apiKey: '3419239266c440c627d6bdd2f1cb82ea',
       indexName: 'nosana',
     }),
   ],
