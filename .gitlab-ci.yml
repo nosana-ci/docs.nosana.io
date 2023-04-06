@@ -4,7 +4,7 @@ include:
 
 variables:
   NODE_VERSION: 19
-#
-#default:
-#  tags:
-#    - nosana
+
+default:
+  tags:
+    - nosana
