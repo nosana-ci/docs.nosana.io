@@ -9,7 +9,7 @@ In the end, you will have a production-ready deployment flow suited for any type
 You will learn how to:
 
 - Configure a multi-signature program using Squads
-- Set up a Nosana pipeline build and test your code
+- Set up a Nosana pipeline to build and test your code
 - Use Nosana to verify your build artifact and only deploy when needed
 - Review and execute program upgrades on Squads
 
@@ -78,13 +78,13 @@ On the dashboard screen you will now see your **Squad address**, save it somewhe
 
 ## Step 3: Change the upgrade authority
 
-Now that we have created the Squad, we need to change the upgrade authority of our program to the Squad's public key.
+Now that we have created the Squad, we need to change the upgrade authority of our program to the Squads public key.
 To do this, to navigate to "Developers -> Programs" inside the Squads navigation menu.
 Then click on "Add new program", enter you programs address, and follow the instructions to change upgrade authoirty:
 
 ![](./addprogram.png)
 
-Your Squad is now authorized to make updates to your Solana program and the program has been added to your Squad's UI.
+Your Squad is now authorized to make updates to your Solana program and the program has been added to your Squad UI.
 Click on the program in the Programs list to bring you to the Upgrades page.
 From here you will have to copy the **Squad Program address** from the address bar of our browser.
 This is the address that is in the last component of the URL:
@@ -99,7 +99,9 @@ Copy the last piece of URL after the / and keep it safe, as we will need it late
 Nosana is a deployment tool that allows you to automate the deployment process for Solana programs.
 In this step, we will set up a pipeline that builds and tests our program, verifies the build artifact, and deploys the multisig buffer if needed.
 
-Create a `.nosana-ci.yml` file in the root directory of your project, and add the following contents:
+### Write a pipeline
+
+Create a `.nosana-ci.yml` file in the root directory of your project, and add the following contents. Also make sure to fill in the 4 values at the top of the file:
 
 ```yaml
 global:
@@ -179,21 +181,21 @@ jobs:
 
 There are 3 steps defined in this pipeline:
 
-1. The build step, where the pipeline compiles your code into an `.so` file.
+1. The build step, this is where the pipeline compiles your code into an `.so` file.
 The pipeline uses the `projectserum/build:v0.27.0` Docker image for the build, but you should change both the image and the build commands to fit your project.
 
-2. The test step, where the pipeline tests the program before deployment.
+2. The test step, this is where the pipeline tests the program before deployment.
 If any tests fail, the deployment will not continue.
 This step has been commented out in the example, but it is recommended to run you tests here.
 
-3. The deployment step, where the pipeline creates a new buffer for the program and proposes it to your Squad.
+3. The deployment step, this is where the pipeline creates a new buffer for the program and proposes it to your Squad.
 For this step you will have to pay SOL as rent for the new buffer, which is paid by the deployment key.
 The pipeline checks if the compiled code is different from the on-chain code to avoid deploying unecessary buffers.
 Note that this step does not change anything in your actual program, it only proposes an update in your Squad.
 
-Next, log in to Nosana and add your repository:
+### Configure your project
 
-![](./nosanarepo.png)
+Next, log in to Nosana and add your repository:
 
 - Open your browser and go https://app.nosana.io
 - Click on "Login with Github"
@@ -202,32 +204,46 @@ Next, log in to Nosana and add your repository:
 
 After completing these steps, you should be able to see your repository listed in the "Pipelines" section.
 
-We must now add the deployment private key as a secret to the Nosana project, so that our pipeline has access to it.
+![](./nosanarepo.png)
+
+We must now add the deployment private key as a secret to the Nosana project so that our pipeline has access to it.
 Navigate to "Manage -> Secrets -> New Secret".
-For the secret's name enter `SQUADS_KEY` and for the secret value paste the content of you `ci.json` file from Step 1:
+For the secret's name enter `SQUADS_KEY` and for the secret value paste the content of your `ci.json` file from Step 1:
 
 ![](./addsecret.png)
 
 ## Step 5: Deploy your program
 
 With everything set up and ready, it's time to deploy your Solana program using the new multi-signature.
-We will use a Nosana pipeline to build out program and prepare the buffer, and then use Squads to authorize the actual program upgrade.
+We will use a Nosana pipeline to build the program and prepare the buffer, and then use Squads to authorize the actual program upgrade.
 Here's how you can do it:
 
-- Make sure you have enough SOL balance in your deployment wallet to pay for the transaction fees. If not, transfer some SOL to it.
+- Make sure you have enough SOL balance in your deployment wallet to pay for the rent of the buffer. If not, transfer some SOL to it.
 - Trigger the pipeline by pushing changes to your code repository.
-- The pipeline will automatically build and test your code, verify the build artifact, and deploy the program only if it's necessary.
-- Once the deployment is approved by the multisig authority, the new program upgrade will be activated on the Solana mainnet.
+- The pipeline will automatically build and test your code, verify the build artifact, and initialize the buffer only if it's necessary.
+- When the pipeline finishes a transaction will be awaiting approval in your Squad.
+- Once the Squads transaction is approved and executed, the program upgrade is finished.
 
 Congratulations! You have successfully deployed your Solana program using a multi-signature upgrade authority and automated deployment pipeline.
 
+::: info
+The buffer rent can get quite expensive for larger programs, but you will receive the rent back once the upgrade is succesfull or cancelled.
+Over time your deployment account will only consume small amounts of SOL for transaction fees.
+:::
+
+### Cleaning up failed deployments
+
+
+
 ## Conclusion
 
-In this tutorial, you have learned how to set up a multi-signature upgrade authority for your Solana programs, and how to use an automated deployment pipeline to streamline the deployment process. By using a multi-signature authority, you have greatly reduced the risk of a security breach, and by automating the deployment process, you have minimized the risk of human error.
+In this tutorial, you have learned how to set up a multi-signature upgrade authority for your Solana programs, and how to use an automated deployment pipeline to streamline the deployment process.
+By using a multi-signature authority, you have greatly reduced the risk of a security breach, and by automating the deployment process, you have minimized the risk of human error.
 
-By implementing these best practices, you can ensure that your Solana programs are always up-to-date and secure, and that your users' funds are safe. We hope this tutorial has been helpful to you, and we look forward to seeing your Solana programs in action!
+By implementing these best practices, you can ensure that your Solana programs are always up-to-date and secure, and improve the trust from your users.
+We hope this tutorial has been helpful, and we look forward to seeing your Solana programs in action!
 
 ## Further Reading
 
-- Nosana documentation
-- Squads documentation
+- [Nosana documentation](https://docs.nosana.io)
+- [Squads documentation](https://docs.squads.so/squads-docs/)
