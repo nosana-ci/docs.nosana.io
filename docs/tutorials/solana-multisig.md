@@ -1,5 +1,7 @@
 # Multi-signature program deployments on Solana
 
+![](./banner.png)
+
 ## Introduction
 
 This tutorial will guide you through the process of setting up a multi-signature upgrade authority for your Solana programs.
