@@ -50,7 +50,7 @@ Copy this address, as you will need it in a later step.
 
 ::: warning
 It is recommended that you create a new keypair for the deployment key.
-As this key is stored inside the CI/CD platform its privileges and funds should be kept to a minimal.
+As this key is stored inside the CI/CD platform its privileges and funds should be kept to a minimum.
 :::
 
 ## Step 2: Set up the Squad
@@ -190,7 +190,7 @@ This step has been commented out in the example, but it is recommended to run yo
 
 3. The deployment step, this is where the pipeline creates a new buffer for the program and proposes it to your Squad.
 For this step you will have to pay SOL as rent for the new buffer, which is paid by the deployment key.
-The pipeline checks if the compiled code is different from the on-chain code to avoid deploying unecessary buffers.
+The pipeline checks if the compiled code is different from the on-chain code to avoid deploying unnecessary buffers.
 Note that this step does not change anything in your actual program, it only proposes an update in your Squad.
 
 ### Configure your project
@@ -231,16 +231,22 @@ The buffer rent can get quite expensive for larger programs, but you will receiv
 Over time your deployment account will only consume small amounts of SOL for transaction fees.
 :::
 
-### Cleaning up failed deployments
+### Cleaning up cancelled deployments
 
+If you want to abort a multisig deployment created by this pipeline, the transaction can be removed in the Squads interface.
+However, at the momement this does not frees the buffer or sends the rent back to your deployment key.
+The following command can be used to close the buffer accounts after cancelling the deployment in Squads:
 
+```sh
+solana -k ci.json -u m program close --buffers
+```
 
 ## Conclusion
 
 In this tutorial, you have learned how to set up a multi-signature upgrade authority for your Solana programs, and how to use an automated deployment pipeline to streamline the deployment process.
 By using a multi-signature authority, you have greatly reduced the risk of a security breach, and by automating the deployment process, you have minimized the risk of human error.
 
-By implementing these best practices, you can ensure that your Solana programs are always up-to-date and secure, and improve the trust from your users.
+By implementing these best practices, you can ensure that your Solana programs are always up-to-date and secure, and increase the trust for your users.
 We hope this tutorial has been helpful, and we look forward to seeing your Solana programs in action!
 
 ## Further Reading
