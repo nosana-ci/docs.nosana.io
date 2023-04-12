@@ -4,7 +4,7 @@
 
 This tutorial will guide you through the process of setting up a multi-signature upgrade authority for your Solana programs.
 We will also set up an automated deployment pipeline so program upgrades are less error-prone and take minimal effort.
-In the end, you will have a production-aready deployment flow suited for any type of organization.
+In the end, you will have a production-ready deployment flow suited for any type of organization.
 
 You will learn how to:
 
@@ -38,7 +38,7 @@ This wallet needs to have enough SOL balance to pay for the deployment.
 $ solana-keygen new --no-bip39-passphrase -s -o ci.json
 ```
 
-This command will generate a new keypair and store the private key in the ci.json file.
+This command will generate a new keypair and store the private key in the `ci.json` file.
 To get the address of the new keypair, run the following command:
 
 ```sh
@@ -47,6 +47,11 @@ $ solana address -k ci.json
 
 This will output the public address of the new keypair.
 Copy this address, as you will need it in a later step.
+
+::: warning
+It is recommended that you create a new keypair for the deployment key.
+As this key is stored inside the CI/CD platform its privileges and funds should be kept to a minimal.
+:::
 
 ## Step 2: Set up the Squad
 
@@ -79,11 +84,20 @@ Then click on "Add new program", enter you programs address, and follow the inst
 
 ![](./addprogram.png)
 
-Your Squad is not authorized to make upgdates to your Solana program.
+Your Squad is now authorized to make updates to your Solana program and the program has been added to your Squad's UI.
+Click on the program in the Programs list to bring you to the Upgrades page.
+From here you will have to copy the **Squad Program address** from the address bar of our browser.
+This is the address that is in the last component of the URL:
 
-## Step 4: Configure Nosana pipeline
+![](./squadprogramaddress.png)
 
-Nosana is a deployment tool that allows you to automate the deployment process for Solana programs. In this step, we will set up a pipeline that builds and tests our program, verifies the build artifact, and deploys multisig buffer if needed.
+The URL will look like this: `https://v3.squads.so/developers/programs/<ABCDEFG...12345>/<12345...ABCDEFG>`
+Copy the last piece of URL after the / and keep it safe, as we will need it later.
+
+## Step 4: Configure the Nosana pipeline
+
+Nosana is a deployment tool that allows you to automate the deployment process for Solana programs.
+In this step, we will set up a pipeline that builds and tests our program, verifies the build artifact, and deploys the multisig buffer if needed.
 
 Create a `.nosana-ci.yml` file in the root directory of your project, and add the following contents:
 
@@ -163,7 +177,24 @@ jobs:
         path: .
 ```
 
+There are 3 steps defined in this pipeline:
+
+1. The build step, where the pipeline compiles your code into an `.so` file.
+The pipeline uses the `projectserum/build:v0.27.0` Docker image for the build, but you should change both the image and the build commands to fit your project.
+
+2. The test step, where the pipeline tests the program before deployment.
+If any tests fail, the deployment will not continue.
+This step has been commented out in the example, but it is recommended to run you tests here.
+
+3. The deployment step, where the pipeline creates a new buffer for the program and proposes it to your Squad.
+For this step you will have to pay SOL as rent for the new buffer, which is paid by the deployment key.
+The pipeline checks if the compiled code is different from the on-chain code to avoid deploying unecessary buffers.
+Note that this step does not change anything in your actual program, it only proposes an update in your Squad.
+
 Next, log in to Nosana and add your repository:
+
+![](./nosanarepo.png)
+
 - Open your browser and go https://app.nosana.io
 - Click on "Login with Github"
 - Add your program's Github repository and install the Nosana app
@@ -171,7 +202,11 @@ Next, log in to Nosana and add your repository:
 
 After completing these steps, you should be able to see your repository listed in the "Pipelines" section.
 
-![](./nosanarepo.png)
+We must now add the deployment private key as a secret to the Nosana project, so that our pipeline has access to it.
+Navigate to "Manage -> Secrets -> New Secret".
+For the secret's name enter `SQUADS_KEY` and for the secret value paste the content of you `ci.json` file from Step 1:
+
+![](./addsecret.png)
 
 ## Step 5: Deploy your program
 
@@ -194,6 +229,5 @@ By implementing these best practices, you can ensure that your Solana programs a
 
 ## Further Reading
 
-- Solana documentation on programs
-- Squads documentation
 - Nosana documentation
+- Squads documentation
