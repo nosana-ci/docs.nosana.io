@@ -15,7 +15,7 @@ It lets nodes in the Nosana Network earn tokens by doing those jobs.
 | Accounts        | [`4`](#accounts)                                                                                                                    |
 | Instructions    | [`11`](#instructions)                                                                                                               |
 | Types           | [`3`](#types)                                                                                                                       |
-| Errors          | [`11`](#errors)                                                                                                                     |
+| Errors          | [`12`](#errors)                                                                                                                     |
 | Domain          | `nosana-jobs.sol`                                                                                                                   |
 |  Address        | [`nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM`](https://explorer.solana.com/address/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM)    |
 
@@ -567,7 +567,7 @@ The following 4 account addresses should be provided when invoking this instruct
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
 | `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [RunAccount](#run-account) address.                                                           |
-| `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The paying identy for the rent.                                                                   |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 
 
@@ -593,7 +593,7 @@ let tx = await program.methods
   .accounts({
     job,               // ✓ writable, 𐄂 signer
     run,               // ✓ writable, 𐄂 signer
-    payer,             // 𐄂 writable, 𐄂 signer
+    payer,             // ✓ writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
   })
   .signers([authorityKey])
@@ -764,13 +764,12 @@ A number of 3 variants are defined in this `enum`:
 
 The `JobState` describes the status of a job.
 
-A number of 4 variants are defined in this `enum`:
+A number of 3 variants are defined in this `enum`:
 | Name                                  | Number                                |
 |---------------------------------------|---------------------------------------|
 | `Queued`                              | `0`                                   |
-| `Running`                             | `1`                                   |
-| `Done`                                | `2`                                   |
-| `Stopped`                             | `3`                                   |
+| `Done`                                | `1`                                   |
+| `Stopped`                             | `2`                                   |
 
 @tab Job Type
 ### Job Type
@@ -792,7 +791,7 @@ A number of 6 variants are defined in this `enum`:
 
 ## Errors
 
-A number of 11 errors are defined in the Nosana Jobs Program.
+A number of 12 errors are defined in the Nosana Jobs Program.
 
 :::: tabs
 
@@ -840,9 +839,9 @@ The job has not yet expired.
 
 ::: warning Nosana Error
 
-### `6004` - Node Queue Does Not Match
+### `6004` - Job Result Null
 
-This node queue does not match.
+The job result can not be null.
 
 :::
 
@@ -850,9 +849,9 @@ This node queue does not match.
 
 ::: warning Nosana Error
 
-### `6005` - Node Stake Unauthorized
+### `6005` - Node Queue Does Not Match
 
-This node is not authorizing this stake.
+This node queue does not match.
 
 :::
 
@@ -860,9 +859,9 @@ This node is not authorizing this stake.
 
 ::: warning Nosana Error
 
-### `6006` - Node Not Enough Stake
+### `6006` - Node Stake Unauthorized
 
-This node has not staked enough tokens.
+This node is not authorizing this stake.
 
 :::
 
@@ -870,9 +869,9 @@ This node has not staked enough tokens.
 
 ::: warning Nosana Error
 
-### `6007` - Node Already Queued
+### `6007` - Node Not Enough Stake
 
-This node is already present in the queue.
+This node has not staked enough tokens.
 
 :::
 
@@ -880,9 +879,9 @@ This node is already present in the queue.
 
 ::: warning Nosana Error
 
-### `6008` - Node Nft Wrong Metadata
+### `6008` - Node Already Queued
 
-This metadata does not have the correct address.
+This node is already present in the queue.
 
 :::
 
@@ -890,9 +889,9 @@ This metadata does not have the correct address.
 
 ::: warning Nosana Error
 
-### `6009` - Node Nft Wrong Owner
+### `6009` - Node Nft Wrong Metadata
 
-This NFT is not owned by this node.
+This metadata does not have the correct address.
 
 :::
 
@@ -900,7 +899,17 @@ This NFT is not owned by this node.
 
 ::: warning Nosana Error
 
-### `6010` - Node Key Invalid Collection
+### `6010` - Node Nft Wrong Owner
+
+This NFT is not owned by this node.
+
+:::
+
+@tab 6011
+
+::: warning Nosana Error
+
+### `6011` - Node Key Invalid Collection
 
 This access key does not belong to a verified collection.
 
