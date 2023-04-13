@@ -10,7 +10,7 @@ In the end, you will have a production-ready deployment flow suited for any type
 
 You will learn how to:
 
-- Configure a multi-signature program using Squads
+- Configure a multi-signature program using [Squads](https://squads.so)
 - Set up a Nosana pipeline to build and test your code
 - Use Nosana to verify your build artifact and only deploy when needed
 - Review and execute program upgrades on Squads
