@@ -109,10 +109,10 @@ Create a `.nosana-ci.yml` file in the root directory of your project, and add th
 global:
   image: projectserum/build:v0.27.0
   environment:
-    PROGRAM_ID: ...  # Fill in you Porgram's address
+    PROGRAM_ID: ...  # Fill in your program's address
     SQUADS_AUTHORITY_PUBKEY: ... # Fill in your deployment key from Step 1
     SQUADS_MULTISIG_PUBKEY: ... # Fill in your Squad address from Step 2
-    SQUADS_PROGRAM_PUBKEY: ... # Fill in your Squad Program address from Step 3
+    SQUADS_PROGRAM_PUBKEY: ... # Fill in your Squad program address from Step 3
     # Leave the following unchanged:
     PRIVATE_KEY_PATH: /root/.config/solana/id.json
     SOLANA_URL: mainnet-beta
@@ -131,7 +131,7 @@ jobs:
       - name: programs
         path: target
 
-# Uncomment this if you want to add anchor test step
+# Uncomment this if you want to add Anchor test step
 #  - name: test
 #    secrets:
 #      - TEST_KEY
