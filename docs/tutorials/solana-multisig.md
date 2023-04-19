@@ -109,10 +109,10 @@ Create a `.nosana-ci.yml` file in the root directory of your project, and add th
 global:
   image: projectserum/build:v0.27.0
   environment:
-    PROGRAM_ID: ...  # Fill in you Porgram's address
+    PROGRAM_ID: ...  # Fill in your program's address
     SQUADS_AUTHORITY_PUBKEY: ... # Fill in your deployment key from Step 1
     SQUADS_MULTISIG_PUBKEY: ... # Fill in your Squad address from Step 2
-    SQUADS_PROGRAM_PUBKEY: ... # Fill in your Squad Program address from Step 3
+    SQUADS_PROGRAM_PUBKEY: ... # Fill in your Squad program address from Step 3
     # Leave the following unchanged:
     PRIVATE_KEY_PATH: /root/.config/solana/id.json
     SOLANA_URL: mainnet-beta
@@ -131,7 +131,7 @@ jobs:
       - name: programs
         path: target
 
-# Uncomment this if you want to add anchor test step
+# Uncomment this if you want to add Anchor test step
 #  - name: test
 #    secrets:
 #      - TEST_KEY
@@ -200,8 +200,8 @@ Note that this step does not change anything in your actual program, it only pro
 Next, log in to Nosana and add your repository:
 
 - Open your browser and go https://app.nosana.io
-- Click on "Login with Github"
-- Add your program's Github repository and install the Nosana app
+- Click on "Login with GitHub"
+- Add your program's GitHub repository and install the Nosana app
 - Click "Add Selected" to add the repository to Nosana
 
 After completing these steps, you should be able to see your repository listed in the "Pipelines" section.
@@ -233,7 +233,7 @@ The buffer rent can get quite expensive for larger programs, but you will receiv
 Over time your deployment account will only consume small amounts of SOL for transaction fees.
 :::
 
-### Cleaning up cancelled deployments
+### Cleaning up canceled deployments
 
 If you want to abort a multisig deployment created by this pipeline, the transaction can be removed in the Squads interface.
 However, at the momement this does not frees the buffer or sends the rent back to your deployment key.
