@@ -200,8 +200,8 @@ Note that this step does not change anything in your actual program, it only pro
 Next, log in to Nosana and add your repository:
 
 - Open your browser and go https://app.nosana.io
-- Click on "Login with Github"
-- Add your program's Github repository and install the Nosana app
+- Click on "Login with GitHub"
+- Add your program's GitHub repository and install the Nosana app
 - Click "Add Selected" to add the repository to Nosana
 
 After completing these steps, you should be able to see your repository listed in the "Pipelines" section.
