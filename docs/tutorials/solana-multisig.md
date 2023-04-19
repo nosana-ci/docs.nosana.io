@@ -233,7 +233,7 @@ The buffer rent can get quite expensive for larger programs, but you will receiv
 Over time your deployment account will only consume small amounts of SOL for transaction fees.
 :::
 
-### Cleaning up cancelled deployments
+### Cleaning up canceled deployments
 
 If you want to abort a multisig deployment created by this pipeline, the transaction can be removed in the Squads interface.
 However, at the momement this does not frees the buffer or sends the rent back to your deployment key.
