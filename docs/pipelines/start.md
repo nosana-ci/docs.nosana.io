@@ -82,7 +82,7 @@ global:
 - `trigger`: the event that will trigger the pipeline. this can be a branch, tag, or a schedule.
 - `image`: the image that will be used to run the pipeline. this can be any docker image that is available on Docker hub. the image will be pulled from docker hub when the pipeline is executed. If the image is not defined in the `jobs` section, the image defined in the `global` section will be used. Note the format of the resource identifier used when pulling down an image: `registry.hub.docker.com/user/image:tag` or `docker.io/user/image:tag`. More information about docker images can be found [here](https://docs.docker.com/registry/introduction/).
 - `trigger`: the event that will trigger the pipeline. this can be a branch, tag, or schedule.
-  - `push`: 
+  - `push`:
     - `branches`: the pipeline will be triggered when a commit is created on the specified branches.
     - `tags`: the pipeline will be triggered when a tag is created matching the tags specified here.
   - `pull_request`

@@ -3,7 +3,7 @@ include:
     file: npm-generic.yml
 
 variables:
-  NODE_VERSION: 19
+  NODE_VERSION: 20
 
 default:
   tags:

@@ -49,7 +49,7 @@ By default, secrets you add on the Nosana Platform through the Github integratio
 nosana:
   global:
     secrets:
-      - global.GLOBAL_SECRET    
+      - global.GLOBAL_SECRET
 jobs:
   - name: test-secret-manager-global
     commands:
