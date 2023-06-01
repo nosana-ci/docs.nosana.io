@@ -22,7 +22,7 @@ global: # required
         value: <password-secret-key> # required
 
 
-    # Trigger event that starts the pipeline, default will trigger on every commit on every branch
+    # Trigger event that starts the pipeline, default will trigger on: every commit on every branch, every tag creation and every pull request
     trigger: # optional
         push: # optional
             branches:
@@ -61,6 +61,17 @@ jobs: # required
       environment: # optional
           <key>: <value> # optional, overrides global environment
       allow_failure: <boolean> # optional, overrides global allow_failure
+
+      # optional, local trigger to determine when this specific job/step has to run
+      trigger:
+        push: # optional
+            branches:
+                - <git_branch> # optional, default: all branches, glob patterns supported
+            tags:
+                - <tag_name> # optional, default: all tags, glob patterns supported
+        pull_request: # optional
+            branches:
+                - <git_branch> # optional, default: all branches, glob patterns supported
       commands: # required
           - <shell_command> # required
           - <other_shell_command> # optional
