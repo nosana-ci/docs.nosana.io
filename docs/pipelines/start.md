@@ -15,27 +15,11 @@ It's standard for configuring ci/cd pipelines on gitlab, github and other popula
 You can find more information about yaml [here](https://yaml.org/).
 
 Let's take a look at the `.nosana-ci.yml` file for this site:
-To begin with there are 3 top level definitions that are used to configure the pipeline: `nosana`, `global`, and `jobs`.
-The `nosana` section is used to configure the pipeline itself, and the `global` section is used to configure the environment that the pipeline will run in.
+To begin with there are 3 top level definitions that are used to configure the pipeline: `global`, and `jobs`.
+The `global` section is used to configure the environment that the pipeline will run in.
 The `jobs` section is used to configure the individual jobs that will be executed in the pipeline.
 
 ::: tabs
-@tab nosana
-
-## nosana
-
-We'll explore the `nosana` section first.
-
-```yaml
-# .nosana-ci.yml
-nosana:
-    # the name of the nosana pipeline
-    description: build and deploy the nosana documentation site
-...
-```
-
-- `description`: the name of the pipeline. this is used to identify the pipeline in the Nosana network.
-
 @tab global
 
 ## global

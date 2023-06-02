@@ -10,9 +10,6 @@ Use this resource to learn more about the YAML syntax used in the `.nosana-ci.ym
 
 ```yaml
 # .nosana-ci.yml
-nosana: # required
-    description: <pipeline_name> # required
-
 # Global configuration
 global: # required
     image: <container_image> # required

@@ -83,11 +83,6 @@ flowchart TB
 
     subgraph Pipeline
 
-        subgraph Nosana
-            description
-            storage
-        end
-
         subgraph Global
             image
             trigger
