@@ -30,7 +30,7 @@ global: # required
                 - <other_git_branch> # optional
             tags:
                 - <tag_name> # optional, default: all tags, glob patterns supported
-        pull_request:
+        pull_request: # optional
             branches:
                 - <git_branch> # optional, default: all branches, glob patterns supported
                 - <other_git_branch> # optional
@@ -60,7 +60,6 @@ jobs: # required
           value: <password-secret-key> # required
       environment: # optional
           <key>: <value> # optional, overrides global environment
-      allow_failure: <boolean> # optional, overrides global allow_failure
 
       # optional, local trigger to determine when this specific job/step has to run
       trigger:
@@ -77,10 +76,9 @@ jobs: # required
           - <other_shell_command> # optional
           - cmd: <other_shell_command>
             working_dir: <working_dir> # optional, directory to run command in
-            allow_failure: <boolean> # optional, overrides global allow_failure
-            artifacts: # optional
-                - name: <artifact_name> # required
-                  path: <artifact_relative_path> # optional, default: <artifact_name>
+      artifacts: # optional
+          - name: <artifact_name> # required
+            path: <artifact_relative_path> # optional, default: <artifact_name>
 
       resources: # optional
           - name: <artifact_name> # optional
@@ -95,7 +93,6 @@ jobs: # required
       image: <container_image> # optional, overrides global image
       environment: # optional
           <key>: <value> # optional, overrides global environment
-      allow_failure: <boolean> # optional, overrides global allow_failure
       commands: # required
           - <shell_command> # required
           - <other_shell_command> # optional
