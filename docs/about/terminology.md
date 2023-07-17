@@ -6,7 +6,7 @@ The blockchain wallet address you use to interact with the Nosana Network.
 
 ### Burner Phone NFT
 
-The [NFTs](/tokens/nft) of the Nosana Network.
+The [NFTs](https://nft.nosana.io/) of the Nosana Network.
 Burner Phones grant access to operate a node on the network, access to special community channels, network boosts,
 and more.
 
