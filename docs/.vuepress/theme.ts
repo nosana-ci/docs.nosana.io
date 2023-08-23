@@ -58,7 +58,6 @@ export default hopeTheme({
       attrs: true,
       chart: true,
       codetabs: true,
-      container: true,
       demo: true,
       echarts: true,
       figure: true,
@@ -73,9 +72,7 @@ export default hopeTheme({
       playground: {
         presets: ['ts', 'vue'],
       },
-      presentation: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      },
+      presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
       stylize: [
         {
           matcher: 'Recommended',
