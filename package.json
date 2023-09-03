@@ -22,7 +22,7 @@
     "@typescript-eslint/parser": "6.5.0",
     "@vuepress/client": "2.0.0-beta.67",
     "@vuepress/plugin-docsearch": "2.0.0-beta.67",
-    "prettier": "3.0.2",
+    "prettier": "3.0.3",
     "vue": "3.3.4",
     "vuepress": "2.0.0-beta.67",
     "vuepress-theme-hope": "2.0.0-beta.236"
