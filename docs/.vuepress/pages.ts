@@ -27,6 +27,6 @@ export default [
     text: 'Programs',
     icon: 'code',
     prefix: '/programs/',
-    children: ['intro', 'staking', 'rewards', 'pools', 'jobs', 'voting'],
+    children: ['intro', 'staking', 'rewards', 'pools', 'jobs', 'voting', 'nodes'],
   },
 ];
