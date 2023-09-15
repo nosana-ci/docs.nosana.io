@@ -16,15 +16,7 @@ export default hopeTheme({
   contributors: false,
 
   // navigation
-  sidebar: [
-    {
-      text: 'About',
-      icon: 'lightbulb',
-      prefix: '/about/',
-      children: ['intro', 'terminology'],
-    },
-    ...pages,
-  ],
+  sidebar: pages,
   navbar: [
     ...pages,
     {
