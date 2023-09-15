@@ -1,7 +1,7 @@
 # Nosana Token
 
 NOS is the native token of the Nosana Network. In exchange for NOS tokens,
-you can use our network to run CI/CD for all your development projects.
+you can use our network to run AI workloads.
 
 ## Info
 
@@ -57,7 +57,7 @@ Airdrop tokens account for 5% of the total number of NOS tokens. These tokens ar
 
 ### Mining tokens
 
-Mining tokens are earned by nodes that execute Nosana CI pipelines. The mining pool is a significant portion of the total supply, and capped to 20,000,000 tokens.
+Mining tokens are earned by nodes that execute Nosana AI workloads. The mining pool is a significant portion of the total supply, and capped to 20,000,000 tokens.
 
 ::: tip Specs
 Mining tokens account for 20% of the total number of NOS tokens. The tokens are released in a linear fashion over a period of 24 months (2 years), beginning at token distribution.

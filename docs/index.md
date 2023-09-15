@@ -5,8 +5,8 @@ icon: home
 heroImage: https://nosana.io/img/Nosana_Logomark_black.svg
 heroImageDark: https://nosana.io/img/Nosana_Logomark_white.svg
 heroText: Nosana Documentation
-tagline: Trustless CI/CD for Web3
-heroFullScreen: true
+tagline: The Decentralized Physical GPU Network
+heroFullScreen: false
 actions:
 - text: " Introduction"
   icon: lightbulb
@@ -21,32 +21,20 @@ features:
   title: Introduction
   details: Welcome to the Nosana Network
   link: about/intro
-- icon: rocket
-  title: Nosana Pipelines
-  details: Get started with a Nosana Pipeline
-  link: pipelines/intro
-- icon: coins
-  title: Nosana Credits
-  details: Get credits to run your CI/CD Pipelines
-  link: credits/credits
 - icon: server
   title: Nosana Nodes
   details: Get started as a Nosana Node
   link: nodes/start
-- icon: key
-  title: Nosana Secrets
-  details: Store your secrets securely with Nosana Secrets
-  link: secrets/start
 - icon: code
   title: Nosana Programs
   details: Learn how to use the Nosana Smart Contracts
-  link: programs/intro
-- icon: mobile
-  title: Nosana Burner Phone
-  details: Nosana Burner Phones - Boost your network access!
-  link: credits/nft
-- icon: ticket
-  title: Nosana Mint Pass
-  details: Start minting Nosana Burner Phones
-  link: credits/pass
+  link: programs/staking
+- icon: coins
+  title: Nosana Staking
+  details: Learn how to use the Nosana Staking Program
+  link: programs/staking
+- icon: shop
+  title: Nosana Market
+  details: Learn how to use the Nosana Jobs Program
+  link: programs/jobs
 ---

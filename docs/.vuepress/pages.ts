@@ -1,15 +1,15 @@
 export default [
   {
-    text: 'Pipelines',
-    icon: 'rocket',
-    prefix: '/pipelines/',
-    children: ['intro', 'start', 'specification', 'examples'],
+    text: 'About',
+    icon: 'lightbulb',
+    prefix: '/about/',
+    children: ['intro', 'terminology'],
   },
   {
-    text: 'Credits',
-    icon: 'coins',
-    prefix: '/credits/',
-    children: ['intro', 'credits', 'nft', 'pass'],
+    text: 'A.I.',
+    icon: 'robot',
+    prefix: '/ai/',
+    children: ['start'],
   },
   {
     text: 'Nodes',
@@ -18,15 +18,9 @@ export default [
     children: ['start', 'install'],
   },
   {
-    text: 'Secrets',
-    icon: 'key',
-    prefix: '/secrets/',
-    children: ['start', 'api'],
-  },
-  {
-    text: 'Programs',
+    text: 'Protocols',
     icon: 'code',
     prefix: '/programs/',
-    children: ['intro', 'staking', 'rewards', 'pools', 'jobs', 'voting', 'nodes'],
+    children: ['start', 'staking', 'rewards', 'pools', 'jobs', 'nodes', 'token'],
   },
 ];
