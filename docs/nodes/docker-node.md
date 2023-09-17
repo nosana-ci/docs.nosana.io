@@ -66,7 +66,7 @@ There are several configuration values we must pass to the node. Firstly, we mus
 export PINATA_JWT="your-logn-jwt-value-here"
 ```
 
-The other configurations can be passed a CLI arguments:
+The other configurations can be passed as CLI arguments:
 
 - `--market`: the market to join
 - `--network`: we will use `devnet`
