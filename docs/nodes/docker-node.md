@@ -51,8 +51,9 @@ nosana-node --help
 Alternatively you can run the node inside a Docker container:
 
 ```
-docker run --network host -it nosana/nosana-node \
+docker run --network host -it \
   -v ~/.config/solana/id.json:/root/.config/solana/id.json \
+  nosana/nosana-node \
   nosana-node --help
 ```
 
@@ -75,9 +76,10 @@ The other configurations can be passed as CLI arguments:
 If we run the node inside Docker, the $PINATA_JWT variable must also be passed through. The final command looks something like this:
 
 ```
-docker run --network host -it nosana/nosana-node \
+docker run --network host -it \
   -v ~/.config/solana/id.json:/root/.config/solana/id.json \
   -e "PINATA_JWT=${PINATA_JWT}" \
+  nosana/nosana-node \
   nosana-node \
   --market 7nxXoihx65yRGZiGzWZsFMz8D7qwxFePNKvDBWZnxc41 \
   --network devnet \
