@@ -15,7 +15,7 @@ export default [
     text: 'Nodes',
     icon: 'server',
     prefix: '/nodes/',
-    children: ['start', 'install'],
+    children: ['start', 'docker-node'],
   },
   {
     text: 'Protocols',
