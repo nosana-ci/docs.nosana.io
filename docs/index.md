@@ -14,7 +14,7 @@ actions:
   type: primary
 - text: " Get Started"
   icon: code
-  link: programs/intro
+  link: programs/start
   type: secondary
 features:
 - icon: lightbulb
