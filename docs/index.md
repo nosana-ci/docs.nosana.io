@@ -2,8 +2,8 @@
 home: true
 title: Home
 icon: home
-heroImage: https://nosana.io/img/Nosana_Logomark_black.svg
-heroImageDark: https://nosana.io/img/Nosana_Logomark_white.svg
+heroImage: assets/logo_black.gif
+heroImageDark: assets/logo_color.gif
 heroText: Nosana Documentation
 tagline: The Decentralized Physical GPU Network
 heroFullScreen: false
