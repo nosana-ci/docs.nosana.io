@@ -9,7 +9,7 @@ export default [
     text: 'A.I. Inference',
     icon: 'robot',
     prefix: '/ai/',
-    children: ['start', 'llama', 'generative'],
+    children: ['start', 'llama', 'diffusion'],
   },
   {
     text: 'Nodes',
