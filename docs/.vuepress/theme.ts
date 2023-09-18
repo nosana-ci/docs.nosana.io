@@ -3,7 +3,7 @@ import { default as pages } from './pages';
 
 export default hopeTheme({
   hostname: 'https://docs.nosana.io',
-  logo: 'https://nosana.io/img/NOS_logo.png',
+  logo: 'assets/token.png',
   repo: 'https://github.com/nosana-ci/docs.nosana.io',
   docsDir: 'docs',
   iconAssets: 'fontawesome',

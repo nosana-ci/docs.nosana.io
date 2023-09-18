@@ -2,8 +2,7 @@
 home: true
 title: Nosana
 icon: book
-heroImage: assets/logo_black.gif
-heroImageDark: assets/logo_color.gif
+heroImage: assets/logo_color.gif
 heroText: Nosana Documentation
 tagline: The Decentralized Physical GPU Network
 heroFullScreen: false
