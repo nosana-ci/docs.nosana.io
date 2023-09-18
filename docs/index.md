@@ -21,14 +21,18 @@ features:
   title: Introduction
   details: Welcome to the Nosana Network
   link: about/intro
+- icon: robot
+  title: AI Inference
+  details: Get started running your AI workloads
+  link: ai/start
 - icon: server
   title: Nosana Nodes
-  details: Get started as a Nosana Node
+  details: Get started earning $NOS as a Nosana Node
   link: nodes/start
 - icon: code
   title: Nosana Programs
   details: Learn how to use the Nosana Smart Contracts
-  link: programs/staking
+  link: programs/start
 - icon: coins
   title: Nosana Staking
   details: Learn how to use the Nosana Staking Program

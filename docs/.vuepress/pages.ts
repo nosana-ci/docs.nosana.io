@@ -6,10 +6,10 @@ export default [
     children: ['intro', 'background'],
   },
   {
-    text: 'A.I.',
+    text: 'A.I. Inference',
     icon: 'robot',
     prefix: '/ai/',
-    children: ['start'],
+    children: ['start', 'llama', 'generative'],
   },
   {
     text: 'Nodes',

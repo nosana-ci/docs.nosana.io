@@ -12,7 +12,7 @@ At the moment the Nosana Node is in pre-release. Nodes should only be experiment
 
 ## Node Flavors
 
-There are two flavors of the Nosana Node that target different runtimes. The most evolved node is capable of running Docker container workloads on Linux machines. It is referred to as the _`docker`-node_. The second flavor is called the _`wasm`-node_ and can run WASM and WebGPU workloads while running in a web browser.
+There are two flavors of the Nosana Node that target different runtimes. The most evolved node is capable of running Docker container workloads on Linux machines. It is referred to as the _docker-node_. The second flavor is called the _wasm`-node_ and can run WASM and WebGPU workloads while running in a web browser.
 
 ## Selecting a Market
 
