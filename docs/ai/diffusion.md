@@ -1,4 +1,4 @@
-# Generative Models
+# Stable Diffusion
 
 If you would like to participate in testing features, please contact us to join our private beta.
 
