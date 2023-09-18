@@ -8,7 +8,7 @@ export default [
   {
     text: 'A.I. Inference',
     icon: 'robot',
-    prefix: '/ai/',
+    prefix: '/a.i./',
     children: ['start', 'llama', 'diffusion'],
   },
   {
@@ -19,8 +19,8 @@ export default [
   },
   {
     text: 'Protocols',
-    icon: 'code',
-    prefix: '/programs/',
+    icon: 'link',
+    prefix: '/protocols/',
     children: ['start', 'staking', 'rewards', 'pools', 'jobs', 'nodes', 'token'],
   },
 ];

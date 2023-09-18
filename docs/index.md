@@ -1,7 +1,7 @@
 ---
 home: true
-title: Home
-icon: home
+title: Nosana
+icon: book
 heroImage: assets/logo_black.gif
 heroImageDark: assets/logo_color.gif
 heroText: Nosana Documentation
@@ -24,21 +24,21 @@ features:
 - icon: robot
   title: AI Inference
   details: Get started running your AI workloads
-  link: ai/start
+  link: a.i./start
 - icon: server
   title: Nosana Nodes
   details: Get started earning $NOS as a Nosana Node
   link: nodes/start
 - icon: code
-  title: Nosana Programs
+  title: Nosana Protocols
   details: Learn how to use the Nosana Smart Contracts
-  link: programs/start
+  link: protocols/start
 - icon: coins
   title: Nosana Staking
   details: Learn how to use the Nosana Staking Program
-  link: programs/staking
+  link: protocols/staking
 - icon: shop
   title: Nosana Market
   details: Learn how to use the Nosana Jobs Program
-  link: programs/jobs
+  link: protocols/jobs
 ---
