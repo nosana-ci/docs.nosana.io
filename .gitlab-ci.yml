@@ -5,6 +5,6 @@ include:
 variables:
   NODE_VERSION: 18.17.1
 
-#default:
-#  tags:
-#    - nosana
+default:
+  tags:
+    - nosana
