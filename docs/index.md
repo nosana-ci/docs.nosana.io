@@ -13,7 +13,7 @@ actions:
   type: primary
 - text: " Get Started"
   icon: code
-  link: programs/start
+  link: protocols/start
   type: secondary
 features:
 - icon: lightbulb
