@@ -90,7 +90,7 @@ export default hopeTheme({
       stylize: [
         {
           matcher: 'Recommended',
-          replacer: ({ tag }) => {
+          replacer: ({ tag }: { tag: string }) => {
             if (tag === 'em')
               return {
                 tag: 'Badge',
