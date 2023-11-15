@@ -70,22 +70,8 @@ export default hopeTheme({
       playground: {
         presets: ['ts', 'vue'],
       },
-      revealjs: {
+      revealJs: {
         plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-        themes: [
-          'auto',
-          'beige',
-          'black',
-          'blood',
-          'league',
-          'moon',
-          'night',
-          'serif',
-          'simple',
-          'sky',
-          'solarized',
-          'white',
-        ],
       },
       stylize: [
         {
