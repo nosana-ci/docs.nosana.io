@@ -8,6 +8,7 @@ export default hopeTheme({
   docsDir: 'docs',
   iconAssets: 'fontawesome',
   editLink: false,
+  prevLink: false,
 
   // footer
   footer: 'MIT Licensed | Copyright © 2021-present Nosana',
@@ -59,7 +60,6 @@ export default hopeTheme({
       demo: true,
       echarts: true,
       figure: true,
-      flowchart: true,
       gfm: true,
       imgLazyload: true,
       imgSize: true,
