@@ -4,7 +4,7 @@ title: Nosana
 icon: book
 heroImage: assets/logo_color.gif
 heroText: Nosana Documentation
-tagline: The Decentralized Physical GPU Network
+tagline: Powering the AI revolution
 heroFullScreen: false
 actions:
 - text: " Introduction"
