@@ -10,10 +10,27 @@ In order to run a Nosana Node, there are a few prerequisites that must be met.
 - [Homebrew](https://brew.sh/) if on MacOS or [Linuxbrew](https://docs.brew.sh/Homebrew-on-Linux) when on Linux.
 - [Docker](https://www.docker.com/)
   - Optional: [Podman](https://podman.io/)
-- Solana Keypair at `~/.config/solana/id.json`, with:
+- Solana File System Wallet at `~/.config/solana/id.json` (see tutorial below), with:
   - Some `$SOL` for paying transactions
   - Staked `$NOS` (https://app.nosana.io/stake)
 - [Pinata](https://www.pinata.cloud/) JWT token
+
+### Setup Solana File System Wallet
+If you already have a Solana File System Wallet set up in `~/.config/solana/id.json`, you can ignore these instructions and move on to the next step.
+
+To setup a Solana wallet through the CLI, you need to have the Solana CLI tools installed. You can install the CLI tools through the instructions on the [Solana docs](https://docs.solana.com/cli/install-solana-cli-tools).
+
+When you have the CLI tools installed. You can use the `solana-keygen` command to generate a new keypair:
+```shell
+solana-keygen new --outfile ~/.config/solana/id.json
+```
+
+`~/.config/solana/id.json` will now contain your keypair. To display your public key / wallet address, run:
+```shell
+solana-keygen pubkey ~/.config/solana/id.json
+```
+
+Before you can use this wallet as node, you will need to have some SOL on there to cover transaction fees. We'd recommend at least `0.05 SOL`.
 
 ## Running Podman
 
