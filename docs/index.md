@@ -20,6 +20,10 @@ features:
   title: Introduction
   details: Welcome to the Nosana Network
   link: about/intro
+- icon: road
+  title: Roadmap
+  details: Learn more about the release cycles
+  link: about/roadmap
 - icon: robot
   title: AI Inference
   details: Get started running your AI workloads
