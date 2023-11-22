@@ -40,21 +40,21 @@ excludes    weekends
 axisFormat  %Y-%m
 
 
-section Genesis (v0.0)
-Test Grid v0.1      :active,   des1, 2023-12,45d
-Test Grid Alpha     :          des2, after des1,45d
-Test Grid Beta      :          after des2,45d
+section Genesis
+Test Grid 1 : active,  g1, 2023-12,45d
+Test Grid 2 :          g2, after g1,45d
+Test Grid 3 :          g3, after g2,45d
 
 section Galactica
-Main grid : 2024-6,180d
+Galactica - Main grid : m1, after g3,90d
 
 section Triangulum
-Major machine learning protocols : 2024-9,180d
+Triangulum - Main protocols : t1, after m1,90d
 
 section Whirlpool
-the world's largest compute grid : 2025-2,180d
+Whirlpool - Largest GPU grid : w1,after t1,90d
 
 section Sombrero
-Businesses : 2025-8,180d
+Sombrero - All businesses : s1,after w1,90d
 
 ```
