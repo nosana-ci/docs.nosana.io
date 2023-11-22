@@ -31,3 +31,30 @@ This release will expand the platform's reach even further by supporting a more 
 ### Sombrero (v1.X - H2 2025)
 
 This release will add support for small and medium-sized businesses, introduce fiat currency ramping, billing, and teams. This phase will involve not only technical development but also business and community development, as the platform will need to attract and support a wider range of users and use cases.
+
+## Expected Timeline
+
+```gantt
+dateFormat  YYYY MMMM
+excludes    weekends
+axisFormat  %Y-%m
+
+
+section Genesis
+Test Grid v0.1      :active,   des1, 2023-12,45d
+Test Grid Alpha     :          des2, after des1,45d
+Test Grid Beta      :          after des2,45d
+
+section Galactica
+Main grid : 2024-6,180d
+
+section Triangulum
+Major machine learning protocols : 2024-9,180d
+
+section Whirlpool
+the world's largest compute grid : 2025-2,180d
+
+section Sombrero
+Businesses : 2025-8,180d
+
+```
