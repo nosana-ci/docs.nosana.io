@@ -18,7 +18,7 @@ In order to run a Nosana Node, there are a few prerequisites that must be met.
 ### Setup Solana File System Wallet
 If you already have a Solana File System Wallet set up in `~/.config/solana/id.json`, you can ignore these instructions and move on to the next step.
 
-To setup a Solana wallet through the CLI, you need to have the Solana CLI tools installed. You can install the CLI tools through the instructions on the [Solana docs](https://docs.solana.com/cli/install-solana-cli-tools).
+To set up a Solana wallet through the CLI, you need to have the Solana CLI tools installed. You can install the CLI tools through the instructions on the [Solana docs](https://docs.solana.com/cli/install-solana-cli-tools).
 
 When you have the CLI tools installed. You can use the `solana-keygen` command to generate a new keypair:
 ```shell
@@ -30,11 +30,11 @@ solana-keygen new --outfile ~/.config/solana/id.json
 solana-keygen pubkey ~/.config/solana/id.json
 ```
 
-Before you can use this wallet as node, you will need to have some SOL on there to cover transaction fees. We'd recommend at least `0.05 SOL`.
+Before you can use this wallet as a node, you will need to have some SOL on there to cover transaction fees. We'd recommend at least `0.05 SOL`.
 
 ## Running Podman
 
-The Nosana Node uses rootless Podman to manage its containers. Communication happens over Podman's HTTP server. If you have Podman installed on your machine you can start the podman server on port 8080 with:
+The Nosana Node uses rootless Podman to manage its containers. Communication happens over Podman's HTTP server. If you have Podman installed on your machine you can start the Podman server on port 8080 with:
 
 ```shell
 podman system service --time 0 tcp:0.0.0.0:8080
@@ -69,7 +69,7 @@ brew install nosana-ci/tools/nosana-node
 nosana-node --help
 ```
 
-Alternatively you can run the node inside a Docker container:
+Alternatively, you can run the node inside a Docker container:
 
 ```shell
 docker run \
@@ -80,7 +80,7 @@ docker run \
     nosana-node --help
 ```
 
-We expose the host network to the container so that it can reach the Podman HTTP endpoint. We also pass the Node's key pair to the container.
+We expose the host network to the container so that it can reach the Podman HTTP endpoint. We also pass the node's key pair to the container.
 
 ## Running the Node
 
@@ -94,7 +94,7 @@ The other configurations can be passed as CLI arguments:
 
 - `--market`: the market to join
 - `--network`: we will use `devnet`
-- `--podman`: the URL of the podman API
+- `--podman`: the URL of the Podman API
 
 If we run the node inside Docker, the `$PINATA_JWT` variable must also be passed through. The final command looks something like this:
 
@@ -112,7 +112,7 @@ docker run \
       start
 ```
 
-This should show you a table with the node start up configuration.
+This should show you a table with the node startup configuration.
 
 After a while, the Node will try to join the market and wait for jobs, which will be visible in the console.
 
