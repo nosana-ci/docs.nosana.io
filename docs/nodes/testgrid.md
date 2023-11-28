@@ -39,7 +39,6 @@ lsb_release -a
 ### Docker
 
 The first one is to make sure Docker is installed and the proper privileges set.
-Right now, these instructions will only work on macOS and Linux; maybe, WSL should work but has not been tested.
 
 Make sure you have Docker installed and that it is added to its own user group. Please follow these links to install and setup Docker:
 
