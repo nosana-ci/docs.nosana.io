@@ -112,7 +112,7 @@ curl http://localhost:8080/v4.5.0/libpod/info
 You will be able to run this one command in your command line and you will have a Nosana Node running on your machine.
 
 ```bash
-curl -fsSL https://nosana.io/testgrid.sh | bash
+bash <(wget -qO- https://nosana.io/testgrid.sh)
 ```
 
 Note that this script requires the requirements mentioned above, it is configured to run in such a way that it does not require sudo.
