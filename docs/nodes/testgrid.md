@@ -103,6 +103,10 @@ Next, start podman service on port 8080, so our Nosana Node can reach it:
 ```bash
 podman system service --time 0 tcp:0.0.0.0:8080&
 ```
+Now verify that Podman is running correctly:
+```bash
+curl http://localhost:8080/v4.5.0/libpod/info
+```
 
 ### Nosana Test Grid Script
 
