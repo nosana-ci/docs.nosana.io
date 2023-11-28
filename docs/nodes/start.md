@@ -1,63 +1,66 @@
 # Getting Started
 
-Join us in creating the decentralized future of CI/CD! Our passion is helping open-source communities to build better software faster and more efficiently.
-Open-source software is developed out in the open, so why wouldn't you use an open-source CI/CD tool?
+The Nosana Node is the software that you run to connect your hardware to the Grid in order to start earning `$NOS` tokens.
 
----
+This guide is aimed at the early pioneers that want to experiment with their hardware.
 
-Welcome to the Nosana Node documentation.
-Here you will learn everything that you need to know to get up and started with a Nosana Node.
-Nosana Nodes are key to running the Nosana Network.
-Without the nodes, we have no network.
-Whatever your reason is to run a node and there are a couple such as:
+::: warning
 
-- You want to earn NOS tokens
-- You want to run pipelines and donate a pipeline to your favorite opensource project
-- You want to contribute to a decentralized Docker-engine
-- You want to be part of a resilient and reliable network to power the next crowd-computing platform.
+At the moment the Nosana Node is in pre-release. Nodes should only be experimented with on sandboxed hardware with throwaway key pairs. If you are looking to earn stable earnings on your hardware, we recommend you to wait until the release of V1.
 
-This is the easy way to get started.
+:::
 
-## QuickStart
+## Node Flavors
 
-This quick start guide will operate with the following assumptions:
+There are two flavors of the Nosana Node that target different runtimes. The most evolved node is capable of running Docker container workloads on Linux machines. It is referred to as the _docker-node_. The second flavor is called the _wasm`-node_ and can run WASM and WebGPU workloads while running in a web browser.
 
-- Your Nosana Node will be operating on [Nosana Devnet](https://devnet.nosana.io) (Which runs on [Solana Devnet](https://docs.solana.com/clusters#devnet)).
-- Your Nosana Node will be running on the [0 NOS Nosana Market](https://devnet.nosana.io/markets/8fAB6xNLwQXDGUhoPtzeaJtppDvPA3VM7Fqb8xXnYhZM).
+## Selecting a Market
 
-These assumptions are made to get you up and running as quickly as possible, without the need to set up your node with NOS tokens and a Nosana NFT.
+The Grid is organized in markets, and each Market targets a specific group of hardware. You will need to find a market that matches your hardware. This is an incomplete list of available markets, which are in active development and will change frequently:
 
-Now that we have the assumptions out of the way, we need to take care of some prerequisites.
 
-### Docker
+### CPU markets
 
-The first one is to make sure Docker is installed and the proper privileges set.
-Right now, these instructions will only work on macOS and Linux; maybe, WSL should work but has not been tested.
+| Specs                        | Node     | Market                                                                                            |
+|------------------------------|----------|---------------------------------------------------------------------------------------------------|
+| x86, 8GB RAM, 2 vCPu, Podman | `docker` | [AdEfJD...EMQNWy](http://explorer.nosana.io/markets/AdEfJDEqWWbNwRtS3SU3JXfo5oSKVnbmK2r8gqEMQNWy) |
+| x86, 8GB RAM, 2 vCPu, Podman | `docker` | [DRPaN6...ChE6GE](http://explorer.nosana.io/markets/DRPaN6jp27usGHqtjnBSq412QdrfkMf3ow9wFjChE6GE) |
 
-Make sure you have Docker installed and that it is added to its own user group. Please follow these links to install and setup Docker:
 
-- [Install Docker Engine](https://docs.docker.com/engine/install/)
-- [Manage Docker as a non-root user.](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+### GPU markets
 
-This will make sure that we can spin up the Nosana Node without any root privileges.
+| Specs                          | Node             | Market        |
+|--------------------------------|------------------|---------------|
+| Apple M2 Max 38-Core           | `wasm`, `docker` | _coming soon_ |
+| Apple M2 Pro 19-Core           | `wasm`, `docker` | _coming soon_ |
+| NVIDIA GeForce RTX 4090 Mobile | `wasm`, `docker` | _coming soon_ |
+| NVIDIA GeForce RTX 4070 Mobile | `wasm`, `docker` | _coming soon_ |
+| AMD Radeon RX 7900 XTX         | `wasm`, `docker` | _coming soon_ |
+| NVIDIA GeForce RTX 4090        | `wasm`, `docker` | _coming soon_ |
+| NVIDIA GeForce RTX 4070        | `wasm`, `docker` | _coming soon_ |
+| NVIDIA GeForce RTX 3080        | `wasm`, `docker` | _coming soon_ |
 
-### Pinata JWT
+When you start your Node it will try to select the most suitable market for your hardware.
 
-The second one is to get a Pinata JWT. This is needed to upload the results of the pipelines to IPFS.
-You can get a Pinata JWT by signing up for a free account at [Pinata](https://pinata.cloud/).
-After you have registered your account, you can get your Pinata JWT by going to your [Pinata Keys](https://app.pinata.cloud/keys) and clicking on the "New Key" tab. Browse through the dropdown menus to find the checkbox with `pinJSONToIPFS`, check it. Give your new API Key a name and Click on "Create Key" and you will be presented with your Pinata JWT. Copy this JWT and save it somewhere safe. We will be using it in a bit.
+## Getting an Access Key
 
-Now that we have the prerequisites out of the way, we can start setting up our Nosana Node.
+Some markets are protected by an access key, which can be seen in the Explorer. This is a Solana NFT that you must have in order to join the market. Currently, all paid markets require a Nosana Burner Phone NFT to join. We recommend to first run your Node on a free market.
 
-### Nosana Install Script
+## Staking Tokens and Commitment
 
-You will be able to run this one command in your command line and you will have a Nosana Node running on your machine.
+Every node must stake a minimum amount of $NOS before they can join a market. The required stake per market can be found in the Explorer. For a free market the minimum stake will be sufficient, so head over to http://app.nosana.io/stake to make sure you have something staked.
 
-```bash
-curl -fsSL https://nosana.io/quickstart.sh | bash
-```
+When your Node accepts a job it is committing to finishing it. This means you are not allowed to shut down your machine or quit the Node software while a job is running. Currently there is no penalty for doing so, but in the future you will risk losing part of your staked tokens.
 
-Note that this script requires the requirements mentioned above, it is configured to run in such a way that it does not require sudo.
-You should never run any script from the internet with sudo privileges without double-checking it.
-Even in this situation, do double-check the script before running it on your box.
-You can read it here: [https://nosana.io/quickstart.sh](https://nosana.io/quickstart.sh)
+## Setting up Pinata
+
+Some core data in the Grid is communicated through IPFS. Nosana is in the process of setting up a dedicated IPFS cluster that is free for Nodes to use, but until that is ready, Nodes are required to register with Pinata for an API key.
+
+You can get a Pinata JWT by signing up for a free account at [Pinata](https://pinata.cloud/). After you have registered you can get your JWT by going to your [Pinata Keys](https://app.pinata.cloud/keys) and clicking on the "New Key" tab. Browse through the dropdown menus to find the checkbox with `pinJSONToIPFS`, check it. Give your new API Key a name and Click on "Create Key" and you will be presented with your Pinata JWT. Copy this JWT and save it somewhere safe. We will be using it in a bit.
+
+## Running the Node
+
+Now that we have the basics setup, we are ready to run the Node server:
+
+- [Getting Started with the Docker Node](docker-node)
+- Getting Started with the Web-based Node (_coming soon_)

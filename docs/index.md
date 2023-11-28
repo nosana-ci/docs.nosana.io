@@ -1,12 +1,11 @@
 ---
 home: true
-title: Home
-icon: home
-heroImage: https://nosana.io/img/Nosana_Logomark_black.svg
-heroImageDark: https://nosana.io/img/Nosana_Logomark_white.svg
+title: Nosana
+icon: book
+heroImage: assets/logo_color.gif
 heroText: Nosana Documentation
-tagline: Trustless CI/CD for Web3
-heroFullScreen: true
+tagline: Powering the AI revolution
+heroFullScreen: false
 actions:
 - text: " Introduction"
   icon: lightbulb
@@ -14,39 +13,35 @@ actions:
   type: primary
 - text: " Get Started"
   icon: code
-  link: programs/intro
+  link: protocols/start
   type: secondary
 features:
 - icon: lightbulb
   title: Introduction
   details: Welcome to the Nosana Network
   link: about/intro
-- icon: rocket
-  title: Nosana Pipelines
-  details: Get started with a Nosana Pipeline
-  link: pipelines/intro
-- icon: coins
-  title: Nosana Credits
-  details: Get credits to run your CI/CD Pipelines
-  link: credits/credits
+- icon: road
+  title: Roadmap
+  details: Learn more about the release cycles
+  link: about/roadmap
+- icon: robot
+  title: AI Inference
+  details: Get started running your AI workloads
+  link: a.i./start
 - icon: server
   title: Nosana Nodes
-  details: Get started as a Nosana Node
+  details: Get started earning $NOS as a Nosana Node
   link: nodes/start
-- icon: key
-  title: Nosana Secrets
-  details: Store your secrets securely with Nosana Secrets
-  link: secrets/start
 - icon: code
-  title: Nosana Programs
+  title: Nosana Protocols
   details: Learn how to use the Nosana Smart Contracts
-  link: programs/intro
-- icon: mobile
-  title: Nosana Burner Phone
-  details: Nosana Burner Phones - Boost your network access!
-  link: credits/nft
-- icon: ticket
-  title: Nosana Mint Pass
-  details: Start minting Nosana Burner Phones
-  link: credits/pass
+  link: protocols/start
+- icon: coins
+  title: Nosana Staking
+  details: Learn how to use the Nosana Staking Program
+  link: protocols/staking
+- icon: shop
+  title: Nosana Market
+  details: Learn how to use the Nosana Jobs Program
+  link: protocols/jobs
 ---

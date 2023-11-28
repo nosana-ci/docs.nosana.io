@@ -3,8 +3,8 @@ include:
     file: npm-generic.yml
 
 variables:
-  NODE_VERSION: 20
+  NODE_VERSION: 18.17.1
 
-#default:
-#  tags:
-#    - nosana
+default:
+  tags:
+    - nosana

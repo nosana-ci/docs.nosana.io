@@ -3,11 +3,12 @@ import { default as pages } from './pages';
 
 export default hopeTheme({
   hostname: 'https://docs.nosana.io',
-  logo: 'https://nosana.io/img/NOS_logo.png',
+  logo: 'assets/token.png',
   repo: 'https://github.com/nosana-ci/docs.nosana.io',
   docsDir: 'docs',
   iconAssets: 'fontawesome',
   editLink: false,
+  prevLink: false,
 
   // footer
   footer: 'MIT Licensed | Copyright © 2021-present Nosana',
@@ -16,15 +17,7 @@ export default hopeTheme({
   contributors: false,
 
   // navigation
-  sidebar: [
-    {
-      text: 'About',
-      icon: 'lightbulb',
-      prefix: '/about/',
-      children: ['intro', 'terminology'],
-    },
-    ...pages,
-  ],
+  sidebar: pages,
   navbar: [
     ...pages,
     {
@@ -34,17 +27,23 @@ export default hopeTheme({
       link: 'https://nosana.io/',
     },
     {
-      text: 'App',
-      icon: 'gauge',
+      text: 'Staking',
+      icon: 'coins',
       // icon: 'network-wired',
-      link: 'https://app.nosana.io/',
+      link: 'https://app.nosana.io/stake',
     },
     {
-      text: 'Burner Phones',
-      // icon: 'link',
-      icon: 'mobile',
-      link: 'https://nft.nosana.io/',
+      text: 'Explorer',
+      icon: 'gauge',
+      // icon: 'network-wired',
+      link: 'https://explorer.nosana.io/',
     },
+    // {
+    //   text: 'Burner Phones',
+    //   // icon: 'link',
+    //   icon: 'mobile',
+    //   link: 'https://nft.nosana.io/',
+    // },
   ],
 
   pageInfo: ['Category', 'Tag', 'ReadingTime'],
@@ -58,11 +57,9 @@ export default hopeTheme({
       attrs: true,
       chart: true,
       codetabs: true,
-      container: true,
       demo: true,
       echarts: true,
       figure: true,
-      flowchart: true,
       gfm: true,
       imgLazyload: true,
       imgSize: true,
@@ -73,13 +70,13 @@ export default hopeTheme({
       playground: {
         presets: ['ts', 'vue'],
       },
-      presentation: {
+      revealJs: {
         plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
       },
       stylize: [
         {
           matcher: 'Recommended',
-          replacer: ({ tag }) => {
+          replacer: ({ tag }: { tag: string }) => {
             if (tag === 'em')
               return {
                 tag: 'Badge',

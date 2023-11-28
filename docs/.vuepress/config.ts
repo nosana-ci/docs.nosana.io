@@ -5,7 +5,7 @@ import theme from './theme.js';
 export default defineUserConfig({
   lang: 'en-US',
   title: 'Nosana Documentation',
-  description: 'The Web3 trusted DevOps platform',
+  description: 'The Decentralized Physical GPU Network',
   base: '/',
   theme,
   shouldPrefetch: false,
