@@ -4,10 +4,10 @@
 Join us as an early adopter and build the foundation for the world's biggest GPU-compute grid. With a total prize pool of 3 million $NOS tokens, this program is our way of recognizing and rewarding the contributions of our community as we work together to make AI more accessible and powerful than ever before.
 
 ## Hardware Requirements
-In order to register for the Test Grid, you'll need to run a Nosana Node with a Nvidia GPU.
-We'd recommend a gigabit connection and further more we have the following requirements:
+In order to register for the Test Grid, you'll need to run a Nosana Node with a NVIDIA GPU.
+We recommend a gigabit connection and further more, we have the following requirements:
 - RAM: 4GB+
-- One of the following Nvidia GPU:
+- One of the following Nvidia GPUs:
 
 | |  |  |  | |
 |-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
@@ -21,14 +21,14 @@ You will need to install the following to get started with a Nosana Node:
 
 - [Linux (also works on Windows with Ubuntu 22.04 on WSL2)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#3-download-ubuntu)
 - [Docker (Required)](https://docs.docker.com/desktop/linux/install/)
-- [Nvidia Drivers (Required)](https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu)
-- [Nvidia Container Toolkit (Required)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
-- [Solana Tools Suite (Optional)](https://docs.solana.com/cli/install-solana-cli-tools)
+- [NVIDIA Drivers (Required)](https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu)
+- [NVIDIA Container Toolkit (Required)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+- [Solana Tool Suite (Optional)](https://docs.solana.com/cli/install-solana-cli-tools)
 - [Podman (Optional - Required for WSL2)](https://software.opensuse.org//download.html?project=devel%3Akubic%3Alibcontainers%3Aunstable&package=podman)
 
 ### Windows: Install Ubuntu 22.02 on WSL2
 If you are using Windows, you have to setup Ubuntu 22.04 on WSL2. **Ubuntu 20.04 won't work on WSL2**
-Follow the following tutorial on how to install WSL and run Ubuntu 22.04 on it:
+Follow this tutorial on how to install WSL and run Ubuntu 22.04:
 
 [Install Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
 
@@ -38,7 +38,7 @@ lsb_release -a
 ```
 ### Docker
 
-The first one is to make sure Docker is installed and the proper privileges set.
+The first one is to make sure Docker is installed and the proper privileges have been set.
 
 Make sure you have Docker installed and that it is added to its own user group. Please follow these links to install and setup Docker:
 
@@ -48,10 +48,10 @@ Make sure you have Docker installed and that it is added to its own user group. 
 This will make sure that we can spin up the Nosana Node without any root privileges.
 
 ### NVIDIA
-#### Windows: Nvidia Drivers installation on WSL2
+#### Windows: NVIDIA Driver installation on WSL2
 Download and install the correct driver on: https://www.nvidia.com/download/index.aspx
 
-#### Linux: Nvidia Drivers installation
+#### Linux: NVIDIA Driver installation
 Download and install the correct driver on: https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu
 
 To check that you have the correct drivers:
@@ -59,11 +59,11 @@ To check that you have the correct drivers:
 nvidia-smi
 ```
 
-#### Install Nvidia Container Toolkit
-Follow the installation instructions on https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html to install the Nvidia Container Toolkit (`nvidia-ctk`)
+#### Install the NVIDIA Container Toolkit
+Follow the installation instructions on https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html to install the NVIDIA Container Toolkit (`nvidia-ctk`)
 
-##### Windows: Configure Nvidia Container Toolkit
-Since we are going to run podman v4 natively on WSL2 (podman in docker is not supported on WSL2), follow the configuration instructions for CDI:
+##### Windows: Configure the NVIDIA Container Toolkit
+Since we are going to run Podman v4 natively on WSL2 (Podman in Docker is not supported on WSL2), follow the configuration instructions for the CDI:
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html
 
 ```bash
@@ -73,8 +73,8 @@ sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
 nvidia-ctk cdi list
 ```
 
-##### Linux: Configure Nvidia Container Toolkit
-Since we are going to run podman inside docker, follow the docker configuration instructions:
+##### Linux: Configure the NVIDIA Container Toolkit
+Since we are going to run Podman inside of Docker, follow the Docker configuration instructions:
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker
 
 ```bash
@@ -84,21 +84,21 @@ sudo nvidia-ctk runtime configure --runtime=containerd
 sudo systemctl restart docker
 ```
 ### Windows: Podman
-The Nosana Node connects to Podman and runs your containers inside of it. for native Linux, we can just run Podman inside Docker (the `testgrid.sh` script in the next steps takes care of this), but on WSL2, you'll need to natively install Podman >v4.1:
+The Nosana Node connects to Podman and runs your containers inside of it. For native Linux, we can just run Podman inside Docker (the `testgrid.sh` script in the next steps takes care of this), but on WSL2, you'll need to natively install Podman >v4.1:
 ```bash
 echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/unstable/xUbuntu_22.04/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:unstable.list
 curl -fsSL https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/unstable/xUbuntu_22.04/Release.key | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_unstable.gpg > /dev/null
 sudo apt update
 sudo apt install podman
 ```
-Check if you have podman version 4 install with and check if we have GPU support:
+Check if you have Podman version 4 installed and if you have GPU support:
 ```
 podman --version
 podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu nvidia-smi -L
 ```
-If this doesn't work, make sure you have the nvidia drivers installed and the nvidia-ctk [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)
+If this doesn't work, make sure you have the NVIDIA drivers installed and the nvidia-ctk [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)
 
-Next, start podman service on port 8080, so our Nosana Node can reach it:
+Next, start Podman service on port 8080, so our Nosana Node can reach it:
 ```bash
 podman system service --time 0 tcp:0.0.0.0:8080&
 ```
