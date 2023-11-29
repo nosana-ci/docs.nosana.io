@@ -87,12 +87,11 @@ curl http://localhost:8080/v4.5.0/libpod/info
 ### Starting the Nosana Node with custom parameters:
 ```bash
 docker run \
-      --gpus=all \
       --network host  \
       --interactive \
       --volume ~/.config/solana/id.json:/root/.nosana/nosana_key.json \
       nosana/nosana-node \
          --network devnet \
-         --podman http://localhost:8080  \
+         --podman http://$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):8080 \
          join-test-grid
 ```         

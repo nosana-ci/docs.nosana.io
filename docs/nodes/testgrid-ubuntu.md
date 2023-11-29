@@ -79,7 +79,6 @@ curl http://localhost:8080/v4.5.0/libpod/info
 ### Starting the Nosana Node with custom parameters:
 ```bash
 docker run \
-      --gpus=all \
       --pull=always \
       --network host  \
       --interactive \
