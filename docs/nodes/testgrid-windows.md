@@ -16,9 +16,9 @@ Make sure you installed the **22.04** version
 
 The first one is to make sure Docker is installed and the proper privileges have been set.
 
-Make sure you have Docker installed and that it is added to its own user group. Please follow these links to install and setup Docker:
+Make sure you have Docker installed and that it is added to its own user group. Please follow this link to install and setup Docker:
 
-- [Install Docker Desktop with WSL2 Backend](https://docs.docker.com/desktop/install/windows-install/)
+- [Install Docker Desktop with WSL2 backend](https://docs.docker.com/desktop/install/windows-install/)
 
 
 ## NVIDIA
