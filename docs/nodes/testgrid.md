@@ -31,5 +31,5 @@ You will need to install the following to get started with a Nosana Node:
 
 ## Windows or native Ubuntu
 Please follow one of the following guides to spin up your Nosana Node and join the Test Grid:
-* [Windows Guide](testgrid-windows)
-* [Ubuntu Guide](testgrid-ubuntu)
+* [Windows Guide (WSL2)](/nodes/testgrid-windows)
+* [Ubuntu Guide (Native)](/nodes/testgrid-ubuntu)

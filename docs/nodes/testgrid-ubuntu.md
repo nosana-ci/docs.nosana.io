@@ -1,4 +1,9 @@
-# Linux: Incentivized GPU Test Grid
+# Ubuntu: Incentivized GPU Test Grid
+Make sure you have Ubuntu version **20.04** or higher. You can check your ubuntu version with:
+
+```bash
+lsb_release -a
+```
 ## Docker
 The first one is to make sure Docker is installed and the proper privileges have been set.
 
