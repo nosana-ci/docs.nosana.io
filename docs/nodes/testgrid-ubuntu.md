@@ -54,6 +54,7 @@ You can read it here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid
 If we are natively running Ubuntu, we can just use Docker to start our Podman instance. This is also already done by the `testgrid.sh` script in the final step, so this step is optional:
 ```bash 
     docker run -d \
+      --pull=always \
       --gpus=all \
       --name podman \
       --device /dev/fuse \
@@ -79,9 +80,10 @@ curl http://localhost:8080/v4.5.0/libpod/info
 ```bash
 docker run \
       --gpus=all \
+      --pull=always \
       --network host  \
       --interactive \
-      --volume ~/.config/solana/id.json:/root/nosana_key.json \
+      --volume ~/.nosana/:/root/.nosana/ \
       nosana/nosana-node \
          --network devnet \
          --podman http://localhost:8080  \
