@@ -52,15 +52,16 @@ Every node must stake a minimum amount of $NOS before they can join a market. Th
 
 When your Node accepts a job it is committing to finishing it. This means you are not allowed to shut down your machine or quit the Node software while a job is running. Currently there is no penalty for doing so, but in the future you will risk losing part of your staked tokens.
 
-## Setting up Pinata
+<!-- ## Setting up Pinata
 
 Some core data in the Grid is communicated through IPFS. Nosana is in the process of setting up a dedicated IPFS cluster that is free for Nodes to use, but until that is ready, Nodes are required to register with Pinata for an API key.
 
-You can get a Pinata JWT by signing up for a free account at [Pinata](https://pinata.cloud/). After you have registered you can get your JWT by going to your [Pinata Keys](https://app.pinata.cloud/keys) and clicking on the "New Key" tab. Browse through the dropdown menus to find the checkbox with `pinJSONToIPFS`, check it. Give your new API Key a name and Click on "Create Key" and you will be presented with your Pinata JWT. Copy this JWT and save it somewhere safe. We will be using it in a bit.
+You can get a Pinata JWT by signing up for a free account at [Pinata](https://pinata.cloud/). After you have registered you can get your JWT by going to your [Pinata Keys](https://app.pinata.cloud/keys) and clicking on the "New Key" tab. Browse through the dropdown menus to find the checkbox with `pinJSONToIPFS`, check it. Give your new API Key a name and Click on "Create Key" and you will be presented with your Pinata JWT. Copy this JWT and save it somewhere safe. We will be using it in a bit. -->
 
 ## Running the Node
 
 Now that we have the basics setup, we are ready to run the Node server:
-
-- [Getting Started with the Docker Node](docker-node)
+<!-- - [Register for the Nosana Test Grid by setting up a GPU node](testgrid) -->
+- Register for the Nosana Test Grid by setting up a GPU node (_coming 1st of December, 2023_)
+- Start and run jobs with the Docker Node (_coming soon_)
 - Getting Started with the Web-based Node (_coming soon_)
