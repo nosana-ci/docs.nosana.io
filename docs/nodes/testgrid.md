@@ -4,7 +4,7 @@ In order to register for the Test Grid, you'll need to run a Nosana Node with a 
 
 ::: warning
 
-At the moment the Nosana Node is in pre-release. Nodes should only be experimented with on sandboxed hardware with throwaway key pairs. If you are looking to earn stable earnings on your hardware, we recommend you to wait until the release of V1.
+At the moment the Nosana Node is in pre-release. Therefore we highly recommend to run this in a clean environment or virtual machine, and to use a Solana address with only a minimal amount of SOL.
 
 :::
 
