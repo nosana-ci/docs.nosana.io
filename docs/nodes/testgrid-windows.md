@@ -58,15 +58,6 @@ podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu 
 ```
 If this doesn't work, make sure you have the NVIDIA drivers installed and the nvidia-ctk [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)
 
-Next, start Podman service on port 8080, so our Nosana Node can reach it:
-```bash
-podman system service --time 0 tcp:0.0.0.0:8080&
-```
-Now verify that Podman is running correctly:
-```bash
-curl http://localhost:8080/v4.5.0/libpod/info
-```
-
 ## Nosana Test Grid Script
 
 You will be able to run this one command in your command line and you will have a Nosana Node running on your machine.
@@ -81,6 +72,18 @@ Even in this situation, do double-check the script before running it on your box
 You can read it here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
 
 ## Advanced
+### Run Podman API
+This command can be used to start Podman service on port 8080, so our Nosana Node can reach it.
+This is also already done by the `testgrid.sh` script in the final step, so this step is optional:
+
+```bash
+podman system service --time 0 tcp:0.0.0.0:8080&
+```
+Now verify that Podman is running correctly:
+```bash
+curl http://localhost:8080/v4.5.0/libpod/info
+```
+
 ### Starting the Nosana Node with custom parameters:
 ```bash
 docker run \
