@@ -71,7 +71,37 @@ You should never run any script from the internet with sudo privileges without d
 Even in this situation, do double-check the script before running it on your box.
 You can read it here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
 
-## Advanced
+The script consists of a couple tests, here we check if all the previous steps in this guide have been successfully completed. When all checks are completed your node will start up.
+
+You should see your node's information in the format below. When there are no error messages, your node will automatically join the Test Grid market, where it'll pick up a Test Grid benchmark job. It is important to keep the node running while it's in this process!
+```bash
+  _ __   ___  ___  __ _ _ __   __ _
+ | '_ \ / _ \/ __|/ _` | '_ \ / _` |
+ | | | | (_) \__ \ (_| | | | | (_| |
+ |_| |_|\___/|___/\__,_|_| |_|\__,_|
+
+  Validator  <NODE ADDRESS>
+  Network    Solana :devnet
+  Market     <MARKET ADDRESS>
+  Balance    0E-9 SOL
+  Tokens     0.000000 NOS
+  Slashed    0.00 NOS
+  NFT        11111111111111111111111111111111
+  Owned      0 NFT
+```
+
+### Test Grid Registration code
+When the Test Grid benchmark job succeeds, a code will appear in the logs, you will need this code to complete your registration.
+
+```bash
+Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
+Test Grid Registration code: <CODE>
+```
+
+Congrats! :tada: You've successfully completed the technical part of the registration.
+
+
+## Advanced (optional)
 ### Run Podman API
 This command can be used to start Podman service on port 8080, so our Nosana Node can reach it.
 This is also already done by the `testgrid.sh` script in the final step, so this step is optional:
