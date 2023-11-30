@@ -1,4 +1,4 @@
-# Windows: Incentivized GPU Test Grid
+# Windows - GPU Nosana Node
 ## Install Ubuntu 22.02 on WSL2
 If you are using Windows, you have to setup Ubuntu 22.04 on WSL2. **Ubuntu 20.04 won't work on WSL2**
 Follow this tutorial on how to install WSL and run Ubuntu 22.04:

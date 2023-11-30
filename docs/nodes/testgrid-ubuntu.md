@@ -1,4 +1,4 @@
-# Ubuntu: Incentivized GPU Test Grid
+# Ubuntu - GPU Nosana Node
 Make sure you have Ubuntu version **20.04** or higher. You can check your ubuntu version with:
 
 ```bash

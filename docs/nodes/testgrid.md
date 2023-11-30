@@ -1,4 +1,10 @@
-# Incentivized GPU Test Grid
+# Getting Started 
+## GPU Test Grid
+The GPU Test Grid is ment to validate our GPU grid with a variety of GPU devices and gathering comprehensive feedback and addressing any potential issues before we move to the mainnet.
+
+Developers, data scientists, and AI enthusiasts can join the test grid, help us run AI models and be part of the reward distribution pool of 250,000 $NOS tokens in Phase 1.
+
+## Nosana Node
 The Nosana Node is the software that you run to connect your hardware to the Grid.
 In order to register for the Test Grid, you'll need to run a Nosana Node with a NVIDIA GPU.
 
@@ -19,7 +25,7 @@ At the moment the Nosana Node is in pre-release. Therefore we highly recommend t
 | NVIDIA RTX 3070Ti | NVIDA RTX 3070 | NVIDA RTX 3060Ti    | NVIDA RTX 3060Ti   | NVIDIA RTX A4000 |
 | NVIDIA RTX A4500 | NVIDIA RTX A5000 | NVIDIA RTX A5500    | NVIDIA RTX A6000   |   |
 
-## Software Requirements
+<!-- ## Software Requirements
 You will need to install the following to get started with a Nosana Node:
 
 - [Ubuntu (>20.04) or Windows (with Ubuntu 22.04 on WSL2)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#3-download-ubuntu)
@@ -27,7 +33,7 @@ You will need to install the following to get started with a Nosana Node:
   - [Podman (Optional - Required for WSL2)](https://software.opensuse.org//download.html?project=devel%3Akubic%3Alibcontainers%3Aunstable&package=podman)
 - [NVIDIA Drivers (Required)](https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu)
 - [NVIDIA Container Toolkit (Required)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
-- [Solana Tool Suite (Optional)](https://docs.solana.com/cli/install-solana-cli-tools)
+- [Solana Tool Suite (Optional)](https://docs.solana.com/cli/install-solana-cli-tools) -->
 
 ## Windows or native Ubuntu
 Please follow one of the following guides to spin up your Nosana Node and join the Test Grid:
