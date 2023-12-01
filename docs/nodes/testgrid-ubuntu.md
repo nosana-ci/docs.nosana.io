@@ -57,6 +57,7 @@ Example output:
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
 ```
+
 ### Guide to Install NVIDIA Container Toolkit
 
 To install the NVIDIA Container Toolkit (`nvidia-ctk`), follow the step-by-step instructions provided at this link: [NVIDIA Container Toolkit Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
@@ -119,7 +120,7 @@ Upon successful completion of the Test Grid benchmark job, you will receive a co
 
 2. Copy the Test Grid Registration code `<CODE>`.
 
-Congratulations! 🎉 You have completed the technical part of the registration.
+Congratulations! :tada: You have completed the technical part of the registration.
 
 ::: info
 

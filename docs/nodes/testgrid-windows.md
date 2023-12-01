@@ -8,47 +8,52 @@ Welcome to the step-by-step guide on installing the Nosana node on your Windows 
 4. [Install Podman v4](#podman)
 5. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)
 
-## Install Ubuntu 22.04 on WSL2
+## Guide: Installing Ubuntu 22.04 on WSL2
 
-If you are using Windows, you have to setup Ubuntu 22.04 on WSL2.
+For Windows users, it's essential to set up Ubuntu 22.04 specifically on WSL2.
 
-::: warning
+::: caution
 
-Make sure you'll install Ubuntu 22.04 on WSL2, Ubuntu 20.04 will **not** work on WSL2
+Ensure you're installing Ubuntu 22.04 on WSL2. Unfortunately, Ubuntu 20.04 is not compatible with WSL2.
 
 :::
 
-Follow this tutorial on how to install WSL and run Ubuntu 22.04:
+For detailed instructions on how to install WSL and run Ubuntu 22.04, follow the tutorial linked below:
 
-[Install Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
+[How to Install Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
 
-You can test your WSL2 Ubuntu version with the following command:
+Once installed, you can verify your WSL2 Ubuntu version by running the following command:
 
 ```shell
 lsb_release -a
 ```
 
-Make sure you installed the **22.04** version
+Please confirm that you have installed version **22.04**.
 
 ## Docker
 
-The first one is to make sure Docker is installed and the proper privileges have been set.
+To ensure a successful setup, follow these steps to install and configure Docker:
 
-Make sure you have Docker installed and that it is added to its own user group. Please follow this link to install and setup Docker:
+1. Install Docker Desktop with the WSL2 backend by visiting this link: [Install Docker Desktop with WSL2 backend](https://docs.docker.com/desktop/install/windows-install/).
 
-- [Install Docker Desktop with WSL2 backend](https://docs.docker.com/desktop/install/windows-install/)
+2. After installation, make sure Docker is added to its own user group.
+
 
 ## NVIDIA
 
-Download and install the correct driver on: https://www.nvidia.com/download/index.aspx
+To fully utilize the GPU on the grid, we will need to install both the NVIDIA drivers and the NVIDIA toolkit.
 
-To check that you have the correct drivers:
+### NVIDIA Driver Installation Guide
+
+To use NVIDIA drivers, download and install the appropriate driver from the official NVIDIA website: [NVIDIA Driver Downloads](https://www.nvidia.com/download/index.aspx).
+
+To verify if the drivers are correctly installed, open a terminal and run the following command:
 
 ```shell
 nvidia-smi
 ```
 
-If you have the drivers installed correctly, you should be seeing information about your GPU. Example output:
+If the drivers are correctly installed, you should see detailed information about your GPU, similar to the following example output:
 
 ```
 +-----------------------------------------------------------------------------+
@@ -72,14 +77,20 @@ If you have the drivers installed correctly, you should be seeing information ab
 +-----------------------------------------------------------------------------+
 ```
 
+
+
+
+These commands will help you generate the necessary configuration file and verify the CDI support.
+
 ### Install the NVIDIA Container Toolkit
 
-Follow the installation instructions on https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html to install the NVIDIA Container Toolkit (`nvidia-ctk`)
+To install the NVIDIA Container Toolkit, please refer to the installation guide provided at https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html. This guide will walk you through the steps needed to install the toolkit, referred to as `nvidia-ctk`.
 
 #### Configure the NVIDIA Container Toolkit
 
-Since we are going to run Podman v4 natively on WSL2 (Podman in Docker is not supported on WSL2), follow the configuration instructions for the CDI:
-https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html
+For configuring the NVIDIA Container Toolkit to run Podman v4 natively on WSL2 (as Podman in Docker is not supported on WSL2), please follow the instructions for CDI configuration. You can find these instructions at https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html.
+
+Once you have completed the configuration, run the following commands:
 
 ```shell
 sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
@@ -109,22 +120,20 @@ podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu 
 
 If this doesn't work, make sure you have the NVIDIA drivers installed and the nvidia-ctk [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)
 
+
 ## Nosana Test Grid Script
 
-You will be able to run this one command in your command line and you will have a Nosana Node running on your machine.
+With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
 ```shell
 bash <(wget -qO- https://nosana.io/testgrid.sh)
 ```
 
-Note that this script requires the requirements mentioned above, it is configured to run in such a way that it does not require sudo.
-You should never run any script from the internet with sudo privileges without double-checking it.
-Even in this situation, do double-check the script before running it on your box.
-You can read it here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
+Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
 
-The script consists of a couple tests, here we check if all the previous steps in this guide have been successfully completed. When all checks are completed your node will start up.
+The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide. Once all the checks pass, your node will start up.
 
-You should see your node's information in the format below. When there are no error messages, your node will automatically join the Test Grid market, where it'll pick up a Test Grid benchmark job. It is important to keep the node running while it's in this process!
+You will see your node's information displayed in the following format. As long as there are no error messages, your node will automatically join the Test Grid market, where it will receive a Test Grid benchmark job. It's important to keep the node running during this process!
 
 ```shell
   _ __   ___  ___  __ _ _ __   __ _
@@ -142,19 +151,24 @@ You should see your node's information in the format below. When there are no er
   Owned      0 NFT
 ```
 
-### Test Grid Registration code
-When the Test Grid benchmark job succeeds, a code will appear in the logs, you will need this code to complete your registration.
 
-```shell
-Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
-Test Grid Registration code: <CODE>
-```
+### Test Grid Registration Instructions
 
-Congrats! :tada: You've successfully completed the technical part of the registration.
+Upon successful completion of the Test Grid benchmark job, you will receive a code in the logs. This code is required for your registration. Please follow the steps below:
+
+1. Check the logs for the following message:
+   ```
+   Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
+   Test Grid Registration code: <CODE>
+   ```
+
+2. Copy the Test Grid Registration code `<CODE>`.
+
+Congratulations! :tada: You have completed the technical part of the registration.
 
 ::: info
 
-You can find your Node's Solana Key in `~/.nosana/nosana_key.json`. Make sure you backup this file!
+To find your Node's Solana Key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
 
 :::
 
