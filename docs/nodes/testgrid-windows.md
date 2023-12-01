@@ -1,6 +1,20 @@
 # Windows - GPU Nosana Node
+This guide will help you setup a Nosana Node on Windows and register for the Test Grid.
+1. [Install Ubuntu 22.02 on WSL2](#install-ubuntu-22-02-on-wsl2)
+2. [Install Docker](#docker)
+3. [Install NVIDIA drivers and container toolkit](#nvidia)
+4. [Install Podman v4](#podman)
+5. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)
 ## Install Ubuntu 22.02 on WSL2
-If you are using Windows, you have to setup Ubuntu 22.04 on WSL2. **Ubuntu 20.04 won't work on WSL2**
+If you are using Windows, you have to setup Ubuntu 22.04 on WSL2. 
+
+::: warning
+
+Make sure you'll install Ubuntu 22.04 on WSL2, Ubuntu 20.04 will **not** work on WSL2
+
+:::
+
+
 Follow this tutorial on how to install WSL and run Ubuntu 22.04:
 
 [Install Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
@@ -27,6 +41,28 @@ Download and install the correct driver on: https://www.nvidia.com/download/inde
 To check that you have the correct drivers:
 ```bash
 nvidia-smi
+```
+If you have the drivers installed correctly, you should be seeing information about your GPU. Example output:
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.54       Driver Version: 526.56       CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  On   | 00000000:01:00.0 Off |                  N/A |
+| N/A   43C    P5     9W /  N/A |      0MiB /  4096MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
 ```
 
 ### Install the NVIDIA Container Toolkit
@@ -100,6 +136,11 @@ Test Grid Registration code: <CODE>
 
 Congrats! :tada: You've successfully completed the technical part of the registration.
 
+::: info
+
+You can find your Node's Solana Key in `~/.nosana/nosana_key.json`. Make sure you backup this file!
+
+:::
 
 ## Advanced (optional)
 ### Run Podman API
@@ -115,13 +156,15 @@ curl http://localhost:8080/v4.5.0/libpod/info
 ```
 
 ### Starting the Nosana Node with custom parameters:
+You can also decide to start the Nosana Node yourself to be able to customize some parameters:
+* If your podman is running somewhere else, you can use the `--podman` paramater to point to your podman service.
+* If you want to use your own solana key, you can use `--volume` to map your key to `/root/.nosana/nosana_key.json` inside the docker container
 ```bash
 docker run \
       --network host  \
       --interactive \
       --volume ~/.config/solana/id.json:/root/.nosana/nosana_key.json \
       nosana/nosana-node \
-         --network devnet \
          --podman http://$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):8080 \
          join-test-grid
-```         
+```
