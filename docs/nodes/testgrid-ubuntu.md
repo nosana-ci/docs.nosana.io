@@ -1,33 +1,41 @@
 # Ubuntu - GPU Nosana Node
+
 Greetings! This is your comprehensive guide to setting up the Nosana node on an Ubuntu system. Whether you are a seasoned developer or new to the Linux world, this easy-to-follow tutorial will assist you in getting your Nosana node operational on your Ubuntu setup. Let's dive in and start the process.
+
 1. [Install Docker](#docker)
 2. [Install NVIDIA drivers and container toolkit](#nvidia)
 3. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)
 
 Make sure you have Ubuntu version **20.04** or higher. You can check your ubuntu version with:
 
-```bash
+```shell
 lsb_release -a
 ```
-## Docker
-The first one is to make sure Docker is installed and the proper privileges have been set.
 
-Make sure you have Docker installed and that it is added to its own user group. Please follow these links to install and setup Docker:
+## Docker
+
+Before proceeding with the installation and configuration of Docker, it is important to ensure that the appropriate privileges have been assigned. To do so, please refer to the following links for detailed instructions on properly installing and configuring Docker:
 
 - [Install Docker Engine](https://docs.docker.com/engine/install/)
-- [Manage Docker as a non-root user.](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+- [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 
-This will make sure that we can spin up the Nosana Node without any root privileges.
+By following these steps, you will be able to run the Nosana Node without the need for root privileges.
 
 ## NVIDIA
-### NVIDIA Driver installation
-Download and install the correct driver on: https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu
 
-To check that you have the correct drivers:
-```bash
-nvidia-smi
-```
-If you have the drivers installed correctly, you should be seeing information about your GPU. Example output:
+To fully utilize the GPU on the grid, we will need to install both the NVIDIA drivers and the NVIDIA toolkit.
+
+## NVIDIA Driver Installation Guide
+
+Follow these steps to install the NVIDIA drivers on your system:
+
+1. Visit the official NVIDIA website or the link provided (https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu) to download the correct driver.
+2. Once the download is complete, run the installer and follow the instructions provided.
+3. After installation, check that the correct driver is installed by using the command `nvidia-smi` in the terminal.
+4. If the command displays the correct driver information, the installation was successful. If not, try reinstalling the driver or seeking further assistance.
+
+Example output:
+
 ```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 525.54       Driver Version: 526.56       CUDA Version: 12.0     |
@@ -50,36 +58,41 @@ If you have the drivers installed correctly, you should be seeing information ab
 +-----------------------------------------------------------------------------+
 ```
 
-### Install the NVIDIA Container Toolkit
-Follow the installation instructions on https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html to install the NVIDIA Container Toolkit (`nvidia-ctk`)
+### Guide to Install NVIDIA Container Toolkit
 
-#### Linux: Configure the NVIDIA Container Toolkit
-Since we are going to run Podman inside of Docker, follow the Docker configuration instructions:
-https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker
+To install the NVIDIA Container Toolkit (`nvidia-ctk`), follow the step-by-step instructions provided at this link: [NVIDIA Container Toolkit Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
 
-```bash
+#### Configuring the NVIDIA Container Toolkit on Linux
+
+As we aim to run Podman within Docker, adhere to the Docker configuration instructions detailed here: [Configuring Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker).
+
+Execute the following commands in your terminal:
+
+```shell
 sudo nvidia-ctk runtime configure --runtime=docker
 ```
-```bash
+
+Subsequently, restart Docker with:
+
+```shell
 sudo systemctl restart docker
 ```
 
 ## Nosana Test Grid Script
-You will be able to run this one command in your command line and you will have a Nosana Node running on your machine.
 
-```bash
+With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
+
+```shell
 bash <(wget -qO- https://nosana.io/testgrid.sh)
 ```
 
-Note that this script requires the requirements mentioned above, it is configured to run in such a way that it does not require sudo.
-You should never run any script from the internet with sudo privileges without double-checking it.
-Even in this situation, do double-check the script before running it on your box.
-You can read it here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
+Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
 
-The script consists of a couple tests, where we check if all the previous steps in this guide have been successfully completed. When all checks are completed your node will start up.
+The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide. Once all the checks pass, your node will start up.
 
-You should see your node's information in the format below. When there are no error messages, your node will automatically join the Test Grid market, where it'll pick up a Test Grid benchmark job. It is important to keep the node running while it's in this process!
-```bash
+You will see your node's information displayed in the following format. As long as there are no error messages, your node will automatically join the Test Grid market, where it will receive a Test Grid benchmark job. It's important to keep the node running during this process!
+
+```shell
   _ __   ___  ___  __ _ _ __   __ _
  | '_ \ / _ \/ __|/ _` | '_ \ / _` |
  | | | | (_) \__ \ (_| | | | | (_| |
@@ -95,26 +108,31 @@ You should see your node's information in the format below. When there are no er
   Owned      0 NFT
 ```
 
-### Test Grid Registration code
-When the Test Grid benchmark job succeeds, a code will appear in the logs, you will need this code to complete your registration.
+### Test Grid Registration Instructions
 
-```bash
-Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
-Test Grid Registration code: <CODE>
-```
+Upon successful completion of the Test Grid benchmark job, you will receive a code in the logs. This code is required for your registration. Please follow the steps below:
 
-Congrats! :tada: You've successfully completed the technical part of the registration.
+1. Check the logs for the following message:
+   ```
+   Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
+   Test Grid Registration code: <CODE>
+   ```
+
+2. Copy the Test Grid Registration code `<CODE>`.
+
+Congratulations! :tada: You have completed the technical part of the registration.
 
 ::: info
 
-You can find your Node's Solana Key in `~/.nosana/nosana_key.json`. Make sure you backup this file!
+To find your Node's Solana Key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
 
 :::
 
-## Advanced (optional)
-### Run Podman in Docker
-If we are natively running Ubuntu, we can just use Docker to start our Podman instance. This is also already done by the `testgrid.sh` script in the final step, so this step is optional:
-```bash 
+## Optional: Run Podman in Docker
+
+If you're running Ubuntu natively, you can use Docker to initiate your Podman instance. The `testgrid.sh` script accomplishes this in the final step, making this a non-mandatory step:
+
+```shell
     docker run -d \
       --pull=always \
       --gpus=all \
@@ -126,23 +144,28 @@ If we are natively running Ubuntu, we can just use Docker to start our Podman in
       nosana/podman podman system service --time 0 tcp:0.0.0.0:8080
 ```
 
-Check if you have GPU support inside Podman containers:
+To confirm GPU support within Podman containers, execute:
+
 ```
 docker exec -it podman bash
 podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu nvidia-smi -L
 ```
-If this doesn't work, make sure you have the NVIDIA drivers installed and the nvidia-ctk [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
 
-Verify that Podman is running correctly:
-```bash
+If unsuccessful, ensure NVIDIA drivers and the nvidia-ctk are [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
+
+To validate Podman's proper functioning, use:
+
+```shell
 curl http://localhost:8080/v4.5.0/libpod/info
 ```
 
-### Starting the Nosana Node with custom parameters:
-You can also decide to start the Nosana Node yourself to be able to customize some parameters:
-* If your podman is running somewhere else, you can use the `--podman` paramater to point to your podman service.
-* If you want to use your own solana key, you can use `--volume` to map your key to `/root/.nosana/nosana_key.json` inside the docker container
-```bash
+## Launching the Nosana Node with Custom Parameters
+
+You can manually launch the Nosana Node to modify certain parameters:
+* Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
+* Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
+
+```shell
 docker run \
       --pull=always \
       --network host  \
@@ -151,4 +174,4 @@ docker run \
       nosana/nosana-node \
          --podman http://localhost:8080  \
          join-test-grid
-```         
+```
