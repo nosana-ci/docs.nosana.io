@@ -14,7 +14,7 @@ lsb_release -a
 
 ## Docker
 
-Before proceeding with the installation and configuration of Docker, it is important to ensure that it is installed correctly and that the appropriate privileges have been assigned. To do so, please refer to the following links for detailed instructions on properly installing and configuring Docker:
+Before proceeding with the installation and configuration of Docker, it is important to ensure that the appropriate privileges have been assigned. To do so, please refer to the following links for detailed instructions on properly installing and configuring Docker:
 
 - [Install Docker Engine](https://docs.docker.com/engine/install/)
 - [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
