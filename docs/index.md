@@ -13,7 +13,7 @@ actions:
   type: primary
 - text: " Get Started"
   icon: code
-  link: protocols/start
+  link: nodes/testgrid
   type: secondary
 features:
 - icon: lightbulb
