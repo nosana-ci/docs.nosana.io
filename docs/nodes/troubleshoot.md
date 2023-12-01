@@ -11,7 +11,7 @@ It means that you do not have NVIDIA drivers installed. To install them, downloa
 ::: details Solution
 Ensure that you have [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) installed and that it is running. If you still have this error message, check if Docker Desktop is using the WSL2 Backend (not Hyper-V). Follow this guide to turn on the WSL2 backend for Docker Desktop: https://docs.docker.com/desktop/wsl/.
 
-Also check to make sure you have WSL version 2 installed:
+Also check with Command Prompt or Powershell to make sure you have WSL version 2 installed:
 ```
 wsl -l -v
 ```
