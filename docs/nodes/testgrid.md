@@ -13,6 +13,8 @@ At the moment the Nosana Node is in pre-release. Therefore we highly recommend t
 :::
 
 ## Hardware Requirements
+
+- Internet connection
 - RAM: 4GB+
 - One of the following Nvidia GPUs:
 
