@@ -3,7 +3,7 @@
 Welcome to the GPU Test Grid, a platform designed to validate our GPU grid across a diverse array of GPU devices. With comprehensive feedback and proactive issue resolution as our core objective, we are on the path to a smooth transition to the mainnet. We extend an open invitation to developers, data scientists, and AI enthusiasts to be part of this exciting journey. By joining the test grid and assisting us in running AI models, you'll also get the opportunity to participate in our reward distribution pool. For phase 1, we have allocated a substantial pool of 250,000 $NOS tokens. Together, let's shape the future of GPU testing and development.
 
 ## Nosana Node
-The Nosana Node is the software that you run to connect your hardware to the Grid.
+The Nosana Node is the software that you run to connect your hardware to the grid.
 In order to register for the Test Grid, you'll need to run a Nosana Node with a NVIDIA GPU.
 
 ::: warning
@@ -16,7 +16,7 @@ At the moment the Nosana Node is in pre-release. Therefore we highly recommend t
 
 - Internet connection
 - RAM: 4GB+
-- One of the following Nvidia GPUs:
+- One of the following NVIDIA GPUs:
 
 |                   |                  |                   |                  |                   |
 |-------------------|------------------|-------------------|------------------|-------------------|
@@ -35,7 +35,7 @@ You will need to install the following to get started with a Nosana Node:
 - [NVIDIA Container Toolkit (Required)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 - [Solana Tool Suite (Optional)](https://docs.solana.com/cli/install-solana-cli-tools) -->
 
-## Installation guides
+## Installation Guides
 
 These guides are instructing you on how to establish your Nosana Node and partake in the Test Grid. The choice of guide depends on your operating system:
 

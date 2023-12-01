@@ -1,6 +1,6 @@
 # Windows - GPU Nosana Node
 
-Welcome to the step-by-step guide on installing the Nosana node on your Windows system. This documentation has been designed to make the installation process straightforward and efficient, even for those who aren't tech-savvy. Follow along, and you'll have your Nosana node up and running in no time.
+Welcome to the step-by-step guide on installing the Nosana Node on your Windows system. This documentation has been designed to make the installation process straightforward and efficient, even for those who aren't tech-savvy. Follow along, and you'll have your Nosana Node up and running in no time.
 
 1. [Install Ubuntu 22.04 on WSL2](#install-ubuntu-22-04-on-wsl2)
 2. [Install Docker](#docker)
@@ -12,7 +12,7 @@ Welcome to the step-by-step guide on installing the Nosana node on your Windows 
 
 For Windows users, it's essential to set up Ubuntu 22.04 specifically on WSL2.
 
-::: caution
+::: Caution
 
 Ensure you're installing Ubuntu 22.04 on WSL2. Unfortunately, Ubuntu 20.04 is not compatible with WSL2.
 
@@ -41,7 +41,7 @@ To ensure a successful setup, follow these steps to install and configure Docker
 
 ## NVIDIA
 
-To fully utilize the GPU on the grid, we will need to install both the NVIDIA drivers and the NVIDIA toolkit.
+To fully utilize the GPU on the grid, we will need to install both the NVIDIA drivers and NVIDIA's CUDA Toolkit.
 
 ### NVIDIA Driver Installation Guide
 
@@ -162,13 +162,13 @@ Upon successful completion of the Test Grid benchmark job, you will receive a co
    Test Grid Registration code: <CODE>
    ```
 
-2. Copy the Test Grid Registration code `<CODE>`.
+2. Copy the Test Grid registration code: `<CODE>`.
 
 Congratulations! :tada: You have completed the technical part of the registration.
 
 ::: info
 
-To find your Node's Solana Key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
+To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
 
 :::
 

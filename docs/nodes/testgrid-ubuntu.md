@@ -1,12 +1,12 @@
 # Ubuntu - GPU Nosana Node
 
-Greetings! This is your comprehensive guide to setting up the Nosana node on an Ubuntu system. Whether you are a seasoned developer or new to the Linux world, this easy-to-follow tutorial will assist you in getting your Nosana node operational on your Ubuntu setup. Let's dive in and start the process.
+Greetings! This is your comprehensive guide to setting up the Nosana Node on an Ubuntu system. Whether you are a seasoned developer or new to the Linux world, this easy-to-follow tutorial will assist you in getting your Nosana Node operational on your Ubuntu setup. Let's dive in and start the process.
 
 1. [Install Docker](#docker)
 2. [Install NVIDIA drivers and container toolkit](#nvidia)
 3. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)
 
-Make sure you have Ubuntu version **20.04** or higher. You can check your ubuntu version with:
+Make sure you have Ubuntu version **20.04** or higher. You can check your Ubuntu version with:
 
 ```shell
 lsb_release -a
@@ -23,7 +23,7 @@ By following these steps, you will be able to run the Nosana Node without the ne
 
 ## NVIDIA
 
-To fully utilize the GPU on the grid, we will need to install both the NVIDIA drivers and the NVIDIA toolkit.
+To fully utilize the GPU on the grid, we will need to install both the NVIDIA drivers and NVIDIA's CUDA Toolkit.
 
 ## NVIDIA Driver Installation Guide
 
@@ -124,7 +124,7 @@ Congratulations! :tada: You have completed the technical part of the registratio
 
 ::: info
 
-To find your Node's Solana Key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
+To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
 
 :::
 
