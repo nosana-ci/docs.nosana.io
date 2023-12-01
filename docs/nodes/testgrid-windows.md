@@ -205,3 +205,6 @@ docker run \
          --podman http://$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):8080 \
          join-test-grid
 ```
+
+## Troubleshoot
+If you have questions or when you have error messages, please take a look at our [Troubleshoot Guide](/nodes/troubleshoot) or join our [Discord](https://discord.gg/nosana) for help.
