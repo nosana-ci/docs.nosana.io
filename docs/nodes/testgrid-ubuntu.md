@@ -14,28 +14,27 @@ lsb_release -a
 
 ## Docker
 
-The first one is to make sure Docker is installed and the proper privileges have been set.
-
-Make sure you have Docker installed and that it is added to its own user group. Please follow these links to install and setup Docker:
+Before proceeding with the installation and configuration of Docker, it is important to ensure that it is installed correctly and that the appropriate privileges have been assigned. To do so, please refer to the following links for detailed instructions on properly installing and configuring Docker:
 
 - [Install Docker Engine](https://docs.docker.com/engine/install/)
-- [Manage Docker as a non-root user.](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+- [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 
-This will make sure that we can spin up the Nosana Node without any root privileges.
+By following these steps, you will be able to run the Nosana Node without the need for root privileges.
 
 ## NVIDIA
 
-### NVIDIA Driver installation
+To fully utilize the GPU on the grid, we will need to install both the NVIDIA drivers and the NVIDIA toolkit.
 
-Download and install the correct driver on: https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu
+## NVIDIA Driver Installation Guide
 
-To check that you have the correct drivers:
+Follow these steps to install the NVIDIA drivers on your system:
 
-```shell
-nvidia-smi
-```
+1. Visit the official NVIDIA website or the link provided (https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu) to download the correct driver.
+2. Once the download is complete, run the installer and follow the instructions provided.
+3. After installation, check that the correct driver is installed by using the command `nvidia-smi` in the terminal.
+4. If the command displays the correct driver information, the installation was successful. If not, try reinstalling the driver or seeking further assistance.
 
-If you have the drivers installed correctly, you should be seeing information about your GPU. Example output:
+Example output:
 
 ```
 +-----------------------------------------------------------------------------+
@@ -58,19 +57,21 @@ If you have the drivers installed correctly, you should be seeing information ab
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
 ```
+### Guide to Install NVIDIA Container Toolkit
 
-### Install the NVIDIA Container Toolkit
+To install the NVIDIA Container Toolkit (`nvidia-ctk`), follow the step-by-step instructions provided at this link: [NVIDIA Container Toolkit Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
 
-Follow the installation instructions on https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html to install the NVIDIA Container Toolkit (`nvidia-ctk`)
+#### Configuring the NVIDIA Container Toolkit on Linux
 
-#### Linux: Configure the NVIDIA Container Toolkit
+As we aim to run Podman within Docker, adhere to the Docker configuration instructions detailed here: [Configuring Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker).
 
-Since we are going to run Podman inside of Docker, follow the Docker configuration instructions:
-https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker
+Execute the following commands in your terminal:
 
 ```shell
 sudo nvidia-ctk runtime configure --runtime=docker
 ```
+
+Subsequently, restart Docker with:
 
 ```shell
 sudo systemctl restart docker
@@ -78,20 +79,17 @@ sudo systemctl restart docker
 
 ## Nosana Test Grid Script
 
-You will be able to run this one command in your command line and you will have a Nosana Node running on your machine.
+With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
 ```shell
 bash <(wget -qO- https://nosana.io/testgrid.sh)
 ```
 
-Note that this script requires the requirements mentioned above, it is configured to run in such a way that it does not require sudo.
-You should never run any script from the internet with sudo privileges without double-checking it.
-Even in this situation, do double-check the script before running it on your box.
-You can read it here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
+Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
 
-The script consists of a couple tests, where we check if all the previous steps in this guide have been successfully completed. When all checks are completed your node will start up.
+The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide. Once all the checks pass, your node will start up.
 
-You should see your node's information in the format below. When there are no error messages, your node will automatically join the Test Grid market, where it'll pick up a Test Grid benchmark job. It is important to keep the node running while it's in this process!
+You will see your node's information displayed in the following format. As long as there are no error messages, your node will automatically join the Test Grid market, where it will receive a Test Grid benchmark job. It's important to keep the node running during this process!
 
 ```shell
   _ __   ___  ___  __ _ _ __   __ _
@@ -109,20 +107,23 @@ You should see your node's information in the format below. When there are no er
   Owned      0 NFT
 ```
 
-### Test Grid Registration code
+### Test Grid Registration Instructions
 
-When the Test Grid benchmark job succeeds, a code will appear in the logs, you will need this code to complete your registration.
+Upon successful completion of the Test Grid benchmark job, you will receive a code in the logs. This code is required for your registration. Please follow the steps below:
 
-```shell
-Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
-Test Grid Registration code: <CODE>
-```
+1. Check the logs for the following message:
+   ```
+   Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
+   Test Grid Registration code: <CODE>
+   ```
 
-Congrats! :tada: You've successfully completed the technical part of the registration.
+2. Copy the Test Grid Registration code `<CODE>`.
+
+Congratulations! 🎉 You have completed the technical part of the registration.
 
 ::: info
 
-You can find your Node's Solana Key in `~/.nosana/nosana_key.json`. Make sure you backup this file!
+To find your Node's Solana Key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
 
 :::
 
