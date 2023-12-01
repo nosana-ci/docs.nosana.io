@@ -30,7 +30,7 @@ features:
   link: a.i./start
 - icon: server
   title: Nosana Nodes
-  details: Get started earning $NOS by joining are Test Grid
+  details: Get started earning $NOS by joining our Test Grid
   link: nodes/testgrid
 - icon: code
   title: Nosana Protocols
