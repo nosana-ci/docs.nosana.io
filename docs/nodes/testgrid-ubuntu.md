@@ -175,3 +175,6 @@ docker run \
          --podman http://localhost:8080  \
          join-test-grid
 ```
+
+## Troubleshoot
+If you have questions or when you have error messages, please take a look at our [Troubleshoot Guide](/nodes/troubleshoot) or join our [Discord](https://discord.gg/nosana) for help.
