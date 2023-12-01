@@ -30,8 +30,8 @@ features:
   link: a.i./start
 - icon: server
   title: Nosana Nodes
-  details: Get started earning $NOS by joining our Test Grid
-  link: nodes/testgrid
+  details: Get started earning $NOS as a Nosana Node
+  link: nodes/start
 - icon: code
   title: Nosana Protocols
   details: Learn how to use the Nosana Smart Contracts
