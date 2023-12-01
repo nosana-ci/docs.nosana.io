@@ -127,11 +127,9 @@ To find your Node's Solana Key, navigate to `~/.nosana/nosana_key.json`. It is e
 
 :::
 
-## Advanced (optional)
+## Optional: Run Podman in Docker
 
-### Run Podman in Docker
-
-If we are natively running Ubuntu, we can just use Docker to start our Podman instance. This is also already done by the `testgrid.sh` script in the final step, so this step is optional:
+If you're running Ubuntu natively, you can use Docker to initiate your Podman instance. The `testgrid.sh` script accomplishes this in the final step, making this a non-mandatory step:
 
 ```shell
     docker run -d \
@@ -145,26 +143,26 @@ If we are natively running Ubuntu, we can just use Docker to start our Podman in
       nosana/podman podman system service --time 0 tcp:0.0.0.0:8080
 ```
 
-Check if you have GPU support inside Podman containers:
+To confirm GPU support within Podman containers, execute:
 
 ```
 docker exec -it podman bash
 podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu nvidia-smi -L
 ```
 
-If this doesn't work, make sure you have the NVIDIA drivers installed and the nvidia-ctk [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
+If unsuccessful, ensure NVIDIA drivers and the nvidia-ctk are [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
 
-Verify that Podman is running correctly:
+To validate Podman's proper functioning, use:
 
 ```shell
 curl http://localhost:8080/v4.5.0/libpod/info
 ```
 
-### Starting the Nosana Node with custom parameters:
+## Launching the Nosana Node with Custom Parameters
 
-You can also decide to start the Nosana Node yourself to be able to customize some parameters:
-* If your podman is running somewhere else, you can use the `--podman` paramater to point to your podman service.
-* If you want to use your own solana key, you can use `--volume` to map your key to `/root/.nosana/nosana_key.json` inside the docker container
+You can manually launch the Nosana Node to modify certain parameters:
+* Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
+* Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 
 ```shell
 docker run \
