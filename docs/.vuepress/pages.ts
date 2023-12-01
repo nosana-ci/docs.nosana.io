@@ -15,7 +15,7 @@ export default [
     text: 'Nodes',
     icon: 'server',
     prefix: '/nodes/',
-    children: ['start'],
+    children: ['testgrid', 'testgrid-windows', 'testgrid-ubuntu', 'troubleshoot'],
   },
   {
     text: 'Protocols',
