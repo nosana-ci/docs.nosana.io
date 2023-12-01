@@ -1,6 +1,5 @@
 # Ubuntu - GPU Nosana Node
-
-This guide will help you setup a Nosana Node on Windows and register for the Test Grid.
+Greetings! This is your comprehensive guide to setting up the Nosana node on an Ubuntu system. Whether you are a seasoned developer or new to the Linux world, this easy-to-follow tutorial will assist you in getting your Nosana node operational on your Ubuntu setup. Let's dive in and start the process.
 1. [Install Docker](#docker)
 2. [Install NVIDIA drivers and container toolkit](#nvidia)
 3. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)

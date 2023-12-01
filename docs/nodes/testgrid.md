@@ -1,8 +1,6 @@
 # Getting Started 
 ## GPU Test Grid
-The GPU Test Grid is ment to validate our GPU grid with a variety of GPU devices and gathering comprehensive feedback and addressing any potential issues before we move to the mainnet.
-
-Developers, data scientists, and AI enthusiasts can join the test grid, help us run AI models and be part of the reward distribution pool of 250,000 $NOS tokens in Phase 1.
+Welcome to the GPU Test Grid, a platform designed to validate our GPU grid across a diverse array of GPU devices. With comprehensive feedback and proactive issue resolution as our core objective, we are on the path to a smooth transition to the mainnet. We extend an open invitation to developers, data scientists, and AI enthusiasts to be part of this exciting journey. By joining the test grid and assisting us in running AI models, you'll also get the opportunity to participate in our reward distribution pool. For phase 1, we have allocated a substantial pool of 250,000 $NOS tokens. Together, let's shape the future of GPU testing and development.
 
 ## Nosana Node
 The Nosana Node is the software that you run to connect your hardware to the Grid.

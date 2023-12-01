@@ -1,10 +1,11 @@
 # Windows - GPU Nosana Node
-This guide will help you setup a Nosana Node on Windows and register for the Test Grid.
+Welcome to the step-by-step guide on installing the Nosana node on your Windows system. This documentation has been designed to make the installation process straightforward and efficient, even for those who aren't tech-savvy. Follow along, and you'll have your Nosana node up and running in no time.
 1. [Install Ubuntu 22.02 on WSL2](#install-ubuntu-22-02-on-wsl2)
 2. [Install Docker](#docker)
 3. [Install NVIDIA drivers and container toolkit](#nvidia)
 4. [Install Podman v4](#podman)
 5. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)
+
 ## Install Ubuntu 22.02 on WSL2
 If you are using Windows, you have to setup Ubuntu 22.04 on WSL2. 
 
