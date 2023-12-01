@@ -1,5 +1,7 @@
 # Windows - GPU Nosana Node
+
 Welcome to the step-by-step guide on installing the Nosana node on your Windows system. This documentation has been designed to make the installation process straightforward and efficient, even for those who aren't tech-savvy. Follow along, and you'll have your Nosana node up and running in no time.
+
 1. [Install Ubuntu 22.04 on WSL2](#install-ubuntu-22-04-on-wsl2)
 2. [Install Docker](#docker)
 3. [Install NVIDIA drivers and container toolkit](#nvidia)
@@ -7,7 +9,8 @@ Welcome to the step-by-step guide on installing the Nosana node on your Windows 
 5. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)
 
 ## Install Ubuntu 22.04 on WSL2
-If you are using Windows, you have to setup Ubuntu 22.04 on WSL2. 
+
+If you are using Windows, you have to setup Ubuntu 22.04 on WSL2.
 
 ::: warning
 
@@ -15,13 +18,13 @@ Make sure you'll install Ubuntu 22.04 on WSL2, Ubuntu 20.04 will **not** work on
 
 :::
 
-
 Follow this tutorial on how to install WSL and run Ubuntu 22.04:
 
 [Install Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
 
 You can test your WSL2 Ubuntu version with the following command:
-```bash
+
+```shell
 lsb_release -a
 ```
 
@@ -35,15 +38,18 @@ Make sure you have Docker installed and that it is added to its own user group. 
 
 - [Install Docker Desktop with WSL2 backend](https://docs.docker.com/desktop/install/windows-install/)
 
-
 ## NVIDIA
+
 Download and install the correct driver on: https://www.nvidia.com/download/index.aspx
 
 To check that you have the correct drivers:
-```bash
+
+```shell
 nvidia-smi
 ```
+
 If you have the drivers installed correctly, you should be seeing information about your GPU. Example output:
+
 ```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 525.54       Driver Version: 526.56       CUDA Version: 12.0     |
@@ -67,39 +73,47 @@ If you have the drivers installed correctly, you should be seeing information ab
 ```
 
 ### Install the NVIDIA Container Toolkit
+
 Follow the installation instructions on https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html to install the NVIDIA Container Toolkit (`nvidia-ctk`)
 
 #### Configure the NVIDIA Container Toolkit
+
 Since we are going to run Podman v4 natively on WSL2 (Podman in Docker is not supported on WSL2), follow the configuration instructions for the CDI:
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html
 
-```bash
+```shell
 sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
 ```
-```bash
+
+```shell
 nvidia-ctk cdi list
 ```
 
 ## Podman
+
 The Nosana Node connects to Podman and runs your containers inside of it. On WSL2, you'll need to natively install Podman >v4.1:
-```bash
+
+```shell
 echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/unstable/xUbuntu_22.04/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:unstable.list
 curl -fsSL https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/unstable/xUbuntu_22.04/Release.key | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_unstable.gpg > /dev/null
 sudo apt update
 sudo apt install podman
 ```
+
 Check if you have Podman version 4 installed and if you have GPU support:
+
 ```
 podman --version
 podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu nvidia-smi -L
 ```
+
 If this doesn't work, make sure you have the NVIDIA drivers installed and the nvidia-ctk [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)
 
 ## Nosana Test Grid Script
 
 You will be able to run this one command in your command line and you will have a Nosana Node running on your machine.
 
-```bash
+```shell
 bash <(wget -qO- https://nosana.io/testgrid.sh)
 ```
 
@@ -111,7 +125,8 @@ You can read it here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid
 The script consists of a couple tests, here we check if all the previous steps in this guide have been successfully completed. When all checks are completed your node will start up.
 
 You should see your node's information in the format below. When there are no error messages, your node will automatically join the Test Grid market, where it'll pick up a Test Grid benchmark job. It is important to keep the node running while it's in this process!
-```bash
+
+```shell
   _ __   ___  ___  __ _ _ __   __ _
  | '_ \ / _ \/ __|/ _` | '_ \ / _` |
  | | | | (_) \__ \ (_| | | | | (_| |
@@ -130,7 +145,7 @@ You should see your node's information in the format below. When there are no er
 ### Test Grid Registration code
 When the Test Grid benchmark job succeeds, a code will appear in the logs, you will need this code to complete your registration.
 
-```bash
+```shell
 Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
 Test Grid Registration code: <CODE>
 ```
@@ -144,23 +159,30 @@ You can find your Node's Solana Key in `~/.nosana/nosana_key.json`. Make sure yo
 :::
 
 ## Advanced (optional)
+
 ### Run Podman API
+
 This command can be used to start Podman service on port 8080, so our Nosana Node can reach it.
 This is also already done by the `testgrid.sh` script in the final step, so this step is optional:
 
-```bash
+```shell
 podman system service --time 0 tcp:0.0.0.0:8080&
 ```
+
 Now verify that Podman is running correctly:
-```bash
+
+```shell
 curl http://localhost:8080/v4.5.0/libpod/info
 ```
 
 ### Starting the Nosana Node with custom parameters:
+
 You can also decide to start the Nosana Node yourself to be able to customize some parameters:
+
 * If your podman is running somewhere else, you can use the `--podman` paramater to point to your podman service.
 * If you want to use your own solana key, you can use `--volume` to map your key to `/root/.nosana/nosana_key.json` inside the docker container
-```bash
+
+```shell
 docker run \
       --network host  \
       --interactive \
