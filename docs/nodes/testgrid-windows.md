@@ -12,7 +12,7 @@ Welcome to the step-by-step guide on installing the Nosana Node on your Windows 
 
 For Windows users, it's essential to set up Ubuntu 22.04 specifically on WSL2.
 
-::: Caution
+::: warning
 
 Ensure you're installing Ubuntu 22.04 on WSL2. Unfortunately, Ubuntu 20.04 is not compatible with WSL2.
 
@@ -135,7 +135,7 @@ The script performs a series of tests to verify the successful completion of the
 
 You will see your node's information displayed in the following format. As long as there are no error messages, your node will automatically join the Test Grid market, where it will receive a Test Grid benchmark job. It's important to keep the node running during this process!
 
-```shell
+```
   _ __   ___  ___  __ _ _ __   __ _
  | '_ \ / _ \/ __|/ _` | '_ \ / _` |
  | | | | (_) \__ \ (_| | | | | (_| |
