@@ -29,3 +29,13 @@ It means that you did not install and configure the Nvidia Container Toolkit cor
 * [Nvidia instructions for Ubuntu (Native)](https://docs.nosana.io/nodes/testgrid-ubuntu.html#guide-to-install-nvidia-container-toolkit)
 :::
 
+::: warning Error: Could not connect to Podman
+::: details Solution
+When you see this error go in Docker Desktop to -> Settings -> Docker engine, please add this line `"bip":"192.168.200.1/24",` somewhere after the first bracket, like this:
+```
+{
+  "bip":"192.168.200.1/24",
+}
+```
+
+Then click appy and restart Docker.
