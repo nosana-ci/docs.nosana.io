@@ -16,7 +16,7 @@ lsb_release -a
 
 Before proceeding with the installation and configuration of Docker, it is important to ensure that the appropriate privileges have been assigned. To do so, please refer to the following links for detailed instructions on properly installing and configuring Docker:
 
-- [Install Docker Engine](https://docs.docker.com/engine/install/)
+- [Install Docker Engine](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
 - [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 
 By following these steps, you will be able to run the Nosana Node without the need for root privileges.
