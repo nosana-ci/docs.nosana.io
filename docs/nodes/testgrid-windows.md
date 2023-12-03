@@ -84,7 +84,19 @@ These commands will help you generate the necessary configuration file and verif
 
 ### Install the NVIDIA Container Toolkit
 
-To install the NVIDIA Container Toolkit, please refer to the installation guide provided at https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html. This guide will walk you through the steps needed to install the toolkit, referred to as `nvidia-ctk`.
+To install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) (`nvidia-ctk`), run the following commands: 
+```shell
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+  && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list \
+  && \
+    sudo apt-get update
+```
+Then we can install the NVIDIA Container Toolkit package:
+```shell
+sudo apt-get install -y nvidia-container-toolkit
+```
 
 #### Configure the NVIDIA Container Toolkit
 
