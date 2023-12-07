@@ -53,3 +53,27 @@ docker run -d \
          --podman http://$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):8080 \
          start --market your-market-address-here
 ```
+
+## FAQ
+::: details Do I need to keep my node running at all times?
+You don't have to keep your node running at all times. However, the more your node is running, the more jobs it'll be able to pick up, which equals more $NOS rewards.
+:::
+
+::: details Where can I see the status of my node?
+You can see the status of your node by having a look in the logs. To view the logs run: 
+```bash
+docker logs -f nosana-node
+```
+:::
+
+::: details Where can I see how much $NOS I’ve earned so far?
+You can see how much you've earned by checking your $NOS balance. If you imported your private key in a wallet you can see the $NOS balance in the wallet. Else go to a [Solscan](https://solscan.io/) or [Solana Explorer](https://explorer.solana.com/) and fill in your node address to see your token balances.
+:::
+
+::: details Why is my node queued?
+Not at all times will there be enough jobs for all the nodes in a market. In that case a queue will form. When there's a new job available the first node in the queue will automatically pick it up.
+:::
+
+::: details Which position in the queue is my node?
+To see the market queue, go to the markets page on the [Nosana Explorer](https://explorer.nosana.io/markets). Choose the market you are assigned to, on the market page it'll show you the queue.
+:::
