@@ -13,7 +13,7 @@ During the Test Grid, you will get paid in NOS for the computations you perform 
 All rewards are paid out in NOS tokens. The rewards listed in euros are converted to NOS at the market rate specified after the Test Grid.
 
 ::: note
-The rewards are subject are subject to change, and can be updated by Nosana to reflect market conditions, improve fairness, or for any other reason.
+The rewards are subject to change, and can be updated by Nosana to reflect market conditions, improve fairness, or for any other reason.
 :::
 
 ### Compute Job Rewards
@@ -22,7 +22,7 @@ For processing compute jobs on your GPU, you will be rewarded with a certain amo
 Note that job earnings are subsidized for the Test Grid and are higher than during normal operations. Also, there will be periods during Test Grid where your GPU is idle and does not earn rewards.
 
 ::: note
-- To earn rewards, you must run a Nosana node and let it successfully do compute jobs
+- To earn rewards, you must run a Nosana Node and let it successfully do compute jobs
 - You only earn rewards while processing compute jobs. During idle times, your GPU is not utilized and you will not earn rewards.
 - Compute Rewards are directly transferred to your node’s Solana account 
 :::
@@ -34,7 +34,7 @@ There are multiple tasks that can be completed for additional rewards, like shar
 ::: warning
 - You must perform the KYC process through our portal.
 - You may not be a resident of one of the [OFAC restricted countries](https://ofac.treasury.gov/sanctions-programs-and-country-information).
-- The amount is linearly unlocked over a period of 31 days starting at the end of the Test Grid.
+- The amount is linearly unlocked over a period of 31 days, starting at the end of the Test Grid.
 - You will get access to our vesting portal, where vested tokens can be claimed at any time.
 - You must have completed at least 14 compute jobs on the Test Grid.
 - The additional tasks are subject to approval by the Nosana team.
@@ -42,7 +42,7 @@ There are multiple tasks that can be completed for additional rewards, like shar
 
 If the requirements are not met, we will not be able to pay out additional rewards.
 
-Refer to the [Test Grid Reward Sheet](https://docs.google.com/spreadsheets/d/1WtRZNaNKgFJ66fGUwmd-ESC-ye8mRa9Qi49RZNvd-YE/edit#gid=0) for details payment of tasks.
+Refer to the [Test Grid Reward Sheet](https://docs.google.com/spreadsheets/d/1WtRZNaNKgFJ66fGUwmd-ESC-ye8mRa9Qi49RZNvd-YE/edit#gid=0) for details on the payment of tasks.
 
 **Details on the Additional Reward Types**
 
@@ -50,7 +50,7 @@ Once you complete an additional task, fill out the following form: <link>
 
 | Task Type               | Description                                                                                                                         | Requirements                                                                                                                                                                                   |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Referrals               | Refer a friend to sign up for the waitlist for our Test Grid.                                                                       | They must fill our your node's address on the [Wait List form](https://docs.google.com/forms/d/e/1FAIpQLSfSBq9TLH4nzG6OL3BEDZaqWokiOTphYWa_7VESEQxpXJRlLQ/viewform) and successfully register. |
+| Referrals               | Refer a friend to sign up for the waitlist for our Test Grid.                                                                       | They must fill in your node's address on the [Wait List form](https://docs.google.com/forms/d/e/1FAIpQLSfSBq9TLH4nzG6OL3BEDZaqWokiOTphYWa_7VESEQxpXJRlLQ/viewform) and successfully register. |
 | Video Tutorial          | Create educational content in video format (YouTube/shorts/reels) (e.g., How to become a Node, How to monetize your GPU)            | See Video Requirements below                                                                                                                                                                   |
 | Written Guide           | Create written educational content (tweet thread/blog post) (e.g., How to become a Node, How to monetize your GPU)                  | See Written Content Requirements below                                                                                                                                                         |
 | Social Media Review     | Share your experience on Twitter, LinkedIn, Instagram, or TikTok (short review, mention benefits, etc.)                             |                                                                                                                                                                                                |
@@ -61,7 +61,7 @@ Once you complete an additional task, fill out the following form: <link>
 
 **Video Requirements:**
 
-1. **Language:** Video content language is at your discretion as long as it is well-spoken and demonstrates a high level of proficiency.
+1. **Language:** Video content language is at your discretion, as long as it is well-spoken and demonstrates a high level of proficiency.
 2. **Platform:** Video content must be uploaded to YouTube for longer tutorials, TikTok, Instagram, or YouTube shorts for shorter videos.
 3. **Quality:** Videos must be in 720p quality or higher.
 4. **Sound Quality:** Ensure you are using a microphone for high-quality audio in the video.
