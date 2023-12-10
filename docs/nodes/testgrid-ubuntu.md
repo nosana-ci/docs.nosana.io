@@ -95,10 +95,10 @@ sudo systemctl restart docker
 With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
 ```shell
-bash <(wget -qO- https://nosana.io/testgrid.sh)
+bash <(wget -qO- https://nosana.io/register.sh)
 ```
 
-Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
+Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/register.sh](https://nosana.io/register.sh)
 
 The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide. Once all the checks pass, your node will start up.
 
@@ -142,7 +142,7 @@ To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is e
 
 ## Optional: Run Podman in Docker
 
-If you're running Ubuntu natively, you can use Docker to initiate your Podman instance. The `testgrid.sh` script accomplishes this in the final step, making this a non-mandatory step:
+If you're running Ubuntu natively, you can use Docker to initiate your Podman instance. The `register.sh` script accomplishes this in the final step, making this a non-mandatory step:
 
 ```shell
     docker run -d \

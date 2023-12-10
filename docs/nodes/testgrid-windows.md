@@ -138,10 +138,10 @@ If this doesn't work, make sure you have the NVIDIA drivers installed and the nv
 With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
 ```shell
-bash <(wget -qO- https://nosana.io/testgrid.sh)
+bash <(wget -qO- https://nosana.io/register.sh)
 ```
 
-Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/testgrid.sh](https://nosana.io/testgrid.sh)
+Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/register.sh](https://nosana.io/register.sh)
 
 The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide. Once all the checks pass, your node will start up.
 
@@ -189,7 +189,7 @@ To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is e
 ### Run Podman API
 
 This command can be used to start Podman service on port 8080, so our Nosana Node can reach it.
-This is also already done by the `testgrid.sh` script in the final step, so this step is optional:
+This is also already done by the `register.sh` script in the final step, so this step is optional:
 
 ```shell
 podman system service --time 0 tcp:0.0.0.0:8080&
