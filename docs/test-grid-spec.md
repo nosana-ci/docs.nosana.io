@@ -46,7 +46,7 @@ Refer to the [Test Grid Reward Sheet](https://docs.google.com/spreadsheets/d/1Wt
 
 **Details on the Additional Reward Types**
 
-Once you complete an additional task, fill out the following form: <link>
+Once you complete an additional task, fill out the following form: https://forms.gle/W4jjiTBSf5523TvU7
 
 | Task Type               | Description                                                                                                                         | Requirements                                                                                                                                                                                   |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
