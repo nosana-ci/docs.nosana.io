@@ -2,7 +2,7 @@
 
 Welcome to the Nosana Test Grid Phase 1! This document contains everything you need to know before you participate. 
 
-## Markets
+## Getting started
 
 For the duration of the first Test Grid, you will be assigned to a market with similar devices. The instructions in your email contain details about your market access key and how to connect with it. If you have not received this email yet please be patient, it should arrive within the first week. You should not switch to a different market unless requested to do so by the Nosana team.
 
@@ -31,12 +31,12 @@ Note that job earnings are subsidized for the Test Grid and are higher than duri
 
 There are multiple tasks that can be completed for additional rewards, like sharing your experience on social networks or publishing educational content. These rewards are paid out at the end of the Test Grid and are subject to several conditions: 
 
-::: warning
+::: note
 - You must perform the KYC process through our portal.
-- You may not be a resident of one of the [OFAC restricted countries](https://ofac.treasury.gov/sanctions-programs-and-country-information).
+- You may not be a resident of one of the listed [restricted countries](https://www.lawsociety.org.uk/topics/anti-money-laundering/high-risk-third-countries-for-aml-purposes).
 - The amount is linearly unlocked over a period of 31 days, starting at the end of the Test Grid.
 - You will get access to our vesting portal, where vested tokens can be claimed at any time.
-- You must have completed at least 14 compute jobs on the Test Grid.
+- You must have completed at least 1 compute jobs on the Test Grid.
 - The additional tasks are subject to approval by the Nosana team.
 :::
 
@@ -67,13 +67,13 @@ Once you complete an additional task, fill out the following form: <link>
 4. **Sound Quality:** Ensure you are using a microphone for high-quality audio in the video.
 5. **Task Demonstration:** The video must effectively demonstrate the successful completion of the task from start to finish.
 7. **Quality Evaluation:** The quality will be evaluated by the Nosana core team
-8. **Timeline:** All video submissions must be made before the end of the testnet
+8. **Timeline:** All video submissions must be made before the end of the Test Grid
 
 ---
 
 **Written Content Requirements:**
 
-1. **Language:** Written content language is at your discretion as long as it is well-written and demonstrates a high level of proficiency.
+1. **Language:** Written content language is at your discretion, as long as it is well-written and demonstrates a high level of proficiency.
 2. **Platform:** Written content must be published as a tweet thread, blog post, or any other appropriate platform.
 3. **Quality:** Ensure the written content is clear, well-structured, and provides valuable information.
 4. **Task Description:** Clearly describe the task or topic covered in the content.
