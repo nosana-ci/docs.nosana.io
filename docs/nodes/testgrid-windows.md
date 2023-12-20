@@ -205,8 +205,8 @@ curl http://localhost:8080/v4.5.0/libpod/info
 
 You can manually launch the Nosana Node to modify certain parameters:
 
-- Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
-- Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
+* Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
+* Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 
 ```shell
 docker run \
