@@ -60,7 +60,8 @@ Example output:
 
 ### Guide to Install NVIDIA Container Toolkit
 
-To install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) (`nvidia-ctk`), run the following commands: 
+To install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) (`nvidia-ctk`), run the following commands:
+
 ```shell
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
   && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
@@ -69,7 +70,9 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
   && \
     sudo apt-get update
 ```
+
 Then we can install the NVIDIA Container Toolkit package:
+
 ```shell
 sudo apt-get install -y nvidia-container-toolkit
 ```
@@ -125,6 +128,7 @@ You will see your node's information displayed in the following format. As long 
 Upon successful completion of the Test Grid benchmark job, you will receive a code in the logs. This code is required for your registration. Please follow the steps below:
 
 1. Check the logs for the following message:
+
    ```
    Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
    Test Grid Registration code: <CODE>
@@ -165,6 +169,8 @@ podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu 
 
 If unsuccessful, ensure NVIDIA drivers and the nvidia-ctk are [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
 
+If you see `Error: container create failed (no logs from conmon)...` when running the command, follow the steps [here](/nodes/troubleshoot.html#podman) to resolve issue
+
 To validate Podman's proper functioning, use:
 
 ```shell
@@ -174,8 +180,9 @@ curl http://localhost:8080/v4.5.0/libpod/info
 ## Launching the Nosana Node with Custom Parameters
 
 You can manually launch the Nosana Node to modify certain parameters:
-* Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
-* Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
+
+- Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
+- Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 
 ```shell
 docker run \
@@ -189,4 +196,5 @@ docker run \
 ```
 
 ## Troubleshoot
+
 If you have questions or when you have error messages, please take a look at our [Troubleshoot Guide](/nodes/troubleshoot) or join our [Discord](https://discord.gg/nosana) for help.
