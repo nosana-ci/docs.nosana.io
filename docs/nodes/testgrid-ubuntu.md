@@ -165,6 +165,7 @@ podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu 
 
 If unsuccessful, ensure NVIDIA drivers and the nvidia-ctk are [installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [configured](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
 
+If you see `Error: container create failed (no logs from conmon)...` when running the command, follow the steps [here](/nodes/troubleshoot.html#podman) to resolve issue
 To validate Podman's proper functioning, use:
 
 ```shell
