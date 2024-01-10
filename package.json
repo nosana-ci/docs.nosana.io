@@ -18,20 +18,26 @@
     "eslint:fix": "eslint 'docs/.vuepress/**/*.ts' --fix"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "6.12.0",
-    "@typescript-eslint/parser": "6.12.0",
-    "@vue/repl": "2.8.0",
+    "@types/katex": "0.16.7",
+    "@typescript-eslint/eslint-plugin": "6.18.1",
+    "@typescript-eslint/parser": "6.18.1",
+    "@vue/repl": "3.2.0",
     "@vuepress/client": "2.0.0-rc.0",
     "@vuepress/plugin-docsearch": "2.0.0-rc.0",
-    "mathjax-full": "3.2.2",
-    "chart.js": "4.4.0",
+    "chart.js": "4.4.1",
     "echarts": "5.4.3",
+    "flowchart.ts": "3.0.0",
     "katex": "0.16.9",
+    "kotlin-playground": "1.30.0",
+    "mathjax-full": "3.2.2",
     "mermaid": "10.6.1",
-    "prettier": "3.1.0",
-    "reveal.js": "5.0.2",
-    "vue": "3.3.8",
+    "prettier": "3.1.1",
+    "reveal.js": "5.0.4",
+    "sandpack-vue3": "3.1.9",
+    "vue": "3.4.7",
     "vuepress": "2.0.0-rc.0",
-    "vuepress-theme-hope": "2.0.0-rc.0"
+    "vuepress-plugin-md-enhance": "2.0.0-rc.11",
+    "vuepress-plugin-pwa2": "2.0.0-rc.11",
+    "vuepress-theme-hope": "2.0.0-rc.11"
   }
 }

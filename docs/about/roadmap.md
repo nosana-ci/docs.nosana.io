@@ -38,9 +38,9 @@ Support for medium-sized and large businesses will be added in this release, as 
 axisFormat  %Y-%m
 
 section Genesis
-Test Grid 1 :          g1, 2023-12,45d
-Test Grid 2 :          g2, after g1,45d
-Test Grid 3 :          g3, after g2,45d
+Test Grid 1 : active, g1, 2023-12 , 60d
+Test Grid 2 :         g2, after g1, 60d
+Test Grid 3 :         g3, after g2, 60d
 
 section Galactica
 Galactica - Main grid : m1, after g3,90d

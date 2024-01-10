@@ -8,7 +8,7 @@ export default [
   {
     text: 'A.I. Inference',
     icon: 'robot',
-    prefix: '/a.i./',
+    prefix: '/inference/',
     children: ['start', 'llama', 'diffusion'],
   },
   {

@@ -1,5 +1,6 @@
 import { hopeTheme } from 'vuepress-theme-hope';
 import { default as pages } from './pages';
+import * as path from 'path';
 
 export default hopeTheme({
   hostname: 'https://docs.nosana.io',
@@ -53,30 +54,67 @@ export default hopeTheme({
 
     // Disable features you don't want here
     mdEnhance: {
+      alert: true,
       align: true,
       attrs: true,
       chart: true,
       codetabs: true,
+      component: true,
       demo: true,
       echarts: true,
       figure: true,
+      flowchart: true,
       gfm: true,
       imgLazyload: true,
+      imgMark: true,
       imgSize: true,
-      include: true,
-      katex: true,
+      include: {
+        deep: true,
+        resolvePath: (file) => {
+          if (file.startsWith('@components/'))
+            return file.replace('@components', path.resolve(__dirname, '../../../components/src'));
+
+          if (file.startsWith('@echarts/'))
+            return file.replace('@echarts', path.resolve(__dirname, '../../../md-enhance/src/echarts'));
+
+          if (file.startsWith('@md-enhance/'))
+            return file.replace('@md-enhance', path.resolve(__dirname, '../../../md-enhance/src'));
+
+          if (file.startsWith('@pwa/')) return file.replace('@pwa', path.resolve(__dirname, '../../../pwa2/src'));
+
+          return file;
+        },
+      },
+      kotlinPlayground: true,
+      mathjax: true,
       mark: true,
+      markmap: false,
       mermaid: true,
       playground: {
-        presets: ['ts', 'vue'],
+        presets: ['ts', 'vue', 'unocss'],
       },
       revealJs: {
         plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
+        themes: [
+          'auto',
+          'beige',
+          'black',
+          'blood',
+          'league',
+          'moon',
+          'night',
+          'serif',
+          'simple',
+          'sky',
+          'solarized',
+          'white',
+        ],
       },
+      sandpack: true,
       stylize: [
         {
           matcher: 'Recommended',
-          replacer: ({ tag }: { tag: string }) => {
+          replacer: ({ tag }) => {
             if (tag === 'em')
               return {
                 tag: 'Badge',
@@ -91,6 +129,12 @@ export default hopeTheme({
       tabs: true,
       vPre: true,
       vuePlayground: true,
+    },
+
+    docsearch: {
+      appId: 'O80DOX8SB5',
+      apiKey: '3419239266c440c627d6bdd2f1cb82ea',
+      indexName: 'nosana',
     },
 
     pwa: {
