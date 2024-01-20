@@ -220,4 +220,4 @@ docker run \
 ```
 
 ## Troubleshoot
-If you have questions or when you have error messages, please take a look at our [Troubleshoot Guide](/nodes/troubleshoot) or join our [Discord](https://discord.gg/nosana) for help.
+If you have questions or when you have error messages, please take a look at our [Troubleshoot Guide](/nodes/troubleshoot) or join our [Discord](https://discord.gg/nosana-ai) for help.
