@@ -52,6 +52,11 @@ When you see this error go in Docker Desktop to -> Settings -> Docker engine, pl
 ```
 
 Then click appy and restart Docker.
+
+***Error /bip must match format 1pv4***
+
+If you see this error using the latest version of Docker Desktop, downgrade to version `4.21.0`.
+
 :::
 
 ::: warning Error: container create failed (no logs from conmon): conmon bytes "": readObjectStart: expect { or n, but found , error found in #0 byte of ...||..., bigger context ...||...
