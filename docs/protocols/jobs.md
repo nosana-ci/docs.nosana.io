@@ -13,7 +13,7 @@ It lets nodes in the Nosana Network earn tokens by doing those jobs.
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                              |
 | Build Status    | [Anchor Verified](https://www.apr.dev/program/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM)                                          |
 | Accounts        | [`4`](#accounts)                                                                                                                    |
-| Instructions    | [`11`](#instructions)                                                                                                               |
+| Instructions    | [`12`](#instructions)                                                                                                               |
 | Types           | [`3`](#types)                                                                                                                       |
 | Errors          | [`13`](#errors)                                                                                                                     |
 | Domain          | `nosana-jobs.sol`                                                                                                                   |
@@ -21,7 +21,7 @@ It lets nodes in the Nosana Network earn tokens by doing those jobs.
 
 ## Instructions
 
-A number of 11 instruction are defined in the Nosana Jobs program.
+A number of 12 instruction are defined in the Nosana Jobs program.
 
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -201,6 +201,54 @@ with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 ```typescript
 let tx = await program.methods
   .close()
+  .accounts({
+    market,            // ✓ writable, 𐄂 signer
+    vault,             // ✓ writable, 𐄂 signer
+    user,              // ✓ writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
+    tokenProgram,      // 𐄂 writable, 𐄂 signer
+  })
+  .signers([authorityKey])
+  .rpc();
+```
+
+@tab Close Admin
+### Close Admin
+
+Close a [MarketAccount](#market-account) and the associated [VaultAccount](#vault-account).
+
+#### Account Info
+
+The following 5 account addresses should be provided when invoking this instruction.
+
+| Name                   | Type                                                                                    | Description                                                                                       |
+|------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
+
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Close Admin Instruction
+is **`cab6b98ed0a191bd`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[202,182,185,142,208,161,145,189]
+```
+
+:::
+::: details Example with Anchor
+
+To invoke the Close Admin Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
+
+```typescript
+let tx = await program.methods
+  .closeAdmin()
   .accounts({
     market,            // ✓ writable, 𐄂 signer
     vault,             // ✓ writable, 𐄂 signer
@@ -657,7 +705,7 @@ A number of 4 accounts make up for the Nosana Jobs Program's state.
 ### Market Account
 
 The `MarketAccount` struct holds all the information about jobs and the nodes queue.
-The total size of this account is `3,363` bytes.
+The total size of this account is `10,211` bytes.
 
 | Name                        | Type                        | Size    | Offset  | Description                                                                                       |
 |-----------------------------|-----------------------------|---------|---------|---------------------------------------------------------------------------------------------------|
@@ -671,7 +719,7 @@ The total size of this account is `3,363` bytes.
 | `nodeAccessKey`             | `publicKey`                 | `32`    | `114`   | The NFT collection address of an NFT that the node holds, in order to access this market.         |
 | `nodeXnosMinimum`           | `u128`                      | `16`    | `146`   | The amount of [`xNOS`](/programs/staking) a node needs to qualify for a market.                   |
 | `queueType`                 | `u8`                        | `1`     | `162`   | The [QueueType](#queue-type) of the queue. Either Nodes or Jobs.                                  |
-| `queue`                     | `Vec<publicKey>`            | `3200`  | `163`   | The queue of order in the market.                                                                 |
+| `queue`                     | `Vec<publicKey>`            | `10048` | `163`   | The queue of order in the market.                                                                 |
 
 ::: details Anchor Account Discriminator
 
