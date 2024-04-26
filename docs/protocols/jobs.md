@@ -13,15 +13,15 @@ It lets nodes in the Nosana Network earn tokens by doing those jobs.
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                              |
 | Build Status    | [Anchor Verified](https://www.apr.dev/program/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM)                                          |
 | Accounts        | [`4`](#accounts)                                                                                                                    |
-| Instructions    | [`12`](#instructions)                                                                                                               |
+| Instructions    | [`14`](#instructions)                                                                                                               |
 | Types           | [`3`](#types)                                                                                                                       |
-| Errors          | [`13`](#errors)                                                                                                                     |
+| Errors          | [`14`](#errors)                                                                                                                     |
 | Domain          | `nosana-jobs.sol`                                                                                                                   |
 |  Address        | [`nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM`](https://explorer.solana.com/address/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM)    |
 
 ## Instructions
 
-A number of 12 instruction are defined in the Nosana Jobs program.
+A number of 14 instruction are defined in the Nosana Jobs program.
 
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -650,6 +650,50 @@ let tx = await program.methods
   .rpc();
 ```
 
+@tab Quit Admin
+### Quit Admin
+
+Quit a [JobAccount](#job-account) that you have started.
+
+#### Account Info
+
+The following 3 account addresses should be provided when invoking this instruction.
+
+| Name                   | Type                                                                                    | Description                                                                                       |
+|------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [RunAccount](#run-account) address.                                                           |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The paying identy for the rent.                                                                   |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Quit Admin Instruction
+is **`67ee6e08b61438c4`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[103,238,110,8,182,20,56,196]
+```
+
+:::
+::: details Example with Anchor
+
+To invoke the Quit Admin Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
+
+```typescript
+let tx = await program.methods
+  .quitAdmin()
+  .accounts({
+    run,               // ✓ writable, 𐄂 signer
+    payer,             // ✓ writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
+  })
+  .signers([authorityKey])
+  .rpc();
+```
+
 @tab Clean
 ### Clean
 
@@ -690,6 +734,50 @@ let tx = await program.methods
     market,            // 𐄂 writable, 𐄂 signer
     payer,             // 𐄂 writable, 𐄂 signer
   })
+  .rpc();
+```
+
+@tab Clean Admin
+### Clean Admin
+
+Close an [JobAccount](#job-account) as an admin.
+
+#### Account Info
+
+The following 3 account addresses should be provided when invoking this instruction.
+
+| Name                   | Type                                                                                    | Description                                                                                       |
+|------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
+| `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Clean Admin Instruction
+is **`f55abc44fdebab69`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[245,90,188,68,253,235,171,105]
+```
+
+:::
+::: details Example with Anchor
+
+To invoke the Clean Admin Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
+
+```typescript
+let tx = await program.methods
+  .cleanAdmin()
+  .accounts({
+    job,               // ✓ writable, 𐄂 signer
+    payer,             // 𐄂 writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
+  })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -841,7 +929,7 @@ A number of 6 variants are defined in this `enum`:
 
 ## Errors
 
-A number of 13 errors are defined in the Nosana Jobs Program.
+A number of 14 errors are defined in the Nosana Jobs Program.
 
 :::: tabs
 
@@ -969,7 +1057,17 @@ This NFT is not owned by this node.
 
 ::: warning Nosana Error
 
-### `6012` - Node Key Invalid Collection
+### `6012` - Node Nft Invalid Amount
+
+Access NFT amount cannot be 0.
+
+:::
+
+@tab 6013
+
+::: warning Nosana Error
+
+### `6013` - Node Key Invalid Collection
 
 This access key does not belong to a verified collection.
 
