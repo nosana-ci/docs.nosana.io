@@ -1,6 +1,6 @@
 # Run your Node on Test Grid
 ## GPU Test Grid
-This guide is for nodes that already successfully registered their node for the GPU Test Grid and got selected for Phase 1. Congratulations for making it this far! Now its time to start up your node and start earning $NOS! If you got selected, your node received a special access NFT that can be used to join a GPU market on Test Grid.
+This guide is for nodes that already successfully registered their node for the GPU Test Grid and got selected for Phase 1 or Phase 2. Congratulations for making it this far! Now its time to start up your node and start earning $NOS! If you got selected, your node received a special access NFT that can be used to join a GPU market on Test Grid.
 
 ::: info Backup your Solana Key
 
@@ -16,15 +16,9 @@ sudo cat ~/.nosana/nosana_key.json
 With just a single command in your command line, you can easily run your Nosana Node on your machine. Simply run the following command:
 
 ```shell
-bash <(wget -qO- https://nosana.io/testgrid.sh) your-market-address-here
+bash <(wget -qO- https://nosana.io/testgrid.sh)
 ```
-If you are selected, you should have received the correct market address and command to run by email.
-
-If everything is successful, your Nosana Node is now running in the background in a docker container.
-To check the logs run:
-```shell
-docker logs -f nosana-node
-```
+If everything is successful, your Nosana Node is now running in a docker container.
 
 ## Register for Test Grid
 
@@ -43,15 +37,15 @@ You can manually launch the Nosana Node to modify certain parameters:
 * Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 
 ```shell
-docker run -d \
+docker run \
       --pull=always \
       --network host  \
-      --interactive \
+      --interactive -t \
       --volume ~/.config/solana/id.json:/root/.nosana/nosana_key.json \
-      nosana/nosana-node \
+      nosana/nosana-cli nosana node start \
          --network mainnet \
-         --podman http://$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):8080 \
-         start --market your-market-address-here
+         --rpc your-rpc-here \
+         --podman http://$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):8080
 ```
 
 ## FAQ
