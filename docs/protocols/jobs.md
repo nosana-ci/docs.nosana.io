@@ -347,7 +347,7 @@ The following 7 account addresses should be provided when invoking this instruct
 | `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
 | `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
 | `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
-| `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The paying identy for the rent.                                                                   |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 | `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
 
@@ -376,7 +376,7 @@ let tx = await program.methods
     market,            // 𐄂 writable, 𐄂 signer
     vault,             // ✓ writable, 𐄂 signer
     user,              // ✓ writable, 𐄂 signer
-    payer,             // 𐄂 writable, 𐄂 signer
+    payer,             // ✓ writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
     tokenProgram,      // 𐄂 writable, 𐄂 signer
   })
@@ -707,7 +707,7 @@ The following 3 account addresses should be provided when invoking this instruct
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
 | `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
-| `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The paying identy for the rent.                                                                   |
 
 
 ::: details Solana Dispatch ID
@@ -732,7 +732,7 @@ let tx = await program.methods
   .accounts({
     job,               // ✓ writable, 𐄂 signer
     market,            // 𐄂 writable, 𐄂 signer
-    payer,             // 𐄂 writable, 𐄂 signer
+    payer,             // ✓ writable, 𐄂 signer
   })
   .rpc();
 ```
@@ -749,7 +749,7 @@ The following 3 account addresses should be provided when invoking this instruct
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
-| `payer`                | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The paying identy for the rent.                                                                   |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The paying identy for the rent.                                                                   |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 
 
@@ -774,7 +774,7 @@ let tx = await program.methods
   .cleanAdmin()
   .accounts({
     job,               // ✓ writable, 𐄂 signer
-    payer,             // 𐄂 writable, 𐄂 signer
+    payer,             // ✓ writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
   })
   .signers([authorityKey])
