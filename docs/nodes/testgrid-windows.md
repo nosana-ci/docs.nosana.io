@@ -144,44 +144,45 @@ bash <(wget -qO- https://nosana.io/register.sh)
 
 Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/register.sh](https://nosana.io/register.sh)
 
-The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide. Once all the checks pass, your node will start up.
+The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide.
 
-You will see your node's information displayed in the following format. As long as there are no error messages, your node will automatically join the Test Grid market, where it will receive a Test Grid benchmark job. It's important to keep the node running during this process!
+You will see your node's information displayed in the following format.
 
 ```
-  _ __   ___  ___  __ _ _ __   __ _
- | '_ \ / _ \/ __|/ _` | '_ \ / _` |
- | | | | (_) \__ \ (_| | | | | (_| |
- |_| |_|\___/|___/\__,_|_| |_|\__,_|
+  _   _                             
+ | \ | | ___  ___  __ _ _ __   __ _ 
+ |  \| |/ _ \/ __|/ _` | '_ \ / _` |
+ | |\  | (_) \__ \ (_| | | | | (_| |
+ |_| \_|\___/|___/\__,_|_| |_|\__,_|
+                                    
+Reading keypair from ~/.nosana/nosana_key.json
 
-  Validator  <NODE ADDRESS>
-  Network    Solana :devnet
-  Market     <MARKET ADDRESS>
-  Balance    0E-9 SOL
-  Tokens     0.000000 NOS
-  Slashed    0.00 NOS
-  NFT        11111111111111111111111111111111
-  Owned      0 NFT
+Network:	    mainnet
+Wallet:		    <NODE_ADDRESS>
+SOL balance:	0E-9 SOL
+NOS balance:	0 NOS
+Provider:	    podman
 ```
 
 
 ### Test Grid Registration Instructions
 
-Upon successful completion of the Test Grid benchmark job, you will receive a code in the logs. This code is required for your registration. Please follow the steps below:
+When running the script it'll ask for some information: email, Discord & Twitter/X handle (optional). After filling in the information and agreeing to the terms & conditions, a benchmark will start. In this benchmark we will check the hardware of your node. 
 
-1. Check the logs for the following message:
-   ```
-   Job Succeeded: https://explorer.nosana.io/jobs/<JOB_ID>?network=devnet
-   Test Grid Registration code: <CODE>
-   ```
+If the benchmark succeeds, you should see the following output:
 
-2. Copy the Test Grid registration code: `<CODE>`.
+```
+Benchmark finished
+================================
+Thank you for registering for Nosana Node. 
+We'll review your registration and you will get an email from us if you are selected.
+```
 
-Congratulations! :tada: You have completed the technical part of the registration.
+Congratulations! :tada: You have completed the registration. If you are selected for Test Grid you will receive an email with more information.
 
-::: info
+::: warning
 
-To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
+To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is **essential** to back up this file to ensure its safety.
 
 :::
 
