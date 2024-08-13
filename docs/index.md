@@ -27,7 +27,7 @@ features:
 - icon: robot
   title: AI Inference
   details: Get started running your AI workloads
-  link: inference/start
+  link: inference/quick_start
 - icon: server
   title: Nosana Nodes
   details: Get started earning $NOS by joining our Test Grid

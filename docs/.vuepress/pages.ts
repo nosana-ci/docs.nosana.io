@@ -9,7 +9,14 @@ export default [
     text: 'A.I. Inference',
     icon: 'robot',
     prefix: '/inference/',
-    children: ['start', 'llama', 'diffusion'],
+    children: ['quick_start', 'job_schema', 'endpoints', 'writing_a_job', 'markets'],
+  },
+  {
+    text: 'Inference Examples',
+    icon: 'code',
+    prefix: '/inference/examples/',
+    collapsible: true,
+    children: ['hello_world', 'jupyter', 'open_webui', 'stable', 'whisper', 'ollama', 'tinyllama', 'multi_job'],
   },
   {
     text: 'Nodes',

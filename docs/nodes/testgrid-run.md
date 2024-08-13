@@ -6,7 +6,7 @@ This guide is for nodes that already successfully registered their node for the 
 
 To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
 You can print your private key to the terminal and then copy it and store it in your password manager for example.
-```shell
+```sh:no-line-numbers
 sudo cat ~/.nosana/nosana_key.json
 ```
 :::
@@ -15,7 +15,7 @@ sudo cat ~/.nosana/nosana_key.json
 
 With just a single command in your command line, you can easily run your Nosana Node on your machine. Simply run the following command:
 
-```shell
+```sh:no-line-numbers
 bash <(wget -qO- https://nosana.io/testgrid.sh)
 ```
 If everything is successful, your Nosana Node is now running in a docker container.
@@ -36,7 +36,7 @@ You can manually launch the Nosana Node to modify certain parameters:
 * Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
 * Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 
-```shell
+```sh:no-line-numbers
 docker run \
       --pull=always \
       --network host  \
@@ -55,7 +55,7 @@ You don't have to keep your node running at all times. However, the more your no
 
 ::: details Where can I see the status of my node?
 You can see the status of your node by having a look in the logs. To view the logs run: 
-```bash
+```sh:no-line-numbers
 docker logs -f nosana-node
 ```
 :::
