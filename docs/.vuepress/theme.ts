@@ -20,7 +20,7 @@ export default hopeTheme({
   // navigation
   sidebar: pages,
   navbar: [
-    ...pages,
+    // ...pages,
     {
       text: 'Site',
       // icon: 'link',

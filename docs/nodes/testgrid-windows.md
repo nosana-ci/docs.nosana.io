@@ -24,7 +24,7 @@ For detailed instructions on how to install WSL and run Ubuntu 22.04, follow the
 
 Once installed, you can verify your WSL2 Ubuntu version by running the following command:
 
-```shell
+```sh:no-line-numbers
 lsb_release -a
 ```
 
@@ -49,7 +49,7 @@ To use NVIDIA drivers, download and install the appropriate driver from the offi
 
 To verify if the drivers are correctly installed, open a terminal and run the following command:
 
-```shell
+```sh:no-line-numbers
 nvidia-smi
 ```
 
@@ -85,7 +85,7 @@ These commands will help you generate the necessary configuration file and verif
 ### Install the NVIDIA Container Toolkit
 
 To install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) (`nvidia-ctk`), run the following commands:
-```shell
+```sh:no-line-numbers
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
   && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
@@ -94,7 +94,7 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
     sudo apt-get update
 ```
 Then we can install the NVIDIA Container Toolkit package:
-```shell
+```sh:no-line-numbers
 sudo apt-get install -y nvidia-container-toolkit
 ```
 
@@ -104,11 +104,11 @@ For configuring the NVIDIA Container Toolkit to run Podman v4 natively on WSL2 (
 
 Once you have completed the configuration, run the following commands:
 
-```shell
+```sh:no-line-numbers
 sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
 ```
 
-```shell
+```sh:no-line-numbers
 nvidia-ctk cdi list
 ```
 
@@ -116,7 +116,7 @@ nvidia-ctk cdi list
 
 The Nosana Node connects to Podman and runs your containers inside of it. On WSL2, you'll need to natively install Podman >v4.1:
 
-```shell
+```sh:no-line-numbers
 echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/unstable/xUbuntu_22.04/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:unstable.list
 curl -fsSL https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/unstable/xUbuntu_22.04/Release.key | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_unstable.gpg > /dev/null
 sudo apt update
@@ -138,7 +138,7 @@ If you see `Error: container create failed (no logs from conmon)...` when runnin
 
 With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
-```shell
+```sh:no-line-numbers
 bash <(wget -qO- https://nosana.io/register.sh)
 ```
 
@@ -193,13 +193,13 @@ To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is *
 This command can be used to start Podman service on port 8080, so our Nosana Node can reach it.
 This is also already done by the `register.sh` script in the final step, so this step is optional:
 
-```shell
+```sh:no-line-numbers
 podman system service --time 0 tcp:0.0.0.0:8080&
 ```
 
 To validate Podman's proper functioning, use:
 
-```shell
+```sh:no-line-numbers
 curl http://localhost:8080/v4.5.0/libpod/info
 ```
 
@@ -209,7 +209,7 @@ You can manually launch the Nosana Node to modify certain parameters:
 * Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
 * Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 
-```shell
+```sh:no-line-numbers
 docker run \
       --pull=always \
       --network host  \

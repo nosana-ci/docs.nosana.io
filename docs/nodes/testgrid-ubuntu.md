@@ -8,7 +8,7 @@ Greetings! This is your comprehensive guide to setting up the Nosana Node on an 
 
 Make sure you have Ubuntu version **20.04** or higher. You can check your Ubuntu version with:
 
-```shell
+```sh:no-line-numbers
 lsb_release -a
 ```
 
@@ -61,7 +61,7 @@ Example output:
 ### Guide to Install NVIDIA Container Toolkit
 
 To install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) (`nvidia-ctk`), run the following commands: 
-```shell
+```sh:no-line-numbers
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
   && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
@@ -70,7 +70,7 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
     sudo apt-get update
 ```
 Then we can install the NVIDIA Container Toolkit package:
-```shell
+```sh:no-line-numbers
 sudo apt-get install -y nvidia-container-toolkit
 ```
 
@@ -80,13 +80,13 @@ As we aim to run Podman within Docker, adhere to the Docker configuration instru
 
 Execute the following commands in your terminal:
 
-```shell
+```sh:no-line-numbers
 sudo nvidia-ctk runtime configure --runtime=docker
 ```
 
 Subsequently, restart Docker with:
 
-```shell
+```sh:no-line-numbers
 sudo systemctl restart docker
 ```
 
@@ -94,7 +94,7 @@ sudo systemctl restart docker
 
 With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
-```shell
+```sh:no-line-numbers
 bash <(wget -qO- https://nosana.io/register.sh)
 ```
 
@@ -145,7 +145,7 @@ To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is *
 
 If you're running Ubuntu natively, you can use Docker to initiate your Podman instance. The `register.sh` script accomplishes this in the final step, making this a non-mandatory step:
 
-```shell
+```sh:no-line-numbers
     docker run -d \
       --pull=always \
       --gpus=all \
@@ -169,7 +169,7 @@ If unsuccessful, ensure NVIDIA drivers and the nvidia-ctk are [installed](https:
 If you see `Error: container create failed (no logs from conmon)...` when running the command, follow the steps [here](/nodes/troubleshoot.html#podman) to resolve issue
 To validate Podman's proper functioning, use:
 
-```shell
+```sh:no-line-numbers
 curl http://localhost:8080/v4.5.0/libpod/info
 ```
 
@@ -179,7 +179,7 @@ You can manually launch the Nosana Node to modify certain parameters:
 * Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
 * Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 
-```shell
+```sh:no-line-numbers
 docker run \
       --pull=always \
       --network host  \
