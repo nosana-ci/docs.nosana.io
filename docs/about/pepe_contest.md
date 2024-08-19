@@ -85,5 +85,5 @@ The winners and honorable mentions will be revealed by the team live during the 
 4. Participants agree that by entering the contest, they grant Nosana the rights to use, edit, and share/distribute the emojis within the community. 
 
 <div style="width: min(400px, 90%); margin: 0 auto;">
-<img style="width: 100% alt="Pepe Nosana Discord Takeover; Are you ready?" src="\frontend\docs\.vuepress\public\assets\NosanaPepeProfile.jpg" />
+<img style="width: 100%" alt="Pepe Nosana Discord Takeover; Are you ready?" src="\frontend\docs\.vuepress\public\assets\NosanaPepeProfile.jpg" />
 </div>
