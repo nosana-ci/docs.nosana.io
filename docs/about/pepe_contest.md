@@ -1,5 +1,5 @@
 # Nosana Pepe Emoji Contest
-<div style="width: 100%; margin: 0 auto;">
+<div style="width: 100%;">
 <img alt="Pepe Nosana Discord Takeover" src="\frontend\docs\.vuepress\public\assets\NosanaPepeContest-04.jpg" />
 </div>
 
@@ -9,13 +9,13 @@
 
 # TL;DR
 
-* Entries should be posted in the #pepe-contest channel on our Discord server. Not a member? Become one now and join here. 
+* Entries should be posted in the #pepe-contest channel on our Discord server. Not a member? Become one now and [join here](https://discord.gg/Nosana-AI). 
 * Submit as many emojis as you want, but you can only win once during this contest. 
 * No NSFW emojis. Let’s keep things *mostly* clean.
 * Emoji should be Nosana and Pepe themed. 
 * Rewards: A total of 300 NOS are up for grabs! 
-* There will be a total of 3 winners and 3 honorable mentions. Each winner and honorable mention gets 10k XP on the server, as well as a special role. Check out the leaderboard here.
-* Submit your emojis by posting in the #pepe-contest channel from now until 23 August 7pm CET.
+* There will be a total of 3 winners and 3 honorable mentions. Each winner and honorable mention gets 10k XP on the server, as well as a special role. Check out the leaderboard [here](https://mee6.xyz/en/nosana).
+* Submit your emojis by posting in the [#pepe-contest channel](https://discord.com/channels/236263424676331521/1263155232884658262) from now until 23 August 7pm CET.
 
 ## Rewards
 
@@ -55,8 +55,8 @@ This contest is open to every member of the Nosana Discord server. Not a member 
 
 ## Creator Resources
 
-1. Nosana’s branding page for helpful things like logos and colors: https://nosana.io/brand
-2. Discord’s custom emoji guide: https://discord.com/blog/beginners-guide-to-custom-emojis
+1. Nosana’s branding page for helpful things like logos and colors: [https://nosana.io/brand](https://nosana.io/brand)
+2. Discord’s custom emoji guide: [https://discord.com/blog/beginners-guide-to-custom-emojis](https://discord.com/blog/beginners-guide-to-custom-emojis)
 
 ## Important Rules
 
@@ -79,11 +79,11 @@ The winners and honorable mentions will be revealed by the team live during the 
 
 **Terms and Conditions Apply** 
 1. **We will ping the winners publicly in the general chat with instructions on how to proceed securely.** 
-    * _NOTE:_ We never DM first, so any unsolicited DM from someone claiming to be Nosana should be considered a scam. We will not be responsible for any interaction you have with a scammer or imposter of Nosana. Please be safe and verify any person through official channels and links, which can be found at https://nosana.io only. 
+    * _NOTE:_ We never DM first, so any unsolicited DM from someone claiming to be Nosana should be considered a scam. We will not be responsible for any interaction you have with a scammer or imposter of Nosana. Please be safe and verify any person through official channels and links, which can be found at [https://nosana.io](https://nosana.io) only. 
 2. Winners will need to confirm their wallet address. **Our team will never ask you for any other information or any amount of money.** 
 3. If a winner doesn’t respond within three days after the public ping in the server, they will not be eligible for the reward. 
 4. Participants agree that by entering the contest, they grant Nosana the rights to use, edit, and share/distribute the emojis within the community. 
 
-<div style="width: 35%; text-align: center">
-<img style="width: 400px alt="Pepe Nosana Discord Takeover; Are you ready?" src="\frontend\docs\.vuepress\public\assets\NosanaPepeProfile.jpg" />
+<div style="width: min(400px, 90%); margin: 0 auto;">
+<img style="width: 100% alt="Pepe Nosana Discord Takeover; Are you ready?" src="\frontend\docs\.vuepress\public\assets\NosanaPepeProfile.jpg" />
 </div>
