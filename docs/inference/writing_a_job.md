@@ -120,6 +120,10 @@ Below we can see a list of the properties and a description for each property th
         - **`output` (optional)**: Specify the output
         - **`entrypoint` (optional)**: An entry point in a container is a script or executable that specifies the command to be run when the container starts
         - **`env` (optional)**: Key value map for environment variables in the container.
+        - **`resources` (optional)**: An array containing assets needed for inference.
+          - **`type`**: String representing where the asset should be retrieved from, S3, HF (HuggingFace) or IPFS.
+          - **`url`**: URL representing where the asset is located.
+          - **`target`**: Location where the asset should be downloaded to.
 
 ### Job JSON schema
 
@@ -180,7 +184,19 @@ Here you will be able to see the full JSON schema specification for a Nosana Job
             "env": {
               "type": "object",
               "additionalProperties": { "type": "string" }
-            }
+            },
+            "resources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": { "type": "string" },
+                  "url": { "type": "string" }
+                  "target": { "type": "string" }
+                },
+                "required": ["type", "url", "target"]
+              }
+            },
           },
           "required": ["image", "cmd"]
         },
