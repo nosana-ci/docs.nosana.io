@@ -120,6 +120,36 @@ Below we can see a list of the properties and a description for each property th
         - **`output` (optional)**: Specify the output
         - **`entrypoint` (optional)**: An entry point in a container is a script or executable that specifies the command to be run when the container starts
         - **`env` (optional)**: Key value map for environment variables in the container.
+        - **`resources` (optional)**: An array containing assets needed for inference.
+          - **`type`**: String representing where the asset should be retrieved from, S3, HF (HuggingFace) or IPFS.
+          - **`url`**: URL representing where the asset is located.
+          - **`target`**: Location where the asset should be downloaded to.
+
+### `cmd`
+
+The `cmd` array is important to illustrate, because there are some nuances on how to use it.
+If you are familiar with how to use the `cmd` property in Docker, you should already have an idea of how this property works.
+
+There are two primary ways of using the `cmd` array.
+
+1. String based CMD
+2. Array based CMD
+
+### String based CMD
+
+When the first element of the array is the whole command, such as:  
+`"gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app"`
+Bash will be used as the shell to interpret this command.
+
+### Array based CMD
+
+Another option is to put each command and every flag as it's own element in an array:  
+`["/bin/sh", "-c", gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "main:app"]`
+
+With the array based notation, we are able to specify the shell we want to use.
+Note that most often you will need to append `-c` flag after `/bin/sh`
+
+You can read more about how to use the `cmd` property by going to the [Docker Documentation](https://docs.docker.com/reference/dockerfile/#cmd).
 
 ### Job JSON schema
 
@@ -180,7 +210,19 @@ Here you will be able to see the full JSON schema specification for a Nosana Job
             "env": {
               "type": "object",
               "additionalProperties": { "type": "string" }
-            }
+            },
+            "resources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": { "type": "string" },
+                  "url": { "type": "string" }
+                  "target": { "type": "string" }
+                },
+                "required": ["type", "url", "target"]
+              }
+            },
           },
           "required": ["image", "cmd"]
         },

@@ -9,7 +9,7 @@ export default [
     text: 'A.I. Inference',
     icon: 'robot',
     prefix: '/inference/',
-    children: ['quick_start', 'job_schema', 'endpoints', 'writing_a_job', 'markets'],
+    children: ['quick_start', 'job_schema', 'endpoints', 'writing_a_job', 'markets', 'cached_resources'],
   },
   {
     text: 'Inference Examples',
