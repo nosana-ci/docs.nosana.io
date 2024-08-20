@@ -4,11 +4,10 @@ Every Nosana Node will cache the resources they need to run a job.
 These can either be Docker images or the inference models needed. 
 This is useful, because the main bottle neck to spinning up a Nosana Job is a downloading the assets to start the job.
 
-
 By splitting apart the docker image and the inference model into separate parts, it becomes possible to make the docker image really small. 
 This helps us achieve a couple of things:
 
-1. Reduced Docker pull speed bottlenecks
+1. Reduce Docker pull speed bottlenecks
 2. Use one Docker image to run multiple models
 3. Share inference models across Docker images, reducing disk space requirements and increasing time to first token.
 
@@ -18,17 +17,18 @@ Allowing you to pull, cache and auto-clean up for multiple resources.
 ## Cache availability
 
 The cache lifetime is currently set to 24 hours from the moment it is downloaded to a Nosana Node.
-Note this does not mean the cached asset is available to all other nodes in that specific market.
+The downloaded Docker image and inference models will be available on the Node for 24 hours.
+
+Note this does not mean the cached asset is cached to all other nodes in that specific market.
 That means if a job gets picked up by Nosana Node `XXX` in the `97G9NnvBDQ2WpKu6fasoMsAKmfj63C9rhysJnkeWodAf` market, and a second job is posted in the same market and is picked up by Nosana Node `YYY`, those resources will need to be downloaded again.
 It's only if Nosana Node `XXX` picks up the job again, will the cached resources be available.
 
-For the moment, when a resource is downloaded to the Nosana Node, it will be cached and available for **24 hours** before it is cleared. 
-
-
-
 ## Available resources per market
 
-It's possible to retrieve the cached images on a Nosana Node, by going to the following URL:
+All nodes will have certain Docker images and inference models always available, called required resources.
+These are available on a per market basis.
+
+It's possible to retrieve a list of these required resources such as Docker images on a Nosana Node, by going to the following URL:
 `https://dashboard.k8s.prd.nos.ci/api/markets/<Market-Address>/required-resources`
 
 By replacing `<Market-Address>` with the address of a market, you will be able to retrieve the cached resources for that specific Nosana Market.
@@ -58,7 +58,9 @@ When we go to this url, we will see the following JSON.
 }
 ```
 
-Here we can see the list of cached Docker images, and cached models that is always available for this particular Nosana Market. All Nosana Nodes operating in this market will have these resources available. That means that as soon as the job is posted to the market and picked up a Nosana Node, it will be almost instantly available.
+Here we can see the list of cached Docker images, and cached models that is always available for this particular Nosana Market. 
+All Nosana Nodes operating in this market will have these resources available. 
+That means that as soon as the job is posted to the market and picked up a Nosana Node, it will be almost instantly available.
 
-Otherwise the resources need to be downloaded, and then can take a while. Usually it is a network constraint, waiting for the Docker image and the 
+Otherwise the resources need to be downloaded, and then can take a while. 
 
