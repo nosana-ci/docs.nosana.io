@@ -1,22 +1,19 @@
 # Jupyter
 
-```ts
+With this example you will spin up a jupyter notebook, Note that a service url will be printed.
+By following that service url, you will be able to access the Jupyter Instance running on the Nosana Grid.
 
-import { Wallet } from '@coral-xyz/anchor';
+To run this example, run:
+
+```sh
+npx tsx jupyter.ts
+```
+
+```ts
+// jupyter.ts
+
 import { PublicKey } from '@solana/web3.js';
 import { Client, Job, sleep } from '@nosana/sdk'
-
-// Check if SOLANA_KEY is set in environment variables otherwise use `your_private_key_here`
-const private_key: string = process.env.SOLANA_KEY ?? 'your_private_key_here';
-
-// Instantiate Nosana client
-const nosana: Client = new Client('mainnet', private_key);
-
-console.log(`
-Connected with wallet: ${(nosana.solana.wallet as Wallet).publicKey.toString()}
-Solana balance: ${(await nosana.solana.getSolBalance())} SOL
-Nosana balance: ${(await nosana.solana.getNosBalance())?.amount.toString()} NOS
-`);
 
 // Define Nosana job definition
 const json_flow = {
@@ -41,7 +38,20 @@ const json_flow = {
       }
     }
   ]
-}
+};
+
+(async () => {
+// Check if SOLANA_KEY is set in environment variables otherwise use `your_private_key_here`
+const private_key: string = process.env.SOLANA_KEY ?? 'your_private_key_here';
+
+// Instantiate Nosana client
+const nosana: Client = new Client('mainnet', private_key);
+
+console.log(`
+Connected with wallet: ${nosana.solana.wallet.publicKey.toString()}
+Solana balance: ${(await nosana.solana.getSolBalance())} SOL
+Nosana balance: ${(await nosana.solana.getNosBalance())?.amount.toString()} NOS
+`);
 
 // Upload Nosana job definition to IPFS
 const ipfsHash = await nosana.ipfs.pin(json_flow);
@@ -67,7 +77,6 @@ while (!job || job.state === "QUEUED"|| job.state !== "RUNNING") {
   console.log(`Check job state: ${job.state}`)
   await sleep(5);
 }
-
-
+})();
 
 ```

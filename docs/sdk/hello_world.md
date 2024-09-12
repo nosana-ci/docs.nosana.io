@@ -1,22 +1,20 @@
 # Hello World
 
-```ts
+Simple hello world typescript program to run an inference job on nosana.
+This program will run `echo hello world` in an `ubuntu` container.
 
-import { Wallet } from '@coral-xyz/anchor';
+The output of `echo` that results in `stdout` is available in the the `result` object: `${JSON.stringify(result.opStates[0].logs)}`
+
+To run this example:
+
+```sh
+npx tsx hello_world.ts
+```
+
+```ts
+// hello_world.ts
 import { PublicKey } from '@solana/web3.js';
 import { Client, Job, sleep } from '@nosana/sdk'
-
-// Check if SOLANA_KEY is set in environment variables otherwise use `your_private_key_here`
-const private_key: string = process.env.SOLANA_KEY ?? 'your_private_key_here';
-
-// Instantiate Nosana client
-const nosana: Client = new Client('mainnet', private_key);
-
-console.log(`
-Connected with wallet: ${(nosana.solana.wallet as Wallet).publicKey.toString()}
-Solana balance: ${(await nosana.solana.getSolBalance())} SOL
-Nosana balance: ${(await nosana.solana.getNosBalance())?.amount.toString()} NOS
-`);
 
 const json_flow = {
   "version": "0.1",
@@ -34,7 +32,21 @@ const json_flow = {
       }
     }
   ]
-}  
+};  
+
+(async () => {
+
+// Check if SOLANA_KEY is set in environment variables otherwise use `your_private_key_here`
+const private_key: string = process.env.SOLANA_KEY ?? 'your_private_key_here';
+
+// Instantiate Nosana client
+const nosana: Client = new Client('mainnet', private_key);
+
+console.log(`
+Connected with wallet: ${nosana.solana.wallet.publicKey.toString()}
+Solana balance: ${(await nosana.solana.getSolBalance())} SOL
+Nosana balance: ${(await nosana.solana.getNosBalance())?.amount.toString()} NOS
+`);
 
 // Upload Nosana job definition to IPFS
 const ipfsHash = await nosana.ipfs.pin(json_flow);
@@ -49,6 +61,7 @@ console.log(`
 Job posted!
 IPFS uploaded: ${nosana.ipfs.config.gateway + ipfsHash}
 Posted to market: https://explorer.nosana.io/markets/${market.toBase58()}
+Service URL: https://${response.job}.node.k8s.prd.nos.ci
 Nosana Explorer: https://explorer.nosana.io/jobs/${response.job}
 `)
 
@@ -75,4 +88,5 @@ ${JSON.stringify(result)}
 Job IPFS:
 ${nosana.ipfs.config.gateway}${job.ipfsResult}
 `)
+})()
 ```

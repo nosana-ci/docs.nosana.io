@@ -1,22 +1,19 @@
 # Tiny Llama
 
-```ts
+This is an example where we run an inference to a Tiny Llama model.
+We prompt it with `Write me a story about Tony the tiny hawk`.
 
-import { Wallet } from '@coral-xyz/anchor';
+To run this example, run:
+
+```sh
+npx tsx tiny_llama.ts
+```
+
+```ts
+// tiny_lamma.ts
+
 import { PublicKey } from '@solana/web3.js';
 import { Client, Job, sleep } from '@nosana/sdk'
-
-// Check if SOLANA_KEY is set in environment variables otherwise use `your_private_key_here`
-const private_key: string = process.env.SOLANA_KEY ?? 'your_private_key_here';
-
-// Insatiate Nosana client
-const nosana: Client = new Client('mainnet', private_key);
-
-console.log(`
-Connected with wallet: ${(nosana.solana.wallet as Wallet).publicKey.toString()}
-Solana balance: ${(await nosana.solana.getSolBalance())} SOL
-Nosana balance: ${(await nosana.solana.getNosBalance())?.amount.toString()} NOS
-`);
 
 const json_flow = {
   "version": "0.1",
@@ -35,7 +32,20 @@ const json_flow = {
       }
     }
   ]
-}
+};
+
+(async () => {
+// Check if SOLANA_KEY is set in environment variables otherwise use `your_private_key_here`
+const private_key: string = process.env.SOLANA_KEY ?? 'your_private_key_here';
+
+// Insatiate Nosana client
+const nosana: Client = new Client('mainnet', private_key);
+
+console.log(`
+Connected with wallet: ${(nosana.solana.wallet).publicKey.toString()}
+Solana balance: ${(await nosana.solana.getSolBalance())} SOL
+Nosana balance: ${(await nosana.solana.getNosBalance())?.amount.toString()} NOS
+`);
 
 // Upload Nosana job definition to IPFS
 const ipfsHash = await nosana.ipfs.pin(json_flow);
@@ -51,6 +61,7 @@ console.log(`
 Job posted!
 IPFS uploaded: ${nosana.ipfs.config.gateway + ipfsHash}
 Posted to market: https://explorer.nosana.io/markets/${market.toBase58()}
+Service URL: https://${response.job}.node.k8s.prd.nos.ci
 Nosana Explorer: https://explorer.nosana.io/jobs/${response.job}
 `)
 
@@ -74,4 +85,5 @@ ${chat_response}
 Job IPFS:
 ${nosana.ipfs.config.gateway}${job.ipfsResult}
 `)
+})()
 ```
