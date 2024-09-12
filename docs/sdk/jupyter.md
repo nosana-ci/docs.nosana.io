@@ -2,6 +2,8 @@
 
 With this example you will spin up a jupyter notebook, Note that a service url will be printed.
 By following that service url, you will be able to access the Jupyter Instance running on the Nosana Grid.
+In this example it would be something like:
+`Service URL: https://8pAaw3fc9AqroEB15yFYckgTPJVDtwqp2xDKczE2uqtZ.node.k8s.prd.nos.ci`
 
 To run this example, run:
 
