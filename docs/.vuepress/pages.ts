@@ -12,6 +12,12 @@ export default [
     children: ['quick_start', 'job_schema', 'endpoints', 'writing_a_job', 'markets', 'cached_resources'],
   },
   {
+    text: 'SDK',
+    icon: 'code',
+    prefix: '/sdk/',
+    children: ['sdk_start', 'hello_world', 'tiny_llama', 'jupyter'],
+  },
+  {
     text: 'Inference Examples',
     icon: 'code',
     prefix: '/inference/examples/',
