@@ -22,7 +22,7 @@ At the moment the Nosana Node is in pre-release. Therefore we highly recommend t
 |-------------------|------------------|-------------------|------------------|-------------------|
 | NVIDIA RTX 4090   | NVIDIA RTX 4080  | NVIDIA RTX 4070Ti | NVIDIA RTX 4070  | NVIDIA RTX 4060Ti |
 | NVIDIA RTX 4060   | NVIDA RTX 3090Ti | NVIDA RTX 3090    | NVIDA RTX 3080Ti | NVIDA RTX 3080    |
-| NVIDIA RTX 3070Ti | NVIDA RTX 3070   | NVIDA RTX 3060Ti  | NVIDA RTX 3060Ti | NVIDIA RTX A4000  |
+| NVIDIA RTX 3070Ti | NVIDA RTX 3070   | NVIDA RTX 3060    | NVIDA RTX 3060Ti | NVIDIA RTX A4000  |
 | NVIDIA RTX A4500  | NVIDIA RTX A5000 | NVIDIA RTX A5500  | NVIDIA RTX A6000 |                   |
 
 <!-- ## Software Requirements
