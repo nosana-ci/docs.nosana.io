@@ -95,10 +95,10 @@ sudo systemctl restart docker
 With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
 ```sh:no-line-numbers
-bash <(wget -qO- https://nosana.io/register.sh)
+bash <(wget -qO- https://nosana.com/register.sh)
 ```
 
-Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.io/register.sh](https://nosana.io/register.sh)
+Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.com/register.sh](https://nosana.com/register.sh)
 
 The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide.
 

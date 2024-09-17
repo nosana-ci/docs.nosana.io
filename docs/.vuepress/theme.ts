@@ -3,9 +3,9 @@ import { default as pages } from './pages';
 import * as path from 'path';
 
 export default hopeTheme({
-  hostname: 'https://docs.nosana.io',
+  hostname: 'https://docs.nosana.com',
   logo: 'assets/logo.svg',
-  repo: 'https://github.com/nosana-ci/docs.nosana.io',
+  repo: 'https://github.com/nosana-ci/docs.nosana.com',
   docsDir: 'docs',
   iconAssets: 'fontawesome',
   editLink: false,
@@ -27,19 +27,19 @@ export default hopeTheme({
       text: 'Site',
       // icon: 'link',
       icon: 'globe',
-      link: 'https://nosana.io/',
+      link: 'https://nosana.com/',
     },
     {
       text: 'Staking',
       icon: 'coins',
       // icon: 'network-wired',
-      link: 'https://app.nosana.io/stake',
+      link: 'https://app.nosana.com/stake',
     },
     {
       text: 'Explorer',
       icon: 'gauge',
       // icon: 'network-wired',
-      link: 'https://explorer.nosana.io/',
+      link: 'https://explorer.nosana.com/',
     },
   ],
   navbarLayout: {

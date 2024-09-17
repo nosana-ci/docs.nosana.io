@@ -1,11 +1,11 @@
-# docs.nosana.io
+# docs.nosana.com
 
 Technical documentation for the Nosana Network
 
 
 ## Documentation
 
-https://docs.nosana.io
+https://docs.nosana.com
 
 ## License
 
