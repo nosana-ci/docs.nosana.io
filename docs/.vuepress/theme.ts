@@ -11,7 +11,7 @@ export default hopeTheme({
   editLink: false,
   prevLink: false,
   siteTitle: 'Documentation',
-  darkmode: "disable",
+  darkmode: 'disable',
 
   // footer
   footer: 'MIT Licensed | Copyright © 2021-present Nosana',
@@ -43,9 +43,9 @@ export default hopeTheme({
     },
   ],
   navbarLayout: {
-    start: ["Brand"],
-    center: ["Links"],
-    end: ["Repo", "Search"],
+    start: ['Brand'],
+    center: ['Links'],
+    end: ['Repo', 'Search'],
   },
 
   pageInfo: ['Category', 'Tag', 'ReadingTime'],
