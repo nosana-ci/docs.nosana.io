@@ -10,7 +10,6 @@ export default hopeTheme({
   iconAssets: 'fontawesome',
   editLink: false,
   prevLink: false,
-  siteTitle: 'Documentation',
   darkmode: 'disable',
 
   // footer
