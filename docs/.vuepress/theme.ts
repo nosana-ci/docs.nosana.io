@@ -4,12 +4,14 @@ import * as path from 'path';
 
 export default hopeTheme({
   hostname: 'https://docs.nosana.io',
-  logo: 'assets/token.png',
+  logo: 'assets/logo.svg',
   repo: 'https://github.com/nosana-ci/docs.nosana.io',
   docsDir: 'docs',
   iconAssets: 'fontawesome',
   editLink: false,
   prevLink: false,
+  siteTitle: 'Documentation',
+  darkmode: "disable",
 
   // footer
   footer: 'MIT Licensed | Copyright © 2021-present Nosana',
@@ -39,13 +41,12 @@ export default hopeTheme({
       // icon: 'network-wired',
       link: 'https://explorer.nosana.io/',
     },
-    // {
-    //   text: 'Burner Phones',
-    //   // icon: 'link',
-    //   icon: 'mobile',
-    //   link: 'https://nft.nosana.io/',
-    // },
   ],
+  navbarLayout: {
+    start: ["Brand"],
+    center: ["Links"],
+    end: ["Repo", "Search"],
+  },
 
   pageInfo: ['Category', 'Tag', 'ReadingTime'],
 

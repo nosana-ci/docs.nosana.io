@@ -3,7 +3,7 @@ import theme from './theme.js';
 
 export default defineUserConfig({
   lang: 'en-US',
-  title: 'Nosana Documentation',
+  title: 'Documentation',
   description: 'Powering the AI revolution',
   base: '/',
   theme,
