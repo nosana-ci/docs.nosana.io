@@ -32,7 +32,7 @@ export default hopeTheme({
       text: 'Staking',
       icon: 'coins',
       // icon: 'network-wired',
-      link: 'https://app.nosana.com/stake',
+      link: 'https://dashboard.nosana.com/stake',
     },
     {
       text: 'Explorer',
