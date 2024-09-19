@@ -69,5 +69,5 @@ Not at all times will there be enough jobs for all the nodes in a market. In tha
 :::
 
 ::: details Which position in the queue is my node?
-To see the market queue, go to the markets page on the [Nosana Explorer](https://explorer.nosana.com/markets). Choose the market you are assigned to, on the market page it'll show you the queue.
+To see the market queue, go to the markets page on the [Nosana Explorer](https://dashboard.nosana.com/markets). Choose the market you are assigned to, on the market page it'll show you the queue.
 :::

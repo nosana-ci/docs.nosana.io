@@ -36,7 +36,7 @@ Some examples of which models you can run and links can be found in the followin
 
 ### Nosana Inference example
 
-You can explore the different jobs happening on the [Nosana Explorer](https://explorer.nosana.com/).
+You can explore the different jobs happening on the [Nosana Explorer](https://dashboard.nosana.com/).
 Here we can see an example of a Nosana inference job. 
 Note there are 2 `ops` (short for operations) happening in this inference job, both are using an [Ubuntu Docker Container](https://hub.docker.com/_/ubuntu).
 

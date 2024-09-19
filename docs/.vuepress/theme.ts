@@ -5,7 +5,7 @@ import * as path from 'path';
 export default hopeTheme({
   hostname: 'https://docs.nosana.com',
   logo: 'assets/logo.svg',
-  repo: 'https://github.com/nosana-ci/docs.nosana.com',
+  repo: 'https://github.com/nosana-ci/docs.nosana.io',
   docsDir: 'docs',
   iconAssets: 'fontawesome',
   editLink: false,
@@ -38,7 +38,7 @@ export default hopeTheme({
       text: 'Explorer',
       icon: 'gauge',
       // icon: 'network-wired',
-      link: 'https://explorer.nosana.com/',
+      link: 'https://dashboard.nosana.com/',
     },
   ],
   navbarLayout: {
