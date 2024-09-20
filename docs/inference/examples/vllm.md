@@ -42,7 +42,7 @@ nosana market get 97G9NnvBDQ2WpKu6fasoMsAKmfj63C9rhysJnkeWodAf
         "resources": [
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/hugging-face/llama3.1/70b/4x/models--hugging-quants--Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
+            "url": "https://models.nosana.io/hugging-face/llama3.1/70b/4x/models--hugging-quants--Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
             "target": "/root/.cache/huggingface/hub/models--hugging-quants--Meta-Llama-3.1-70B-Instruct-AWQ-INT4"
           }
         ]
@@ -88,7 +88,7 @@ nosana job post --market GLJHzqRN9fKGBsvsFzmGnaQGknUtLN1dqaFR8n3YdM22 --file vll
         "resources": [
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/hugging-face/llama3.1/8b/models--unsloth--Meta-Llama-3.1-8B",
+            "url": "https://models.nosana.io/hugging-face/llama3.1/8b/models--unsloth--Meta-Llama-3.1-8B",
             "target": "/root/.cache/huggingface/hub/models--unsloth--Meta-Llama-3.1-8B"
           }
         ]
@@ -134,7 +134,7 @@ nosana job post --market 97G9NnvBDQ2WpKu6fasoMsAKmfj63C9rhysJnkeWodAf --file vll
         "resources": [
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/hugging-face/llama3.1/8b/4x/models--hugging-quants--Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+            "url": "https://models.nosana.io/hugging-face/llama3.1/8b/4x/models--hugging-quants--Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
             "target": "/root/.cache/huggingface/hub/models--hugging-quants--Meta-Llama-3.1-8B-Instruct-AWQ-INT4"
           }
         ]
