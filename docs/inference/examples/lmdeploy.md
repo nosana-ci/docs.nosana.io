@@ -44,12 +44,12 @@ nosana market get 97G9NnvBDQ2WpKu6fasoMsAKmfj63C9rhysJnkeWodAf
         "resources": [
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/hugging-face/llama3.1/70b/4x/models--hugging-quants--Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
+            "url": "https://models.nosana.io/hugging-face/llama3.1/70b/4x/models--hugging-quants--Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
             "target": "/root/models/"
           },
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/templates/lmdeploy/chat",
+            "url": "https://models.nosana.io/templates/lmdeploy/chat",
             "target": "/root/templates/"
           }
         ]
@@ -95,12 +95,12 @@ nosana job post --market GLJHzqRN9fKGBsvsFzmGnaQGknUtLN1dqaFR8n3YdM22 --file lmd
         "resources": [
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/hugging-face/llama3.1/8b/models--unsloth--Meta-Llama-3.1-8B",
+            "url": "https://models.nosana.io/hugging-face/llama3.1/8b/models--unsloth--Meta-Llama-3.1-8B",
             "target": "/root/models/"
           },
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/templates/lmdeploy/chat",
+            "url": "https://models.nosana.io/templates/lmdeploy/chat",
             "target": "/root/templates/"
           }
         ]
@@ -148,12 +148,12 @@ nosana job post --market 97G9NnvBDQ2WpKu6fasoMsAKmfj63C9rhysJnkeWodAf --file lmd
         "resources": [
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/hugging-face/llama3.1/8b/4x/models--hugging-quants--Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+            "url": "https://models.nosana.io/hugging-face/llama3.1/8b/4x/models--hugging-quants--Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
             "target": "/root/models/"
           },
           {
             "type": "S3",
-            "url": "s3://nos-ai-models-qllsn32u/templates/lmdeploy/chat",
+            "url": "https://models.nosana.io/templates/lmdeploy/chat",
             "target": "/root/templates/"
           }
         ]
