@@ -31,7 +31,9 @@ body {
   .button-top,
   .button-bottom,
   .button-middle,
-  .vp-top, .vp-middle, .vp-bottom {
+  .vp-top,
+  .vp-middle,
+  .vp-bottom {
     background-color: white;
   }
 }
@@ -44,7 +46,8 @@ body {
   color: white;
 }
 
-.theme-container .page, .theme-container .vp-page {
+.theme-container .page,
+.theme-container .vp-page {
   padding-top: calc(var(--navbar-height) + 50px);
 }
 
@@ -52,21 +55,26 @@ body {
   // top: calc(var(--navbar-height) + 50px);
 }
 
-.footer-wrapper, .vp-footer-wrapper {
+.footer-wrapper,
+.vp-footer-wrapper {
   background: black;
   color: white;
 }
 
-.toggle-sidebar-button .icon, .vp-toggle-sidebar-button .icon {
+.toggle-sidebar-button .icon,
+.vp-toggle-sidebar-button .icon {
   background: white !important;
 }
-.toggle-sidebar-button::before, .vp-toggle-sidebar-button::before {
+.toggle-sidebar-button::before,
+.vp-toggle-sidebar-button::before {
   background: white;
 }
-.toggle-sidebar-button::after, .vp-toggle-sidebar-button::after {
+.toggle-sidebar-button::after,
+.vp-toggle-sidebar-button::after {
   background: white;
 }
 
-.repo-link, .vp-repo-link {
+.repo-link,
+.vp-repo-link {
   color: #fff !important;
 }
