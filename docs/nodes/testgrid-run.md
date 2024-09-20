@@ -16,7 +16,7 @@ sudo cat ~/.nosana/nosana_key.json
 With just a single command in your command line, you can easily run your Nosana Node on your machine. Simply run the following command:
 
 ```sh:no-line-numbers
-bash <(wget -qO- https://nosana.io/testgrid.sh)
+bash <(wget -qO- https://nosana.com/testgrid.sh)
 ```
 If everything is successful, your Nosana Node is now running in a docker container.
 

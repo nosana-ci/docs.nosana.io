@@ -1,1 +1,63 @@
 // place your custom styles here
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+html, body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.site-name {
+  color: #fff !important;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: none;
+}
+
+.logo {
+  height: 38px !important;
+  margin-top: 14px;
+}
+
+.dropdown-wrapper .dropdown-title {
+  color: white;
+}
+
+.toggle-navbar-button {
+  .button-top, .button-bottom, .button-middle {
+    background-color: white;
+  }
+}
+.dropdown-wrapper .dropdown-title .arrow {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgba(255,255,255,1)' d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/></svg>");
+}
+
+.navbar .nav-item > .nav-link {
+  color: white;
+}
+
+.theme-container .page {
+  padding-top: calc(var(--navbar-height) + 50px);
+}
+
+.theme-container .sidebar {
+  // top: calc(var(--navbar-height) + 50px);
+}
+
+.footer-wrapper {
+  background: black;
+  color: white;
+}
+
+.toggle-sidebar-button .icon {
+  background: white;
+}
+.toggle-sidebar-button::before {
+  background: white;
+}
+.toggle-sidebar-button::after {
+  background: white;
+}
+
+.repo-link {
+  color: #fff !important;
+}

@@ -2,7 +2,7 @@
 
 The staking program allows users to stake `NOS` tokens for a variable amount of time.
 
-The staking dashboard can be found here: https://app.nosana.io/stake/
+The staking dashboard can be found here: https://explorer.nosana.io/stake/
 
 There are 2 values associated with a users stake:
 
@@ -826,4 +826,4 @@ A staker can stake Nosana Tokens for a minimum of two weeks and a maximum of one
 The longer the duration of a stake, the higher the multiplier against the number of tokens in stake.
 The maximum multiplier is this system is $4$, because $1 \frac{ 365 }{ 121 \frac{ 2 }{ 3 } } = 4$.
 
-On the Nosana website you can find a [xNOS calculator](https://nosana.io/stake).
+On the Nosana website you can find a [xNOS calculator](https://nosana.com/stake).
