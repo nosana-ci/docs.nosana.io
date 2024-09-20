@@ -1,19 +1,23 @@
 // place your custom styles here
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
-html, body {
+html,
+body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
-.site-name {
+.site-name,
+.vp-site-name {
   color: #fff !important;
 }
 
-.navbar {
+.navbar,
+.vp-navbar {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: none;
 }
 
-.logo {
+.logo,
+.vp-nav-logo {
   height: 38px !important;
   margin-top: 14px;
 }
@@ -22,8 +26,11 @@ html, body {
   color: white;
 }
 
-.toggle-navbar-button {
-  .button-top, .button-bottom, .button-middle {
+.toggle-navbar-button,
+.vp-toggle-navbar-button {
+  .button-top,
+  .button-bottom,
+  .button-middle {
     background-color: white;
   }
 }
@@ -31,7 +38,8 @@ html, body {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='rgba(255,255,255,1)' d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/></svg>");
 }
 
-.navbar .nav-item > .nav-link {
+.navbar .nav-item > .nav-link,
+.vp-navbar .nav-item > .nav-link {
   color: white;
 }
 
