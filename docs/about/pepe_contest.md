@@ -56,7 +56,7 @@ This contest is open to every member of the Nosana Discord server. Not a member 
 
 ## Creator Resources
 
-1. Nosana’s branding page for helpful things like logos and colors: [https://nosana.io/brand](https://nosana.io/brand)
+1. Nosana’s branding page for helpful things like logos and colors: [https://nosana.com/brand](https://nosana.com/brand)
 2. Discord’s custom emoji guide: [https://discord.com/blog/beginners-guide-to-custom-emojis](https://discord.com/blog/beginners-guide-to-custom-emojis)
 
 ## Important Rules
@@ -81,7 +81,7 @@ The winners and honorable mentions will be revealed by the team live during the 
 **Terms and Conditions Apply**
 
 1. **We will ping the winners publicly in the general chat with instructions on how to proceed securely.**
-   - _NOTE:_ We never DM first, so any unsolicited DM from someone claiming to be Nosana should be considered a scam. We will not be responsible for any interaction you have with a scammer or imposter of Nosana. Please be safe and verify any person through official channels and links, which can be found at [https://nosana.io](https://nosana.io) only.
+   - _NOTE:_ We never DM first, so any unsolicited DM from someone claiming to be Nosana should be considered a scam. We will not be responsible for any interaction you have with a scammer or imposter of Nosana. Please be safe and verify any person through official channels and links, which can be found at [https://nosana.com](https://nosana.com) only.
 2. Winners will need to confirm their wallet address. **Our team will never ask you for any other information or any amount of money.**
 3. If a winner doesn’t respond within three days after the public ping in the server, they will not be eligible for the reward.
 4. Participants agree that by entering the contest, they grant Nosana the rights to use, edit, and share/distribute the emojis within the community.

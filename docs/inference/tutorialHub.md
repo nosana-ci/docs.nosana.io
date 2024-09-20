@@ -53,4 +53,4 @@
 
 ---
 
-We hope you find these tutorials helpful. If you have any questions or need further assistance, please visit our [support page](https://nosana.io/support) or join our community on [Discord](https://discord.gg/nosana).
+We hope you find these tutorials helpful. If you have any questions or need further assistance, please visit our [support page](https://nosana.com/support) or join our community on [Discord](https://discord.gg/nosana).

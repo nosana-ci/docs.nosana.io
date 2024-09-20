@@ -18,4 +18,4 @@ Our hard work began to pay off. We successfully started to pivot, harnessing the
 
 Today, we stand at the forefront of a new era in GPU computing. Our decentralized crowd computer has exceeded our initial expectations, especially with the AI revolution in full swing and the growing demand for GPU devices distributed all over the globe in the houses of gamers, miners, and MacBook owners.
 
-And this is just the beginning. Stay up-to-date with our progress and news by reading our [blog](https://nosana.io/blog).
+And this is just the beginning. Stay up-to-date with our progress and news by reading our [blog](https://nosana.com/blog).
