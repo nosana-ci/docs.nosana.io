@@ -1,8 +1,89 @@
 // place your custom styles here
+@import 'bulma/bulma';
+@import 'bulma/sass/utilities/mixins';
+@import 'bulma/sass/utilities/initial-variables';
+@import 'bulma/sass/utilities/functions';
+$family-sans-serif: 'Space Grotesk', sans-serif;
+$family-headers: 'Space Grotesk', sans-serif;
+
+// Colors
+$primary: #1c282a;
+$secondary: #10e80c;
+$accent: #10e80c;
+
+$secondary-invert: findColorInvert($secondary) !default;
+$accent-invert: findColorInvert($accent) !default;
+
+$custom-colors: (
+  'secondary': (
+    $secondary,
+    $secondary-invert,
+  ),
+  'accent': (
+    $accent,
+    $accent-invert,
+  ),
+);
+
+$text: rgba(51, 51, 51, 1);
+$black: #000;
+$grey-dark: #333;
+$grey: #666;
+$grey-light: #999;
+$grey-lighter: #f9f9f9;
+
+$link: $accent;
+$link-hover: lighten($accent, 20%);
+$link-focus: lighten($accent, 20%);
+$link-active: lighten($accent, 20%);
+
+$title-weight: 600;
+$title-color: $primary;
+// $subtitle-color: $secondary;
+$title-family: $family-headers;
+$subtitle-family: $family-headers;
+
+$body-line-height: 1.7;
+$button-padding-horizontal: 1.7em;
+$button-border-color: $text;
+$button-text-hover-color: $text;
+$button-static-background-color: transparent;
+
+$dark-mode-background: #010c04;
+
+$navbar-height: 5rem;
+$control-border-width: 2px;
+$footer-background-color: transparent;
+
+$border: $accent;
+$tabs-link-hover-border-bottom-color: $accent;
+$tabs-link-active-border-bottom-color: $accent;
+$tabs-link-color: white;
+$tabs-link-hover-color: $accent;
+$tabs-link-active-color: $accent;
+$navbar-dropdown-item-hover-color: $link;
+$label-weight: 400;
+
+$input-background-color: $white-ter;
+$input-border-color: $white-ter;
+$input-shadow: none;
+$input-focus-box-shadow-color: rgba($secondary, 0.25);
+$box-shadow: none;
+$box-padding: 1.6rem;
+
+$background-gradient: linear-gradient(180deg, rgba(18, 54, 3, 1) 0%, rgba(10, 10, 10, 0) 35%);
+
+$size-2: 38px;
+$size-3: 26px;
+$size-4: 20px;
+$size-5: 18px;
+$column-gap: 24px;
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 html,
 body {
   font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
 }
 
 .site-name,
@@ -10,10 +91,54 @@ body {
   color: #fff !important;
 }
 
+th,
+td {
+  padding: 0.6em 1em;
+  border: 1px solid #dfe2e5;
+}
+
+ul,
+ol {
+  padding-inline-start: 1.2em !important;
+}
+
+.number {
+  font-size: inherit;
+  height: auto;
+  margin-right: 0;
+  min-width: auto;
+  padding: 0;
+}
+
+.toc-list {
+  padding: 0 !important;
+}
+
 .navbar,
 .vp-navbar {
+  height: 88px !important;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: none;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
 }
 
 .logo,
@@ -77,4 +202,78 @@ body {
 .repo-link,
 .vp-repo-link {
   color: #fff !important;
+}
+
+@media screen and (min-width: 1390px) {
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1390px !important;
+  }
+  .sidebar,
+  .vp-sidebar {
+    padding-inline-start: 0;
+    margin-left: calc(var(--sidebar-space) - var(--sidebar-width));
+  }
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: $accent;
+}
+
+.vp-breadcrumb {
+  ol {
+    padding: 0 !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 719px) {
+  .vp-sidebar {
+    z-index: 99;
+  }
+}
+
+div[class*='language-'] > button.copy-code-button:not(.fancy) .copy-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0.625rem;
+  color: var(--code-ln-color, #9e9e9e);
+  font-size: 1.25rem;
+  margin-left: 10px;
+}
+div[class*='language-'] > button.copy-code-button:not(.fancy).copied::after {
+  height: 2.5rem;
 }

@@ -2,177 +2,188 @@ import { hopeTheme } from 'vuepress-theme-hope';
 import { default as pages } from './pages';
 import * as path from 'path';
 
-export default hopeTheme({
-  hostname: 'https://docs.nosana.com',
-  logo: 'assets/logo.svg',
-  repo: 'https://github.com/nosana-ci/docs.nosana.io',
-  docsDir: 'docs',
-  iconAssets: 'fontawesome',
-  editLink: false,
-  prevLink: false,
-  darkmode: 'disable',
+export default () => ({
+  name: 'vuepress-theme-local',
 
-  // footer
-  footer: 'MIT Licensed | Copyright © 2021-present Nosana',
-  copyright: false,
-  displayFooter: true,
-  contributors: false,
-
-  // navigation
-  sidebar: pages,
-  navbar: [
-    ...pages,
+  extends: hopeTheme(
     {
-      text: 'Site',
-      // icon: 'link',
-      icon: 'globe',
-      link: 'https://nosana.com/',
-    },
-    {
-      text: 'Staking',
-      icon: 'coins',
-      // icon: 'network-wired',
-      link: 'https://explorer.nosana.io/stake',
-    },
-    {
-      text: 'Explorer',
-      icon: 'gauge',
-      // icon: 'network-wired',
-      link: 'https://explorer.nosana.io/',
-    },
-  ],
-  navbarLayout: {
-    start: ['Brand'],
-    center: ['Links'],
-    end: ['Repo', 'Search'],
-  },
+      hostname: 'https://docs.nosana.com',
+      logo: 'assets/logo.svg',
+      repo: 'https://github.com/nosana-ci/docs.nosana.io',
+      docsDir: 'docs',
+      iconAssets: 'fontawesome',
+      editLink: false,
+      prevLink: false,
+      darkmode: 'disable',
 
-  pageInfo: ['Category', 'Tag', 'ReadingTime'],
+      // footer
+      footer: 'MIT Licensed | Copyright © 2021-present Nosana',
+      copyright: false,
+      displayFooter: true,
+      contributors: false,
 
-  plugins: {
-    copyright: true,
-
-    // Disable features you don't want here
-    mdEnhance: {
-      alert: true,
-      align: true,
-      attrs: true,
-      chart: true,
-      codetabs: true,
-      component: true,
-      demo: true,
-      echarts: true,
-      figure: true,
-      flowchart: true,
-      gfm: true,
-      imgLazyload: true,
-      imgMark: true,
-      imgSize: true,
-      include: {
-        deep: true,
-        resolvePath: (file) => {
-          if (file.startsWith('@components/'))
-            return file.replace('@components', path.resolve(__dirname, '../../../components/src'));
-
-          if (file.startsWith('@echarts/'))
-            return file.replace('@echarts', path.resolve(__dirname, '../../../md-enhance/src/echarts'));
-
-          if (file.startsWith('@md-enhance/'))
-            return file.replace('@md-enhance', path.resolve(__dirname, '../../../md-enhance/src'));
-
-          if (file.startsWith('@pwa/')) return file.replace('@pwa', path.resolve(__dirname, '../../../pwa2/src'));
-
-          return file;
-        },
-      },
-      kotlinPlayground: true,
-      mathjax: true,
-      mark: true,
-      markmap: false,
-      mermaid: true,
-      playground: {
-        presets: ['ts', 'vue', 'unocss'],
-      },
-      revealJs: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-        themes: [
-          'auto',
-          'beige',
-          'black',
-          'blood',
-          'league',
-          'moon',
-          'night',
-          'serif',
-          'simple',
-          'sky',
-          'solarized',
-          'white',
-        ],
-      },
-      sandpack: true,
-      stylize: [
+      // navigation
+      sidebar: pages,
+      navbar: [
+        ...pages,
         {
-          matcher: 'Recommended',
-          replacer: ({ tag }) => {
-            if (tag === 'em')
-              return {
-                tag: 'Badge',
-                attrs: { type: 'tip' },
-                content: 'Recommended',
-              };
-          },
+          text: 'Site',
+          // icon: 'link',
+          icon: 'globe',
+          link: 'https://nosana.com/',
+        },
+        {
+          text: 'Staking',
+          icon: 'coins',
+          // icon: 'network-wired',
+          link: 'https://explorer.nosana.io/stake',
+        },
+        {
+          text: 'Explorer',
+          icon: 'gauge',
+          // icon: 'network-wired',
+          link: 'https://explorer.nosana.io/',
         },
       ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      vPre: true,
-      vuePlayground: true,
-    },
-
-    docsearch: {
-      appId: 'O80DOX8SB5',
-      apiKey: '3419239266c440c627d6bdd2f1cb82ea',
-      indexName: 'nosana',
-    },
-
-    pwa: {
-      favicon: '/favicon.ico',
-      cacheHTML: true,
-      cachePic: true,
-      appendBase: true,
-      apple: {
-        icon: '/assets/icon/apple-touch-icon.png',
-        statusBarColor: 'black',
+      navbarLayout: {
+        start: ['Brand'],
+        center: ['Links'],
+        end: ['Repo', 'Search'],
       },
-      manifest: {
-        icons: [
-          {
-            src: '/assets/icon/chrome-512x512.png',
-            sizes: '512x512',
-            purpose: 'maskable',
-            type: 'image/png',
+
+      pageInfo: ['Category', 'Tag', 'ReadingTime'],
+
+      plugins: {
+        copyright: true,
+
+        // Disable features you don't want here
+        mdEnhance: {
+          alert: true,
+          align: true,
+          attrs: true,
+          chart: true,
+          codetabs: true,
+          component: true,
+          demo: true,
+          echarts: true,
+          figure: true,
+          flowchart: true,
+          gfm: true,
+          imgLazyload: true,
+          imgMark: true,
+          imgSize: true,
+          include: {
+            deep: true,
+            resolvePath: (file) => {
+              if (file.startsWith('@components/'))
+                return file.replace('@components', path.resolve(__dirname, '../../../components/src'));
+
+              if (file.startsWith('@echarts/'))
+                return file.replace('@echarts', path.resolve(__dirname, '../../../md-enhance/src/echarts'));
+
+              if (file.startsWith('@md-enhance/'))
+                return file.replace('@md-enhance', path.resolve(__dirname, '../../../md-enhance/src'));
+
+              if (file.startsWith('@pwa/')) return file.replace('@pwa', path.resolve(__dirname, '../../../pwa2/src'));
+
+              return file;
+            },
           },
-          {
-            src: '/assets/icon/chrome-192x192.png',
-            sizes: '192x192',
-            purpose: 'maskable',
-            type: 'image/png',
+          kotlinPlayground: true,
+          mathjax: true,
+          mark: true,
+          markmap: false,
+          mermaid: true,
+          playground: {
+            presets: ['ts', 'vue', 'unocss'],
           },
-          {
-            src: '/assets/icon/chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
+          revealJs: {
+            plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
+            themes: [
+              'auto',
+              'beige',
+              'black',
+              'blood',
+              'league',
+              'moon',
+              'night',
+              'serif',
+              'simple',
+              'sky',
+              'solarized',
+              'white',
+            ],
           },
-          {
-            src: '/assets/icon/chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
+          sandpack: true,
+          stylize: [
+            {
+              matcher: 'Recommended',
+              replacer: ({ tag }) => {
+                if (tag === 'em')
+                  return {
+                    tag: 'Badge',
+                    attrs: { type: 'tip' },
+                    content: 'Recommended',
+                  };
+              },
+            },
+          ],
+          sub: true,
+          sup: true,
+          tabs: true,
+          vPre: true,
+          vuePlayground: true,
+        },
+
+        docsearch: {
+          appId: 'O80DOX8SB5',
+          apiKey: '3419239266c440c627d6bdd2f1cb82ea',
+          indexName: 'nosana',
+        },
+
+        pwa: {
+          favicon: '/favicon.ico',
+          cacheHTML: true,
+          cachePic: true,
+          appendBase: true,
+          apple: {
+            icon: '/assets/icon/apple-touch-icon.png',
+            statusBarColor: 'black',
           },
-        ],
-        shortcuts: [],
+          manifest: {
+            icons: [
+              {
+                src: '/assets/icon/chrome-512x512.png',
+                sizes: '512x512',
+                purpose: 'maskable',
+                type: 'image/png',
+              },
+              {
+                src: '/assets/icon/chrome-192x192.png',
+                sizes: '192x192',
+                purpose: 'maskable',
+                type: 'image/png',
+              },
+              {
+                src: '/assets/icon/chrome-512x512.png',
+                sizes: '512x512',
+                type: 'image/png',
+              },
+              {
+                src: '/assets/icon/chrome-192x192.png',
+                sizes: '192x192',
+                type: 'image/png',
+              },
+            ],
+            shortcuts: [],
+          },
+        },
       },
     },
+    { custom: true },
+  ),
+  alias: {
+    '@theme-hope/modules/navbar/components/Navbar': path.resolve(__dirname, './components/Navbar.vue'),
+    // '@theme-hope/components/PageFooter': path.resolve(__dirname, './components/Footer.vue'),
   },
 });

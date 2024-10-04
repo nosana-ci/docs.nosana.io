@@ -39,5 +39,8 @@
     "vuepress-plugin-md-enhance": "2.0.0-rc.11",
     "vuepress-plugin-pwa2": "2.0.0-rc.11",
     "vuepress-theme-hope": "2.0.0-rc.11"
+  },
+  "dependencies": {
+    "bulma": "^0.9.4"
   }
 }
