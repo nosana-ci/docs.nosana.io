@@ -277,3 +277,8 @@ div[class*='language-'] > button.copy-code-button:not(.fancy) .copy-icon {
 div[class*='language-'] > button.copy-code-button:not(.fancy).copied::after {
   height: 2.5rem;
 }
+
+.DocSearch-Button {
+  width: calc(100% - 60px);
+  margin: 30px 30px 10px 30px !important;
+}
