@@ -184,6 +184,8 @@ export default () => ({
   ),
   alias: {
     '@theme-hope/modules/navbar/components/Navbar': path.resolve(__dirname, './components/Navbar.vue'),
+    '@theme-hope/modules/sidebar/components/Sidebar': path.resolve(__dirname, './components/Sidebar.vue'),
+    '@theme-hope/components/NormalPage': path.resolve(__dirname, './components/NormalPage.vue'),
     // '@theme-hope/components/PageFooter': path.resolve(__dirname, './components/Footer.vue'),
   },
 });
