@@ -2,7 +2,7 @@
 
 ![Jupyter](./jupyter.gif)
 
-Harness the power of Nosana Endpoint to seamlessly run Jupyter Notebooks and connect via a user-friendly web interface. 
+Harness the power of Nosana Endpoint to seamlessly run Jupyter Notebooks and connect via a user-friendly web interface.
 With access to GPU-backed nodes, you can conduct your experiments efficiently and cost-effectively, unlocking new possibilities for your research and data analysis.
 
 ## JSON Job Schema
@@ -76,6 +76,3 @@ run nosana job get CZwK1SjaGuA6EVeChS8ZeiDztByjMjWyiCn37swcJthk --network mainne
 
 
 ![Jupyter Notebook](./jupyter.png)
-
-
-

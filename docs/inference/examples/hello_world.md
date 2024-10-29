@@ -84,4 +84,3 @@ Exited with status success with code 0
 ```
 
 As we can see the output of the commands we specified in the job are logged to the standard output, and displayed back to us in the logs of the results.
-

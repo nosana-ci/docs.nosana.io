@@ -149,12 +149,12 @@ The script performs a series of tests to verify the successful completion of the
 You will see your node's information displayed in the following format.
 
 ```
-  _   _                             
- | \ | | ___  ___  __ _ _ __   __ _ 
+  _   _
+ | \ | | ___  ___  __ _ _ __   __ _
  |  \| |/ _ \/ __|/ _` | '_ \ / _` |
  | |\  | (_) \__ \ (_| | | | | (_| |
  |_| \_|\___/|___/\__,_|_| |_|\__,_|
-                                    
+
 Reading keypair from ~/.nosana/nosana_key.json
 
 Network:	    mainnet
@@ -167,14 +167,14 @@ Provider:	    podman
 
 ### Test Grid Registration Instructions
 
-When running the script it'll ask for some information: email, Discord & Twitter/X handle (optional). After filling in the information and agreeing to the terms & conditions, a benchmark will start. In this benchmark we will check the hardware of your node. 
+When running the script it'll ask for some information: email, Discord & Twitter/X handle (optional). After filling in the information and agreeing to the terms & conditions, a benchmark will start. In this benchmark we will check the hardware of your node.
 
 If the benchmark succeeds, you should see the following output:
 
 ```
 Benchmark finished
 ================================
-Thank you for registering for Nosana Node. 
+Thank you for registering for Nosana Node.
 We'll review your registration and you will get an email from us if you are selected.
 ```
 

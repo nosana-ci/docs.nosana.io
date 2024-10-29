@@ -118,4 +118,3 @@ nosana job get INSERT_JOB_ID --network mainnet --wait
 Now that we know how to write a basic Nosana job schema, we will continue with creating a long-running instance that we can query multiple times via an endpoint.
 
 After that, we will go into more detail on how to write more complex jobs, adjust parameters of each job to accommodate your needs, provide a more in-depth explanation of Nosana's GPU markets, and explore the available models on Nosana for you to run inference on!
-

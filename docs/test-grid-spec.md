@@ -1,6 +1,6 @@
 # Test Grid Spec - Phase 1
 
-Welcome to the Nosana Test Grid Phase 1! This document contains everything you need to know before you participate. 
+Welcome to the Nosana Test Grid Phase 1! This document contains everything you need to know before you participate.
 
 ## Getting started
 
@@ -24,12 +24,12 @@ Note that job earnings are subsidized for the Test Grid and are higher than duri
 ::: note
 - To earn rewards, you must run a Nosana Node and let it successfully do compute jobs
 - You only earn rewards while processing compute jobs. During idle times, your GPU is not utilized and you will not earn rewards.
-- Compute Rewards are directly transferred to your node’s Solana account 
+- Compute Rewards are directly transferred to your node’s Solana account
 :::
 
 ### Additional Rewards
 
-There are multiple tasks that can be completed for additional rewards, like sharing your experience on social networks or publishing educational content. These rewards are paid out at the end of the Test Grid and are subject to several conditions: 
+There are multiple tasks that can be completed for additional rewards, like sharing your experience on social networks or publishing educational content. These rewards are paid out at the end of the Test Grid and are subject to several conditions:
 
 ::: note
 - You must perform the KYC process through our portal.

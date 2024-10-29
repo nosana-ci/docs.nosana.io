@@ -5,4 +5,3 @@ This document outlines various AI inference projects that we would like to be se
 ## AI Inference Projects
 
 | **Project Name**                | **Description**                                                                                   | **Required Resources**                                                                 | **Applications**                                                        |
-

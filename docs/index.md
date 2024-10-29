@@ -1,5 +1,5 @@
 ---
-home: true
+home: false
 title: Nosana
 icon: book
 heroImage: assets/logo_color.gif
@@ -45,3 +45,11 @@ features:
   details: Learn how to use the Nosana Jobs Program
   link: protocols/jobs
 ---
+
+# Nosana Documentaion
+
+_Powering the AI revolution_
+
+Discover the expansive realm of Nosana through our documentation. Dive deep into the functionalities and features that Nosana has to offer, with step-by-step guides designed to enhance your understanding and usage of the platform.
+
+Whether you are a beginner looking to get started or an experienced user seeking advanced techniques, our resources cater to all levels of expertise. Engage with our community through forums and discussions, share your experiences, and learn from others. With regular updates and new content added frequently, you’ll always have access to the latest information and best practices in the Nosana ecosystem. Join us in unlocking the full potential of decentralized cloud computing!

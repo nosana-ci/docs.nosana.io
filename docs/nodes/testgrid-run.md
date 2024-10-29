@@ -54,7 +54,7 @@ You don't have to keep your node running at all times. However, the more your no
 :::
 
 ::: details Where can I see the status of my node?
-You can see the status of your node by having a look in the logs. To view the logs run: 
+You can see the status of your node by having a look in the logs. To view the logs run:
 ```sh:no-line-numbers
 docker logs -f nosana-node
 ```

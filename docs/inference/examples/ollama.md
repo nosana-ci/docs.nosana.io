@@ -77,7 +77,7 @@ It will take a while for this image to load up and be used, you might need to wa
 The end
 
 ::: info
-Note the endpoint service url:  
+Note the endpoint service url:
 `https://B7hWYTyWHMLmYUH9sZFJL3TjgrHUAdDBi76xuEg9m9hX.node.k8s.prd.nos.ci`
 :::
 
@@ -163,4 +163,3 @@ You should see the following response:
   "eval_duration": 279790000
 }
 ```
-

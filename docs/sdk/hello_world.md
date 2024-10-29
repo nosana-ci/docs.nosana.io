@@ -32,7 +32,7 @@ const json_flow = {
       }
     }
   ]
-};  
+};
 
 (async () => {
 
@@ -79,10 +79,10 @@ const result = await nosana.ipfs.retrieve(job.ipfsResult);
 
 console.log(`
 Job done!
-Job output logs: 
+Job output logs:
 ${JSON.stringify(result.opStates[0].logs)}
 
-Job result meta data: 
+Job result meta data:
 ${JSON.stringify(result)}
 
 Job IPFS:

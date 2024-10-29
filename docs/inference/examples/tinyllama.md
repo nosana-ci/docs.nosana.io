@@ -44,7 +44,7 @@ nosana job post --file tiny_llama.json --market 97G9NnvBDQ2WpKu6fasoMsAKmfj63C9r
  |  \| |/ _ \/ __|/ _` | '_ \ / _` |
  | |\  | (_) \__ \ (_| | | | | (_| |
  |_| \_|\___/|___/\__,_|_| |_|\__,_|
-  
+
 Reading keypair from /home/djmbritt/.nosana/nosana_key.json
 
 Network:	mainnet
@@ -99,8 +99,3 @@ Tony was proud of himself for seeing something so amazing! He knew that from now
 
 Exited with status success with code 0
 ```
-
-
-
-
-

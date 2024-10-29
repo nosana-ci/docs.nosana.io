@@ -2,8 +2,8 @@
 
 ![Open WebUI](./openwebui.gif)
 
-[Open WebUI](https://github.com/open-webui/open-webui) is an extensible, feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline. 
-It supports various LLM runners, including Ollama and OpenAI-compatible APIs. 
+[Open WebUI](https://github.com/open-webui/open-webui) is an extensible, feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline.
+It supports various LLM runners, including Ollama and OpenAI-compatible APIs.
 With Nosana we can run an instance of Open WebUI and connect to it via a Nosana Endpoint.
 
 ## JSON Job Schema
@@ -77,9 +77,3 @@ run nosana job get 41s1bL8CYBctRgz6jCAYfUSxd8zueUkneHXHeMXVE3p5 --network mainne
 ## Example
 
 ![Open WebUI](./open_webui.png)
-
-
-
-
-
-

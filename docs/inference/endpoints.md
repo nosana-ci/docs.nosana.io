@@ -75,8 +75,8 @@ run nosana job get B3MmwHz7sovudYwMxZFwjS2E6eMRaEEqNgWao5RYUkLi --network mainne
 ```
 
 ::: info
-Take note of the following line in the output:  
-The service will be exposed at  
+Take note of the following line in the output:
+The service will be exposed at
 https://FhkRunC6dAtPaEWGJwRK16Vctzv1KmHBhpSyUmMsYyMS.node.k8s.prd.nos.ci
 :::
 
@@ -164,7 +164,7 @@ You can visit the service URL to check the status.
 Initially, you might see a "Page not found" message. After 15 minutes, the Ollama service should be up and running, and you can start making requests to the endpoint.
 
 ::: info
-Note the endpoint service url:  
+Note the endpoint service url:
 `https://B7hWYTyWHMLmYUH9sZFJL3TjgrHUAdDBi76xuEg9m9hX.node.k8s.prd.nos.ci`
 :::
 

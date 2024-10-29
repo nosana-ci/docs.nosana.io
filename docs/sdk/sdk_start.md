@@ -2,7 +2,7 @@
 
 After reading how to use the `@nosana/cli` section, you should have a clear understanding of how to post and retrieve inference jobs on Nosana.
 Now in this section we will dive a bit deeper into how this is done with the `@nosana/sdk`.
-The steps are a bit more manual, in the sense, you will have to upload the data to IPFS, post the job, wait, and retrieve the job. 
+The steps are a bit more manual, in the sense, you will have to upload the data to IPFS, post the job, wait, and retrieve the job.
 
 These are the basics steps needed to get started using the SDK.
 
@@ -22,7 +22,7 @@ These are the basics steps needed to get started using the SDK.
 To begin, install the Nosana SDK to the folder, using NPM or your favorite JS runtime.
 
 :::: tabs
-@tab npm 
+@tab npm
 [Node.JS](https://nodejs.org/en)
 ```sh:no-line-numbers
 npm install @nosana/sdk
@@ -79,7 +79,7 @@ const nosana: Client = new Client('mainnet', private_key);
 ```
 
 Here we have to make sure we are logged in correctly.
-This logs the public key of the wallet associated with the Nosana client instance. 
+This logs the public key of the wallet associated with the Nosana client instance.
 It is also possible to retrieve the balance of SOL and NOS for this account.
 
 ```typescript
@@ -97,9 +97,9 @@ Next up comes the workflow definition, this JSON object will specify the paramet
 These are the minimum required properties to run a hello world example on the Nosana Grid.
 Let's go through them one by one:
 
-- `ops`: 
+- `ops`:
   This is short for operations, as can be seen in this example it is an array.
-  A Nosana workflow definition can contain multiple operations. 
+  A Nosana workflow definition can contain multiple operations.
   It is possible to chain these operations and move assets between the operations, but is beyond the scope of this tutorial.
 - `op`:
   The motif continues and this is short for operation, here we define the context of the operation.
@@ -110,7 +110,7 @@ Let's go through them one by one:
   Short for arguments, here we start specifying the commands images for the operation.
 
   - `cmds`:
-    An array of the commands 
+    An array of the commands
     - `cmd`:
       The shell commands that will run in the container
     - `image`:
@@ -137,7 +137,7 @@ const json_flow = {
 };
 ```
 
-The `json_flow` object defines a workflow for running a Docker container. 
+The `json_flow` object defines a workflow for running a Docker container.
 In this case, it specifies an operation (`op`) to run a container with the `ubuntu` image and execute the command `echo hello world`.
 
 ## Uploading to IPFS
@@ -176,7 +176,7 @@ Nosana Explorer: https://explorer.nosana.io/jobs/${response.job}
 After the job has been posted, all we have to do is wait.
 This usually takes about 10 seconds, from posting the job, to a Nosana Node running the job, to posting the results back.
 
-The script then enters a loop to monitor the job status. 
+The script then enters a loop to monitor the job status.
 It uses the `jobs.get()` method to check the job's state, waiting until it reaches a `COMPLETED` state.
 The job state are `QUEUED`, `RUNNING` or `COMPLETED`.
 
@@ -192,7 +192,7 @@ while (!job || job.state !== "COMPLETED") {
 
 ## Retrieving Job Result from IPFS
 
-Once the job is complete, the result (which was stored in IPFS) is retrieved using the `ipfs.retrieve()` method. 
+Once the job is complete, the result (which was stored in IPFS) is retrieved using the `ipfs.retrieve()` method.
 The result is then logged, in this case the result is that `hello world` has been printed to stdout, and can be seen in the logs.
 
 ```typescript

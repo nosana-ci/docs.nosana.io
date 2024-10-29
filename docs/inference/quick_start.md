@@ -7,7 +7,7 @@ The Nosana Network is a platform for running [AI inference workloads](https://ww
 To begin, you need to install the Nosana CLI globally using NPM or your favorite JavaScript runtime.
 
 :::: tabs
-@tab npm 
+@tab npm
 [Node.JS](https://nodejs.org/en)
 ```sh:no-line-numbers
 npm install -g @nosana/cli
@@ -53,7 +53,7 @@ You should see the Nosana CLI usage information.
 
 ## Your Nosana Wallet
 
-When you first run the Nosana CLI, a new keypair is generated for you in `~/.nosana/.nosana_key.json`, creating a new wallet. In order to run Nosana jobs, you need to have some NOS and SOL in this wallet. You can purchase NOS on Kraken or swap in your Solana wallet. 
+When you first run the Nosana CLI, a new keypair is generated for you in `~/.nosana/.nosana_key.json`, creating a new wallet. In order to run Nosana jobs, you need to have some NOS and SOL in this wallet. You can purchase NOS on Kraken or swap in your Solana wallet.
 
 Next, run `nosana address`, and the terminal will print out your address (the public key). If you need access to your private keys, they can be found in the local folder on your machine. However, for security reasons, we strongly advise against replacing this file.
 
@@ -63,7 +63,7 @@ Once you have NOS/SOL, send some to the address logged from the `nosana address`
 
 Once your wallet is loaded with some SOL and NOS, you can post jobs to the Nosana Network.
 
-First, we need to determine which market to post our job in. Navigate to [Nosana Explorer Markets](https://explorer.nosana.io/markets) to see a list of available markets. Each market has certain parameters, such as NOS per second, type of GPU used, available nodes, etc. 
+First, we need to determine which market to post our job in. Navigate to [Nosana Explorer Markets](https://explorer.nosana.io/markets) to see a list of available markets. Each market has certain parameters, such as NOS per second, type of GPU used, available nodes, etc.
 
 For this first test, we will use the cheapest option, which at the time of writing is [Market 3060](https://explorer.nosana.io/markets/7AtiXMSH6R1jjBxrcYjehCkkSF7zvYWte63gwEDBcGHq). Copy the market address, `7AtiXMSH6R1jjBxrcYjehCkkSF7zvYWte63gwEDBcGHq`, and use it in the `nosana job post` command.
 
@@ -117,7 +117,7 @@ Exited with status success with code 0
 
 ## Get Job from Job ID
 
-Retrieving the results from the CLI is also possible. Use the job ID to retrieve the data, which can be found in the job URL posted above:  
+Retrieving the results from the CLI is also possible. Use the job ID to retrieve the data, which can be found in the job URL posted above:
 <https://explorer.nosana.io/jobs/FQTP2F5hNP2rNGUtQm4Annrx462PgxPcSA6ND6ToPTxH>.
 
 Run the following command to get the result of the job:
@@ -127,4 +127,3 @@ nosana job get FQTP2F5hNP2rNGUtQm4Annrx462PgxPcSA6ND6ToPTxH
 ```
 
 Next, we will learn how to create a Nosana Job schema to access Nosana's powerful features, such as using GPUs and spinning up an instance to connect to an endpoint.
-

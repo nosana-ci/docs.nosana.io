@@ -37,7 +37,7 @@ Some examples of which models you can run and links can be found in the followin
 ### Nosana Inference example
 
 You can explore the different jobs happening on the [Nosana Explorer](https://explorer.nosana.io/).
-Here we can see an example of a Nosana inference job. 
+Here we can see an example of a Nosana inference job.
 Note there are 2 `ops` (short for operations) happening in this inference job, both are using an [Ubuntu Docker Container](https://hub.docker.com/_/ubuntu).
 
 1. The first one is using the [nvidia-smi](https://developer.nvidia.com/system-management-interface) and other utilities to log hardware specifications of the Nosana node.
@@ -107,7 +107,7 @@ Below we can see a list of the properties and a description for each property th
 - **`ops`**: An array of operations that the job will perform. Each operation includes:
     - **`type`**: Specifies the operation type. For instance, "container/run" indicates a containerized operation.
     - **`id`**: A unique identifier for the operation. Examples include "gpu-stats" and "run-whisper".
-    - **`results`**(optional): 
+    - **`results`**(optional):
             - **`regex`**: Regex for parsing the result.
             - **`logType`**: The type of log for the result.
     - **`args`**: Arguments for the operation, which include:
@@ -137,13 +137,13 @@ There are two primary ways of using the `cmd` array.
 
 ### String based CMD
 
-When the first element of the array is the whole command, such as:  
+When the first element of the array is the whole command, such as:
 `"gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app"`
 Bash will be used as the shell to interpret this command.
 
 ### Array based CMD
 
-Another option is to put each command and every flag as it's own element in an array:  
+Another option is to put each command and every flag as it's own element in an array:
 `["/bin/sh", "-c", gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "main:app"]`
 
 With the array based notation, we are able to specify the shell we want to use.
@@ -288,4 +288,3 @@ Here you will be able to see the full JSON schema specification for a Nosana Job
   "required": ["version", "type", "ops"]
 }
 ```
-

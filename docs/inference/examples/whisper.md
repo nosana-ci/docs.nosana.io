@@ -1,6 +1,6 @@
 # Whisper
 
-[Whisper](https://github.com/openai/whisper) is a general-purpose speech recognition model. 
+[Whisper](https://github.com/openai/whisper) is a general-purpose speech recognition model.
 It is trained on a large dataset of diverse audio and is also a multitasking model that can perform multilingual speech recognition, speech translation, and language identification.
 In this example we will use whisper to analyze a file that has the audio of someone saying "hello", and it will transcribe the audio for us.
 
@@ -99,4 +99,3 @@ Using device: cuda:0
 
 Exited with status success with code 0
 ```
-

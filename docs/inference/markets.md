@@ -1,6 +1,6 @@
 # GPU Markets
 
-Nosana offers a variety of GPU markets tailored to different needs. Below is a comprehensive list of available NVIDIA GPU markets. 
+Nosana offers a variety of GPU markets tailored to different needs. Below is a comprehensive list of available NVIDIA GPU markets.
 
 - **Market Name**: Type of NVIDIA GPU available.
 - **Address of Market**: Address to use with the `--market` flag in the `nosana job post` command.
@@ -134,4 +134,3 @@ nosana job post --market nvidia-3060
 | [Market 3090](https://explorer.nosana.io/markets/CA5pMpqkYFKtme7K31pNB1s62X2SdhEv1nN9RdxKCpuQ)         |   CA5pMpqkYFKtme7K31pNB1s62X2SdhEv1nN9RdxKCpuQ   | High-performance GPUs for gaming and professional tasks. |
 | [Market 3070](https://explorer.nosana.io/markets/RXP7JK8MTY4uPJng4UjC9ZJdDDSG6wGr8pvVf3mwgXF)          |   RXP7JK8MTY4uPJng4UjC9ZJdDDSG6wGr8pvVf3mwgXF    | GPUs offering a good balance of performance and cost. |
 | [Market A5000](https://explorer.nosana.io/markets/4uBye3vJ1FAYukDdrvqQ36MZZZxqW3o8utWu8fyomRuN)        |   4uBye3vJ1FAYukDdrvqQ36MZZZxqW3o8utWu8fyomRuN   | High-performance GPUs for professional workloads. |
-
