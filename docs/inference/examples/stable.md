@@ -29,7 +29,14 @@ Create a file named `stable-webui.json`, copy and paste the following into it:
         "cmd": [],
         "image": "docker.io/universonic/stable-diffusion-webui:minimal",
         "gpu": true,
-        "expose": 8080
+        "expose": 8080,
+        "resources": [
+          {
+            "type": "S3",
+            "url": "https://models.nosana.io/stable-diffusion/1.5",
+            "target": "/app/stable-diffusion-webui/models/Stable-diffusion"
+          }
+        ]
       }
     }
   ]
@@ -41,7 +48,7 @@ Create a file named `stable-webui.json`, copy and paste the following into it:
 Run the following command to post the job to the Nosana network.
 
 ```sh:no-line-numbers
-nosana job post --file stable_webui.json --market Crop49jpc7prcgAcS82WbWyGHwbN5GgDym3uFbxxCTZg
+nosana job post --file stable_webui.json --market nvidia-4090
 ```
 
 ## Output
@@ -73,6 +80,5 @@ run nosana job get 5hYyrw4jBkekaLDZviAvoBJPXjfUgJu5S8u1fjzdt5Wx --network mainne
 ```
 
 ## Example
-
 
 ![Stable Diffusion WebUI](./stable_webui.png)
