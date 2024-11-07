@@ -21,18 +21,8 @@ These steps describe how submitting an inference job to the Nosana network.
 ## Examples
 
 Nosana is a fully permissionless network, which means that whatever model you want to run in our network you can!
-For examples you can take a look at the [Examples Catalog](../inference/examples/) or visit: [Nosana-CLI Examples](https://github.com/nosana-ci/nosana-cli/tree/main/job-examples) on GitHub.
+For examples you can take a look at the [Examples Catalog](../inference/examples/) or visit: [Nosana Templates](https://github.com/nosana-ci/pipeline-templates/tree/main/templates) on GitHub.
 Some examples of which models you can run and links can be found in the following table:
-
-| Model Family | Specialty     |
-|--------------|---------------|
-| [llama2](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/llama2.json)          | text-to-text  |
-| [llama3](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/llama3.json)          | text-to-text  |
-| [tinyllama](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/tinyllama.json)       | text-to-text  |
-| [stable diffusion](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/stable-diffusion.json)| text-to-image |
-| [whisper](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/whisper.json)         | audio-to-text |
-| [Jupyter Notebook](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/jupyter-notebook.json) | Notebook backed by GPU |
-
 
 ### Nosana Inference example
 
@@ -58,10 +48,7 @@ Read below for a full list of all of the properties you can set.
       "type": "container/run",
       "id": "gpu-stats",
       "args": {
-        "cmd": [
-          "sh -c ",
-          "nvidia-smi; cat /proc/cpuinfo | grep flags | head -1;"
-        ],
+        "cmd": ["sh -c ", "nvidia-smi; cat /proc/cpuinfo | grep flags | head -1;"],
         "image": "ubuntu",
         "env": {
           "DEBUG": "1"
@@ -78,7 +65,7 @@ Read below for a full list of all of the properties you can set.
           "wget -q https://nosana.mypinata.cloud/ipfs/QmPKP7hjBd1Yyt6CmVpggNCgn9x5oXD1ok27HQvmPiFyew -O audio.mp3;",
           "python openai-whisper.py -p audio.mp3;",
           "wget -q https://nosana.mypinata.cloud/ipfs/QmUFXcvn3KZNvQmND9SCtDnzsU4NzL6awwYTiCkTkdFNTd -O audio.mp3;",
-          "python openai-whisper.py -p audio.mp3;",
+          "python openai-whisper.py -p audio.mp3;"
           // additional commands omitted for brevity
         ],
         "image": "docker.io/nosana/whisper:cuda-check",
@@ -96,34 +83,33 @@ Below we can see a list of the properties and a description for each property th
 - **`version`**: Specifies Nosana compiler version.
 - **`type`**: Indicates the type of job. Here, it's set to "container", meaning the job will run inside a Docker container.
 - **`meta` (optional)**:
-    - **`trigger`**: Defines how the job is triggered. In this example, it's set to "cli" (command-line interface).
+  - **`trigger`**: Defines how the job is triggered. In this example, it's set to "cli" (command-line interface).
 - **`global` (optional)**: This a is a property to help define the properties of all of the operations defined in `ops`.
-    - **`image`**: The Docker image to be used for the container.
-    - **`gpu`**: A boolean indicating whether GPU resources are required.
-    - **`entrypoint`**: An entry point in a container is a script or executable that specifies the command to be run when the container starts
-    - **`env`**: Key value map for environment variables in the container.
-    - **`work_dir`**: The working directory that will be selected for running commands.
+
+  - **`image`**: The Docker image to be used for the container.
+  - **`gpu`**: A boolean indicating whether GPU resources are required.
+  - **`entrypoint`**: An entry point in a container is a script or executable that specifies the command to be run when the container starts
+  - **`env`**: Key value map for environment variables in the container.
+  - **`work_dir`**: The working directory that will be selected for running commands.
 
 - **`ops`**: An array of operations that the job will perform. Each operation includes:
-    - **`type`**: Specifies the operation type. For instance, "container/run" indicates a containerized operation.
-    - **`id`**: A unique identifier for the operation. Examples include "gpu-stats" and "run-whisper".
-    - **`results`**(optional):
-            - **`regex`**: Regex for parsing the result.
-            - **`logType`**: The type of log for the result.
-    - **`args`**: Arguments for the operation, which include:
-        - **`image`**: The Docker image to be used for the container.
-        - **`cmd`**: The command(s) to be executed in the container.
-        - **`volumes` (optional)**: An array of objects containing a `name` and `dest` (destination) properties.
-        - **`expose` (optional)**: A number representing an application port that needs to be exposed via the Nosana Service Endpoint.
-        - **`gpu` (optional)**: A boolean indicating whether GPU resources are required.
-        - **`work_dir` (optional)**: The working directory that will be selected for running commands.
-        - **`output` (optional)**: Specify the output
-        - **`entrypoint` (optional)**: An entry point in a container is a script or executable that specifies the command to be run when the container starts
-        - **`env` (optional)**: Key value map for environment variables in the container.
-        - **`resources` (optional)**: An array containing assets needed for inference.
-          - **`type`**: String representing where the asset should be retrieved from, S3, HF (HuggingFace) or IPFS.
-          - **`url`**: URL representing where the asset is located.
-          - **`target`**: Location where the asset should be downloaded to.
+  - **`type`**: Specifies the operation type. For instance, "container/run" indicates a containerized operation.
+  - **`id`**: A unique identifier for the operation. Examples include "gpu-stats" and "run-whisper".
+  - **`results`**(optional): - **`regex`**: Regex for parsing the result. - **`logType`**: The type of log for the result.
+  - **`args`**: Arguments for the operation, which include:
+    - **`image`**: The Docker image to be used for the container.
+    - **`cmd`**: The command(s) to be executed in the container.
+    - **`volumes` (optional)**: An array of objects containing a `name` and `dest` (destination) properties.
+    - **`expose` (optional)**: A number representing an application port that needs to be exposed via the Nosana Service Endpoint.
+    - **`gpu` (optional)**: A boolean indicating whether GPU resources are required.
+    - **`work_dir` (optional)**: The working directory that will be selected for running commands.
+    - **`output` (optional)**: Specify the output
+    - **`entrypoint` (optional)**: An entry point in a container is a script or executable that specifies the command to be run when the container starts
+    - **`env` (optional)**: Key value map for environment variables in the container.
+    - **`resources` (optional)**: An array containing assets needed for inference.
+      - **`type`**: String representing where the asset should be retrieved from, S3, HF (HuggingFace) or IPFS.
+      - **`url`**: URL representing where the asset is located.
+      - **`target`**: Location where the asset should be downloaded to.
 
 ### `cmd`
 
