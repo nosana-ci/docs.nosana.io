@@ -21,18 +21,8 @@ These steps describe how submitting an inference job to the Nosana network.
 ## Examples
 
 Nosana is a fully permissionless network, which means that whatever model you want to run in our network you can!
-For examples you can take a look at the [Examples Catalog](../inference/examples/) or visit: [Nosana-CLI Examples](https://github.com/nosana-ci/nosana-cli/tree/main/job-examples) on GitHub.
+For examples you can take a look at the [Examples Catalog](../inference/examples/) or visit: [Nosana Templates](https://github.com/nosana-ci/pipeline-templates/tree/main/templates) on GitHub.
 Some examples of which models you can run and links can be found in the following table:
-
-| Model Family | Specialty     |
-|--------------|---------------|
-| [llama2](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/llama2.json)          | text-to-text  |
-| [llama3](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/llama3.json)          | text-to-text  |
-| [tinyllama](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/tinyllama.json)       | text-to-text  |
-| [stable diffusion](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/stable-diffusion.json)| text-to-image |
-| [whisper](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/whisper.json)         | audio-to-text |
-| [Jupyter Notebook](https://github.com/nosana-ci/nosana-cli/blob/main/job-examples/jupyter-notebook.json) | Notebook backed by GPU |
-
 
 ### Nosana Inference example
 
