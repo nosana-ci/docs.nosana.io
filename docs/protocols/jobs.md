@@ -361,8 +361,7 @@ The following 1 arguments should also be provided when invoking this instruction
 
 | Name                   | Type              | Size    | Offset  | Description                                               |
 |------------------------|-------------------|---------|---------|-----------------------------------------------------------|
-| `ipfsJob`              | `["u8",32]`       | `32`    | `0`     | The byte array representing the IPFS hash to the job.     |
-| `timeout`              | `i64`             | `16`    | `32`    | The timeout time in seconds for this job.                 |
+| `timeout`              | `i64`             | `16`    | `0`     | The new timeout time in seconds for this job.             |
 
 
 ::: details Solana Dispatch ID
