@@ -291,6 +291,7 @@ The following 1 arguments should also be provided when invoking this instruction
 | Name                   | Type              | Size    | Offset  | Description                                               |
 |------------------------|-------------------|---------|---------|-----------------------------------------------------------|
 | `ipfsJob`              | `["u8",32]`       | `32`    | `0`     | The byte array representing the IPFS hash to the job.     |
+| `timeout`              | `i64`             | `16`    | `32`    | The timeout time in seconds for this job.                 |
 
 
 ::: details Solana Dispatch ID
@@ -313,6 +314,7 @@ with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
 let tx = await program.methods
   .list(
     ipfsJob,           // type: ["u8",32]
+    timeout,           // type: i64
   )
   .accounts({
     job,               // ✓ writable, ✓ signer
@@ -329,6 +331,73 @@ let tx = await program.methods
     systemProgram,     // 𐄂 writable, 𐄂 signer
   })
   .signers([jobKey, runKey, payerKey, authorityKey])
+  .rpc();
+```
+
+@tab Extend
+### Extend
+
+Extend the timeout of a [JobAccount](#job-account).
+
+#### Account Info
+
+The following 9 account addresses should be provided when invoking this instruction.
+
+| Name                   | Type                                                                                    | Description                                                                                       |
+|------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
+| `market`               | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [MarketAccount](#market-account) address.                                                     |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
+| `rewardsReflection`    | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Nosana Rewards Program's [ReflectionAccount](/programs/rewards#reflection-account) address.   |
+| `rewardsVault`         | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Nosana Rewards Program's [VaultAccount](/programs/rewards#vault-account) address.             |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+| `rewardsProgram`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [Nosana Rewards](/programs/rewards) Program address.                                          |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
+
+#### Arguments
+
+The following 1 arguments should also be provided when invoking this instruction.
+
+| Name                   | Type              | Size    | Offset  | Description                                               |
+|------------------------|-------------------|---------|---------|-----------------------------------------------------------|
+| `ipfsJob`              | `["u8",32]`       | `32`    | `0`     | The byte array representing the IPFS hash to the job.     |
+| `timeout`              | `i64`             | `16`    | `32`    | The timeout time in seconds for this job.                 |
+
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Extend Instruction
+is **`36aec14311298426`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[54,174,193,67,17,41,132,38]
+```
+
+:::
+::: details Example with Anchor
+
+To invoke the Extend Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
+
+```typescript
+let tx = await program.methods
+  .extend(
+    timeout,           // type: i64
+  )
+  .accounts({
+    job,               // ✓ writable, 𐄂 signer
+    market,            // 𐄂 writable, 𐄂 signer
+    user,              // ✓ writable, 𐄂 signer
+    vault,             // ✓ writable, 𐄂 signer
+    rewardsReflection, // ✓ writable, 𐄂 signer
+    rewardsVault,      // ✓ writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
+    rewardsProgram,    // 𐄂 writable, 𐄂 signer
+    tokenProgram,      // 𐄂 writable, 𐄂 signer
+  })
+  .signers([authorityKey])
   .rpc();
 ```
 
