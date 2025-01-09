@@ -1,4 +1,4 @@
-### **Glossary of Terms**
+# Glossary of Terms
 
 - **AI Inference**: The process of using trained AI models to generate content, make predictions or decisions based on new data.
 - **GPU Compute**: High-performance computing using GPUs for tasks like deep learning, data analytics, and rendering.
