@@ -3,7 +3,7 @@ export default [
     text: 'About',
     icon: 'lightbulb',
     prefix: '/about/',
-    children: ['intro', 'background', 'roadmap', 'community'],
+    children: ['intro', 'background', 'roadmap', 'glossary', 'community'],
   },
   {
     text: 'A.I. Inference',
