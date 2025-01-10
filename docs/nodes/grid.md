@@ -1,10 +1,10 @@
 # Getting Started
-## GPU Test Grid
-Welcome to the GPU Test Grid, a platform designed to validate our GPU grid across a diverse array of GPU devices. With comprehensive feedback and proactive issue resolution as our core objective, we are on the path to a smooth transition to the mainnet. We extend an open invitation to developers, data scientists, and AI enthusiasts to be part of this exciting journey. By joining the test grid and assisting us in running AI models, you'll also get the opportunity to participate in our reward distribution pool. For phase 1, we have allocated a substantial pool of 250,000 $NOS tokens. Together, let's shape the future of GPU testing and development.
+## Nosana GPU Grid
+Welcome to the Nosana GPU Grid, a platform designed to validate our GPU grid across a diverse array of GPU devices.
 
 ## Nosana Node
 The Nosana Node is the software that you run to connect your hardware to the grid.
-In order to register for the Test Grid, you'll need to run a Nosana Node with a NVIDIA GPU.
+In order to register for the Nosana Grid, you'll need to run a Nosana Node with a NVIDIA GPU.
 
 ::: warning
 
@@ -37,8 +37,8 @@ You will need to install the following to get started with a Nosana Node:
 
 ## Installation Guides
 
-These guides are instructing you on how to establish your Nosana Node and partake in the Test Grid. The choice of guide depends on your operating system:
+These guides are instructing you on how to establish your Nosana Node and partake in the Nosana Grid. The choice of guide depends on your operating system:
 
-1. [Windows (WSL2)](/nodes/testgrid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your Nosana Node within this environment.
+1. [Windows (WSL2)](/nodes/grid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your Nosana Node within this environment.
 
-2. [Ubuntu](/nodes/testgrid-ubuntu): If you're running Ubuntu, a popular distribution of Linux, you should follow this guide.
+2. [Ubuntu](/nodes/grid-ubuntu): If you're running Ubuntu, a popular distribution of Linux, you should follow this guide.

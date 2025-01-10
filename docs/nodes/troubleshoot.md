@@ -63,7 +63,7 @@ wget https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/sta
 sudo apt install /tmp/conmon_2.1.2.deb
 ```
 
-Then you can rerun the podmon command
+Then you can rerun the podman command
 
 ```
 podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu nvidia-smi -L

@@ -4,7 +4,7 @@ Greetings! This is your comprehensive guide to setting up the Nosana Node on an 
 
 1. [Install Docker](#docker)
 2. [Install NVIDIA drivers and container toolkit](#nvidia)
-3. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)
+3. [Run the Nosana Node and register for Nosana Grid](#nosana-join-grid-script)
 
 Make sure you have Ubuntu version **20.04** or higher. You can check your Ubuntu version with:
 
@@ -90,7 +90,7 @@ Subsequently, restart Docker with:
 sudo systemctl restart docker
 ```
 
-## Nosana Test Grid Script
+## Nosana Join Grid Script
 
 With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
@@ -121,7 +121,7 @@ Provider:	    podman
 ```
 
 
-### Test Grid Registration Instructions
+### Nosana Grid Registration Instructions
 
 When running the script it'll ask for some information: email, Discord & Twitter/X handle (optional). After filling in the information and agreeing to the terms & conditions, a benchmark will start. In this benchmark we will check the hardware of your node.
 
@@ -131,10 +131,9 @@ If the benchmark succeeds, you should see the following output:
 Benchmark finished
 ================================
 Thank you for registering for Nosana Node.
-We'll review your registration and you will get an email from us if you are selected.
 ```
 
-Congratulations! :tada: You have completed the registration. If you are selected for Test Grid you will receive an email with more information.
+Congratulations! :tada: You have completed the registration.
 
 ::: warning
 
@@ -183,11 +182,10 @@ You can manually launch the Nosana Node to modify certain parameters:
 docker run \
       --pull=always \
       --network host  \
-      --interactive \
+      --interactive -t \
       --volume ~/.config/solana/id.json:/root/.nosana/nosana_key.json \
-      nosana/nosana-node \
-         --podman http://localhost:8080  \
-         join-test-grid
+      nosana/nosana-cli:latest node start \
+         --podman http://localhost:8080
 ```
 
 ## Troubleshoot

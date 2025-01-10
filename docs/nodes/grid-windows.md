@@ -6,7 +6,7 @@ Welcome to the step-by-step guide on installing the Nosana Node on your Windows 
 2. [Install Docker](#docker)
 3. [Install NVIDIA drivers and container toolkit](#nvidia)
 4. [Install Podman v4](#podman)
-5. [Run the Nosana Node and register for Test Grid](#nosana-test-grid-script)
+5. [Run the Nosana Node and register for Nosana Grid](#nosana-join-grid-script)
 
 ## Guide: Installing Ubuntu 22.04 on WSL2
 
@@ -134,7 +134,7 @@ If this doesn't work, make sure you have the NVIDIA drivers installed and the nv
 
 If you see `Error: container create failed (no logs from conmon)...` when running the command, follow the steps [here](/nodes/troubleshoot.html#podman) to resolve issue
 
-## Nosana Test Grid Script
+## Nosana Join Grid Script
 
 With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
 
@@ -165,7 +165,7 @@ Provider:	    podman
 ```
 
 
-### Test Grid Registration Instructions
+### Nosana Grid Registration Instructions
 
 When running the script it'll ask for some information: email, Discord & Twitter/X handle (optional). After filling in the information and agreeing to the terms & conditions, a benchmark will start. In this benchmark we will check the hardware of your node.
 
@@ -175,10 +175,9 @@ If the benchmark succeeds, you should see the following output:
 Benchmark finished
 ================================
 Thank you for registering for Nosana Node.
-We'll review your registration and you will get an email from us if you are selected.
 ```
 
-Congratulations! :tada: You have completed the registration. If you are selected for Test Grid you will receive an email with more information.
+Congratulations! :tada: You have completed the registration.
 
 ::: warning
 
@@ -213,11 +212,11 @@ You can manually launch the Nosana Node to modify certain parameters:
 docker run \
       --pull=always \
       --network host  \
-      --interactive \
+      --interactive -t \
       --volume ~/.config/solana/id.json:/root/.nosana/nosana_key.json \
-      nosana/nosana-node \
-         --podman http://$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):8080 \
-         join-test-grid
+      nosana/nosana-cli:latest \
+         node join \
+         --podman http://$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):8080
 ```
 
 ## Troubleshoot

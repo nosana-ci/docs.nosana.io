@@ -13,7 +13,7 @@ actions:
   type: primary
 - text: " Get Started"
   icon: code
-  link: nodes/testgrid
+  link: nodes/grid
   type: secondary
 features:
 - icon: lightbulb
@@ -30,8 +30,8 @@ features:
   link: inference/quick_start
 - icon: server
   title: Nosana Nodes
-  details: Get started earning $NOS by joining our Test Grid
-  link: nodes/testgrid
+  details: Get started earning $NOS by joining our Nosana Grid
+  link: nodes/grid
 - icon: code
   title: Nosana Protocols
   details: Learn how to use the Nosana Smart Contracts

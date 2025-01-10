@@ -1,6 +1,6 @@
-# Run your Node on Test Grid
-## GPU Test Grid
-This guide is for nodes that already successfully registered their node for the GPU Test Grid and got selected for Phase 1 or Phase 2. Congratulations for making it this far! Now its time to start up your node and start earning $NOS! If you got selected, your node received a special access NFT that can be used to join a GPU market on Test Grid.
+# Run your Node on the Nosana Grid
+## GPU Nosana Grid
+This guide is for nodes that already successfully registered their node for the Nosana Grid. Congratulations for making it this far! Now its time to start up your node and start earning $NOS!
 
 ::: info Backup your Solana Key
 
@@ -11,22 +11,22 @@ sudo cat ~/.nosana/nosana_key.json
 ```
 :::
 
-## Nosana Test Grid Script
+## Nosana Start Node Script
 
 With just a single command in your command line, you can easily run your Nosana Node on your machine. Simply run the following command:
 
 ```sh:no-line-numbers
-bash <(wget -qO- https://nosana.com/testgrid.sh)
+bash <(wget -qO- https://nosana.com/start.sh)
 ```
 If everything is successful, your Nosana Node is now running in a docker container.
 
-## Register for Test Grid
+## Register for Nosana Grid
 
-If you didn't register yet for testgrid, you can register for the next phases. These guides are instructing you on how to establish your Nosana Node and partake in the Test Grid. The choice of guide depends on your operating system:
+These guides are instructing you on how to establish your Nosana Node and partake in the Nosana Grid. The choice of guide depends on your operating system:
 
-1. [Windows (WSL2)](/nodes/testgrid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your Nosana Node within this environment.
+1. [Windows (WSL2)](/nodes/grid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your Nosana Node within this environment.
 
-2. [Ubuntu](/nodes/testgrid-ubuntu): If you're running Ubuntu, a popular distribution of Linux, you should follow this guide.
+2. [Ubuntu](/nodes/grid-ubuntu): If you're running Ubuntu, a popular distribution of Linux, you should follow this guide.
 
 
 ## Advanced (optional)
@@ -69,5 +69,5 @@ Not at all times will there be enough jobs for all the nodes in a market. In tha
 :::
 
 ::: details Which position in the queue is my node?
-To see the market queue, go to the markets page on the [Nosana Explorer](https://explorer.nosana.io/markets). Choose the market you are assigned to, on the market page it'll show you the queue.
+To see the market queue, go to the markets page on the [Nosana Dashboard](https://dashboard.nosana.com/markets). Choose the market you are assigned to, on the market page it'll show you the queue.
 :::
