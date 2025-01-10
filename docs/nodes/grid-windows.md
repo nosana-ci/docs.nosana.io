@@ -1,4 +1,4 @@
-# Windows - GPU Nosana Node
+# Register Windows Node
 
 Welcome to the step-by-step guide on installing the Nosana Node on your Windows system. This documentation has been designed to make the installation process straightforward and efficient, even for those who aren't tech-savvy. Follow along, and you'll have your Nosana Node up and running in no time.
 

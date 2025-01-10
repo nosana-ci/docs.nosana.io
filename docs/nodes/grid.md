@@ -42,3 +42,9 @@ These guides are instructing you on how to establish your Nosana Node and partak
 1. [Windows (WSL2)](/nodes/grid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your Nosana Node within this environment.
 
 2. [Ubuntu](/nodes/grid-ubuntu): If you're running Ubuntu, a popular distribution of Linux, you should follow this guide.
+
+## Run your Node
+
+After you have successfully installed the Nosana Node and registered for the Nosana Grid, you can now start up your node and join the Nosana Grid!
+
+* [**Run your Node**](/nodes/grid-run)

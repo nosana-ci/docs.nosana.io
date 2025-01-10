@@ -1,4 +1,4 @@
-# Ubuntu - GPU Nosana Node
+# Register Ubuntu Node
 
 Greetings! This is your comprehensive guide to setting up the Nosana Node on an Ubuntu system. Whether you are a seasoned developer or new to the Linux world, this easy-to-follow tutorial will assist you in getting your Nosana Node operational on your Ubuntu setup. Let's dive in and start the process.
 

@@ -1,5 +1,4 @@
-# Run your Node on the Nosana Grid
-## GPU Nosana Grid
+# Run Nosana Node
 This guide is for nodes that already successfully registered their node for the Nosana Grid. Congratulations for making it this far! Now its time to start up your node and start earning $NOS!
 
 ::: info Backup your Solana Key
