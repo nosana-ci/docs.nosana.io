@@ -2,16 +2,16 @@
 
 ## Nosana GPU Grid
 
-Welcome to the Nosana GPU Grid, a platform designed to validate our GPU grid across a diverse array of GPU devices.
+Welcome to the Nosana GPU Grid, a platform dedicated to our GPU Hosts, featuring a wide variety of GPU devices.
 
-## Nosana Node
+## GPU Hosts
 
-The Nosana Node is the software that you run to connect your hardware to the grid.
-In order to register for the Nosana Grid, you'll need to run a Nosana Node with a NVIDIA GPU.
+GPU Hosts run software (call the "Nosana Node" software) that will connect your hardware to the grid.
+In order to register for the Nosana Grid, your device needs to have access to a NVIDIA GPU.
 
 ::: warning
 
-At the moment the Nosana Node is in pre-release. Therefore we highly recommend to run this in a clean environment or virtual machine, and to use a Solana address with only a minimal amount of SOL.
+We highly recommend to run this in a virtual environment, and to use a Solana address with only a minimal amount of SOL.
 
 :::
 
@@ -29,7 +29,7 @@ At the moment the Nosana Node is in pre-release. Therefore we highly recommend t
 | NVIDIA RTX A4500  | NVIDIA RTX A5000 | NVIDIA RTX A5500  | NVIDIA RTX A6000 |                   |
 
 <!-- ## Software Requirements
-You will need to install the following to get started with a Nosana Node:
+You will need to install the following to get started as a GPU Host:
 
 - [Ubuntu (>20.04) or Windows (with Ubuntu 22.04 on WSL2)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#3-download-ubuntu)
 - [Docker (Required)](https://docs.docker.com/desktop/linux/install/)
@@ -40,14 +40,14 @@ You will need to install the following to get started with a Nosana Node:
 
 ## Installation Guides
 
-These guides are instructing you on how to establish your Nosana Node and partake in the Nosana Grid. The choice of guide depends on your operating system:
+These guides provide instructions on how to set up your GPU Host and engage with the Nosana Grid. Please choose the guide that corresponds to your operating system:
 
-1. [Windows (WSL2)](/nodes/grid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your Nosana Node within this environment.
+1. [Windows (WSL2)](/hosts/grid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your GPU Host within this environment.
 
-2. [Ubuntu](/nodes/grid-ubuntu): If you're running Ubuntu, a popular distribution of Linux, you should follow this guide.
+2. [Ubuntu](/hosts/grid-ubuntu): If you're running Ubuntu, a popular distribution of Linux, you should follow this guide.
 
-## Run your Node
+## Host your GPU
 
-After you have successfully installed the Nosana Node and registered for the Nosana Grid, you can now start up your node and join the Nosana Grid!
+After you have successfully setup your GPU Host and registered for the Nosana Grid, you can now start up your host and join the Nosana Grid!
 
-* [**Run your Node**](/nodes/grid-run)
+* [**Run your GPU Host**](/hosts/grid-run)

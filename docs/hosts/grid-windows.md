@@ -1,12 +1,12 @@
-# Register Windows Node
+# Register a Windows GPU Host
 
-Welcome to the step-by-step guide on installing the Nosana Node on your Windows system. This documentation has been designed to make the installation process straightforward and efficient, even for those who aren't tech-savvy. Follow along, and you'll have your Nosana Node up and running in no time.
+Welcome to the step-by-step guide on installing the GPU Hosts on your Windows system. This documentation has been designed to make the installation process straightforward and efficient, even for those who aren't tech-savvy. Follow along, and you'll have your GPU Hosts up and running in no time.
 
 1. [Install Ubuntu 22.04 on WSL2](#install-ubuntu-22-04-on-wsl2)
 2. [Install Docker](#docker)
 3. [Install NVIDIA drivers and container toolkit](#nvidia)
 4. [Install Podman v4](#podman)
-5. [Run the Nosana Node and register for Nosana Grid](#nosana-join-grid-script)
+5. [Run the GPU Hosts and register for Nosana Grid](#nosana-join-grid-script)
 
 ## Guide: Installing Ubuntu 22.04 on WSL2
 
@@ -78,8 +78,6 @@ If the drivers are correctly installed, you should see detailed information abou
 ```
 
 
-
-
 These commands will help you generate the necessary configuration file and verify the CDI support.
 
 ### Install the NVIDIA Container Toolkit
@@ -114,7 +112,7 @@ nvidia-ctk cdi list
 
 ## Podman
 
-The Nosana Node connects to Podman and runs your containers inside of it. On WSL2, you'll need to natively install Podman >v4.1:
+The GPU Hosts connects to Podman and runs your containers inside of it. On WSL2, you'll need to natively install Podman >v4.1:
 
 ```sh:no-line-numbers
 echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/unstable/xUbuntu_22.04/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:unstable.list
@@ -136,7 +134,7 @@ If you see `Error: container create failed (no logs from conmon)...` when runnin
 
 ## Nosana Join Grid Script
 
-With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
+With just a single command in your command line, you can easily set up a GPU Hosts on your machine. Simply run the following command:
 
 ```sh:no-line-numbers
 bash <(wget -qO- https://nosana.com/register.sh)
@@ -174,7 +172,7 @@ If the benchmark succeeds, you should see the following output:
 ```
 Benchmark finished
 ================================
-Thank you for registering for Nosana Node.
+Thank you for registering for GPU Hosts.
 ```
 
 Congratulations! :tada: You have completed the registration.
@@ -189,7 +187,7 @@ To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is *
 
 ### Run Podman API
 
-This command can be used to start Podman service on port 8080, so our Nosana Node can reach it.
+This command can be used to start Podman service on port 8080, so our GPU Hosts can reach it.
 This is also already done by the `register.sh` script in the final step, so this step is optional:
 
 ```sh:no-line-numbers
@@ -202,9 +200,9 @@ To validate Podman's proper functioning, use:
 curl http://localhost:8080/v4.5.0/libpod/info
 ```
 
-## Launching the Nosana Node with Custom Parameters
+## Launching the GPU Hosts with Custom Parameters
 
-You can manually launch the Nosana Node to modify certain parameters:
+You can manually launch the GPU Hosts to modify certain parameters:
 * Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
 * Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 

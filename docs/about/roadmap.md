@@ -12,7 +12,7 @@ At every stage, we focus on different aspects of our platform, aiming to provide
 
 ## Release cycles
 
-### Genesis (v0.1 - H2 2023)
+### Genesis (v0.1 - H1 2024)
 
 This is the platform's launch, which includes alpha and beta stages. It will entail bootstrapping the GPU network and replicating demand > supply > demand throughput to test the system from start to finish. It will involve testing the system, onboarding early adopters, and gathering input for future upgrades. During this phase, the emphasis will be on guaranteeing the platform's stability, dependability, and performance.
 

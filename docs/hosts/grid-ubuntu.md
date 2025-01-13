@@ -1,10 +1,10 @@
-# Register Ubuntu Node
+# Register an Ubuntu GPU Host
 
-Greetings! This is your comprehensive guide to setting up the Nosana Node on an Ubuntu system. Whether you are a seasoned developer or new to the Linux world, this easy-to-follow tutorial will assist you in getting your Nosana Node operational on your Ubuntu setup. Let's dive in and start the process.
+Greetings! This is your comprehensive guide to setting up the GPU Host on an Ubuntu system. Whether you are a seasoned developer or new to the Linux world, this easy-to-follow tutorial will assist you in getting your GPU Host operational on your Ubuntu setup. Let's dive in and start the process.
 
 1. [Install Docker](#docker)
 2. [Install NVIDIA drivers and container toolkit](#nvidia)
-3. [Run the Nosana Node and register for Nosana Grid](#nosana-join-grid-script)
+3. [Run the GPU Host and register for Nosana Grid](#nosana-join-grid-script)
 
 Make sure you have Ubuntu version **20.04** or higher. You can check your Ubuntu version with:
 
@@ -19,7 +19,7 @@ Before proceeding with the installation and configuration of Docker, it is impor
 - [Install Docker Engine](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
 - [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 
-By following these steps, you will be able to run the Nosana Node without the need for root privileges.
+By following these steps, you will be able to run the GPU Host without the need for root privileges.
 
 ## NVIDIA
 
@@ -92,7 +92,7 @@ sudo systemctl restart docker
 
 ## Nosana Join Grid Script
 
-With just a single command in your command line, you can easily set up a Nosana Node on your machine. Simply run the following command:
+With just a single command in your command line, you can easily set up a GPU Host on your machine. Simply run the following command:
 
 ```sh:no-line-numbers
 bash <(wget -qO- https://nosana.com/register.sh)
@@ -130,7 +130,7 @@ If the benchmark succeeds, you should see the following output:
 ```
 Benchmark finished
 ================================
-Thank you for registering for Nosana Node.
+Thank you for registering for GPU Host.
 ```
 
 Congratulations! :tada: You have completed the registration.
@@ -172,9 +172,9 @@ To validate Podman's proper functioning, use:
 curl http://localhost:8080/v4.5.0/libpod/info
 ```
 
-## Launching the Nosana Node with Custom Parameters
+## Launching the GPU Host with Custom Parameters
 
-You can manually launch the Nosana Node to modify certain parameters:
+You can manually launch the GPU Host to modify certain parameters:
 * Use the `--podman` parameter to direct to your Podman service if it's running elsewhere.
 * Use `--volume` to map your solana key to `/root/.nosana/nosana_key.json` within the Docker container if you wish to use your own key.
 

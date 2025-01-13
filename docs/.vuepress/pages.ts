@@ -9,9 +9,9 @@ export default [
   {
     text: 'Hosts',
     icon: 'server',
-    prefix: '/nodes/',
+    prefix: '/hosts/',
     collapsible: true,
-    children: ['grid', 'grid-run', 'grid-windows', 'grid-ubuntu',  'troubleshoot'],
+    children: ['grid', 'grid-windows', 'grid-ubuntu', 'grid-run', 'troubleshoot'],
   },
   {
     text: 'Inference',
