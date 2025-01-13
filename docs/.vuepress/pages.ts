@@ -15,7 +15,7 @@ export default [
   },
   {
     text: 'Run Inference',
-    icon: 'robot',
+    icon: 'rocket',
     prefix: '/inference/',
     collapsible: true,
     children: [
@@ -45,15 +45,15 @@ export default [
     ],
   },
   {
-    text: 'SDK Usage',
-    icon: 'code',
+    text: 'SDK',
+    icon: 'terminal',
     prefix: '/sdk/',
     collapsible: true,
     children: ['sdk_start', 'hello_world', 'tiny_llama', 'jupyter'],
   },
   {
-    text: 'Protocol Docs',
-    icon: 'link',
+    text: 'Protocols',
+    icon: 'cubes',
     prefix: '/protocols/',
     collapsible: true,
     children: ['start', 'staking', 'rewards', 'pools', 'jobs', 'nodes', 'token'],
