@@ -1,4 +1,4 @@
-# Register a Windows GPU Host
+# Setup for Windows
 
 Welcome to the step-by-step guide on installing the GPU Hosts on your Windows system. This documentation has been designed to make the installation process straightforward and efficient, even for those who aren't tech-savvy. Follow along, and you'll have your GPU Hosts up and running in no time.
 

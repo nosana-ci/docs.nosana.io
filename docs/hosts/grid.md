@@ -1,7 +1,5 @@
 # Getting Started
 
-## Nosana GPU Grid
-
 Welcome to the Nosana GPU Grid, a platform dedicated to our GPU Hosts, featuring a wide variety of GPU devices.
 
 ## GPU Hosts

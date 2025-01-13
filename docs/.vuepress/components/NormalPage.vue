@@ -11,9 +11,9 @@
             <div class="link">Run AI Inference on Nosana</div>
           </router-link>
           <router-link aria-label="Stable Diffusion WebUI" class="vp-link nav-link next nav-link next"
-            to="/nodes/grid.html">
+            to="/hosts/grid.html">
             <div class="hint">Next<span class="arrow end"></span></div>
-            <div class="link">Get Started as a Node</div>
+            <div class="link">Get Started as a GPU Host</div>
           </router-link>
         </nav>
       </div>

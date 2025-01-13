@@ -1,4 +1,4 @@
-# Register an Ubuntu GPU Host
+# Setup for Ubuntu
 
 Greetings! This is your comprehensive guide to setting up the GPU Host on an Ubuntu system. Whether you are a seasoned developer or new to the Linux world, this easy-to-follow tutorial will assist you in getting your GPU Host operational on your Ubuntu setup. Let's dive in and start the process.
 

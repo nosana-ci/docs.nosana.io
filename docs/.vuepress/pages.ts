@@ -7,14 +7,14 @@ export default [
     children: ['intro', 'background', 'roadmap', 'glossary', 'community'],
   },
   {
-    text: 'Hosts',
+    text: 'Host GPUs',
     icon: 'server',
     prefix: '/hosts/',
     collapsible: true,
     children: ['grid', 'grid-windows', 'grid-ubuntu', 'grid-run', 'troubleshoot'],
   },
   {
-    text: 'Inference',
+    text: 'Run Inference',
     icon: 'robot',
     prefix: '/inference/',
     collapsible: true,
@@ -39,14 +39,14 @@ export default [
     ],
   },
   {
-    text: 'SDK',
+    text: 'SDK Usage',
     icon: 'code',
     prefix: '/sdk/',
     collapsible: true,
     children: ['sdk_start', 'hello_world', 'tiny_llama', 'jupyter'],
   },
   {
-    text: 'Protocols',
+    text: 'Protocol Docs',
     icon: 'link',
     prefix: '/protocols/',
     collapsible: true,
