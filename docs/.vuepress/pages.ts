@@ -18,9 +18,15 @@ export default [
     icon: 'robot',
     prefix: '/inference/',
     collapsible: true,
-    children: ['quick_start', 'job_schema', 'endpoints', 'writing_a_job', 'markets', 'cached_resources',
+    children: [
+      'quick_start',
+      'job_schema',
+      'endpoints',
+      'writing_a_job',
+      'markets',
+      'cached_resources',
       {
-        text: "Examples",
+        text: 'Examples',
         prefix: '/inference/examples/',
         collapsible: true,
         children: [
@@ -35,7 +41,7 @@ export default [
           'vllm',
           'lmdeploy',
         ],
-      }
+      },
     ],
   },
   {
