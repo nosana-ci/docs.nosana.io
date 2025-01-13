@@ -1,8 +1,11 @@
 # Getting Started
+
 ## Nosana GPU Grid
+
 Welcome to the Nosana GPU Grid, a platform designed to validate our GPU grid across a diverse array of GPU devices.
 
 ## Nosana Node
+
 The Nosana Node is the software that you run to connect your hardware to the grid.
 In order to register for the Nosana Grid, you'll need to run a Nosana Node with a NVIDIA GPU.
 

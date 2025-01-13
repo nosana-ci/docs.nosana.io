@@ -16,19 +16,19 @@ At every stage, we focus on different aspects of our platform, aiming to provide
 
 This is the platform's launch, which includes alpha and beta stages. It will entail bootstrapping the GPU network and replicating demand > supply > demand throughput to test the system from start to finish. It will involve testing the system, onboarding early adopters, and gathering input for future upgrades. During this phase, the emphasis will be on guaranteeing the platform's stability, dependability, and performance.
 
-### Galactica (v1.0 - H1/H2 2024)
+### Galactica (v1.0 - H1 2025)
 
 The main grid will go live in the second phase. The CLI and SDK will be released, allowing anyone to connect to the network. In addition, a Container Node for consumer GPUs will be launched. The emphasis throughout this phase will be on scaling the network and engaging with a broader user base.
 
-### Triangulum (v1.X - H2 2024)
+### Triangulum (v1.X - H2 2025)
 
 The focus of this release is on integrating major machine learning protocols. The Community Connector Library, as well as official connectors for PyTorch, HuggingFace, TensorFlow, and others, will be released. During this phase, the platform's usability and compatibility with existing machine-learning tools and libraries will increase.
 
-### Whirlpool (v1.X - H1 2025)
+### Whirlpool (v1.X - H1 2026)
 
 The platform's reach will be expanded even further, which will support a more diverse array of GPUs, including those from AMD, Intel, and Apple Silicon. The objective is to make Nosana the world's largest compute grid. Since it will be necessary to make sure the platform can handle a wide range of hardware and use cases, this phase will present major technical obstacles.
 
-### Sombrero (v1.X - H2 2025)
+### Sombrero (v1.X - H2 2026)
 
 Support for medium-sized and large businesses will be added in this release, as well as fiat currency ramping, billing, and teams. Because the platform will need to attract and support a broader range of users and use cases, this phase will include not only technological development but also business and community growth.
 
@@ -38,20 +38,20 @@ Support for medium-sized and large businesses will be added in this release, as 
 axisFormat  %Y-%m
 
 section Genesis
-Test Grid Phase 1 : done  , g1, 2023-12 , 120d
-Test Grid Phase 2 : active, g2, after g1, 120d
-Test Grid Phase 3 :         g3, after g2, 90d
+Test Grid Phase 1 : done, g1, 2023-12 , 120d
+Test Grid Phase 2 : done, g2, after g1, 120d
+Test Grid Phase 3 : done, g3, after g2, 170d
 
 section Galactica
-Galactica - Main grid : m1, after g3,90d
+Galactica - Main grid : active, m1, after g3, 180d
 
 section Triangulum
-Triangulum - Main protocols : t1, after m1,90d
+Triangulum - Main protocols : t1, after m1, 180d
 
 section Whirlpool
-Whirlpool - Largest GPU grid : w1,after t1,90d
+Whirlpool - Largest GPU grid : w1,after t1, 180d
 
 section Sombrero
-Sombrero - All businesses : s1,after w1,90d
+Sombrero - All businesses : s1,after w1, 180d
 
 ```
