@@ -1,10 +1,12 @@
 # Host a GPU
 
-This guide is for GPU Hosts that already successfully registered their GPU in the Nosana Grid. Congratulations for making it this far! Now its time to start up your host and start earning $NOS!
+This guide is for GPU Hosts who have successfully registered their GPUs on the Nosana GPU Marketplace. Congratulations on reaching this milestone! Now it's time to launch your Node and start earning $NOS by contributing GPU power to the Nosana Network.
 
 ::: info Backup your Solana Key
 
-To find your Hosts' Solana key, navigate to `~/.nosana/nosana_key.json`. It is essential to back up this file to ensure its safety.
+Your Node's Solana key is critical for operations and must be securely backed up.
+To locate your Node's Solana key file, navigate to: `~/.nosana/nosana_key.json`.
+It is essential to back up this file to ensure its safety.
 You can print your private key to the terminal and then copy it and store it in your password manager for example.
 ```sh:no-line-numbers
 sudo cat ~/.nosana/nosana_key.json
@@ -49,6 +51,7 @@ docker run \
 ```
 
 ## FAQ
+
 ::: details Do I need to keep my host running at all times?
 You don't have to keep your host running at all times. However, the more your host is running, the more jobs it'll be able to pick up, which equals more $NOS rewards.
 :::

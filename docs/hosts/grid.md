@@ -1,23 +1,26 @@
 # Getting Started
 
-Welcome to the Nosana GPU Grid, a platform dedicated to our GPU Hosts, featuring a wide variety of GPU devices.
+## Welcome to the Nosana GPU Marketplace
+
+The Nosana Network connects GPU Hosts with Clients who need scalable, cost-effective GPU compute. As a GPU Host, you’ll contribute to a decentralized ecosystem by listing your NVIDIA GPUs on the Nosana Marketplace for AI inference and other compute workloads.
 
 ## GPU Hosts
 
-GPU Hosts run software (call the "Nosana Node" software) that will connect your hardware to the grid.
-In order to register for the Nosana Grid, your device needs to have access to a NVIDIA GPU.
+GPU Hosts run the Nosana Node software, which connects your hardware to the marketplace. To register your device, it must include a compatible NVIDIA GPU.
 
 ::: warning
 
-We highly recommend to run this in a virtual environment, and to use a Solana address with only a minimal amount of SOL.
+We recommend running the Nosana Node software in a virtual environment and using a Solana wallet with only a minimal amount of SOL.
 
 :::
 
 ## Hardware Requirements
 
-- Internet connection
-- RAM: 4GB+
-- One of the following NVIDIA GPUs:
+To participate as a GPU Host, ensure your setup meets the following criteria:
+
+- **Internet Connection**: A stable connection is required.
+- **RAM**: 4GB+
+- **Supported NVIDIA GPUs**:
 
 |                   |                  |                   |                  |                   |
 |-------------------|------------------|-------------------|------------------|-------------------|
@@ -38,14 +41,14 @@ You will need to install the following to get started as a GPU Host:
 
 ## Installation Guides
 
-These guides provide instructions on how to set up your GPU Host and engage with the Nosana Grid. Please choose the guide that corresponds to your operating system:
+Follow these guides to become a GPU Host or list your hardware on the Nosana Network:
 
-1. [Windows (WSL2)](/hosts/grid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your GPU Host within this environment.
+1. [Windows (WSL2)](/hosts/grid-windows): Learn how to list your hardware using Windows Subsystem for Linux 2, allowing Linux to run on your Windows machine.
 
-2. [Ubuntu](/hosts/grid-ubuntu): If you're running Ubuntu, a popular distribution of Linux, you should follow this guide.
+2. [Ubuntu](/hosts/grid-ubuntu): Follow this guide if you're using Ubuntu, a widely used Linux distribution.
 
-## Host your GPU
+## Host Your GPU
 
-After you have successfully setup your GPU Host and registered for the Nosana Grid, you can now start up your host and join the Nosana Grid!
+After listing your hardware on the Nosana Network, you’re ready to start hosting! Launch your GPU Host to begin contributing compute power and earning rewards.
 
-* [**Run your GPU Host**](/hosts/grid-run)
+👉 Get started today: [**Nosana Docs**](/hosts/grid-run)

@@ -24,4 +24,3 @@
 - **Secure and On-Demand Access**: Tap into a global network of the latest GPUs, including hard-to-find models.
 - **Pay-Per-Second Billing**: Flexible pricing that scales with your compute usage.
 - **Reduced Carbon Footprint**: Optimize idle resources to minimize environmental impact.
-
