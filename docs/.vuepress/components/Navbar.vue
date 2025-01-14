@@ -40,11 +40,12 @@
           <div class="navbar-end is-align-items-center">
             <div class="navbar-item has-dropdown is-hoverable" @click="mobileMenu = false">
               <a class="navbar-link is-arrowless">
-                <div>Product</div>
+                <div>GPU Marketplace</div>
               </a>
               <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="https://nosana.com/compute"> Compute Marketplace </a>
-                <a href="https://explorer.nosana.io/" target="_blank" class="navbar-item">
+                <a class="navbar-item" href="https://nosana.com/hosts">Become a GPU host</a>
+                <a class="navbar-item" href="https://nosana.com/clients">Deploy AI workloads</a>
+                <a href="https://dashboard.nosana.com/" target="_blank" class="navbar-item">
                   <span>Explorer</span>
                 </a>
               </div>
@@ -56,7 +57,7 @@
               <div class="navbar-dropdown is-boxed">
                 <a class="navbar-item" to="/team"> About Nosana </a>
                 <a class="navbar-item" href="https://nosana.com/token"> $NOS Token </a>
-                <a href="https://explorer.nosana.io/stake/" target="_blank" class="navbar-item">
+                <a href="https://dashboard.nosana.com/stake/" target="_blank" class="navbar-item">
                   <span>Staking</span>
                 </a>
               </div>
@@ -81,7 +82,9 @@
               </div>
             </div>
             <div class="navbar-item" @click="mobileMenu = false">
-              <a href="https://nosana.com/compute" class="button is-secondary is-size-6"> Get Access </a>
+              <a target="_blank" href="https://dashboard.nosana.com/" class="button is-secondary is-size-6"
+                >Dashboard</a
+              >
             </div>
           </div>
         </div>
@@ -104,10 +107,10 @@ export default {
       const themeContainer = document.getElementsByClassName('theme-container')[0];
       if (themeContainer.classList.contains('sidebar-open')) {
         themeContainer.classList.remove('sidebar-open');
-        document.getElementById("check").checked = false;
+        document.getElementById('check').checked = false;
       } else {
         themeContainer.classList.add('sidebar-open');
-        document.getElementById("check").checked = true;
+        document.getElementById('check').checked = true;
       }
     },
   },
