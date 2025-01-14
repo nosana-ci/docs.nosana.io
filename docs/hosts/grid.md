@@ -51,6 +51,7 @@ To participate as a GPU Host, ensure your setup meets the following criteria:
 | NVIDIA | RTX A40       |
 | NVIDIA | RTX A100 40GB |
 | NVIDIA | RTX A100 80GB |
+| NVIDIA | RTX H100      |
 
 <!-- ## Software Requirements
 You will need to install the following to get started as a GPU Host:
