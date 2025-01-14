@@ -45,9 +45,9 @@
               <div class="navbar-dropdown is-boxed">
                 <a class="navbar-item" href="https://nosana.com/hosts">Become a GPU host</a>
                 <a class="navbar-item" href="https://nosana.com/clients">Deploy AI workloads</a>
-                <a href="https://dashboard.nosana.com/" target="_blank" class="navbar-item">
+                <!-- <a href="https://dashboard.nosana.com/" target="_blank" class="navbar-item">
                   <span>Explorer</span>
-                </a>
+                </a> -->
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable" @click="mobileMenu = false">
