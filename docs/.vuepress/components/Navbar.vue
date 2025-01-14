@@ -38,17 +38,23 @@
         <div id="navbar" class="navbar-menu" :class="{ 'is-active': mobileMenu }">
           <div class="navbar-start" />
           <div class="navbar-end is-align-items-center">
-            <div class="navbar-item has-dropdown is-hoverable" @click="mobileMenu = false">
-              <a class="navbar-link is-arrowless">
-                <div>GPU Marketplace</div>
-              </a>
-              <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="https://nosana.com/hosts">Become a GPU host</a>
-                <a class="navbar-item" href="https://nosana.com/clients">Deploy AI workloads</a>
-                <!-- <a href="https://dashboard.nosana.com/" target="_blank" class="navbar-item">
-                  <span>Explorer</span>
-                </a> -->
-              </div>
+            <div class="navbar-item is-hoverable" @click="mobileMenu = false">
+              <a
+                class="navbar-link is-arrowless"
+                href="https://nosana.com/hosts"
+                exact-active-class="is-active"
+              >
+                <div>Hosting</div>
+            </a>
+            </div>
+            <div class="navbar-item" @click="mobileMenu = false">
+              <a
+                class="navbar-link is-arrowless"
+                href="https://nosana.com/clients"
+                exact-active-class="is-active"
+              >
+                <div>Deploy AI Workloads</div>
+            </a>
             </div>
             <div class="navbar-item has-dropdown is-hoverable" @click="mobileMenu = false">
               <a class="navbar-link is-arrowless">
@@ -282,6 +288,13 @@ export default {
   .navbar-menu {
     .navbar-item .navbar-link {
       color: #fff;
+      &:focus, &:hover {
+        background: transparent;
+      }
+      &.is-active {
+        background: transparent;
+        text-decoration: underline;
+      }
     }
   }
 }
