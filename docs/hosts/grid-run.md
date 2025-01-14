@@ -22,9 +22,9 @@ bash <(wget -qO- https://nosana.com/start.sh)
 ```
 If everything is successful, your GPU Hosts is now running in a docker container.
 
-## Register for Nosana Grid
+## Register as a GPU Host
 
-These guides are instructing you on how to establish your GPU Host and partake in the Nosana Grid. The choice of guide depends on your operating system:
+These guides are instructing you on how to establish your GPU Host and partake in the Nosana GPU Markets. The choice of guide depends on your operating system:
 
 1. [Windows (WSL2)](/hosts/grid-windows): This guide is suitable for you if you're running Windows. WSL2 stands for Windows Subsystem for Linux 2, which allows you to run Linux on your Windows machine. Following this guide, you'll be able to set up your GPU Host within this environment.
 
