@@ -18,16 +18,39 @@ We recommend running the Nosana Node software in a virtual environment and using
 
 To participate as a GPU Host, ensure your setup meets the following criteria:
 
-- **Internet Connection**: A stable connection is required.
-- **RAM**: 4GB+
+- **RAM**: 12GB+
+- **Storage**: 256GB+ SSD
+
+  Large language models storage requirements can be high, especially models geared towards higher end GPU’s. It is recommended that ancillary storage up to 1TB be provided for your host to handle client model requirements.
+- **Bandwidth**: Minimum 100 Mb/s download, 50 Mb/s upload.
+
+  High speed internet speed is required. To increase your chances of your host being hired by a client, we recommend 500 Mb/s download, 250 Mb/s upload, with ping below 100ms.
 - **Supported NVIDIA GPUs**:
 
-|                   |                  |                   |                  |                   |
-|-------------------|------------------|-------------------|------------------|-------------------|
-| NVIDIA RTX 4090   | NVIDIA RTX 4080  | NVIDIA RTX 4070Ti | NVIDIA RTX 4070  | NVIDIA RTX 4060Ti |
-| NVIDIA RTX 4060   | NVIDA RTX 3090Ti | NVIDA RTX 3090    | NVIDA RTX 3080Ti | NVIDA RTX 3080    |
-| NVIDIA RTX 3070Ti | NVIDA RTX 3070   | NVIDA RTX 3060    | NVIDA RTX 3060Ti | NVIDIA RTX A4000  |
-| NVIDIA RTX A4500  | NVIDIA RTX A5000 | NVIDIA RTX A5500  | NVIDIA RTX A6000 |                   |
+| Brand  | Model         |
+|--------|---------------|
+| NVIDIA | RTX 4090      |
+| NVIDIA | RTX 4080      |
+| NVIDIA | RTX 4070Ti    |
+| NVIDIA | RTX 4070      |
+| NVIDIA | RTX 4060Ti    |
+| NVIDIA | RTX 4060      |
+| NVIDIA | RTX 3090Ti    |
+| NVIDIA | RTX 3090      |
+| NVIDIA | RTX 3080Ti    |
+| NVIDIA | RTX 3080      |
+| NVIDIA | RTX 3070Ti    |
+| NVIDIA | RTX 3070      |
+| NVIDIA | RTX 3060Ti    |
+| NVIDIA | RTX 3060      |
+| NVIDIA | RTX A4000     |
+| NVIDIA | RTX A4500     |
+| NVIDIA | RTX A5000     |
+| NVIDIA | RTX A5500     |
+| NVIDIA | RTX A6500     |
+| NVIDIA | RTX A40       |
+| NVIDIA | RTX A100 40GB |
+| NVIDIA | RTX A100 80GB |
 
 <!-- ## Software Requirements
 You will need to install the following to get started as a GPU Host:
