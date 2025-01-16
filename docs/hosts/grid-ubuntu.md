@@ -90,15 +90,15 @@ Subsequently, restart Docker with:
 sudo systemctl restart docker
 ```
 
-## Nosana Join Grid Script
+## Join the Grid
 
 With just a single command in your command line, you can easily set up a GPU Host on your machine. Simply run the following command:
 
 ```sh:no-line-numbers
-bash <(wget -qO- https://nosana.com/register.sh)
+bash <(wget -qO- https://nosana.com/start.sh)
 ```
 
-Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.com/register.sh](https://nosana.com/register.sh)
+Please note that this script has certain requirements and is specifically designed to run without the need for sudo privileges. It's crucial to exercise caution when running any script from the internet with sudo privileges. Even in this case, it's advisable to thoroughly review the script before executing it on your system. You can review the script here: [https://nosana.com/start.sh](https://nosana.com/start.sh)
 
 The script performs a series of tests to verify the successful completion of the previous steps outlined in the guide.
 
@@ -125,16 +125,6 @@ Provider:	    podman
 
 When running the script it'll ask for some information: email, Discord & Twitter/X handle (optional). After filling in the information and agreeing to the terms & conditions, a benchmark will start. In this benchmark we will check the hardware of your node.
 
-If the benchmark succeeds, you should see the following output:
-
-```
-Benchmark finished
-================================
-Thank you for registering for GPU Host.
-```
-
-Congratulations! :tada: You have completed the registration.
-
 ::: warning
 
 To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is **essential** to back up this file to ensure its safety.
@@ -142,7 +132,7 @@ To find your Node's Solana key, navigate to `~/.nosana/nosana_key.json`. It is *
 
 ## Optional: Run Podman in Docker
 
-If you're running Ubuntu natively, you can use Docker to initiate your Podman instance. The `register.sh` script accomplishes this in the final step, making this a non-mandatory step:
+If you're running Ubuntu natively, you can use Docker to initiate your Podman instance. The `start.sh` script accomplishes this in the final step, making this a non-mandatory step:
 
 ```sh:no-line-numbers
     docker run -d \
