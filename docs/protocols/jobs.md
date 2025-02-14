@@ -13,15 +13,15 @@ It lets nodes in the Nosana Network earn tokens by doing those jobs.
 | Source Code     | [GitHub](https://github.com/nosana-ci/nosana-programs)                                                                              |
 | Build Status    | [Anchor Verified](https://www.apr.dev/program/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM)                                          |
 | Accounts        | [`4`](#accounts)                                                                                                                    |
-| Instructions    | [`17`](#instructions)                                                                                                               |
+| Instructions    | [`19`](#instructions)                                                                                                               |
 | Types           | [`3`](#types)                                                                                                                       |
-| Errors          | [`18`](#errors)                                                                                                                     |
+| Errors          | [`19`](#errors)                                                                                                                     |
 | Domain          | `nosana-jobs.sol`                                                                                                                   |
 |  Address        | [`nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM`](https://explorer.solana.com/address/nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM)    |
 
 ## Instructions
 
-A number of 17 instruction are defined in the Nosana Jobs program.
+A number of 19 instruction are defined in the Nosana Jobs program.
 
 To load the program with [Anchor](https://coral-xyz.github.io/anchor/ts/index.html).
 
@@ -259,6 +259,82 @@ let tx = await program.methods
     tokenProgram,      // 𐄂 writable, 𐄂 signer
   })
   .signers([authorityKey])
+  .rpc();
+```
+
+@tab Assign
+### Assign
+
+Create a [JobAccount](#job-account) and optional [RunAccount](#run-account) with node assigned.
+
+#### Account Info
+
+The following 13 account addresses should be provided when invoking this instruction.
+
+| Name                   | Type                                                                                    | Description                                                                                       |
+|------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [JobAccount](#job-account) address.                                                           |
+| `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
+| `run`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The [RunAccount](#run-account) address.                                                           |
+| `node`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The node that runs this job.                                                                      |
+| `user`                 | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The user token account that will debit/credit the tokens.                                         |
+| `vault`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [VaultAccount](#vault-account) address.                                                       |
+| `payer`                | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="#3EAF7C" />       | The paying identy for the rent.                                                                   |
+| `rewardsReflection`    | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Nosana Rewards Program's [ReflectionAccount](/programs/rewards#reflection-account) address.   |
+| `rewardsVault`         | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The Nosana Rewards Program's [VaultAccount](/programs/rewards#vault-account) address.             |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+| `rewardsProgram`       | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The [Nosana Rewards](/programs/rewards) Program address.                                          |
+| `tokenProgram`         | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official SPL Token Program address. Responsible for token CPIs.                               |
+| `systemProgram`        | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The official Solana system program address. Responsible for system CPIs.                          |
+
+#### Arguments
+
+The following 2 arguments should also be provided when invoking this instruction.
+
+| Name                   | Type              | Size    | Offset  | Description                                               |
+|------------------------|-------------------|---------|---------|-----------------------------------------------------------|
+| `ipfsJob`              | `["u8",32]`       | `32`    | `0`     | The byte array representing the IPFS hash to the job.     |
+| `timeout`              | `i64`             | `16`    | `32`    | The timeout time in seconds for a job.                    |
+
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Assign Instruction
+is **`49427dcb51294087`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[73,66,125,203,81,41,64,135]
+```
+
+:::
+::: details Example with Anchor
+
+To invoke the Assign Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
+
+```typescript
+let tx = await program.methods
+  .assign(
+    ipfsJob,           // type: ["u8",32]
+    timeout,           // type: i64
+  )
+  .accounts({
+    job,               // ✓ writable, ✓ signer
+    market,            // ✓ writable, 𐄂 signer
+    run,               // ✓ writable, ✓ signer
+    node,              // 𐄂 writable, 𐄂 signer
+    user,              // ✓ writable, 𐄂 signer
+    vault,             // ✓ writable, 𐄂 signer
+    payer,             // ✓ writable, ✓ signer
+    rewardsReflection, // ✓ writable, 𐄂 signer
+    rewardsVault,      // ✓ writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
+    rewardsProgram,    // 𐄂 writable, 𐄂 signer
+    tokenProgram,      // 𐄂 writable, 𐄂 signer
+    systemProgram,     // 𐄂 writable, 𐄂 signer
+  })
+  .signers([jobKey, runKey, payerKey, authorityKey])
   .rpc();
 ```
 
@@ -623,11 +699,12 @@ Exit the node queue from [MarketAccount](#market-account).
 
 #### Account Info
 
-The following 2 account addresses should be provided when invoking this instruction.
+The following 3 account addresses should be provided when invoking this instruction.
 
 | Name                   | Type                                                                                    | Description                                                                                       |
 |------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | `market`               | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [MarketAccount](#market-account) address.                                                     |
+| `node`                 | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="lightgrey" />   | The node that runs this job.                                                                      |
 | `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
 
 
@@ -652,6 +729,7 @@ let tx = await program.methods
   .stop()
   .accounts({
     market,            // ✓ writable, 𐄂 signer
+    node,              // 𐄂 writable, 𐄂 signer
     authority,         // 𐄂 writable, ✓ signer
   })
   .signers([authorityKey])
@@ -711,6 +789,58 @@ let tx = await program.methods
     systemProgram,     // 𐄂 writable, 𐄂 signer
   })
   .signers([runKey, payerKey, authorityKey])
+  .rpc();
+```
+
+@tab Complete
+### Complete
+
+Complete a job that has been [stopped](#stop).
+
+#### Account Info
+
+The following 2 account addresses should be provided when invoking this instruction.
+
+| Name                   | Type                                                                                    | Description                                                                                       |
+|------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `job`                  | <FontIcon icon="pencil" color="#3EAF7C" /><FontIcon icon="key" color="lightgrey" />     | The [JobAccount](#job-account) address.                                                           |
+| `authority`            | <FontIcon icon="pencil" color="lightgrey" /><FontIcon icon="key" color="#3EAF7C" />     | The signing authority of the program invocation.                                                  |
+
+#### Arguments
+
+The following 1 arguments should also be provided when invoking this instruction.
+
+| Name                   | Type              | Size    | Offset  | Description                                               |
+|------------------------|-------------------|---------|---------|-----------------------------------------------------------|
+| `ipfsResult`           | `["u8",32]`       | `32`    | `0`     | The byte array representing the IPFS hash to the results. |
+
+
+::: details Solana Dispatch ID
+
+The Solana dispatch ID for the Complete Instruction
+is **`004de0938819584c`**,
+which can also be expressed as an 8 byte discriminator:
+
+```json
+[0,77,224,147,136,25,88,76]
+```
+
+:::
+::: details Example with Anchor
+
+To invoke the Complete Instruction
+with [Anchor TS](https://coral-xyz.github.io/anchor/ts/index.html).
+
+```typescript
+let tx = await program.methods
+  .complete(
+    ipfsResult,        // type: ["u8",32]
+  )
+  .accounts({
+    job,               // ✓ writable, 𐄂 signer
+    authority,         // 𐄂 writable, ✓ signer
+  })
+  .signers([authorityKey])
   .rpc();
 ```
 
@@ -1108,7 +1238,7 @@ A number of 6 variants are defined in this `enum`:
 
 ## Errors
 
-A number of 18 errors are defined in the Nosana Jobs Program.
+A number of 19 errors are defined in the Nosana Jobs Program.
 
 :::: tabs
 
@@ -1216,9 +1346,9 @@ The run account does not match the job.
 
 ::: warning Nosana Error
 
-### `6010` - Node Queue Does Not Match
+### `6010` - Job Results Already Set
 
-This node queue does not match.
+The job results are already set.
 
 :::
 
@@ -1226,9 +1356,9 @@ This node queue does not match.
 
 ::: warning Nosana Error
 
-### `6011` - Node Stake Unauthorized
+### `6011` - Node Queue Does Not Match
 
-This node is not authorizing this stake.
+This node queue does not match.
 
 :::
 
@@ -1236,9 +1366,9 @@ This node is not authorizing this stake.
 
 ::: warning Nosana Error
 
-### `6012` - Node Not Enough Stake
+### `6012` - Node Stake Unauthorized
 
-This node has not staked enough tokens.
+This node is not authorizing this stake.
 
 :::
 
@@ -1246,9 +1376,9 @@ This node has not staked enough tokens.
 
 ::: warning Nosana Error
 
-### `6013` - Node Already Queued
+### `6013` - Node Not Enough Stake
 
-This node is already present in the queue.
+This node has not staked enough tokens.
 
 :::
 
@@ -1256,9 +1386,9 @@ This node is already present in the queue.
 
 ::: warning Nosana Error
 
-### `6014` - Node Nft Wrong Metadata
+### `6014` - Node Already Queued
 
-This metadata does not have the correct address.
+This node is already present in the queue.
 
 :::
 
@@ -1266,9 +1396,9 @@ This metadata does not have the correct address.
 
 ::: warning Nosana Error
 
-### `6015` - Node Nft Wrong Owner
+### `6015` - Node Nft Wrong Metadata
 
-This NFT is not owned by this node.
+This metadata does not have the correct address.
 
 :::
 
@@ -1276,9 +1406,9 @@ This NFT is not owned by this node.
 
 ::: warning Nosana Error
 
-### `6016` - Node Nft Invalid Amount
+### `6016` - Node Nft Wrong Owner
 
-Access NFT amount cannot be 0.
+This NFT is not owned by this node.
 
 :::
 
@@ -1286,7 +1416,17 @@ Access NFT amount cannot be 0.
 
 ::: warning Nosana Error
 
-### `6017` - Node Key Invalid Collection
+### `6017` - Node Nft Invalid Amount
+
+Access NFT amount cannot be 0.
+
+:::
+
+@tab 6018
+
+::: warning Nosana Error
+
+### `6018` - Node Key Invalid Collection
 
 This access key does not belong to a verified collection.
 
